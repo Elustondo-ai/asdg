@@ -1,0 +1,21 @@
+FAIL: Catalogue mode must remain read-only-evaluation
+FAIL: Missing shared file: AGENTS.md
+FAIL: Missing shared file: .codex/README.md
+FAIL: Missing authoritative lifecycle baseline
+FAIL: Invalid entry asdg_coordinator: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_coordinator.toml'
+FAIL: Invalid entry asdg_01: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_01.toml'
+FAIL: Invalid entry asdg_02: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_02.toml'
+FAIL: Invalid entry asdg_03: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_03.toml'
+FAIL: Invalid entry asdg_04: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_04.toml'
+FAIL: Invalid entry asdg_05: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_05.toml'
+FAIL: Invalid entry asdg_06: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_06.toml'
+FAIL: Invalid entry asdg_07: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_07.toml'
+FAIL: Invalid entry asdg_08: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_08.toml'
+FAIL: Invalid entry asdg_09: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_09.toml'
+FAIL: Invalid entry asdg_10: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_10.toml'
+FAIL: Invalid entry asdg_11: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_11.toml'
+FAIL: Invalid entry asdg_12: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex/agents/asdg_12.toml'
+FAIL: Unexpected or missing native agent TOML files
+FAIL: Missing legacy review marker or current hash-bound review receipt: asdg/04-benchmarks-and-eval-strategy/logs/README.md
+FAIL: Missing legacy review marker or current hash-bound review receipt: asdg/05-high-level-design-and-architecture/logs/README.md
+FAIL: Missing legacy review marker or current hash-bound review receipt: asdg/README.md

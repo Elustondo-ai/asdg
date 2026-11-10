@@ -1,0 +1,339 @@
+{
+  "schema_version": 1,
+  "events": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "c3e68d981f4979549774f74d2500d54b3294392d307ce53d55d0440f2d1d1fa2",
+      "previous_sha256": "cb87e2b1f1a577074fd4ca3ef4928fdc83328f37d83902c28a8595f325c5063d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.255210+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "README.md",
+      "sha256": "fdc2df16406c79184f2b30e243d025fae602895a5c760260cdf5e9db52967093",
+      "previous_sha256": "c958dd70a38ecb5477ee64327565983065e13810055a3aad3100640da74befe7",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.255471+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "components/video-builder/src/build_piper_video.md",
+      "sha256": "c29022be882198891e04823a41aeae9cd6e8767740bf35bcbf679f5b8a9ed255",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.258891+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/distribution-build.md",
+      "sha256": "cab3701f3c3f646bd5999f8d51d0b184162e58a4ca41fbcb55a2aed3c8518689",
+      "previous_sha256": "4290810761062e1d85dfa5a8fd564716dede73a0580903741121271b56510602",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.259525+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/install-clone-prompt.md",
+      "sha256": "a83a01a7ffae9fefc1ae67c03e9df1428c371e98e5ba392335be809addcc9ef8",
+      "previous_sha256": "a7589761b12a7fbf8ed61939a31d77f5814dabb7dc799170ff280404a9830d10",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.259657+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/installation.md",
+      "sha256": "561c1ab5c859cdf6cf09e1d5197d057b54644e22cf76b10bd518fc559c8907d7",
+      "previous_sha256": "39d12bbff6ebbe74c412b2fe3a84ade67a81a5b36dbd9985d4d114657bc7e5d7",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.259959+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/migration/README.md",
+      "sha256": "21d5afdf9560c5feda107aa844f9a3b93f5ffc982554e35dd707a20b7f128d9a",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.260232+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/migration/commands.md",
+      "sha256": "0d4f23920014c3e05427f4cc00942fe99e5e106221131942c6e052d186d3d27f",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.260366+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/migration/failures-01.md",
+      "sha256": "049693abc5e7f1ac03f7930fdaf4585f3df1b70ca586e5e62b371ba4c3e137e0",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.260417+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/migration/failures-02.md",
+      "sha256": "e11727107cae61cc92be786f291c6c685908101f32e223e19812cb11a0ef10d5",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.260466+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/migration/failures-03.md",
+      "sha256": "38ed7461f9e6328d0b9de8f34e8680bc17fa3c159973ce9906b60b43560edc7a",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.260514+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/migration/failures-04.md",
+      "sha256": "4729602aa5e585b5891efb55490294420a26f26aa571693d0b6f726199c363b9",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.260556+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/migration/failures-05.md",
+      "sha256": "56653b499d8b5e9072412dc8d3e80796600f2a749fa32dd51a8fda7eb506b360",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.260594+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/migration/failures.md",
+      "sha256": "7f82bbfdfeb58bf93355d7da5734fd9bc20cda5f6b1dde7d02623c9b4790fbcd",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.260628+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/migration/impact.md",
+      "sha256": "a74e96b8b0d3fc65fe577aae6a50beed54e1dde60189af10fe086805ffb17e66",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.260771+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/migration/provider-assumptions-after-01.md",
+      "sha256": "fd37895f9eede6efc6d2c585d15ab065ea69f1a98dcf9688b1e322b95a42f3ff",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.260906+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/migration/provider-assumptions-after.md",
+      "sha256": "b17ba1bdbdf0bdf197d39b26b51e65da8ab1a0e59198f62274113cad4b00bd30",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.261021+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/review-loop.md",
+      "sha256": "974697aac988cb366123e6a948d9d4b38c44c008c336c15a015b4c36cacf28f6",
+      "previous_sha256": "d9d640ae6aee28964e9fb882a134c1ba2a800f18274f94c1ffb13539c92dd532",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.262633+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "docs/synchronization.md",
+      "sha256": "9260e5179003c20972fb4efd87e9f9ce1d789f88b07265155fa9db5ac8791f6f",
+      "previous_sha256": "c2089a62ca5c2eee8a002a60ad9e86028175375b0d12a26340a6d779873ffd24",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.262850+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "scripts/build_distribution.md",
+      "sha256": "5a3bf22b227360dfac770772553caef70ea998c5b947babd2dd28bfc317f6ecb",
+      "previous_sha256": "8964e393aae447c2fe7fc2be1e39ddaecff94ed906cb9a381d5b088b1f38944d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.264649+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "scripts/check.md",
+      "sha256": "36b199c33032e9269efc2ae7c4b5ca6b0c9590e407bbb856469c3f5ec46c5ca1",
+      "previous_sha256": "d02625e733e37c9ac43e959cf445d69af6a89c67de1e7717788eba3c7adf85bc",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.264765+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "scripts/lib/cli_install_source.md",
+      "sha256": "c16350866d4b99a16cacf19533bf510d2b06dfa6b2b21ba84b08340ea75231ea",
+      "previous_sha256": "4e77532c3320e66f3d271731979158dbf7126343298c4361aa90c07662cb903e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.266550+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "scripts/lib/cli_model.md",
+      "sha256": "ef92b1d948aa1206e55498875d8a5b895eb79b9399ea9b539d8471d60156cba3",
+      "previous_sha256": "829e8e8f479678d98b2283a3ba066db59fb575601a43e72983d63eba682738f3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.266682+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "scripts/lib/cli_project.md",
+      "sha256": "617183658d8d9350c9ec1b549c3a67f48bcc9e8ea2e78beee1754de0d0482039",
+      "previous_sha256": "c5755e918f903b71206f6e07e0008ee81a65a7a11684072fad86ca16cd3cea87",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.266985+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "scripts/lib/cli_status.md",
+      "sha256": "dd2ef03fdb723fffa8abe984541b06f7ddb63c2bb58d09926fa07f78008977d4",
+      "previous_sha256": "264f6491237cc71d245c69ebd067ed0d2d540ea8b42ba8fc17e7d50bff17fab5",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.267380+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "scripts/lib/cli_sync.md",
+      "sha256": "5a00983ffc79dadf9b56c856c7dd1b3f67d570fe143f5f19463d6944103b4629",
+      "previous_sha256": "ae6b466c5277398fb582c4c4696c07820947eda4925e9e14f8d8c52809d95f2f",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.267490+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "scripts/lib/cli_sync_manifest.md",
+      "sha256": "efe3526d0d2fbe37853db3368bd3d67a4188f20b7574861ec83f1315bce83d2c",
+      "previous_sha256": "4498c9922a3e00690a274560e340097d92f6828923c2c95507daaef19343d282",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.267581+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "skills/asdg-component/src/create_component.md",
+      "sha256": "acd177ffa22cd4a66b1779b0d751e00299487bea6a356ffcbf2915c26451adb7",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.269272+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "skills/asdg-init/SKILL.md",
+      "sha256": "01cc09c79ffd3eb6f8ba95a5d7482f91b16407ff88c2dbffea9a40790e748668",
+      "previous_sha256": "6ca7cef78c4a1b086bd753fe54962297625203c122ed0d22433c57abda3be056",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.271233+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "skills/asdg-presentation/src/build.md",
+      "sha256": "ce21dc533255c9280cc34d1e61d90d3cb192a64f1f1cbbc01e2310fd83c2e2d8",
+      "previous_sha256": null,
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.272318+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "skills/asdg-publish/SKILL.md",
+      "sha256": "d202cc9e9972cdf211d9ac58faafa8825c1b7f8f01e348e0d09ae30f3772ab36",
+      "previous_sha256": "65470eb4191adc0787246554cb6b051f5bfb9d03813d8174eed73c3cd02fb2c7",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.272542+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "skills/asdg-report-project-status/report_packets.md",
+      "sha256": "16248ef9b451a650714171fa011c9021a14b597a19989e9e833d83903b4f448f",
+      "previous_sha256": "cb7c69167406bcf116a6d0c77d269a06347b6c8ed8e0dd6c85921d5ee92aeacb",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.272931+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "skills/asdg-update/SKILL.md",
+      "sha256": "0e9b2cd5582bad11060a4d111db77e4d10e470b056ba8c094db6c4f6c47ce267",
+      "previous_sha256": "890062cb946626c9ce2a84871001c94d07c1f1cc61bacc5dddd251714d45b06b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.274048+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "tests/continuation_fixture.md",
+      "sha256": "99e866f04bb13b863e7bc5d1aaf5996b489baff5eeba4cb79cd6e6571b5f0ab4",
+      "previous_sha256": "be6295e28ebd578ac49ed5a897c19c950646bef2971ae1f31aae989d2c383bdf",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.276470+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "tests/test_agent_config.md",
+      "sha256": "374bf79a163ccd4a1e16a930801a0ca8b7410154e26aee99d408df5619d94a61",
+      "previous_sha256": "eeebdf318c458b4dcac6307c536710ca4290fa85f652c7e8cb7b36f4aff957f7",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.276691+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "tests/test_install.md",
+      "sha256": "c2873672140b0cc0eeecd661d111dd4d411e79370c40bd76cc7d1cff956278aa",
+      "previous_sha256": "1c62551ff0ea52d4a31cbe2281d2623a6d9c0bda3914f9157016ebb401395335",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.276933+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    },
+    {
+      "path": "tests/test_sync.md",
+      "sha256": "7865e0409acd0bb5b4d9afe3dd0923d3cdaf52229d8654f72e22d62c0a435e7b",
+      "previous_sha256": "6f0653897457d982fea3fb68bbf3ba608d0be0fb144786a694772f008e78c4a6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-09T19:59:29.278091+00:00",
+      "human_approval": null,
+      "scope": "Standalone repository migration preparation only"
+    }
+  ],
+  "approval_binding": "Historical approvals stay bound to old bytes; none is transferred."
+}

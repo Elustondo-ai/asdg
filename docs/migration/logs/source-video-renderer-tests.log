@@ -1,0 +1,42 @@
+test_full_detailed_range_and_coverage (test_piper_video.PiperVideoTests.test_full_detailed_range_and_coverage) ... ok
+test_invalid_range (test_piper_video.PiperVideoTests.test_invalid_range) ... ok
+test_rejects_missing_audio_and_truncated_duration (test_piper_video.PiperVideoTests.test_rejects_missing_audio_and_truncated_duration) ... ok
+test_existing_deck_preserves_embedded_visuals_and_complete_notes (test_pptx_sources.PptxSourceTests.test_existing_deck_preserves_embedded_visuals_and_complete_notes) ... ERROR
+test_intro_five_slides_keep_original_picture_placement (test_pptx_sources.PptxSourceTests.test_intro_five_slides_keep_original_picture_placement) ... ERROR
+test_notes_keep_blank_paragraphs_and_exclude_slide_number_placeholder (test_pptx_sources.PptxSourceTests.test_notes_keep_blank_paragraphs_and_exclude_slide_number_placeholder) ... ok
+test_markdown_clean (test_video.VideoTests.test_markdown_clean) ... ok
+test_order (test_video.VideoTests.test_order) ... ok
+test_slide_discovery (test_video.VideoTests.test_slide_discovery) ... ok
+
+======================================================================
+ERROR: test_existing_deck_preserves_embedded_visuals_and_complete_notes (test_pptx_sources.PptxSourceTests.test_existing_deck_preserves_embedded_visuals_and_complete_notes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/asdg-cutover-evidence/source/asdg/components/video-builder/tests/test_pptx_sources.py", line 28, in test_existing_deck_preserves_embedded_visuals_and_complete_notes
+    with tempfile.TemporaryDirectory(dir=root / 'build') as temporary:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.17/Frameworks/Python.framework/Versions/3.11/lib/python3.11/tempfile.py", line 871, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.17/Frameworks/Python.framework/Versions/3.11/lib/python3.11/tempfile.py", line 385, in mkdtemp
+    _os.mkdir(file, 0o700)
+FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/asdg-cutover-evidence/source/docs/presentations/codex-agent-skills-and-adapters/build/tmpccc3x05q'
+
+======================================================================
+ERROR: test_intro_five_slides_keep_original_picture_placement (test_pptx_sources.PptxSourceTests.test_intro_five_slides_keep_original_picture_placement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/asdg-cutover-evidence/source/asdg/components/video-builder/tests/test_pptx_sources.py", line 16, in test_intro_five_slides_keep_original_picture_placement
+    with tempfile.TemporaryDirectory(dir=root / 'build') as temporary:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.17/Frameworks/Python.framework/Versions/3.11/lib/python3.11/tempfile.py", line 871, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.17/Frameworks/Python.framework/Versions/3.11/lib/python3.11/tempfile.py", line 385, in mkdtemp
+    _os.mkdir(file, 0o700)
+FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/asdg-cutover-evidence/source/docs/presentations/asdg-introduction/build/tmpy1jqfewh'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.021s
+
+FAILED (errors=2)

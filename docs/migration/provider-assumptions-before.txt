@@ -1,0 +1,123 @@
+skills/asdg-publish/SKILL.md:3:description: Publish a verified portable ASDG ZIP and checksum from the canonical agentic-sdlc-governance provider, with matching release metadata and installation instructions. Provider-only; never use in an adopting project.
+skills/asdg-publish/SKILL.md:13:Resolve the Git root and verify its origin is `Elustondo-ai/agentic-sdlc-governance`, its provider root instructions and `scripts/prepare_commit.py` exist, and this skill is not in the portable file list. Stop in a client or ambiguous checkout.
+skills/asdg-publish/SKILL.md:26:Run `python3 scripts/prepare_commit.py`, then `python3 asdg/scripts/check.py --integrity` and the applicable portable/provider tests. Inspect the ZIP's single `asdg/` root, manifest, install prompt, version and checksum.
+scripts/lib/cli_hook.py:82:        if candidate == root / 'asdg/scripts/cli.py':
+metadata/deliveries/0.3.0-pilot.3.json:14:      "repository": "https://github.com/Elustondo-ai/agentic-sdlc-governance",
+metadata/deliveries/0.3.0-pilot.2.json:14:      "repository": "https://github.com/Elustondo-ai/agentic-sdlc-governance",
+skills/asdg-presentation/src/sources.py:7:sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "00-governance/src"))
+metadata/MANIFEST.json:14:      "repository": "https://github.com/Elustondo-ai/agentic-sdlc-governance",
+metadata/MANIFEST.json:20:      "repository": "https://github.com/Elustondo-ai/agentic-sdlc-governance",
+scripts/lib/cli_project.py:236:            or not (focus_root / 'asdg-focus/SKILL.md').is_file()
+scripts/lib/cli_project.py:237:            or not (focus_root / 'asdg-focus/agents/openai.yaml').is_file()):
+metadata/distribution.json:17:  "canonical_repository": "https://github.com/Elustondo-ai/agentic-sdlc-governance",
+metadata/distribution.json:27:      "repository": "https://github.com/Elustondo-ai/agentic-sdlc-governance",
+metadata/distribution.json:33:      "repository": "https://github.com/Elustondo-ai/agentic-sdlc-governance",
+skills/asdg-presentation/src/build.py:24:            collection = SKILL.parents[2] / "docs" / "presentations"
+scripts/lib/cli_model.py:18:REPO = Path(__file__).resolve().parents[3]
+scripts/build_distribution.py:65:    parser.add_argument('--output', type=Path, default=CORE.parent / 'build/distributions')
+docs/review-loop.md:3:The canonical `agentic-sdlc-governance` repository owns reusable methodology and distribution builds.
+docs/provenance.md:4:[agentic-sdlc-governance](https://drive.google.com/drive/folders/1CzNrE_O6Vb39BK5d4EXtA3Uj2kSAYoqL).
+docs/installation.md:3:The recommended [repository-URL Quick Start](https://github.com/Elustondo-ai/agentic-sdlc-governance#quick-start--give-your-agent-the-repository-url) lets the agent acquire the ZIP safely. Manual ZIP + Prompt and Clone + Prompt remain alternatives using one Python 3.9+ engine on macOS/Linux. The prompts select inputs, show the plan and wait for approval; they never implement a second installer.
+docs/distribution-build.md:4:The recommended [repository-URL Quick Start](https://github.com/Elustondo-ai/agentic-sdlc-governance#quick-start--give-your-agent-the-repository-url) delegates acquisition and initialization to an agent; manual extraction and a pinned clone remain alternatives.
+docs/distribution-build.md:35:python3 scripts/prepare_commit.py
+scripts/hook.py:7:ROOT = Path(__file__).resolve().parents[2]
+README.md:4:The canonical repository is [agentic-sdlc-governance](https://github.com/Elustondo-ai/agentic-sdlc-governance).
+components/video-builder/src/build_piper_video.py:13:REPO = Path(__file__).resolve().parents[4]
+components/video-builder/src/build_piper_video.py:14:SKILL = REPO / 'asdg/skills/asdg-presentation'
+components/video-builder/tests/test_video.py:9:        root=Path(__file__).resolve().parents[4]/'docs'/'presentations'/'codex-agent-skills-and-adapters'
+components/video-builder/tests/test_video.py:14:        root=Path(__file__).resolve().parents[4]/'docs'/'presentations'/'codex-agent-skills-and-adapters'
+scripts/lib/agent_log_hook.py:9:REPO = Path(__file__).resolve().parents[3]
+skills/asdg-focus/installation-2026-10-19.json:4:  "scope": "Existing Drive-backed agentic-sdlc-governance checkout; no change to consumer bindings, registry, native subagent definitions, permissions or lifecycle state",
+skills/asdg-focus/installation-2026-10-18.json:5:  "destination": "Drive project folder 1CzNrE_O6Vb39BK5d4EXtA3Uj2kSAYoqL (agentic-sdlc-governance)",
+skills/asdg-report-project-status/report_packets.py:7:CORE = Path(__file__).resolve().parents[2]
+tests/test_install.py:39:        git(self.source, 'remote', 'add', 'origin', 'https://github.com/Elustondo-ai/agentic-sdlc-governance.git')
+tests/test_install.py:138:                    self.assertEqual((self.target / skill).read_bytes(), (CORE.parent / skill).read_bytes())
+tests/test_portable.py:37:            target = self.root / 'asdg' / source.relative_to(CORE)
+tests/test_portable.py:47:        result = subprocess.run([sys.executable, '-B', str(self.root / 'asdg/scripts' / entry), *args],
+tests/test_portable.py:53:        core = self.root / 'asdg'
+tests/test_portable.py:144:                         (self.root / 'asdg/templates/.agents/skills/asdg-status/SKILL.md').read_bytes())
+tests/test_portable.py:186:                                     str(self.root / 'asdg/scripts' / entry), *args],
+tests/test_portable.py:200:                         (self.root / 'asdg/templates' / relative).read_bytes())
+tests/test_portable.py:201:        self.assertTrue((self.root / 'asdg/02-purpose/skills/elicit-purpose/opening.md').is_file())
+tests/test_portable.py:202:        self.assertTrue((self.root / 'asdg/00-governance/docs/continuation.md').is_file())
+tests/test_portable.py:214:                             (self.root / 'asdg/templates' / relative / name).read_bytes())
+tests/test_portable.py:236:                             (self.root / 'asdg/templates' / relative / name).read_bytes())
+tests/test_portable.py:238:        self.assertEqual(canonical, (self.root / 'asdg/skills/asdg-attitude/SKILL.md').resolve())
+tests/test_portable.py:268:                             (self.root / 'asdg/templates' / relative / name).read_bytes())
+tests/test_portable.py:270:        self.assertEqual(canonical, (self.root / 'asdg/skills/asdg-openspec-propose/SKILL.md').resolve())
+tests/test_portable.py:283:        docs = self.root / 'asdg/00-governance/docs'
+tests/test_portable.py:307:        self.assertIn('00 Governance by default', (self.root / 'asdg/AGENTS.md').read_text())
+tests/test_portable.py:314:        (self.root / 'asdg/00-governance/types/contract.md').unlink()
+tests/test_portable.py:338:        sys.path.insert(0, str(self.root / 'asdg/scripts/lib'))
+tests/test_portable.py:339:        self.addCleanup(sys.path.remove, str(self.root / 'asdg/scripts/lib'))
+tests/test_portable.py:443:            self.assertTrue((CORE.parent / registration[key]).is_file(), key)
+tests/test_portable.py:457:                             (self.root / 'asdg/templates' / relative / name).read_bytes())
+tests/test_portable.py:460:        self.assertEqual(canonical, (self.root / 'asdg/skills/asdg-admin/SKILL.md').resolve())
+tests/test_portable.py:467:        self.assertIn('$asdg-admin', json.loads((self.root / 'asdg/admin/types/admin-role.json').read_text())['selectors'])
+tests/test_portable.py:468:        self.assertIn('[Admin](asdg-admin/SKILL.md)', (self.root / 'asdg/skills/README.md').read_text())
+tests/test_portable.py:477:        shutil.copytree(CORE, self.root / 'asdg', ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+tests/test_portable.py:555:        names = sorted(p.parent.name for p in (self.root / 'asdg/templates/.agents/skills').glob('*/SKILL.md'))
+tests/test_portable.py:563:            self.assertEqual(targets, {(self.root / 'asdg/skills' / name / 'SKILL.md').resolve()}, name)
+tests/test_portable.py:640:        sys.path.insert(0, str(self.root / 'asdg/scripts/lib'))
+tests/test_portable.py:641:        self.addCleanup(sys.path.remove, str(self.root / 'asdg/scripts/lib'))
+tests/test_portable.py:690:                             (self.root / 'asdg/templates' / relative / name).read_bytes())
+tests/test_portable.py:692:        self.assertEqual(canonical, (self.root / 'asdg/skills/asdg-decision/SKILL.md').resolve())
+tests/test_portable.py:695:        self.assertTrue((self.root / 'asdg/05-high-level-design-and-architecture/docs/architectural-decisions.md').is_file())
+tests/test_portable.py:713:        catalogue = json.loads((self.root / 'asdg/00-governance/types/agent-catalog.json').read_text())
+tests/test_portable.py:737:            path = self.root / 'asdg/templates/.agents/skills/asdg-focus' / name
+tests/test_portable.py:746:        path = self.root / 'asdg/templates/.agents/skills/asdg-focus-05-architecture/SKILL.md'
+tests/test_portable.py:881:        catalogue = (self.root / 'asdg/00-governance/types/agent-catalog.json').read_bytes()
+tests/test_portable.py:886:        self.assertEqual((self.root / 'asdg/00-governance/types/agent-catalog.json').read_bytes(), catalogue)
+tests/test_portable.py:892:        registration = self.root / 'asdg/admin/types/admin-role.json'
+tests/test_portable.py:904:            (lambda: (self.root / 'asdg/admin/types/contract.md').unlink(),
+tests/test_portable.py:907:        contract = (self.root / 'asdg/admin/types/contract.md').read_bytes()
+tests/test_portable.py:917:            (self.root / 'asdg/admin/types/contract.md').write_bytes(contract)
+00-governance/src/validate_agents.py:49:    catalogue = root / 'asdg/00-governance/types/agent-catalog.json'
+00-governance/src/validate_agents.py:92:            if home.parent != root / 'asdg' or not home.name.startswith(f'{stage:02d}-'):
+00-governance/src/validate_agents.py:149:    flat = list((root / 'asdg/agents').glob('[0-9][0-9]-*.md'))
+00-governance/src/validate_agents.py:164:    root = root or Path(__file__).resolve().parents[3]
+00-governance/src/agent_log_hook.py:9:REPO = Path(__file__).resolve().parents[3]
+00-governance/src/cli_namespace.py:81:    if (root / 'asdg').is_dir():
+00-governance/src/cli_namespace.py:85:    if not (root / 'asdg').is_file() or not (root / 'asdlc').is_dir():
+tests/test_ownership.py:26:        rows = json.loads((self.root / 'asdg/00-governance/types/agent-catalog.json').read_text())['agents']
+tests/test_agent_config.py:6:ROOT = Path(__file__).resolve().parents[2]
+00-governance/types/document-reviews.json:28680:      "path": "scripts/prepare_commit.py",
+00-governance/types/document-reviews.json:28693:      "path": "scripts/prepare_commit.md",
+00-governance/types/document-reviews.json:28706:      "path": "scripts/tests/test_prepare_commit.py",
+00-governance/types/document-reviews.json:28719:      "path": "scripts/tests/test_prepare_commit.md",
+00-governance/types/migrations/speaker-coach-exporters.patch:11: CONSUMER = DECK.parents[2]
+00-governance/types/migrations/speaker-coach-exporters.patch:12: METHOD = CONSUMER.parent / "agentic-sdlc-governance"
+00-governance/types/migrations/speaker-coach-exporters.patch:22: CONSUMER = DECK.parents[2]
+00-governance/types/migrations/speaker-coach-exporters.patch:23: METHOD = CONSUMER.parent / "agentic-sdlc-governance"
+tests/test_sync.py:44:            core = root / 'asdg'
+tests/test_sync.py:75:        core = root / 'asdg'
+tests/test_sync.py:88:        core = root / 'asdg'
+tests/test_sync.py:388:            shutil.rmtree(root / 'asdg/metadata/deliveries')
+tests/test_sync.py:407:            shutil.rmtree(root / 'asdg')
+tests/test_sync.py:410:                target = root / 'asdg' / source.relative_to(CORE)
+tests/test_sync.py:413:            descriptor = root / 'asdg' / DESCRIPTOR
+tests/test_report_project_status.py:87:    script = renderer_preflight(CORE.parent)['script']
+tests/test_distribution.py:37:        result = subprocess.run([sys.executable, '-B', str(root / 'asdg/scripts/cli.py'), *args],
+00-governance/src/cli_model.py:18:REPO = Path(__file__).resolve().parents[3]
+tests/test_purpose_review.py:227:        policy = self.root / 'asdg/policy.md'
+tests/continuation_fixture.py:25:    shutil.copytree(CORE, root / 'asdg', ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+00-governance/docs/baseline-checkpoint-plan-r01.md:16:asdg_provider="$PWD/agentic-sdlc-governance"
+00-governance/docs/state-engine-verification.md:5:Implementation and tests are confined to `agentic-sdlc-governance`; test projects live in temporary
+00-governance/docs/logging-acceptance.md:7:Open the existing agentic-sdlc-governance repository; wait for Drive synchronization.
+00-governance/tests/test_agent_packages.py:9:ROOT = Path(__file__).resolve().parents[3]
+00-governance/tests/test_agent_packages.py:23:                shutil.copytree(p, self.root / 'asdg' / p.name, ignore=shutil.ignore_patterns('__pycache__'))
+00-governance/tests/test_agent_packages.py:32:        self.catalog = self.root / 'asdg/00-governance/types/agent-catalog.json'
+00-governance/tests/test_agent_packages.py:59:        ops = (self.root / 'asdg/11-operational-reality-devops-and-user-acceptance/AGENTS.md').read_text()
+00-governance/tests/test_agent_packages.py:60:        learning = (self.root / 'asdg/12-observability-insights-and-learning/AGENTS.md').read_text()
+00-governance/tests/test_agent_packages.py:66:        shutil.rmtree(self.root / 'asdg/02-purpose/src')
+00-governance/tests/test_agent_packages.py:70:        (self.root / 'asdg/02-purpose/skills/elicit-purpose/SKILL.md').unlink()
+00-governance/tests/test_agent_packages.py:74:        p = self.root / 'asdg/02-purpose/skills/elicit-purpose/SKILL.md'
+00-governance/tests/test_agent_packages.py:79:        p = self.root / 'asdg/02-purpose/skills/elicit-purpose/SKILL.md'
+00-governance/tests/test_agent_packages.py:85:        (self.root / 'asdg/02-purpose/types/contract.md').unlink()
+00-governance/tests/test_agent_packages.py:107:        p = self.root / 'asdg/02-purpose/docs/README.md'
+00-governance/tests/test_agent_packages.py:116:        p = self.root / 'asdg/02-purpose/AGENTS.md'
+00-governance/tests/test_agent_packages.py:126:        p = self.root / 'asdg/agents/02-purpose.md'
+00-governance/tests/test_agent_config.py:6:ROOT = Path(__file__).resolve().parents[3]
+00-governance/tests/test_baseline.py:19:SKILL_SOURCE = Path(__file__).resolve().parents[2] / 'skills' / 'asdg-documentation' / 'SKILL.md'
+00-governance/tests/test_cli_bootstrap.py:14:REPO = Path(__file__).resolve().parents[3]
+00-governance/tests/test_cli_bootstrap.py:15:SRC = REPO / 'asdg/00-governance/src'

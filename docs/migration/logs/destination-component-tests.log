@@ -1,0 +1,8 @@
+test_creates_and_checks (test_scaffold.ScaffoldTests.test_creates_and_checks) ... ok
+test_refuses_overwrite (test_scaffold.ScaffoldTests.test_refuses_overwrite) ... ok
+test_rejects_bad_name (test_scaffold.ScaffoldTests.test_rejects_bad_name) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.008s
+
+OK

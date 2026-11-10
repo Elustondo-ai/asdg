@@ -1,0 +1,15 @@
+test_bad_slide_fails (test_report_project_status.PacketTests.test_bad_slide_fails) ... ok
+test_claude_specialist_and_governance_routing (test_report_project_status.PacketTests.test_claude_specialist_and_governance_routing) ... ok
+test_cli_duplicate_fields_and_absent_renderer (test_report_project_status.PacketTests.test_cli_duplicate_fields_and_absent_renderer) ... ok
+test_full_order_is_independent_of_return_order (test_report_project_status.PacketTests.test_full_order_is_independent_of_return_order) ... ok
+test_partial_and_zero_coverage (test_report_project_status.PacketTests.test_partial_and_zero_coverage) ... ok
+test_unaccounted_role_and_reused_worker_fail (test_report_project_status.PacketTests.test_unaccounted_role_and_reused_worker_fail) ... ok
+test_wrong_or_missing_packet_fields_fail (test_report_project_status.PacketTests.test_wrong_or_missing_packet_fields_fail) ... ok
+test_rebuild_after_editing_only_markdown (test_report_project_status.ReportRenderTests.test_rebuild_after_editing_only_markdown) ... ok
+test_specialist_full_and_partial_pptx (test_report_project_status.ReportRenderTests.test_specialist_full_and_partial_pptx) ... ok
+test_read_sources_with_no_build_or_renderer (test_report_project_status.ReportSourceTests.test_read_sources_with_no_build_or_renderer) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 9.616s
+
+OK

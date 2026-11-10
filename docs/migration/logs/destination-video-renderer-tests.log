@@ -1,0 +1,111 @@
+test_full_detailed_range_and_coverage (test_piper_video.PiperVideoTests.test_full_detailed_range_and_coverage) ... ERROR
+test_invalid_range (test_piper_video.PiperVideoTests.test_invalid_range) ... ERROR
+test_rejects_missing_audio_and_truncated_duration (test_piper_video.PiperVideoTests.test_rejects_missing_audio_and_truncated_duration) ... ok
+test_existing_deck_preserves_embedded_visuals_and_complete_notes (test_pptx_sources.PptxSourceTests.test_existing_deck_preserves_embedded_visuals_and_complete_notes) ... ERROR
+test_intro_five_slides_keep_original_picture_placement (test_pptx_sources.PptxSourceTests.test_intro_five_slides_keep_original_picture_placement) ... ERROR
+test_notes_keep_blank_paragraphs_and_exclude_slide_number_placeholder (test_pptx_sources.PptxSourceTests.test_notes_keep_blank_paragraphs_and_exclude_slide_number_placeholder) ... ok
+test_markdown_clean (test_video.VideoTests.test_markdown_clean) ... ok
+test_order (test_video.VideoTests.test_order) ... ERROR
+test_slide_discovery (test_video.VideoTests.test_slide_discovery) ... ERROR
+
+======================================================================
+ERROR: test_full_detailed_range_and_coverage (test_piper_video.PiperVideoTests.test_full_detailed_range_and_coverage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/components/video-builder/tests/test_piper_video.py", line 13, in test_full_detailed_range_and_coverage
+    slides = select_slides(root, 9, 13, 'detailed')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/components/video-builder/src/build_piper_video.py", line 38, in select_slides
+    slides = discover(root, profile)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/skills/asdg-presentation/src/sources.py", line 94, in discover
+    presentation = presentation.resolve(strict=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.17/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 993, in resolve
+    s = os.path.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen posixpath>", line 413, in realpath
+  File "<frozen posixpath>", line 457, in _joinrealpath
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/docs/presentations'
+
+======================================================================
+ERROR: test_invalid_range (test_piper_video.PiperVideoTests.test_invalid_range)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/components/video-builder/tests/test_piper_video.py", line 23, in test_invalid_range
+    select_slides(REPO / 'docs/presentations/codex-agent-skills-and-adapters', 13, 9, 'detailed')
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/components/video-builder/src/build_piper_video.py", line 38, in select_slides
+    slides = discover(root, profile)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/skills/asdg-presentation/src/sources.py", line 94, in discover
+    presentation = presentation.resolve(strict=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.17/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 993, in resolve
+    s = os.path.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen posixpath>", line 413, in realpath
+  File "<frozen posixpath>", line 457, in _joinrealpath
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/docs/presentations'
+
+======================================================================
+ERROR: test_existing_deck_preserves_embedded_visuals_and_complete_notes (test_pptx_sources.PptxSourceTests.test_existing_deck_preserves_embedded_visuals_and_complete_notes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/components/video-builder/tests/test_pptx_sources.py", line 28, in test_existing_deck_preserves_embedded_visuals_and_complete_notes
+    with tempfile.TemporaryDirectory(dir=root / 'build') as temporary:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.17/Frameworks/Python.framework/Versions/3.11/lib/python3.11/tempfile.py", line 871, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.17/Frameworks/Python.framework/Versions/3.11/lib/python3.11/tempfile.py", line 385, in mkdtemp
+    _os.mkdir(file, 0o700)
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/docs/presentations/codex-agent-skills-and-adapters/build/tmp13cp1wid'
+
+======================================================================
+ERROR: test_intro_five_slides_keep_original_picture_placement (test_pptx_sources.PptxSourceTests.test_intro_five_slides_keep_original_picture_placement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/components/video-builder/tests/test_pptx_sources.py", line 16, in test_intro_five_slides_keep_original_picture_placement
+    with tempfile.TemporaryDirectory(dir=root / 'build') as temporary:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.17/Frameworks/Python.framework/Versions/3.11/lib/python3.11/tempfile.py", line 871, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.17/Frameworks/Python.framework/Versions/3.11/lib/python3.11/tempfile.py", line 385, in mkdtemp
+    _os.mkdir(file, 0o700)
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/docs/presentations/asdg-introduction/build/tmpsk0w6io0'
+
+======================================================================
+ERROR: test_order (test_video.VideoTests.test_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/components/video-builder/tests/test_video.py", line 15, in test_order
+    result=slides_at(root)
+           ^^^^^^^^^^^^^^^
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/components/video-builder/src/build_video.py", line 25, in slides_at
+    for folder in sorted(root.iterdir()):
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.17/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 931, in iterdir
+    for name in os.listdir(self):
+                ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/presentations/codex-agent-skills-and-adapters'
+
+======================================================================
+ERROR: test_slide_discovery (test_video.VideoTests.test_slide_discovery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/components/video-builder/tests/test_video.py", line 10, in test_slide_discovery
+    result=slides_at(root)
+           ^^^^^^^^^^^^^^^
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/components/video-builder/src/build_video.py", line 25, in slides_at
+    for folder in sorted(root.iterdir()):
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.17/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py", line 931, in iterdir
+    for name in os.listdir(self):
+                ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/presentations/codex-agent-skills-and-adapters'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.002s
+
+FAILED (errors=6)

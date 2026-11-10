@@ -1,0 +1,968 @@
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -1,7 +1,8 @@
+ # Using and maintaining embedded ASDG
+ 
+-This directory is the client's local methodology distribution, not the client application's evidence.
+-The client root `AGENTS.md` loads this file through its ASDG bootstrap block; also follow the project-owned guidance after that block and the user's explicit task.
++This repository root is the standalone ASDG methodology development and distribution source (`Elustondo-ai/asdg`).
++When installed under a consumer's `asdg/`, the client root bootstrap loads this file; follow that project's guidance and the user's explicit task.
++For source maintenance, use `python3 scripts/check.py --integrity` and `python3 -B -m unittest discover -s tests -v`; do not initialize this source repository as a client.
+ Read [the lifecycle baseline](docs/lifecycle-baseline.md); preserve governance 00 and stages 01–12. No external provider checkout is required.
+ Use [the catalogue](00-governance/types/agent-catalog.json) for identities and paths; Stage 02 is Purpose.
+ 
+--- a/README.md
++++ b/README.md
+@@ -1,10 +1,26 @@
+ # ASDG — portable methodology
+ 
+ ASDG carries twelve lifecycle stages, specialist responsibilities, evidence rules and sprint controls inside your project.
+-The canonical repository is [agentic-sdlc-governance](https://github.com/Elustondo-ai/agentic-sdlc-governance).
++The canonical repository is [asdg](https://github.com/Elustondo-ai/asdg).
+ This consolidated pilot is a review candidate; packaging does not establish human approval or native enforcement.
+ 
+ ![A verified ZIP carries one asdg folder into the developer's Git repository, where initialization creates local integrations and state.](docs/images/distribution-flow.svg)
++
++## Standalone source and contributions
++
++This repository root is the intended canonical development and distribution source; consumers receive it under `<project>/asdg/`.
++The prepared cutover is pending human review and commit. No release assets are published here by this migration.
++For a reviewed local clone, follow [Clone + Prompt](docs/install-clone-prompt.md); the source entry point is `scripts/init.py`.
++Source-only migration evidence is retained under `docs/migration/`; review it before cutover.
++Maintainers change definitions here, run the [build and verification commands](docs/distribution-build.md), review the resulting manifest and propose a focused change for human review.
++Do not initialize the source checkout as an application. Source checks use `scripts/check.py`; installed-client checks use `asdg/scripts/cli.py verify`.
++The catalogue's `asdg/` paths describe installed consumers, not a nested source directory.
++
++## Quick Start — give your agent the repository URL
++
++Ask your agent to use this repository's reviewed full commit and [clone installation prompt](docs/install-clone-prompt.md) to prepare installation in an existing Git project.
++Review the complete preview before approving apply. Installation creates no sprint, hook trust or permission for project work.
++A release ZIP may be built locally with [the documented builder](docs/distribution-build.md); do not assume new-repository release URLs exist.
+ 
+ ## Start
+ 
+--- a/components/video-builder/src/build_piper_video.py
++++ b/components/video-builder/src/build_piper_video.py
+@@ -10,8 +10,9 @@
+ import wave
+ from pathlib import Path
+ 
+-REPO = Path(__file__).resolve().parents[4]
+-SKILL = REPO / 'asdg/skills/asdg-presentation'
++CORE = Path(__file__).resolve().parents[3]
++REPO = CORE if (CORE / '.git').exists() else CORE.parent
++SKILL = CORE / 'skills/asdg-presentation'
+ sys.path.insert(0, str(SKILL / 'types'))
+ sys.path.insert(0, str(SKILL / 'src'))
+ from sources import discover, read_notes
+--- a/docs/distribution-build.md
++++ b/docs/distribution-build.md
+@@ -1,7 +1,7 @@
+ # Build and verify the portable distribution
+ 
+ The canonical repository produces one ZIP with one top-level `asdg/` folder.
+-The recommended [repository-URL Quick Start](https://github.com/Elustondo-ai/agentic-sdlc-governance#quick-start--give-your-agent-the-repository-url) delegates acquisition and initialization to an agent; manual extraction and a pinned clone remain alternatives.
++The recommended [repository-URL Quick Start](https://github.com/Elustondo-ai/asdg#quick-start--give-your-agent-the-repository-url) delegates acquisition and initialization to an agent; manual extraction and a pinned clone remain alternatives.
+ 
+ ![The provider selects portable files, validates hashes and builds a ZIP; the client extracts it and initializes local integrations and state.](images/distribution-flow.svg)
+ 
+@@ -29,15 +29,15 @@
+ Version `0.3.0-pilot.4` adds role-based write ownership to Status-owned onboarding, Help, Update and stable team ordering; preserve existing pilot.1, pilot.2 and pilot.3 assets. Publication requires explicit human authorization.
+ Review `metadata/package-files.json`, the explicit portable file list, when adding a capability.
+ Repository-only presentation tools, legacy provider code, application evidence and builds are excluded.
+-Before every commit/push, after changes and documentation receipts are ready, run from the provider root:
++Before every commit/push, after changes and documentation receipts are ready, run from the standalone source root:
+ 
+ ```sh
+-python3 scripts/prepare_commit.py
+-python3 asdg/scripts/check.py --integrity
+-python3 -B -m unittest discover -s asdg/tests -v
++python3 -B scripts/build_distribution.py --refresh-manifest
++python3 -B scripts/check.py --integrity
++python3 -B -m unittest discover -s tests -v
+ ```
+ 
+-The provider-only wrapper refreshes the manifest through the existing builder and writes a ZIP and SHA-256 sidecar under ignored `build/distributions/`.
++The builder refreshes the candidate manifest and writes a ZIP and SHA-256 sidecar under ignored `build/distributions/`. There is no enclosing provider wrapper in this source repository.
+ Review/include the refreshed manifest in your commit; re-run after further package edits. No hook is installed; commit, push and publication remain human actions.
+ The ZIP contains working-tree bytes. Regeneration replaces the local same-version artifact; it does not increment the version, and unchanged inputs produce identical bytes.
+ Stable file order, timestamps and permissions make repeated local builds byte-identical.
+@@ -50,7 +50,7 @@
+ This candidate supports fresh embedded installations, repeat setup and [reviewed local promote/upgrade](synchronization.md).
+ Existing linked providers still require explicit migration. Version upgrades use an adoption record; init does not silently change versions.
+ Synchronization preserves `.asdg/`, client documents, installed adapters and hooks; changed templates need separately reviewed integration work.
+-The provider's `bin/asdg` delegates to the embedded runtime; machine-wide installation is retired from that entry point.
+-Historical installer, namespace migration and baseline code remain in the provider for separate reconciliation.
++Contributors invoke `python3 scripts/cli.py`; consumers invoke their installed `python3 asdg/scripts/cli.py`. Source maintenance uses the checks above, not client initialization.
++Historical installer, namespace migration and baseline code are retained for separate reconciliation; they are not a second active source or installer.
+ The preserved presentation/component tools are outside this core package and its acceptance claim.
+ Publishing an artifact and granting exact-state human acceptance are separate decisions.
+--- a/docs/install-clone-prompt.md
++++ b/docs/install-clone-prompt.md
+@@ -5,11 +5,11 @@
+ 
+ ```text
+ Initialize ASDG in TARGET_PROJECT using my existing local canonical clone at CANONICAL_CLONE and exactly FULL_COMMIT_SHA.
+-Use that clone's asdg/skills/asdg-init/SKILL.md and the target's existing instructions.
+-Use Python 3.9+ and the clone's asdg/scripts/init.py; do not create a second installer.
++Use that clone's skills/asdg-init/SKILL.md and the target's existing instructions.
++Use Python 3.9+ and the clone's scripts/init.py; do not create a second installer.
+ Select --client claude in Claude Code or --client codex in Codex; ask if uncertain.
+ Inspect target Git root/status and record application-file hashes.
+-Run python3 "CANONICAL_CLONE/asdg/scripts/init.py" --source "CANONICAL_CLONE" --commit FULL_COMMIT_SHA --target "TARGET_PROJECT" --client CLIENT --dry-run.
++Run python3 "CANONICAL_CLONE/scripts/init.py" --source "CANONICAL_CLONE" --commit FULL_COMMIT_SHA --target "TARGET_PROJECT" --client CLIENT --dry-run.
+ Require verified canonical origin, exact HEAD, committed selected bytes and matching package integrity. Stop on mismatch; do not change the commit or refresh a manifest.
+ Show the complete file plan and generated diffs, including hooks. Copy only the selected portable distribution; never copy source .git, provider extras or project state.
+ Use the canonical asdg-init skill’s mandatory approval presentation, including a real complete-plan/diff reference and actual preview values.
+--- a/docs/installation.md
++++ b/docs/installation.md
+@@ -1,6 +1,6 @@
+ # Install ASDG in an existing Git project
+ 
+-The recommended [repository-URL Quick Start](https://github.com/Elustondo-ai/agentic-sdlc-governance#quick-start--give-your-agent-the-repository-url) lets the agent acquire the ZIP safely. Manual ZIP + Prompt and Clone + Prompt remain alternatives using one Python 3.9+ engine on macOS/Linux. The prompts select inputs, show the plan and wait for approval; they never implement a second installer.
++The recommended [repository-URL Quick Start](https://github.com/Elustondo-ai/asdg#quick-start--give-your-agent-the-repository-url) lets the agent acquire the ZIP safely. Manual ZIP + Prompt and Clone + Prompt remain alternatives using one Python 3.9+ engine on macOS/Linux. The prompts select inputs, show the plan and wait for approval; they never implement a second installer.
+ 
+ ![Both acquisitions use one integrity, approval and verification engine; Status owns the separately invoked next-step assessment.](images/installation-engine.svg)
+ 
+@@ -14,7 +14,7 @@
+ # ZIP: from the target Git project
+ python3 asdg/scripts/init.py --client codex --dry-run
+ # Clone: substitute explicit paths and the reviewed full commit
+-python3 /path/to/canonical/asdg/scripts/init.py --source /path/to/canonical --commit FULL_COMMIT --target /path/to/project --client claude --dry-run
++python3 /path/to/canonical/scripts/init.py --source /path/to/canonical --commit FULL_COMMIT --target /path/to/project --client claude --dry-run
+ ```
+ 
+ Choose `codex` or `claude`; `both` requires an explicit choice. Supply an initial `--project-status defining` only when that declaration is intended; otherwise first setup records `new`.
+--- a/docs/review-loop.md
++++ b/docs/review-loop.md
+@@ -1,6 +1,6 @@
+ # Iterate with local Codex and a reviewer
+ 
+-The canonical `agentic-sdlc-governance` repository owns reusable methodology and distribution builds.
++The canonical `Elustondo-ai/asdg` repository owns reusable methodology and distribution builds.
+ Each client keeps its embedded version; propose reusable pilot improvements upstream with source commits and validation.
+ An iteration changes this baseline only through a visible, bounded diff and suitable validation.
+ 
+--- a/docs/synchronization.md
++++ b/docs/synchronization.md
+@@ -10,7 +10,7 @@
+ ## Preview, review, apply
+ 
+ Use Python 3.9+ and Git. Run the current project-local entry point; no global command or model is required.
+-Supply absolute Git roots, each with an identifiable HTTP(S)/SSH `origin`, a HEAD commit and an embedded versioned distribution.
++Supply absolute Git roots, each with an identifiable HTTP(S)/SSH `origin`, a HEAD commit and a versioned distribution (canonical source at repository root; consumers under `asdg/`).
+ The canonical descriptor's `canonical_repository` must match its origin. The pilot must have a valid `.asdg/project.json` binding.
+ 
+ ```sh
+@@ -26,12 +26,12 @@
+ 
+ ## Distribution and preservation
+ 
+-Only files selected by `asdg/metadata/package-files.json` participate; older pilots without it use Git-tracked methodology paths under `asdg/`.
++Only files selected by canonical `metadata/package-files.json` (consumer `asdg/metadata/package-files.json`) participate; older pilots without it use Git-tracked methodology paths under `asdg/`.
+ The first comparison prefers an exact shared current delivery, otherwise one unambiguous shared archive; absent/ambiguous ancestry makes differing existing files conflict.
+ Source-only changes apply when the target still matches the baseline. Target-only changes are retained; changes on both sides conflict unless bytes agree.
+ Tracked deletions follow the same rule. An untracked target file is never deleted, and a differing untracked addition collision blocks copying.
+ Application code, `docs/asdg/`, `.asdg/`, installed adapters, hooks and root configuration are outside the write scope.
+-The source is never modified. Apply writes a local `asdg/metadata/sync-state.json` adoption record, excluded from synchronization and ZIPs.
++The source is never modified. Apply writes a local `metadata/sync-state.json` adoption record in the canonical root, or `asdg/metadata/sync-state.json` in a consumer, excluded from synchronization and ZIPs.
+ Keep that record with the adopting project: it stores repository identities, source commit, exact incoming hashes and version for subsequent comparisons.
+ The incoming baseline remains separate from retained local edits. Repeating an unchanged applied operation writes nothing.
+ 
+--- a/metadata/MANIFEST.json
++++ b/metadata/MANIFEST.json
+@@ -147,23 +147,23 @@
+     "12-observability-insights-and-learning/src/README.md": "0092563f7f157041af74361b12b2eb1f38d5d885372a15a243e7359bb8c58265",
+     "12-observability-insights-and-learning/tests/acceptance.md": "d5a21216a6d540ebb8ebe42d6cdeee8e6b86f9c606bb07f5b39952fa9812a8bc",
+     "12-observability-insights-and-learning/types/contract.md": "860f4d4ca62ac705aaca954b91ae35072bce17d30fc4d0ef7c9313649a787e15",
+-    "AGENTS.md": "cb87e2b1f1a577074fd4ca3ef4928fdc83328f37d83902c28a8595f325c5063d",
++    "AGENTS.md": "c3e68d981f4979549774f74d2500d54b3294392d307ce53d55d0440f2d1d1fa2",
+     "CODEX-PROMPT.md": "9a657d04518580ec3ea13e5b9c61b81b57fb75ce84eac7e88f6f6a5205a5af60",
+     "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+-    "README.md": "c958dd70a38ecb5477ee64327565983065e13810055a3aad3100640da74befe7",
++    "README.md": "fdc2df16406c79184f2b30e243d025fae602895a5c760260cdf5e9db52967093",
+     "admin/AGENTS.md": "39f6d79e1296f467e028a8a347ccbe2f03be04eb488a4ea5f0cffb5ad101bcf1",
+     "admin/skills/maintain-rules/SKILL.md": "f350795689f0f2c121a90e7c3ab3e7d70d6f160a49e31c8dda0a3abf35f32952",
+     "admin/types/admin-role.json": "c99abc74a42e5b63450e9d42fb7e0884c6cbd452862c7328e0b1dc350174a2cd",
+     "admin/types/contract.md": "c8e22e5f6782f0bd4df545433e8f060d9f6f67d22f38629e95d75c36d559f590",
+     "docs/client-integrations.md": "18f016cf295a1aef3752553ef1272ba46c07b0c0787a1f40fafc6c2489750397",
+-    "docs/distribution-build.md": "4290810761062e1d85dfa5a8fd564716dede73a0580903741121271b56510602",
++    "docs/distribution-build.md": "cab3701f3c3f646bd5999f8d51d0b184162e58a4ca41fbcb55a2aed3c8518689",
+     "docs/images/client-integrations.svg": "d68c8ac4cf7c7d4b961f6a26ea923d0835276de91dea3916c463433a523bfaa9",
+     "docs/images/distribution-flow.svg": "68c3359729a6f260cf74eacd2d83902c0fcb699ad71e1d19fbdf0826a60df7c5",
+     "docs/images/installation-engine.svg": "77898afc32a14f901dcc9be75106f9a42a27552356c67779f897e8e2ae3a7c91",
+     "docs/images/synchronization.svg": "31fd45ca588b807221e4a13a1f033f2af75d94f5f7cd69197470d3838e4bbe12",
+-    "docs/install-clone-prompt.md": "a7589761b12a7fbf8ed61939a31d77f5814dabb7dc799170ff280404a9830d10",
++    "docs/install-clone-prompt.md": "a83a01a7ffae9fefc1ae67c03e9df1428c371e98e5ba392335be809addcc9ef8",
+     "docs/install-zip-prompt.md": "6c4b50a98f5b62209558923d9c478d381b7f923ca112fbb488c16ff4428ee882",
+-    "docs/installation.md": "39d12bbff6ebbe74c412b2fe3a84ade67a81a5b36dbd9985d4d114657bc7e5d7",
++    "docs/installation.md": "561c1ab5c859cdf6cf09e1d5197d057b54644e22cf76b10bd518fc559c8907d7",
+     "docs/lifecycle-baseline.md": "c17dd80f5f74486749b8f24df4d1b9f8e0cc48d6184ae3e36a453d52b300de3a",
+     "docs/native-integration.md": "825c4b724fbda1e1537718bdbd8e25ded48eb8c376ff94886cb551c383b238bb",
+     "docs/proposals/roles-concerns-and-focus/01-comparison.md": "07a07a2b1ac2fedaf301792c663089e08ee43c1374055693347eff311c39c37b",
+@@ -190,9 +190,9 @@
+     "docs/proposals/roles-concerns-and-focus/images/routing.svg": "fa10f2164968a9242ab97d8c4eae070a106bebaed343af8251f9ceffa03a3cb0",
+     "docs/proposals/roles-concerns-and-focus/images/session.svg": "68226d727924d27f7010e64f372a51de63da3f61214c479537a62f68a327a91e",
+     "docs/provenance.md": "3018219816273ac0aabdef64605c431e1c2aa9d1d1827967e848b4e342a4c1ae",
+-    "docs/review-loop.md": "d9d640ae6aee28964e9fb882a134c1ba2a800f18274f94c1ffb13539c92dd532",
++    "docs/review-loop.md": "974697aac988cb366123e6a948d9d4b38c44c008c336c15a015b4c36cacf28f6",
+     "docs/root-layout.md": "193fa708c526837876e846d9e26fee32b15690782875c78c7e434c9803352784",
+-    "docs/synchronization.md": "c2089a62ca5c2eee8a002a60ad9e86028175375b0d12a26340a6d779873ffd24",
++    "docs/synchronization.md": "9260e5179003c20972fb4efd87e9f9ce1d789f88b07265155fa9db5ac8791f6f",
+     "docs/usage.md": "334e973fe1a191b9b2abe2e2488e06475953b5071856c4393fd835288d01191e",
+     "docs/verification.md": "b709839cc52bdad46b8b9ea740056672c0fd4def009368fcbcf41f40e13d9467",
+     "metadata/README.md": "28bf15f6392e58016125cbeec6e6a4eef383e3a2e26697cf691e9e7d54f9d477",
+@@ -200,7 +200,7 @@
+     "metadata/deliveries/0.2.0-pilot.2.json": "bd56b26516224e2c550c739715cb12ae5e1fb8266aa9fe6a37164dc59dec8692",
+     "metadata/deliveries/0.3.0-pilot.2.json": "d988ed18b99ed5a03613fa9b7b01e1eafdd0fa7def300e46aab192370a183405",
+     "metadata/deliveries/0.3.0-pilot.3.json": "c92ab89ae3a9c884fbfb7be32a8cc8b2a67ea1d4c98bc5bfbe2cb9cb49914e32",
+-    "metadata/distribution.json": "39ff5a3dc23c233e56701b659233b06acfa9d7bd24b34fbce2382efb5c5e2fb3",
++    "metadata/distribution.json": "ff4f6d17003ba7102b00c09dbccbb716ecca7ae629e36fa051d02e2a82897b42",
+     "metadata/package-files.json": "e38bb870608cc7c60a78e4a8c3bf8a273c21ef01ed9fc1516bc344247169e8c2",
+     "metadata/refactors/root-layout-2026-10-20.json": "f92038fb7e59af7b2fa650dcb99ea3beabfaa633461e743f26ee7330c428b0ad",
+     "metadata/source-manifest.json": "99c3236fbf93fed547f956e839542bece20876a5b0684530bfa2c35de19465d3",
+@@ -218,10 +218,10 @@
+     "scaffolds/stages/11-operational-reality-devops-and-user-acceptance.md": "ff5b69f302e13f60df324a8d09bee5506bd9796db98cc38a1e032d2cd996e053",
+     "scaffolds/stages/12-observability-insights-and-learning.md": "edd0d027488d6f8c6974d67dd9389769500be53f2a79e98c5b33f0515db5b79c",
+     "scripts/README.md": "7ad3a5a1b51c245c9edce944913beab0fe0d5b3de3a0cb81e44102ddba6ac3d8",
+-    "scripts/build_distribution.md": "8964e393aae447c2fe7fc2be1e39ddaecff94ed906cb9a381d5b088b1f38944d",
+-    "scripts/build_distribution.py": "c43b738a98dfade3a85d9b22eadb54a4fec61dc281a9e5251914250cb1102673",
+-    "scripts/check.md": "d02625e733e37c9ac43e959cf445d69af6a89c67de1e7717788eba3c7adf85bc",
+-    "scripts/check.py": "9a499ea7428ab09d0cb818a112d49f648f3e1dd99fae1f0c501edf04103787ed",
++    "scripts/build_distribution.md": "5a3bf22b227360dfac770772553caef70ea998c5b947babd2dd28bfc317f6ecb",
++    "scripts/build_distribution.py": "ca15eb2556416403d0b33295b0cbda46e1861eab6d51d9316cda7b88529d8e05",
++    "scripts/check.md": "36b199c33032e9269efc2ae7c4b5ca6b0c9590e407bbb856469c3f5ec46c5ca1",
++    "scripts/check.py": "979882534b1aabe872a5a2f0d451036e1eb2f75683ae445680dfc2ff862d67f7",
+     "scripts/cli.md": "e0e3c854ba5d61381117aa09867e8d661fc4ec626332909e38193954e72632c7",
+     "scripts/cli.py": "d7d9f96ad758e00292a749994df6d90e33a750639a2f402012010cb8b1c8bba3",
+     "scripts/hook.md": "eb051bbeaea71ccbc28f31a4d9ff340d3f17be4d3222f4a437aaf4efb8753114",
+@@ -257,28 +257,28 @@
+     "scripts/lib/cli_hook.py": "a17dea125361242e197d3ac97f6da21d6b52ec6584ce954bfbf3408f7c2a8159",
+     "scripts/lib/cli_install.md": "e8533f92bee7c7c56dc83146f31823bdb4063e4caedc6f33d91c255f488c1551",
+     "scripts/lib/cli_install.py": "1bb668a0dbe4672aae347da456c091d32397ffd8f316f938d06073564d4b64c4",
+-    "scripts/lib/cli_install_source.md": "4e77532c3320e66f3d271731979158dbf7126343298c4361aa90c07662cb903e",
+-    "scripts/lib/cli_install_source.py": "11d7288e21c4b7db79504143477123d973d08fc576e7e3db3f72dd1ddf30e975",
+-    "scripts/lib/cli_model.md": "829e8e8f479678d98b2283a3ba066db59fb575601a43e72983d63eba682738f3",
+-    "scripts/lib/cli_model.py": "2c591337c7d23df168910943cafb3ada53f1fddf8ded74e3ec5970940f5f9c65",
++    "scripts/lib/cli_install_source.md": "c16350866d4b99a16cacf19533bf510d2b06dfa6b2b21ba84b08340ea75231ea",
++    "scripts/lib/cli_install_source.py": "196370a6752d8e0108e5006f9848ec0f4536b9d09400275bed6a4ee3ca8717fd",
++    "scripts/lib/cli_model.md": "ef92b1d948aa1206e55498875d8a5b895eb79b9399ea9b539d8471d60156cba3",
++    "scripts/lib/cli_model.py": "585c349449390944d673f3607c403f9329a1720e617b7632a7a95a983d54d1e2",
+     "scripts/lib/cli_ownership.md": "99a60f5550bd26512b9a66c3d0ae5935d8fe8326d121213778665332c5f25fde",
+     "scripts/lib/cli_ownership.py": "feb76b48eb48baa8aeaa43389fa408f8e78775dd5e018294b4baf0aaed72dc8c",
+     "scripts/lib/cli_policy.md": "ea3afd5bb34e9c56d46fe6c2c7568c6a754e22d8a1d463f65073ec8a8f75dcd6",
+     "scripts/lib/cli_policy.py": "4a30a96e4af62bbc68aa0f7ff7e8617fbd0646d8f68cdd0d7c49133967d2ea75",
+-    "scripts/lib/cli_project.md": "c5755e918f903b71206f6e07e0008ee81a65a7a11684072fad86ca16cd3cea87",
+-    "scripts/lib/cli_project.py": "8b27fa1e6dd46e53472744194d325c059db915dc7fd1db8b6d6cbd88a0944ae3",
++    "scripts/lib/cli_project.md": "617183658d8d9350c9ec1b549c3a67f48bcc9e8ea2e78beee1754de0d0482039",
++    "scripts/lib/cli_project.py": "3a8eb19a835b010aef40f63e70781592f4c996a1cf7391ba1c0527a90e01bf35",
+     "scripts/lib/cli_runtime_env.md": "5308394619a7fd7d6783dc896654e4672fac4dc171ca7dfdd932daba6043bbfa",
+     "scripts/lib/cli_runtime_env.py": "7ee57ddd04d89dd721da857fa5c4d0f8b1989a6b82ca6b5fed4de4106c983d06",
+     "scripts/lib/cli_session.md": "0e5321ce3724ae7e69612cd1b5a1492644ea21e976aeea52977c78c411061522",
+     "scripts/lib/cli_session.py": "d9520e2daf4dfdf6561a57ff90ed2b7c1cc188aff512853c2ec577dbbe2e304c",
+     "scripts/lib/cli_sprint.md": "0ab58e3555cfa44a10fed804781c97441eda344f8880b3379ff3e330b3c6ff68",
+     "scripts/lib/cli_sprint.py": "67977fecf20e26f79c02828466db00ae37dd6ed2581eba4417314f9528f737c9",
+-    "scripts/lib/cli_status.md": "264f6491237cc71d245c69ebd067ed0d2d540ea8b42ba8fc17e7d50bff17fab5",
+-    "scripts/lib/cli_status.py": "7ffe1e2d27c2d83e939d6f3c05aab2b27184ef17b99aa120611960b076c3d858",
+-    "scripts/lib/cli_sync.md": "ae6b466c5277398fb582c4c4696c07820947eda4925e9e14f8d8c52809d95f2f",
+-    "scripts/lib/cli_sync.py": "718e55c32ca41548d024f9b6732f0ca526f78f6ec746b12654ae20d5d60f4c5e",
+-    "scripts/lib/cli_sync_manifest.md": "4498c9922a3e00690a274560e340097d92f6828923c2c95507daaef19343d282",
+-    "scripts/lib/cli_sync_manifest.py": "8fc78b78a67420dbe99bed74b2091e4b3b7deea631f78c542a100d18cfe7eb11",
++    "scripts/lib/cli_status.md": "dd2ef03fdb723fffa8abe984541b06f7ddb63c2bb58d09926fa07f78008977d4",
++    "scripts/lib/cli_status.py": "459d08ab16ddea0f29c3fe87c69a3cedca74bd45d4bd6456612e8c380228179c",
++    "scripts/lib/cli_sync.md": "5a00983ffc79dadf9b56c856c7dd1b3f67d570fe143f5f19463d6944103b4629",
++    "scripts/lib/cli_sync.py": "a677df53ceaf52c784fe5e67c43287081b6c0b94413ce27060a6d7dfb2c3d55a",
++    "scripts/lib/cli_sync_manifest.md": "efe3526d0d2fbe37853db3368bd3d67a4188f20b7574861ec83f1315bce83d2c",
++    "scripts/lib/cli_sync_manifest.py": "c67e890622bef90e2c9d276377376d953260b30d9b3a2fba2bf47ef05a667811",
+     "scripts/lib/distribution_files.md": "9cb48f3dd5a2f57a4ffa29eb5c5b982e901c69fa4dd85587233ad572ca01efbc",
+     "scripts/lib/distribution_files.py": "87210721a1fb587759c20ea286a76de7de3ad84eeb5ce9f32d48f1760621dd1b",
+     "scripts/lib/documentation.md": "91e64fd9351dcbdc068e32d2c99916c979a6a738228744c918b3d45eabf76c2a",
+@@ -341,7 +341,7 @@
+     "skills/asdg-focus/subject-focus.md": "5fc299b215f629cfcdefe672912516934f2f85df71af362793058ccf36d890bc",
+     "skills/asdg-help/SKILL.md": "ef65fe211b570189d4cb4869fcee93da031000ad1907021e6e0b93670c3db2aa",
+     "skills/asdg-help/command-reference.md": "ee2055185b3615773370ecc0dfb81ea2863788bb29733dbce5b5ffda472937df",
+-    "skills/asdg-init/SKILL.md": "6ca7cef78c4a1b086bd753fe54962297625203c122ed0d22433c57abda3be056",
++    "skills/asdg-init/SKILL.md": "01cc09c79ffd3eb6f8ba95a5d7482f91b16407ff88c2dbffea9a40790e748668",
+     "skills/asdg-init/agents/openai.yaml": "2ec5c036182b3796fe873e42ac39023b1bccca52f4495811aa13d42437d71f2d",
+     "skills/asdg-openspec-propose/SKILL.md": "e2ecfab133873978d670b2791995b2d2540aaa056525504ff3ff0303214dc9b4",
+     "skills/asdg-openspec-propose/TRY-IT.md": "47d6757885fb6d1609cd9133302a028783493b5a9b87230acb9718f34e8bbfab",
+@@ -351,8 +351,8 @@
+     "skills/asdg-report-project-status/TRY-IT.md": "50d0b91328ed7d18f78084b1b985a949b1d2e7d0e519c309f0ea997861602c52",
+     "skills/asdg-report-project-status/packets.md": "62d1829fb6d7eaa145757704827e3b95a65da1b4ecd5e309db4cf9fdb87a8899",
+     "skills/asdg-report-project-status/report-flow.svg": "8aefc99efd658237b89ada67edb605268e65829db01b51cdad0e372727f51cd9",
+-    "skills/asdg-report-project-status/report_packets.md": "cb7c69167406bcf116a6d0c77d269a06347b6c8ed8e0dd6c85921d5ee92aeacb",
+-    "skills/asdg-report-project-status/report_packets.py": "8269469dfc4da917624a53824f65df332e55d3200f16a79b9502d697b1ac969a",
++    "skills/asdg-report-project-status/report_packets.md": "16248ef9b451a650714171fa011c9021a14b597a19989e9e833d83903b4f448f",
++    "skills/asdg-report-project-status/report_packets.py": "db86631945e1fb9cfdb4340ea3e8c38324a057754d6885ac38fb4d67c9c1992c",
+     "skills/asdg-role/SKILL.md": "cf331061cde660ce7278f231c2c7ea082aada71adf18e4e413a6e27c10f3c744",
+     "skills/asdg-sprint-close/SKILL.md": "2a672d46c27692966eaa6390002f32e1cb423fbbbf7507619de79f4ee7ef2246",
+     "skills/asdg-sprint-close/recording.md": "4f876754001162497962ce34b05ee51a6d9b70b75f5d537b2966ac9367a97721",
+@@ -362,7 +362,7 @@
+     "skills/asdg-status/SKILL.md": "89687b96df20884b3ed774a6e2fe790c1328d1bd45a39ee0753b93323416d2bb",
+     "skills/asdg-status/status-format.md": "919364ce1d320a64684a3be69847666188138bd453a5c79b0733ba7c356efb9e",
+     "skills/asdg-suggestion/SKILL.md": "175e26873427bd6410bc4ffcc1c4bb5d2135472ace9bf786e511e420012de326",
+-    "skills/asdg-update/SKILL.md": "890062cb946626c9ce2a84871001c94d07c1f1cc61bacc5dddd251714d45b06b",
++    "skills/asdg-update/SKILL.md": "0e9b2cd5582bad11060a4d111db77e4d10e470b056ba8c094db6c4f6c47ce267",
+     "skills/asdg-view-dev/SKILL.md": "a8b1fda4f1ab995e57d9db36560bdb90ed52c0d068d91fac46bb3929cae8732a",
+     "templates/.agents/skills/asdg-admin/SKILL.md": "a5b0ec3ec5dd8df300f05ffc66728193c9bd0852621a55dd67b9bb6ded41bf35",
+     "templates/.agents/skills/asdg-admin/agents/openai.yaml": "5e5b851fe3057a8e7352b9b1b6b7f7b78bf0237adf24e63b31599e6a08f412cd",
+@@ -417,34 +417,34 @@
+     "templates/.codex/agents/asdg_coordinator.toml": "9b014bf4de0936b47131c0bb7597cbac185d20041d550d45a4c3920979204683",
+     "tests/README.md": "21253c771c9ac0edfc4018d7e0a1f9ad4a1319fa9577b81d9f3ab3f93eeffef9",
+     "tests/acceptance.md": "1765a23b85e3b6380c67a22a157b1904b919d919f1d587db64bb1f7197374e45",
+-    "tests/continuation_fixture.md": "be6295e28ebd578ac49ed5a897c19c950646bef2971ae1f31aae989d2c383bdf",
+-    "tests/continuation_fixture.py": "13be7a285ca79e3b0bbc6bb0b262026de6444517763397f608ed29e5d91f1356",
++    "tests/continuation_fixture.md": "99e866f04bb13b863e7bc5d1aaf5996b489baff5eeba4cb79cd6e6571b5f0ab4",
++    "tests/continuation_fixture.py": "1500934546705e17c0687d370a0457d1a5f15bda5311f97a38ebba64e191013a",
+     "tests/images/continuation_fixture-flow.svg": "94efe8535733ec8275ff9c2b2622a67300af5e300929cff636dad9f63fd73871",
+     "tests/images/test_agent_config-flow.svg": "bd8b147b3609504005b930adc4261c1423074a2f959f781211dfec0523752f27",
+     "tests/images/test_portable-flow.svg": "1e0331b284665d27f9dd5904c4c51185175b46098f01ef012de4025b34e86b7f",
+     "tests/images/test_purpose_review-flow.svg": "31ab40f621c6f7d065881a42e78e98e91d04235603f107152e238c04836269c3",
+     "tests/images/test_stage_review-flow.svg": "8b7f82f31927c134bed9f9d49751c924a7a49ec81b26065f2f011f158ab4f4c0",
+     "tests/test_agent_config-cases.md": "4dab5139e4c579892302aaebfe09164d0b5aea775bcefd6843cc4790601efd99",
+-    "tests/test_agent_config.md": "eeebdf318c458b4dcac6307c536710ca4290fa85f652c7e8cb7b36f4aff957f7",
+-    "tests/test_agent_config.py": "8ba791492b856e9f126cfdecc56c8ae25efa302942d3e04d39b7e8d3aec7feaa",
++    "tests/test_agent_config.md": "374bf79a163ccd4a1e16a930801a0ca8b7410154e26aee99d408df5619d94a61",
++    "tests/test_agent_config.py": "bed357105b29d2f72fd3bf037a088ee3a17a773b143fb74876365a2e8718925d",
+     "tests/test_distribution.md": "6345646f08aedcbefa714d9b4a96b052099e139b8226b461418a187a44d7082f",
+     "tests/test_distribution.py": "d9200fca936c4de344301653fb0ca0362dcfb7d18d951d427eed37e53bd54c82",
+-    "tests/test_install.md": "1c62551ff0ea52d4a31cbe2281d2623a6d9c0bda3914f9157016ebb401395335",
+-    "tests/test_install.py": "4dd3404ab49f5315a213f7c00ab6487f3074bda11a49bc41d2ee02cb70eb2857",
++    "tests/test_install.md": "c2873672140b0cc0eeecd661d111dd4d411e79370c40bd76cc7d1cff956278aa",
++    "tests/test_install.py": "3f0eb91f14cb242ffccb1dd1b797877e11c4690fca28836863eac45edd03f167",
+     "tests/test_ownership.md": "37b4815e32fb6d98f48faaf7ad696c2762cd3bf77785fb3ca1151d12b5f9a2fe",
+     "tests/test_ownership.py": "f5f39656651a6ab3498850c4dcab732c2fb52c66668dfe540d6f429def1d4fb5",
+     "tests/test_portable-cases-clients.md": "7722ebd8e1283f4b87a6342d7147d676901534300626790dda45cd9ca7445dea",
+     "tests/test_portable-cases-roles.md": "bf46f453ecb71a2647ed4598398296edb3e883db738bf2478efce9c6563a6715",
+     "tests/test_portable-cases.md": "d285d742ff224e82596d06aaab7b8e372d970085b9e932928e8776329f5b60e3",
+     "tests/test_portable.md": "e3cf6644ad9daf2f858e36a4ba7c061ee48d427595f39be380b28ed725c664d8",
+-    "tests/test_portable.py": "7a86375d326b702a0457a206e9c1d72eaa01c46a02c1e103b942b8da32f06a1f",
++    "tests/test_portable.py": "9b48892890bc8f7d44c0209d5e80dd8fd1e5938405a20b2964969d93818321b7",
+     "tests/test_purpose_review-cases.md": "7700591981e35de266145c7469e1786395ec8f8407d9788efbc82704344ebfb5",
+     "tests/test_purpose_review.md": "4591d9cb5b2a59e75039101fb52fe70c5c9b894daeb1792ca1774f2402b0b886",
+     "tests/test_purpose_review.py": "113fe3606a98fe134327af97ca31de7a48f3dbd779b29bbb731058c8d6f999d0",
+     "tests/test_stage_review-cases.md": "4090a9c513ac4462d60b54a73ff40d6170105e317220a9349414cb18f443677e",
+     "tests/test_stage_review.md": "a15a04f36f6a355a5a713eb3b8b775e61dd0b9c04d5ac19b8afdff3a0dcf46c6",
+     "tests/test_stage_review.py": "efe77efc07dcb9a4f5ddbb4134d03f6cccc04f4615fd3598f42864dd83eee661",
+-    "tests/test_sync.md": "6f0653897457d982fea3fb68bbf3ba608d0be0fb144786a694772f008e78c4a6",
+-    "tests/test_sync.py": "6debb469ca7f50d3dcc4f547867ad6f47fa716f0086dfa0b3ed51c90fff3eb5a"
++    "tests/test_sync.md": "7865e0409acd0bb5b4d9afe3dd0923d3cdaf52229d8654f72e22d62c0a435e7b",
++    "tests/test_sync.py": "ad0e4972e895fa5b72545cb6469a4ce7aeb6dc0ec08e3834cab90eeb912cef52"
+   }
+ }
+--- a/metadata/distribution.json
++++ b/metadata/distribution.json
+@@ -14,7 +14,7 @@
+   "native_runtime_enforcement": "NOT_VERIFIED",
+   "layout": "organized-v1",
+   "previous_version": "0.3.0-pilot.3",
+-  "canonical_repository": "https://github.com/Elustondo-ai/agentic-sdlc-governance",
++  "canonical_repository": "https://github.com/Elustondo-ai/asdg",
+   "distribution_status": "candidate-for-review",
+   "sources": [
+     {
+--- a/scripts/build_distribution.md
++++ b/scripts/build_distribution.md
+@@ -16,3 +16,5 @@
+ Archive entries begin with `asdg/`, use stable timestamps and regular-file permissions, and preserve source bytes.
+ Building may replace the same version's local artifact; it never publishes it or modifies client state.
+ Run the [distribution tests](../tests/test_distribution.md) to check exclusion, reproducibility and extraction behavior.
++
++In a standalone Git source checkout the default output is local `build/distributions/`; the ZIP still has exactly one top-level `asdg/`.
+--- a/scripts/build_distribution.py
++++ b/scripts/build_distribution.py
+@@ -62,7 +62,7 @@
+ 
+ def main() -> int:
+     parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument('--output', type=Path, default=CORE.parent / 'build/distributions')
++    parser.add_argument('--output', type=Path, default=(CORE if (CORE / '.git').exists() else CORE.parent) / 'build/distributions')
+     parser.add_argument('--refresh-manifest', action='store_true',
+                         help='record reviewed candidate bytes before building; grants no approval')
+     args = parser.parse_args()
+--- a/scripts/check.md
++++ b/scripts/check.md
+@@ -32,3 +32,5 @@
+ ## Example
+ 
+ `python3 asdg/scripts/check.py` checks structure and links; add `--integrity` before building or checking an extracted distribution.
++
++Source validation projects files into a logical installed `asdg/` layout, independent of the source checkout’s directory name; consumer catalogue paths remain unchanged.
+--- a/scripts/check.py
++++ b/scripts/check.py
+@@ -24,13 +24,13 @@
+     root = core.parent
+     try:
+         selected = package_files(core)
+-        agents, _ = catalogue(root)
+-        lifecycle_rules(root)
++        agents, _ = catalogue(core)
++        lifecycle_rules(core)
+     except (OSError, ValueError, KeyError, TypeError) as exc:
+         return ['Invalid catalogue/rules: ' + str(exc)]
+     for row in agents:
+         for field in ('entry', 'skill'):
+-            if not (root / row[field]).is_file():
++            if not (core / row[field].removeprefix('asdg/')).is_file():
+                 issues.append('Missing role source: ' + row[field])
+         adapter = core / 'templates' / row['adapter']
+         try:
+@@ -44,7 +44,8 @@
+                 issues.append('Obsolete standalone agent sandbox setting: ' + str(adapter))
+         except (OSError, ValueError) as exc:
+             issues.append('Invalid adapter: ' + str(exc))
+-    selected_set = set(selected)
++    logical_core = root / 'asdg'
++    selected_set = {logical_core / p.relative_to(core) for p in selected}
+     for path in selected:
+         if path.suffix == '.py':
+             try:
+@@ -59,7 +60,7 @@
+         if path.name == 'SKILL.md':
+             if not re.match(r'\A---\nname: [a-z0-9-]+\ndescription: .+\n---\n', text):
+                 issues.append('Invalid skill front matter: ' + str(path.relative_to(core)))
+-        virtual = root / path.relative_to(core / 'templates') if path.is_relative_to(core / 'templates') else path
++        virtual = root / path.relative_to(core / 'templates') if path.is_relative_to(core / 'templates') else logical_core / path.relative_to(core)
+         for link in re.findall(r'\]\(([^)]+)\)', text):
+             link = link.split('#')[0]
+             if not link or '://' in link or link.startswith('mailto:'):
+@@ -68,9 +69,9 @@
+             if not target.is_relative_to(root):
+                 issues.append('Link escapes client: ' + str(path.relative_to(core)) + ': ' + link)
+                 continue
+-            template_target = core / 'templates' / target.relative_to(root)
++            template_target = logical_core / 'templates' / target.relative_to(root)
+             candidates = (target, template_target)
+-            if not any(candidate in selected_set or any(candidate in p.parents for p in selected)
++            if not any(candidate in selected_set or any(candidate in p.parents for p in selected_set)
+                        for candidate in candidates):
+                 issues.append('Link missing from package: ' + str(path.relative_to(core)) + ': ' + link)
+     if integrity:
+--- a/scripts/lib/cli_install_source.md
++++ b/scripts/lib/cli_install_source.md
+@@ -15,3 +15,5 @@
+ Source Git operations are read-only. Integrity does not establish release approval or external authenticity; the developer selects and reviews the source and commit.
+ ZIP acquisition uses an already extracted single `asdg/` folder; the engine neither downloads nor extracts archives.
+ Conflicts and Git/filesystem failures stop installation. No application, provider project state or Git metadata is copied.
++
++Pinned standalone clones verify selected root paths against Git blobs; embedded/extracted inputs retain their `asdg/` prefix. Both routes normalize the same selected bytes.
+--- a/scripts/lib/cli_install_source.py
++++ b/scripts/lib/cli_install_source.py
+@@ -8,7 +8,7 @@
+ from pathlib import Path
+ 
+ from cli_files import Conflict, read_bytes, safe_path
+-from cli_model import git_value, json_bytes, sha
++from cli_model import distribution_core, git_value, json_bytes, sha
+ from cli_project import distribution
+ from cli_sync_manifest import methodology_path, repository_id
+ from distribution_files import MANIFEST, package_files
+@@ -25,7 +25,7 @@
+ def package(repo: Path) -> tuple[dict, dict]:
+     """Manifest equality establishes integrity, not release approval or authenticity."""
+     metadata = distribution(repo)
+-    core = safe_path(repo, 'asdg')
++    core = distribution_core(repo)
+     entries = {methodology_path(p.relative_to(core).as_posix()): read_bytes(p)
+                for p in package_files(core)}
+     manifest = json.loads(entries[MANIFEST])
+@@ -54,8 +54,9 @@
+     origin = git_value(repo, 'remote', 'get-url', 'origin')
+     if not origin or repository_id(origin) != repository_id(info['canonical_repository'] or ''):
+         raise Conflict('Source origin does not identify the canonical methodology repository.')
++    prefix = '' if distribution_core(repo) == repo else 'asdg/'
+     try:
+-        result = subprocess.run(['git', '-C', str(repo), 'ls-tree', '-rz', commit, '--', 'asdg'],
++        result = subprocess.run(['git', '-C', str(repo), 'ls-tree', '-rz', commit, '--', prefix or '.'],
+                                 capture_output=True, timeout=15, check=True)
+     except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as exc:
+         raise Conflict('Cannot inspect the selected source commit.') from exc
+@@ -67,9 +68,9 @@
+             tree[name.decode()] = (mode, kind, oid)
+     algorithm = hashlib.sha1 if len(commit) == 40 else hashlib.sha256
+     for name, data in entries.items():
+-        mode, kind, oid = tree.get('asdg/' + name, ('', '', ''))
++        mode, kind, oid = tree.get(prefix + name, ('', '', ''))
+         actual = algorithm(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+         if mode not in ('100644', '100755') or kind != 'blob' or oid != actual:
+-            raise Conflict('Selected package file does not match source commit: asdg/' + name)
++            raise Conflict('Selected package file does not match source commit: ' + prefix + name)
+     info.update(kind='VERIFIED_LOCAL_CLONE', commit=commit)
+     return info, entries
+--- a/scripts/lib/cli_model.md
++++ b/scripts/lib/cli_model.md
+@@ -35,3 +35,5 @@
+ ## Example
+ 
+ `agent_by_name('02')` returns the Purpose role definition; it does not activate an agent.
++
++Standalone source resolves its catalogue at repository root; embedded clients retain the catalogue’s `asdg/` paths. `distribution_core(repo)` resolves those two filesystem layouts without changing role identities.
+--- a/scripts/lib/cli_model.py
++++ b/scripts/lib/cli_model.py
+@@ -15,7 +15,8 @@
+ COMMAND = 'asdg'
+ SHORT_COMMAND = 'asdg'
+ VERSION = '0.3.0-pilot.4'
+-REPO = Path(__file__).resolve().parents[3]
++CORE = Path(__file__).resolve().parents[2]
++REPO = CORE if (CORE / '.git').exists() else CORE.parent
+ CATALOG = Path('asdg/00-governance/types/agent-catalog.json')
+ ARTIFACTS = Path('docs/asdg')
+ BINDING = Path('.asdg/project.json')
+@@ -42,8 +43,15 @@
+     return (json.dumps(value, indent=2, ensure_ascii=False) + '\n').encode('utf-8')
+ 
+ 
++def distribution_core(repo: Path) -> Path:
++    """Resolve standalone source or embedded distribution without changing client paths."""
++    if (repo / 'metadata/package-files.json').is_file():
++        return repo
++    return safe_path(repo, 'asdg')
++
++
+ def catalogue(repo: Path = REPO) -> tuple[list[dict], str]:
+-    raw = safe_path(repo, CATALOG).read_bytes()
++    raw = safe_path(distribution_core(repo), str(CATALOG).removeprefix('asdg/')).read_bytes()
+     value = json.loads(raw)
+     agents = value.get('agents')
+     if value.get('version') != '0.2' or not isinstance(agents, list) or len(agents) != 13:
+--- a/scripts/lib/cli_project.md
++++ b/scripts/lib/cli_project.md
+@@ -47,3 +47,5 @@
+ ## Example
+ 
+ From the client root: `python3 asdg/scripts/init.py --dry-run` previews writes.
++
++Distribution metadata may be read at canonical repository root or under a consumer’s `asdg/`; project initialization remains consumer-only.
+--- a/scripts/lib/cli_project.py
++++ b/scripts/lib/cli_project.py
+@@ -7,7 +7,7 @@
+ from cli_clients import (CLIENTS, INTEGRATIONS, claude_bridge, claude_bridge_problems, claude_files,
+                          integrations_bytes, read_integrations, resolve_clients)
+ from cli_files import Conflict, plan, read_bytes, safe_path
+-from cli_model import ARTIFACTS, BINDING, PROVIDER, REPO, VERSION, catalogue, json_bytes, now, sha
++from cli_model import ARTIFACTS, BINDING, PROVIDER, REPO, VERSION, catalogue, distribution_core, json_bytes, now, sha
+ from cli_sprint import INACTIVE, SPRINT, read_state
+ from documentation import nonblank_source_lines, review_record, PROJECT_REVIEWS
+ 
+@@ -80,7 +80,7 @@
+ 
+ 
+ def distribution(repo):
+-    value = json.loads(read_bytes(safe_path(repo, 'asdg/metadata/distribution.json')) or b'{}')
++    value = json.loads(read_bytes(safe_path(distribution_core(repo), 'metadata/distribution.json')) or b'{}')
+     if (value.get('schema_version') != 1 or value.get('provider') != PROVIDER
+             or value.get('version') != VERSION or value.get('installation_mode') != 'embedded-distribution'):
+         raise Conflict('Unsupported or missing embedded distribution metadata.')
+--- a/scripts/lib/cli_status.md
++++ b/scripts/lib/cli_status.md
+@@ -41,3 +41,5 @@
+ ## Example
+ 
+ `python3 asdg/scripts/cli.py status --json` exposes the factual snapshot without coordinator advice.
++
++Lifecycle rules and their baseline resolve from standalone source root or embedded consumer `asdg/`, preserving the same thirteen roles and twelve stages.
+--- a/scripts/lib/cli_status.py
++++ b/scripts/lib/cli_status.py
+@@ -6,7 +6,7 @@
+ from pathlib import Path
+ 
+ from cli_files import Conflict, read_bytes, safe_path
+-from cli_model import ARTIFACTS, PROVIDER, REPO, VERSION, catalogue, now
++from cli_model import ARTIFACTS, PROVIDER, REPO, VERSION, catalogue, distribution_core, now
+ from cli_policy import implementation_permission
+ from cli_project import inspect, STAGE_NOTE
+ from cli_session import governance_bootstrap
+@@ -21,12 +21,13 @@
+ 
+ 
+ def lifecycle_rules(repo: Path) -> list[dict]:
+-    value = json.loads(safe_path(repo, RULES).read_bytes())
++    core = distribution_core(repo)
++    value = json.loads(safe_path(core, str(RULES).removeprefix('asdg/')).read_bytes())
+     rows = value.get('rules', [])
+     if value.get('schema_version') != 1 or [row.get('stage') for row in rows] != list(range(1, 13)):
+         raise Conflict('Unsupported lifecycle rules; expected ordered stages 01 through 12.')
+     labels = re.findall(r'^\| (\d{2}) \| (.+?) \|$',
+-                        safe_path(repo, value['baseline']).read_text(encoding='utf-8'), re.MULTILINE)
++                        safe_path(core, value['baseline'].removeprefix('asdg/')).read_text(encoding='utf-8'), re.MULTILINE)
+     if [int(number) for number, _ in labels] != list(range(1, 13)):
+         raise Conflict('Canonical lifecycle baseline must retain twelve ordered stages.')
+     agents, _ = catalogue(repo)
+--- a/scripts/lib/cli_sync.md
++++ b/scripts/lib/cli_sync.md
+@@ -31,3 +31,5 @@
+ Per-file writes reuse existing mode preservation and ordinary-failure rollback, without claiming a crash-safe or concurrent-writer transaction.
+ 
+ See [usage](../../docs/synchronization.md) for commands and [tests](../../tests/test_sync.md) for executed scenarios.
++
++Apply resolves selected paths and the adoption receipt relative to the actual endpoint core: canonical root or consumer `asdg/`. The comparison, approval and conflict rules remain unchanged.
+--- a/scripts/lib/cli_sync.py
++++ b/scripts/lib/cli_sync.py
+@@ -55,24 +55,25 @@
+     for name in sorted(set(old) | set(source['hashes']) | set(target['hashes'])):
+         methodology_path(name)
+         target_path = safe_path(target['core'], name)
++        relative = target_path.relative_to(target['root']).as_posix()
+         current = read_bytes(target_path)  # An unlisted local file still blocks an addition collision.
+         local, incoming = digest(current), source['hashes'].get(name)
+         category, reason = classify(old.get(name), incoming, local)
+-        tracked = 'asdg/' + name in target['tracked']
++        tracked = relative in target['tracked']
+         if category == 'deleted' and not tracked:
+             category, reason = 'conflicting', 'refusing to delete untracked work'
+-        rows.append({'path': 'asdg/' + name, 'status': category, 'reason': reason,
++        rows.append({'path': relative, 'status': category, 'reason': reason,
+                      'baseline_sha256': old.get(name), 'source_sha256': incoming,
+                      'target_sha256': local, 'target_tracked': tracked})
+         if category in ('added', 'modified', 'deleted'):
+-            change = plan(target['root'], 'asdg/' + name, source['data'].get(name), replace=True)
++            change = plan(target['root'], relative, source['data'].get(name), replace=True)
+             if change:
+                 changes.append(change)
+     counts = {key: sum(r['status'] == key for r in rows)
+               for key in ('added', 'modified', 'deleted', 'unchanged', 'conflicting')}
+     report = {'operation': operation, 'source': source['info'], 'target': target['info'],
+               'baseline': basis, 'counts': counts, 'files': rows,
+-              'warnings': ['Only asdg/ distribution files are synchronized; installed adapters, hooks and project state are unchanged.',
++              'warnings': ['Only selected methodology distribution files are synchronized; installed adapters, hooks and project state are unchanged.',
+                            'Apply records adoption, not a release or methodology approval.'],
+               'sync_state_sha256': digest(read_bytes(safe_path(target['core'], STATE)))}
+     if not source['info']['manifest_matches_worktree']:
+@@ -104,7 +105,8 @@
+               'files': source['hashes']}
+     state = target['state']
+     state['upstreams'][source['info']['repository']] = record
+-    receipt = plan(target['root'], 'asdg/' + STATE, encoded(state), replace=True)
++    receipt_path = (target['core'] / STATE).relative_to(target['root']).as_posix()
++    receipt = plan(target['root'], receipt_path, encoded(state), replace=True)
+     if receipt:
+         changes.append(receipt)
+     # Re-read source, target, binding and receipt immediately before the existing file transaction.
+--- a/scripts/lib/cli_sync_manifest.md
++++ b/scripts/lib/cli_sync_manifest.md
+@@ -33,3 +33,5 @@
+ Adoption records contain source commit/version/hashes and target identity/binding hash, never project evidence or application code.
+ `metadata/sync-state.json` must remain local to that project and is excluded from both distribution selection and archives.
+ This module reads no remote, executes no source-repository code and changes no Git or project state.
++
++Canonical snapshots may use repository-root methodology files; consumers retain `asdg/`. Origin, commit, selected-file and binding checks are unchanged.
+--- a/scripts/lib/cli_sync_manifest.py
++++ b/scripts/lib/cli_sync_manifest.py
+@@ -9,6 +9,8 @@
+ from urllib.parse import urlsplit
+ 
+ from cli_files import Conflict, read_bytes, safe_path
++
++from cli_model import distribution_core
+ 
+ PROVIDER = 'elustondo.ai/asdg'
+ STATE = 'metadata/sync-state.json'
+@@ -116,7 +118,7 @@
+         raise Conflict('Supply the Git repository root, not a subdirectory.')
+     identity = repository_id(git(root, 'remote', 'get-url', 'origin'))
+     head = git(root, 'rev-parse', 'HEAD')
+-    core = safe_path(root, 'asdg')
++    core = distribution_core(root)
+     descriptor = read_json(safe_path(core, DESCRIPTOR))
+     version = descriptor.get('version')
+     if (descriptor.get('schema_version') != 1 or descriptor.get('provider') != PROVIDER
+@@ -128,7 +130,8 @@
+     if manifest.get('schema_version') != 1 or manifest.get('version') != version:
+         raise Conflict('Distribution descriptor and manifest versions disagree.')
+     historical = hash_map(manifest.get('files'))
+-    tracked = set(git(root, 'ls-files', '-z', '--', 'asdg/').split('\0')) - {''}
++    prefix = '' if core == root else 'asdg/'
++    tracked = set(git(root, 'ls-files', '-z', '--', prefix or '.').split('\0')) - {''}
+     index_raw = read_bytes(safe_path(core, INDEX))
+     if index_raw is not None:
+         index = json.loads(index_raw)
+@@ -139,7 +142,7 @@
+             raise Conflict('Invalid portable package file list.')
+     else:
+         # Legacy portable pilots predate the index: only committed/indexed ASDG paths qualify.
+-        names = [p.removeprefix('asdg/') for p in tracked if p != 'asdg/' + STATE]
++        names = [p.removeprefix(prefix) for p in tracked if p != prefix + STATE]
+         if not {DESCRIPTOR, MANIFEST} <= set(names):
+             raise Conflict('Legacy pilot lacks versioned distribution metadata.')
+     data = {}
+--- a/skills/asdg-component/src/create_component.py
++++ b/skills/asdg-component/src/create_component.py
+@@ -34,7 +34,8 @@
+         raise ValueError("Component name must be lowercase kebab-case")
+     repo=repo.resolve()
+     if not repo.is_dir(): raise ValueError("Repository root must exist")
+-    target=repo/"asdg"/"components"/name
++    core = repo if (repo / "metadata/package-files.json").is_file() else repo / "asdg"
++    target=core/"components"/name
+     expected=files_for(name)
+     if check:
+         missing=[str(target/p) for p in expected if not (target/p).is_file()]
+--- a/skills/asdg-init/SKILL.md
++++ b/skills/asdg-init/SKILL.md
+@@ -6,7 +6,7 @@
+ # Initialize ASDG using one Python engine
+ 
+ Read [installation](../../docs/installation.md), [client integrations](../../docs/client-integrations.md) and the target project's instructions.
+-This skill is a conversational interface to `asdg/scripts/init.py`; never reproduce its file writes in prompts or shell scripts.
++This skill is a conversational interface to source `scripts/init.py` or installed `asdg/scripts/init.py`; never reproduce its file writes in prompts or shell scripts.
+ Use Python 3.9+ and an existing Git project. Never initialize Git or install dependencies automatically.
+ Identify the target root and acquisition: an extracted ZIP or an existing local canonical clone.
+ For ZIP, require its single `asdg/` folder; acquisition must never overwrite existing application or methodology files.
+--- a/skills/asdg-presentation/src/build.py
++++ b/skills/asdg-presentation/src/build.py
+@@ -21,7 +21,9 @@
+     args = parser.parse_args()
+     try:
+         if args.all:
+-            collection = SKILL.parents[2] / "docs" / "presentations"
++            core = SKILL.parents[1]
++            root = core if (core / ".git").exists() else core.parent
++            collection = root / "docs" / "presentations"
+             decks = sorted(p for p in collection.iterdir() if p.is_dir())
+         else:
+             decks = [args.presentation]
+--- a/skills/asdg-publish/SKILL.md
++++ b/skills/asdg-publish/SKILL.md
+@@ -1,6 +1,6 @@
+ ---
+ name: asdg-publish
+-description: Publish a verified portable ASDG ZIP and checksum from the canonical agentic-sdlc-governance provider, with matching release metadata and installation instructions. Provider-only; never use in an adopting project.
++description: Publish a verified portable ASDG ZIP and checksum from the canonical standalone ASDG repository, with matching release metadata and installation instructions. Provider-only; never use in an adopting project.
+ ---
+ 
+ # Publish ASDG from its canonical provider
+@@ -10,7 +10,7 @@
+ 
+ ## Establish scope
+ 
+-Resolve the Git root and verify its origin is `Elustondo-ai/agentic-sdlc-governance`, its provider root instructions and `scripts/prepare_commit.py` exist, and this skill is not in the portable file list. Stop in a client or ambiguous checkout.
++Resolve the Git root and verify its origin is `Elustondo-ai/asdg`, its root instructions and `scripts/build_distribution.py` exist, and this skill is not in the portable file list. Stop in a client or ambiguous checkout.
+ Read root `AGENTS.md`, the [Admin contract](../../admin/AGENTS.md), [distribution build](../../docs/distribution-build.md) and [synchronization contract](../../docs/synchronization.md).
+ Require explicitly selected ASDG Admin and a bounded human publication request; a build, commit, status request or prior publication is not release authorization.
+ Record Git status/revision, preserve unrelated work and identify the exact source changes to publish. Existing authorization persists within its scope; ask only for missing authority.
+@@ -19,11 +19,11 @@
+ ## Prepare one versioned candidate
+ 
+ Read current metadata and published releases. Select the next unused pilot/version appropriate to the requested change; preserve published tags and assets rather than overwriting them.
+-Preserve the previous actually shipped manifest from its published tag in `asdg/metadata/deliveries/<version>.json`; do not mistake a locally refreshed candidate for that delivery.
++Preserve the previous actually shipped manifest from its published tag in `metadata/deliveries/<version>.json`; do not mistake a locally refreshed candidate for that delivery.
+ Keep `metadata/distribution.json`, `scripts/lib/cli_model.py` and its companion consistent. Record the source baseline and previous version; add historical manifests to the reviewed portable file list.
+ Update root README installation ZIP, checksum and release links to the selected version. Reconcile other active version references while preserving historical reports and presentation downloads.
+ Append exact-hash documentation receipts and save a bounded Stage 07 maintenance report/JSON receipt listing changed paths, authority, actual verification and remaining limits. Publication never adds PME-APPROVED or implies documentation acceptance.
+-Run `python3 scripts/prepare_commit.py`, then `python3 asdg/scripts/check.py --integrity` and the applicable portable/provider tests. Inspect the ZIP's single `asdg/` root, manifest, install prompt, version and checksum.
++Run `python3 -B scripts/build_distribution.py --refresh-manifest`, then `python3 scripts/check.py --integrity` and the applicable portable/provider tests. Inspect the ZIP's single `asdg/` root, manifest, install prompt, version and checksum.
+ Confirm this provider-only skill, provider scripts, client state, credentials and application evidence are absent from the ZIP. Generated ZIPs/checksums stay under ignored `build/distributions/`.
+ If candidate files change, regenerate and recheck before committing or uploading. Stop on failed required checks; report the actual failure.
+ 
+--- a/skills/asdg-report-project-status/report_packets.md
++++ b/skills/asdg-report-project-status/report_packets.md
+@@ -26,3 +26,5 @@
+ Use that provider’s `asdg/skills/asdg-presentation/src/build.py`, its `requirements.txt` and a working system Cairo library. Open its presentation standard and building guide locally. If any prerequisite is unavailable, report which one and deliver the checked Markdown index, numbered slide sources, and shared original images.
+ 
+ With the reviewed renderer interpreter and an absolute path to the authorized client presentation source directory, run the builder with `--presentation <report-dir> --narration intro --check`, then repeat without `--check`. Verify the resulting PPTX, speaker notes and manifest inside `presentation/build/`. A successful fixture render does not verify a live agent runtime.
++
++Renderer discovery accepts an explicitly supplied standalone source root or an embedded provider layout; it does not fetch or infer a checkout.
+--- a/skills/asdg-report-project-status/report_packets.py
++++ b/skills/asdg-report-project-status/report_packets.py
+@@ -89,7 +89,10 @@
+ def renderer_preflight(provider):
+     if provider is None:
+         return {"status": "UNAVAILABLE", "reason": "a reviewed provider checkout is required"}
+-    script = provider.resolve() / "asdg/skills/asdg-presentation/src/build.py"
++    core = provider.resolve()
++    if not (core / "metadata/package-files.json").is_file():
++        core = core / "asdg"
++    script = core / "skills/asdg-presentation/src/build.py"
+     if not script.is_file():
+         return {"status": "UNAVAILABLE", "reason": f"missing provider renderer: {script}"}
+     return {"status": "LOCATED", "script": str(script)}
+--- a/skills/asdg-update/SKILL.md
++++ b/skills/asdg-update/SKILL.md
+@@ -15,7 +15,7 @@
+ 
+ Resolve the client root as `../../..` from this canonical skill directory. Verify the actual target Git root, ASDG binding and recorded client integrations.
+ Use the human-selected local canonical root and distribution. Ask for missing source/version choices; never fetch, clone, download, publish or select a newer release automatically.
+-Inspect source and target Git status, HEAD and origin without changing them. Verify the selected source manifest with its own `asdg/scripts/check.py --integrity`; matching hashes are not release approval.
++Inspect source and target Git status, HEAD and origin without changing them. Verify the selected source manifest with its own `scripts/check.py --integrity` (standalone source); matching hashes are not release approval.
+ Explain whether the source is a local candidate or a published release, including version, source commit, manifest/snapshot hashes and any working-tree differences. Same version strings never prove identical content.
+ The current upgrade engine requires both roots to have HEAD and identifiable origins. If either is missing, stop dependent application, report the prerequisite and preserve Git state; do not commit, stage, add a remote or fake identity.
+ When blocked, offer a read-only content comparison with hashes as preparation only. It is not an executable approval plan; do not bypass the engine with manual copying, replacement extraction or a fabricated baseline.
+@@ -23,7 +23,7 @@
+ 
+ ## Preview and approve methodology
+ 
+-Run the selected source's `asdg/scripts/cli.py upgrade --source <canonical-root> --target <client-root> --dry-run --json`, passing arguments safely.
++Run the selected source's `scripts/cli.py upgrade --source <canonical-root> --target <client-root> --dry-run --json`, passing arguments safely.
+ Present every added, modified, deleted, unchanged/retained and conflicting path with the exact `plan_id`, source identity and target. Keep the detailed report accessible; summarize important changes and conflicts.
+ Any conflict blocks the whole apply. Present the conflicting bytes for a bounded human reconciliation decision; never force, merge, delete local work or refresh a target manifest to manufacture success.
+ A request to prepare an update stops at the reviewable preview. Obtain explicit approval of its exact plan before applying; prior install approval, invocation, matching hashes or a version label is not that decision.
+--- a/tests/continuation_fixture.md
++++ b/tests/continuation_fixture.md
+@@ -28,3 +28,5 @@
+ ## Example
+ 
+ `python3 asdg/tests/continuation_fixture.py /tmp/asdg-example partial` creates a new disposable partial-Purpose client.
++
++Standalone source fixtures exclude source Git metadata and generated build outputs when embedding the methodology into a disposable client.
+--- a/tests/continuation_fixture.py
++++ b/tests/continuation_fixture.py
+@@ -22,7 +22,7 @@
+     if root.exists():
+         raise ValueError('Fixture destination must not exist; existing projects are never overwritten.')
+     root.mkdir(parents=True)
+-    shutil.copytree(CORE, root / 'asdg', ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
++    shutil.copytree(CORE, root / 'asdg', ignore=shutil.ignore_patterns('.git', 'build', '__pycache__', '*.pyc'))
+     subprocess.run(['git', 'init', '-q', str(root)], check=True)
+     # Explicitly authorized disposable fixture construction, not the public installer.
+     _, changes = plan_initialization(root, repo=root)
+--- a/tests/test_agent_config.md
++++ b/tests/test_agent_config.md
+@@ -25,3 +25,5 @@
+ ## Example
+ 
+ From the project root: `TMPDIR=/private/tmp python3 -B -m unittest discover -s asdg/tests -p 'test_agent_config.py'`.
++
++The maintained adapter fixture is resolved directly from this methodology core, independent of whether it is source root or embedded under `asdg/`.
+--- a/tests/test_agent_config.py
++++ b/tests/test_agent_config.py
+@@ -3,14 +3,14 @@
+ import unittest
+ from pathlib import Path
+ 
+-ROOT = Path(__file__).resolve().parents[2]
+-sys.path.insert(0, str(ROOT / 'asdg/scripts/lib'))
++ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(ROOT / 'scripts/lib'))
+ from agent_config import flat_strings, loads
+ 
+ 
+ class AgentConfigTests(unittest.TestCase):
+     def test_current_adapters_on_older_python(self):
+-        paths = list((ROOT / 'asdg/templates/.codex/agents').glob('*.toml'))
++        paths = list((ROOT / 'templates/.codex/agents').glob('*.toml'))
+         self.assertEqual(len(paths), 13)
+         for path in paths:
+             with self.subTest(path=path.name):
+--- a/tests/test_install.md
++++ b/tests/test_install.md
+@@ -30,3 +30,5 @@
+ | Status sees verified team, deferral or facts-only request | No repeated setup advice; facts-only omits recommendations |
+ 
+ These are acceptance criteria, not claims of observed native behavior or automated response classification.
++
++The standalone-clone regression commits only a disposable fixture, installs root source files into consumer `asdg/`, verifies both adapters and rejects changed selected source bytes without target writes.
+--- a/tests/test_install.py
++++ b/tests/test_install.py
+@@ -36,7 +36,7 @@
+         self.source = self.root / 'canonical clone'
+         self.source.mkdir()
+         git(self.source, 'init', '-q')
+-        git(self.source, 'remote', 'add', 'origin', 'https://github.com/Elustondo-ai/agentic-sdlc-governance.git')
++        git(self.source, 'remote', 'add', 'origin', 'https://github.com/Elustondo-ai/asdg.git')
+         for p in package_files(CORE):
+             target = self.source / 'asdg' / p.relative_to(CORE)
+             target.parent.mkdir(parents=True, exist_ok=True)
+@@ -89,6 +89,23 @@
+                 stream.write(p, 'asdg/' + p.relative_to(self.source / 'asdg').as_posix())
+         with zipfile.ZipFile(archive) as stream:
+             stream.extractall(self.target)
++
++    def test_standalone_canonical_clone_installs_and_rejects_dirty_selected_bytes(self):
++        embedded = self.source / 'asdg'
++        shutil.copytree(embedded, self.source, dirs_exist_ok=True)
++        shutil.rmtree(embedded)
++        self.commit = self.save()
++        preview = self.invoke(client='both')
++        self.assertEqual(preview['source']['kind'], 'VERIFIED_LOCAL_CLONE')
++        result = self.invoke(client='both', apply_changes=True, expected_plan=preview['plan'])
++        self.assertTrue(result['structure_ok'])
++        self.assertTrue((self.target / 'asdg/scripts/init.py').is_file())
++        self.assertFalse((self.target / 'asdg/asdg').exists())
++        (self.source / 'README.md').write_text('Dirty selected bytes\n')
++        before = tree(self.target)
++        with self.assertRaises(Conflict):
++            self.invoke(client='both')
++        self.assertEqual(before, tree(self.target))
+ 
+     def test_both_routes_both_clients_preview_apply_verify_and_repeat(self):
+         for route in ('zip', 'clone'):
+@@ -135,7 +152,7 @@
+                     self.assertNotIn('CREATE TEAM or NOT NOW', completion)
+                     self.assertNotIn('Next, use /asdg-status in your project chat.', render(preview))
+                     skill = Path('asdg/skills/asdg-init/SKILL.md')
+-                    self.assertEqual((self.target / skill).read_bytes(), (CORE.parent / skill).read_bytes())
++                    self.assertEqual((self.target / skill).read_bytes(), (CORE / skill.relative_to('asdg')).read_bytes())
+                     self.assertTrue(installed['verification']['structure_ok'])
+                     self.assertFalse(installed['context_survey']['offered'])
+                     self.assertFalse(installed['context_survey']['executed'])
+--- a/tests/test_portable.py
++++ b/tests/test_portable.py
+@@ -440,7 +440,7 @@
+                          ('ASDG-ADMIN', 'ASDG Admin', None, False, None))
+         self.assertEqual(registration['activation'], 'explicit-human-selection-only')
+         for key in ('entry', 'contract', 'skill'):
+-            self.assertTrue((CORE.parent / registration[key]).is_file(), key)
++            self.assertTrue((CORE / registration[key].removeprefix('asdg/')).is_file(), key)
+         catalogue = json.loads((CORE / '00-governance/types/agent-catalog.json').read_text())
+         self.assertEqual(len(catalogue['agents']), 13)
+         self.assertNotIn('ASDG-ADMIN', json.dumps(catalogue))
+@@ -474,7 +474,7 @@
+     def fresh_client(self, name):
+         self.root = Path(self.area.name) / name
+         self.root.mkdir()
+-        shutil.copytree(CORE, self.root / 'asdg', ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
++        shutil.copytree(CORE, self.root / 'asdg', ignore=shutil.ignore_patterns('.git', 'build', '__pycache__', '*.pyc'))
+         self.seal_package()
+         subprocess.run(['git', 'init', '-q', str(self.root)], check=True)
+         (self.root / 'app.js').write_text('console.log("existing application");\n')
+--- a/tests/test_report_project_status.py
++++ b/tests/test_report_project_status.py
+@@ -84,7 +84,7 @@
+ 
+ 
+ def export_fixture(deck):
+-    script = renderer_preflight(CORE.parent)['script']
++    script = renderer_preflight(CORE)['script']
+     args = [sys.executable, '-B', script, '--presentation', str(deck), '--narration', 'intro']
+     for flags in (['--check'], []):
+         subprocess.run(args + flags, capture_output=True, text=True, check=True, timeout=120)
+--- a/tests/test_sync.md
++++ b/tests/test_sync.md
+@@ -24,3 +24,5 @@
+ Temporary fixtures clean up themselves. These checks do not prove native agent invocation, hook trust, human approval or release readiness.
+ 
+ Run `python3 -B -m unittest discover -s asdg/tests -p test_sync.py -v` from the repository root.
++
++The standalone regression exercises upgrade from a root canonical source and promotion back into it, preserving consumer application bytes and preventing a nested canonical `asdg/` directory.
+--- a/tests/test_sync.py
++++ b/tests/test_sync.py
+@@ -67,6 +67,28 @@
+             self.commit(root)
+         # Identical manifests establish the first shared baseline.
+ 
++    def test_standalone_canonical_upgrade_and_promotion_keep_root_layout(self):
++        self.edit(self.canonical, 'docs/a.md', 'Canonical root change\n')
++        embedded = self.canonical / 'asdg'
++        shutil.copytree(embedded, self.canonical, dirs_exist_ok=True)
++        shutil.rmtree(embedded)
++        self.commit(self.canonical)
++        before = (self.pilot / 'app.py').read_bytes()
++        preview = synchronize('upgrade', self.canonical, self.pilot)
++        self.assertEqual(preview['counts']['conflicting'], 0)
++        synchronize('upgrade', self.canonical, self.pilot, apply=True,
++                    expected_plan=preview['plan_id'])
++        self.assertEqual((self.pilot / 'asdg/docs/a.md').read_text(), 'Canonical root change\n')
++        self.edit(self.pilot, 'docs/a.md', 'Pilot contribution\n')
++        preview = synchronize('promote', self.pilot, self.canonical)
++        self.assertEqual(preview['counts']['conflicting'], 0)
++        synchronize('promote', self.pilot, self.canonical, apply=True,
++                    expected_plan=preview['plan_id'])
++        self.assertEqual((self.canonical / 'docs/a.md').read_text(), 'Pilot contribution\n')
++        self.assertFalse((self.canonical / 'asdg').exists())
++        self.assertTrue((self.canonical / STATE).is_file())
++        self.assertEqual((self.pilot / 'app.py').read_bytes(), before)
++
+     def commit(self, root):
+         git(root, 'add', '.')
+         git(root, 'commit', '-qm', 'fixture', '--allow-empty')

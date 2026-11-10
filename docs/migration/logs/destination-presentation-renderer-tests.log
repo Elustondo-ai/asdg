@@ -1,0 +1,44 @@
+test_build_symlink_rejected (test_build.PresentationTests.test_build_symlink_rejected) ... ok
+test_duplicate_notes (test_build.PresentationTests.test_duplicate_notes) ... ok
+test_empty_narration (test_build.PresentationTests.test_empty_narration) ... ok
+test_external_css_resource (test_build.PresentationTests.test_external_css_resource) ... ok
+test_external_svg_reference (test_build.PresentationTests.test_external_svg_reference) ... ok
+test_extra_visual (test_build.PresentationTests.test_extra_visual) ... ok
+test_missing_notes (test_build.PresentationTests.test_missing_notes) ... ok
+test_missing_number (test_build.PresentationTests.test_missing_number) ... ok
+test_no_outputs_on_invalid_source (test_build.PresentationTests.test_no_outputs_on_invalid_source) ... ok
+test_original_sources_unchanged (test_build.PresentationTests.test_original_sources_unchanged) ... ok
+test_reference_metadata_separate (test_build.PresentationTests.test_reference_metadata_separate) ... ok
+test_repeat_build_same_bytes (test_build.PresentationTests.test_repeat_build_same_bytes) ... ok
+test_round_trip_notes (test_build.PresentationTests.test_round_trip_notes) ... FAIL
+test_source_symlink_rejected (test_build.PresentationTests.test_source_symlink_rejected) ... ok
+test_svg_script (test_build.PresentationTests.test_svg_script) ... ok
+test_unexpected_subfolder (test_build.PresentationTests.test_unexpected_subfolder) ... ok
+test_unsupported_renderer (test_build.PresentationTests.test_unsupported_renderer) ... ok
+test_valid_pair (test_build.PresentationTests.test_valid_pair) ... ok
+test_blank_supplement_rejected (test_narration.LayeredNarrationTests.test_blank_supplement_rejected) ... ok
+test_detailed_needs_walkthrough (test_narration.LayeredNarrationTests.test_detailed_needs_walkthrough) ... ok
+test_detailed_note_order (test_narration.LayeredNarrationTests.test_detailed_note_order) ... ok
+test_detailed_preserves_existing_intro_outputs (test_narration.LayeredNarrationTests.test_detailed_preserves_existing_intro_outputs) ... ok
+test_detailed_repeat_build (test_narration.LayeredNarrationTests.test_detailed_repeat_build) ... ok
+test_intro_ignores_optional_parts (test_narration.LayeredNarrationTests.test_intro_ignores_optional_parts) ... ok
+test_manifest_hashes_all_selected_parts (test_narration.LayeredNarrationTests.test_manifest_hashes_all_selected_parts) ... ok
+test_missing_walkthrough_rejected (test_narration.LayeredNarrationTests.test_missing_walkthrough_rejected) ... ok
+test_new_intro_name_supported (test_narration.LayeredNarrationTests.test_new_intro_name_supported) ... ok
+test_supplement_metadata_not_spoken (test_narration.LayeredNarrationTests.test_supplement_metadata_not_spoken) ... ok
+test_two_notes_supported (test_narration.LayeredNarrationTests.test_two_notes_supported) ... ok
+test_unknown_profile_rejected (test_narration.LayeredNarrationTests.test_unknown_profile_rejected) ... ok
+test_unrecognized_note_file_rejected (test_narration.LayeredNarrationTests.test_unrecognized_note_file_rejected) ... ok
+
+======================================================================
+FAIL: test_round_trip_notes (test_build.PresentationTests.test_round_trip_notes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/skills/asdg-presentation/tests/test_build.py", line 42, in test_round_trip_notes
+    self.assertEqual(result.pptx.parent, self.deck/'build')
+AssertionError: PosixPath('/private/var/folders/sr/0mj2x8d536919gtgfc[41 chars]ild') != PosixPath('/var/folders/sr/0mj2x8d536919gtgfcz2qcp000[33 chars]ild')
+
+----------------------------------------------------------------------
+Ran 31 tests in 1.122s
+
+FAILED (failures=1)

@@ -1,0 +1,2151 @@
+[
+  {
+    "suite": "legacy",
+    "test": "test_a_fresh_init_valid_inactive_blocked_and_context_next (test_project_status.StatusTests.test_a_fresh_init_valid_inactive_blocked_and_context_next)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 57tig4bj/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_absent_metadata_remains_unknown (test_project_status.StatusTests.test_absent_metadata_remains_unknown)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests rliy0_ot/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_active_sprint_without_binding_is_blocked (test_sprint_gate.SprintTests.test_active_sprint_without_binding_is_blocked)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_agent_listing_is_definition_inspection (test_cli_bootstrap.InstallTests.test_agent_listing_is_definition_inspection)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_all_backups_exist_before_first_replacement (test_cli_install_migration.MigrationTests.test_all_backups_exist_before_first_replacement)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_all_generated_markdown_at_most_fifty_lines (test_cli_bootstrap.ProjectTests.test_all_generated_markdown_at_most_fifty_lines)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests spj1czga/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_all_thirteen_actual_role_packages_load_for_baseline (test_agent_packages.AgentPackageTests.test_all_thirteen_actual_role_packages_load_for_baseline)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_application_and_git_control_files_unchanged (test_cli_bootstrap.ProjectTests.test_application_and_git_control_files_unchanged)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 4wu0nr34/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_apply_refuses_changed_snapshot (test_cli_bootstrap.ProjectTests.test_apply_refuses_changed_snapshot)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_arbitrary_tools_and_shell_cannot_bypass_or_start_sprint (test_sprint_gate.SprintTests.test_arbitrary_tools_and_shell_cannot_bypass_or_start_sprint)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_b_earliest_unmet_stage_and_missing_recorded_file (test_project_status.StatusTests.test_b_earliest_unmet_stage_and_missing_recorded_file)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests x50uii1p/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_backup_write_failure_leaves_managed_files_unchanged (test_cli_install_migration.MigrationTests.test_backup_write_failure_leaves_managed_files_unchanged)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_bad_evidence_index_readme_symlinks_and_unknown_stage_fail_closed (test_project_status.StatusTests.test_bad_evidence_index_readme_symlinks_and_unknown_stage_fail_closed)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests _12qpdjh/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_binding_has_no_machine_specific_checkout_path (test_cli_bootstrap.ProjectTests.test_binding_has_no_machine_specific_checkout_path)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests u94ifvey/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_both_commands_share_one_implementation_and_binding (test_cli_bootstrap.RenameTests.test_both_commands_share_one_implementation_and_binding)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_bridge_and_hook_allow_shared_status_queries (test_project_status.StatusTests.test_bridge_and_hook_allow_shared_status_queries)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests urnr_bap/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_broken_existing_bridge_not_overwritten (test_cli_bootstrap.ProjectTests.test_broken_existing_bridge_not_overwritten)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests x5xyfizv/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_broken_role_link (test_agent_packages.AgentPackageTests.test_broken_role_link)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_c_active_sprint_fields_and_shared_permission (test_project_status.StatusTests.test_c_active_sprint_fields_and_shared_permission)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests oec7s9tk/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_case_a_no_sprint_blocks_hello_creation_and_modification (test_sprint_gate.SprintTests.test_case_a_no_sprint_blocks_hello_creation_and_modification)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_case_b_active_sprint_allows_scoped_patch (test_sprint_gate.SprintTests.test_case_b_active_sprint_allows_scoped_patch)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_case_c_outside_scope_blocks (test_sprint_gate.SprintTests.test_case_c_outside_scope_blocks)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_catalogue_drift_not_silently_adopted (test_cli_bootstrap.ProjectTests.test_catalogue_drift_not_silently_adopted)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests meg10wv2/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_changed_legacy_launcher_is_refused_and_never_executed (test_cli_install_migration.MigrationTests.test_changed_legacy_launcher_is_refused_and_never_executed)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_cli_gate_applies_before_dispatch (test_cli_bootstrap.PythonCompatibilityTests.test_cli_gate_applies_before_dispatch)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_cli_modules_parse_as_python39 (test_cli_bootstrap.PythonCompatibilityTests.test_cli_modules_parse_as_python39)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_cli_preserves_calling_project_and_detects_nested_root (test_cli_bootstrap.ProjectTests.test_cli_preserves_calling_project_and_detects_nested_root)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_collision_elsewhere_on_path (test_cli_bootstrap.InstallTests.test_collision_elsewhere_on_path)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_collision_never_overwrites_existing_report (test_advice_report.ReportTests.test_collision_never_overwrites_existing_report)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests t4q30d1c/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_concise_console_omits_detail_and_shows_one_question (test_advice_report.ReportTests.test_concise_console_omits_detail_and_shows_one_question)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests iq61sotd/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_conflicting_current_evidence_fails_before_writes (test_namespace_migration.NamespaceMigrationTests.test_conflicting_current_evidence_fails_before_writes)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "AssertionError: \"Conflicting current\" does not match \"Legacy binding/catalogue is not the reviewed identity-only migration baseline.\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_conflicting_hook_not_overwritten (test_sprint_gate.SprintTests.test_conflicting_hook_not_overwritten)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_conflicting_project_config_is_not_overwritten (test_sprint_gate.SprintTests.test_conflicting_project_config_is_not_overwritten)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_conflicting_state_trees_fail_before_writes (test_namespace_migration.NamespaceMigrationTests.test_conflicting_state_trees_fail_before_writes)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_01.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_02.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_03.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_04.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_05.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_06.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_07.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_08.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_09.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_10.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_11.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_12.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) (path='asdg_coordinator.toml')",
+    "classification": "source failure only; retained destination outcome differs",
+    "source": [
+      "ERROR",
+      "KeyError: 'sandbox_mode'"
+    ],
+    "destination": null
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_install_repeat_is_no_op (test_cli_install_migration.MigrationTests.test_current_install_repeat_is_no_op)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_current_record_conflict_cannot_fall_back_to_legacy (test_cli_install_migration.MigrationTests.test_current_record_conflict_cannot_fall_back_to_legacy)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_d_outside_scope_and_structural_error_block_same_guard (test_project_status.StatusTests.test_d_outside_scope_and_structural_error_block_same_guard)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests kjfz8y0w/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_dashboard_http_routes_use_evaluator_and_offer_no_writes (test_project_status.StatusTests.test_dashboard_http_routes_use_evaluator_and_offer_no_writes)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests hplnnqaj/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_destination_comes_from_catalogue_capability_and_binding (test_advice_report.ReportTests.test_destination_comes_from_catalogue_capability_and_binding)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 5ohi0ye1/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_document_publish_failure_removes_its_receipt_and_staging (test_advice_report.ReportTests.test_document_publish_failure_removes_its_receipt_and_staging)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 6jhuj5dx/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_dry_run_is_non_mutating (test_namespace_migration.NamespaceMigrationTests.test_dry_run_is_non_mutating)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "cli_files.Conflict: Legacy binding/catalogue is not the reviewed identity-only migration baseline."
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_duplicate_identity (test_agent_packages.AgentPackageTests.test_duplicate_identity)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_duplicate_skill_metadata_is_rejected (test_agent_packages.AgentPackageTests.test_duplicate_skill_metadata_is_rejected)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_e_cli_json_and_plain_output_share_model (test_project_status.StatusTests.test_e_cli_json_and_plain_output_share_model)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 4bhvh3rq/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_edited_duplicate_or_incomplete_legacy_path_block_is_refused (test_cli_install_migration.MigrationTests.test_edited_duplicate_or_incomplete_legacy_path_block_is_refused)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_edited_owned_launcher_not_overwritten (test_cli_bootstrap.InstallTests.test_edited_owned_launcher_not_overwritten)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_existing_asdg_collision_leaves_home_unchanged (test_cli_bootstrap.InstallTests.test_existing_asdg_collision_leaves_home_unchanged)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_existing_bash_login_file_chosen (test_cli_bootstrap.InstallTests.test_existing_bash_login_file_chosen)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_existing_content_and_approval_preserved (test_cli_bootstrap.ProjectTests.test_existing_content_and_approval_preserved)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 6lfges66/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_existing_shell_settings_preserved_and_backed_up (test_cli_bootstrap.InstallTests.test_existing_shell_settings_preserved_and_backed_up)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_extra_agent (test_agent_packages.AgentPackageTests.test_extra_agent)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_f_dashboard_renders_same_object_and_escapes_content (test_project_status.StatusTests.test_f_dashboard_renders_same_object_and_escapes_content)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests kyc8gcez/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_fifty_line_rule_blocks_overlong_merge (test_cli_bootstrap.ProjectTests.test_fifty_line_rule_blocks_overlong_merge)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 7wnlh_h2/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_filenames_unique_even_with_same_timestamp (test_advice_report.ReportTests.test_filenames_unique_even_with_same_timestamp)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests zj_2qkhy/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_foreign_current_record_cannot_fall_back_to_legacy (test_cli_install_migration.MigrationTests.test_foreign_current_record_cannot_fall_back_to_legacy)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_foreign_metadata_refused_without_any_other_changes (test_cli_bootstrap.ProjectTests.test_foreign_metadata_refused_without_any_other_changes)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests i_qj2tp7/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_foreign_old_asd_on_path_is_not_touched_or_blocked (test_cli_bootstrap.RenameTests.test_foreign_old_asd_on_path_is_not_touched_or_blocked)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "AssertionError: 1 != 0"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_g_next_is_deterministic_and_same_recommendation (test_project_status.StatusTests.test_g_next_is_deterministic_and_same_recommendation)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 12r09np_/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_guard_execution_failure_returns_deny (test_sprint_gate.SprintTests.test_guard_execution_failure_returns_deny)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_init_and_standalone_verify_have_concise_success_output (test_cli_bootstrap.ProjectTests.test_init_and_standalone_verify_have_concise_success_output)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_init_exception_reports_actionable_error (test_cli_bootstrap.ProjectTests.test_init_exception_reports_actionable_error)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_init_generates_exact_catalogue_folders (test_cli_bootstrap.ProjectTests.test_init_generates_exact_catalogue_folders)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 4k1bgs9y/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_init_twice_is_no_op (test_cli_bootstrap.ProjectTests.test_init_twice_is_no_op)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests uof1iji8/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_init_verifies_after_writes_and_shares_verify_logic (test_cli_bootstrap.ProjectTests.test_init_verifies_after_writes_and_shares_verify_logic)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_install_is_idempotent (test_cli_bootstrap.InstallTests.test_install_is_idempotent)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_install_no_flags_required_and_extra_flags_rejected (test_cli_bootstrap.InstallTests.test_install_no_flags_required_and_extra_flags_rejected)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "AssertionError: 1 != 2"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_installer_refuses_sudo_before_writes (test_cli_bootstrap.PythonCompatibilityTests.test_installer_refuses_sudo_before_writes)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_installer_version_gate_accepts_39_and_up (test_cli_bootstrap.PythonCompatibilityTests.test_installer_version_gate_accepts_39_and_up)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_installer_version_gate_rejects_38_before_writes (test_cli_bootstrap.PythonCompatibilityTests.test_installer_version_gate_rejects_38_before_writes)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_invalid_cli_arguments_exit_nonzero (test_baseline.BaselineCliTests.test_invalid_cli_arguments_exit_nonzero)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "AssertionError: 1 != 0"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_invalid_combinations_fail_before_model_or_project_access (test_advice_report.ReportTests.test_invalid_combinations_fail_before_model_or_project_access)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 5m119nvh/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_invalid_native_skill_yaml_is_rejected (test_agent_packages.AgentPackageTests.test_invalid_native_skill_yaml_is_rejected)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "AssertionError: False is not true : ['Catalogue mode must remain read-only-evaluation', 'Lifecycle baseline must retain the twelve ordered stages', 'Broken role link: asdg_coordinator: ../admin/AGENTS.md', 'Broken role link: asdg_coordinator: ../docs/lifecycle-baseline.md', 'Adapter is not read-only: asdg_coordinator', 'Broken role link: asdg_01: ../admin/AGENTS.md', 'Broken role link: asdg_01: ../docs/lifecycle-baseline.md', 'Adapter is not read-only: asdg_01', 'Broken role link: asdg_02: ../admin/AGENTS.md', 'Broken role link: asdg_02: ../docs/lifecycle-baseline.md', 'Missing skill review marker: asdg_02', 'Adapter is not read-only: asdg_02', 'Broken role link: asdg_03: ../admin/AGENTS.md', 'Broken role link: asdg_03: ../docs/lifecycle-baseline.md', 'Adapter is not read-only: asdg_03', 'Broken role link: asdg_04: ../admin/AGENTS.md', 'Broken role link: asdg_04: ../docs/lifecycle-baseline.md', 'Adapter is not read-only: asdg_04', 'Broken role link: asdg_05: ../admin/AGENTS.md', 'Broken role link: asdg_05: ../docs/lifecycle-baseline.md', 'Broken role link: asdg_05: ../skills/asdg-decision/SKILL.md', 'Adapter is not read-only: asdg_05', 'Broken role link: asdg_06: ../admin/AGENTS.md', 'Broken role link: asdg_06: ../docs/lifecycle-baseline.md', 'Adapter is not read-only: asdg_06', 'Broken role link: asdg_07: ../admin/AGENTS.md', 'Broken role link: asdg_07: ../docs/lifecycle-baseline.md', 'Adapter is not read-only: asdg_07', 'Broken role link: asdg_08: ../admin/AGENTS.md', 'Broken role link: asdg_08: ../docs/lifecycle-baseline.md', 'Adapter is not read-only: asdg_08', 'Broken role link: asdg_09: ../admin/AGENTS.md', 'Broken role link: asdg_09: ../docs/lifecycle-baseline.md', 'Adapter is not read-only: asdg_09', 'Broken role link: asdg_10: ../admin/AGENTS.md', 'Broken role link: asdg_10: ../docs/lifecycle-baseline.md', 'Adapter is not read-only: asdg_10', 'Broken role link: asdg_11: ../admin/AGENTS.md', 'Broken role link: asdg_11: ../docs/lifecycle-baseline.md', 'Adapter is not read-only: asdg_11', 'Broken role link: asdg_12: ../admin/AGENTS.md', 'Broken role link: asdg_12: ../docs/lifecycle-baseline.md', 'Adapter is not read-only: asdg_12', 'Missing legacy review marker or current hash-bound review receipt: asdg/04-benchmarks-and-eval-strategy/logs/README.md', 'Missing legacy review marker or current hash-bound review receipt: asdg/05-high-level-design-and-architecture/logs/README.md']"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_invalid_project_and_release_metadata_fail_closed (test_project_status.StatusTests.test_invalid_project_and_release_metadata_fail_closed)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 2o48vyvx/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_invalid_start_does_not_mutate_state (test_sprint_gate.SprintTests.test_invalid_start_does_not_mutate_state)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_invalid_summary_is_rejected (test_advice_report.ReportTests.test_invalid_summary_is_rejected)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests bavjmo_2/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_json_verbose_is_one_valid_object (test_advice_report.ReportTests.test_json_verbose_is_one_valid_object)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 97flxah2/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_known_old_and_new_blocks_collapse_without_touching_surroundings (test_cli_install_migration.MigrationTests.test_known_old_and_new_blocks_collapse_without_touching_surroundings)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_legacy_bootstrap_path (test_agent_packages.AgentPackageTests.test_legacy_bootstrap_path)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_legacy_bridge_migrates_but_authored_edits_are_preserved (test_sprint_gate.SprintTests.test_legacy_bridge_migrates_but_authored_edits_are_preserved)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_legacy_file_duplicate (test_agent_packages.AgentPackageTests.test_legacy_file_duplicate)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_legacy_launcher_without_record_is_refused (test_cli_install_migration.MigrationTests.test_legacy_launcher_without_record_is_refused)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_legacy_zdotdir_is_preserved (test_cli_install_migration.MigrationTests.test_legacy_zdotdir_is_preserved)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_lifecycle_and_scope_references_follow_evidence_without_losing_decisions (test_namespace_migration.NamespaceMigrationTests.test_lifecycle_and_scope_references_follow_evidence_without_losing_decisions)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "cli_files.Conflict: Legacy binding/catalogue is not the reviewed identity-only migration baseline."
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_line_limit (test_agent_packages.AgentPackageTests.test_line_limit)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_line_limit_rejected_before_creating_destination (test_advice_report.ReportTests.test_line_limit_rejected_before_creating_destination)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests kgrbc23e/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_malformed_legacy_json_is_refused (test_cli_install_migration.MigrationTests.test_malformed_legacy_json_is_refused)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_migration_preserves_active_state_history_permissions_and_application (test_namespace_migration.NamespaceMigrationTests.test_migration_preserves_active_state_history_permissions_and_application)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "cli_files.Conflict: Legacy binding/catalogue is not the reviewed identity-only migration baseline."
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_missing_baseline (test_agent_packages.AgentPackageTests.test_missing_baseline)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_missing_contract (test_agent_packages.AgentPackageTests.test_missing_contract)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_missing_invalid_and_symlink_state_fail_closed (test_sprint_gate.SprintTests.test_missing_invalid_and_symlink_state_fail_closed)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_missing_package_directory (test_agent_packages.AgentPackageTests.test_missing_package_directory)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_missing_skill (test_agent_packages.AgentPackageTests.test_missing_skill)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_missing_stage_folder_repaired_without_overwriting_others (test_cli_bootstrap.ProjectTests.test_missing_stage_folder_repaired_without_overwriting_others)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests iuo2y061/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_modified_current_launcher_is_refused_after_migration (test_cli_install_migration.MigrationTests.test_modified_current_launcher_is_refused_after_migration)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_modified_managed_path_block_rejected (test_cli_bootstrap.InstallTests.test_modified_managed_path_block_rejected)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_new_project_starts_readably_with_hash_bound_receipts (test_documentation.InitializationReadabilityTests.test_new_project_starts_readably_with_hash_bound_receipts)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 9mi76_cg/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_new_shell_finds_cli_without_export_argument (test_cli_bootstrap.InstallTests.test_new_shell_finds_cli_without_export_argument)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_new_short_name_and_qualified_name (test_cli_bootstrap.RenameTests.test_new_short_name_and_qualified_name)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_no_report_or_write_when_advice_unavailable (test_advice_report.ReportTests.test_no_report_or_write_when_advice_unavailable)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests ezaq7wkz/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_non_executable_drive_copy_can_run_via_python (test_cli_bootstrap.InstallTests.test_non_executable_drive_copy_can_run_via_python)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_non_git_directory_not_implicitly_initialized (test_cli_bootstrap.ProjectTests.test_non_git_directory_not_implicitly_initialized)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_operational_and_learning_roles_preserve_separate_boundaries (test_agent_packages.AgentPackageTests.test_operational_and_learning_roles_preserve_separate_boundaries)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_path_escape (test_agent_packages.AgentPackageTests.test_path_escape)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_planning_implementation_and_cycle_recommendations (test_project_status.StatusTests.test_planning_implementation_and_cycle_recommendations)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests bomujyki/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_poc_can_be_unnecessary_but_other_stages_cannot_be_skipped (test_project_status.StatusTests.test_poc_can_be_unnecessary_but_other_stages_cannot_be_skipped)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests 4a1qqor8/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_preflight_conflicting_stage_file_leaves_no_scaffold (test_cli_bootstrap.ProjectTests.test_preflight_conflicting_stage_file_leaves_no_scaffold)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests g1cu9zlf/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_protected_paths_traversal_symlinks_and_multi_file_patch (test_sprint_gate.SprintTests.test_protected_paths_traversal_symlinks_and_multi_file_patch)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_provider_cannot_be_initialized_as_application (test_cli_bootstrap.ProjectTests.test_provider_cannot_be_initialized_as_application)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_publish_failure_leaves_no_partial_report_or_temporary_file (test_advice_report.ReportTests.test_publish_failure_leaves_no_partial_report_or_temporary_file)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests mcj2u1tt/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_python_entry_and_installed_launcher (test_cli_bootstrap.PythonCompatibilityTests.test_python_entry_and_installed_launcher)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_python_install_entry_point_still_works (test_cli_bootstrap.RenameTests.test_python_install_entry_point_still_works)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_read_only_setting (test_agent_packages.AgentPackageTests.test_read_only_setting)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_real_cli_registration_dry_run_json_and_state_preservation (test_baseline.BaselineCliTests.test_real_cli_registration_dry_run_json_and_state_preservation)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "AssertionError: 1 != 0"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_real_legacy_upgrade_via_python_entry_point_and_repeat (test_cli_install_migration.MigrationTests.test_real_legacy_upgrade_via_python_entry_point_and_repeat)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_recorded_project_and_release_are_distinct_from_evidence_and_sprint (test_project_status.StatusTests.test_recorded_project_and_release_are_distinct_from_evidence_and_sprint)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests nf2nqwe6/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_recorded_shells_migrate_after_switching_to_bash (test_cli_install_migration.MigrationTests.test_recorded_shells_migrate_after_switching_to_bash)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_rejects_symlink_destinations_and_foreign_artifact_root (test_advice_report.ReportTests.test_rejects_symlink_destinations_and_foreign_artifact_root)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests _oh2wxcz/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_release_metadata_does_not_start_or_approve_a_sprint (test_project_status.StatusTests.test_release_metadata_does_not_start_or_approve_a_sprint)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests way6d9tw/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_repeat_migration_and_initialization_preserve_state_and_never_recreate_legacy (test_namespace_migration.NamespaceMigrationTests.test_repeat_migration_and_initialization_preserve_state_and_never_recreate_legacy)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "cli_files.Conflict: Legacy binding/catalogue is not the reviewed identity-only migration baseline."
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_repository_launcher_preserves_external_working_directory (test_cli_bootstrap.RenameTests.test_repository_launcher_preserves_external_working_directory)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_root_and_installed_help_use_new_name (test_cli_bootstrap.RenameTests.test_root_and_installed_help_use_new_name)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_root_asdg_install_executes_without_options (test_cli_bootstrap.InstallTests.test_root_asdg_install_executes_without_options)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_save_failure_does_not_hide_successful_advice_or_claim_saved (test_advice_report.ReportTests.test_save_failure_does_not_hide_successful_advice_or_claim_saved)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests k52pls_2/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_source_move_has_diagnostic_and_reinstall_recovers (test_cli_bootstrap.InstallTests.test_source_move_has_diagnostic_and_reinstall_recovers)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "AssertionError: 1 != 0"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_stale_or_unrecognized_legacy_metadata_is_refused (test_cli_install_migration.MigrationTests.test_stale_or_unrecognized_legacy_metadata_is_refused)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_standalone_verify_reports_removed_structure (test_cli_bootstrap.ProjectTests.test_standalone_verify_reports_removed_structure)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "AssertionError: 1 != 0"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_status_stop_and_repeat_init_preserve_state (test_sprint_gate.SprintTests.test_status_stop_and_repeat_init_preserve_state)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_symlink_in_project_path_refused (test_cli_bootstrap.ProjectTests.test_symlink_in_project_path_refused)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_symlink_shell_file_rejected (test_cli_bootstrap.InstallTests.test_symlink_shell_file_rejected)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_symlink_source_is_rejected_before_writes (test_namespace_migration.NamespaceMigrationTests.test_symlink_source_is_rejected_before_writes)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_symlinked_legacy_manifest_is_refused (test_cli_install_migration.MigrationTests.test_symlinked_legacy_manifest_is_refused)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_unknown_agent_error_names_asdg (test_cli_bootstrap.RenameTests.test_unknown_agent_error_names_asdg)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "AssertionError: 'run asdg agent list' not found in 'Traceback (most recent call last):\\n  File \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests y6m9u3a_/tools with spaces/ASDG \\'repo\\'/bin/asdg\", line 8, in <module>\\n    from cli import main\\nModuleNotFoundError: No module named \\'cli\\'\\n'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_unknown_binding_and_initialization_of_legacy_are_rejected (test_namespace_migration.NamespaceMigrationTests.test_unknown_binding_and_initialization_of_legacy_are_rejected)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_unknown_nonempty_metadata_directory_refused (test_cli_bootstrap.ProjectTests.test_unknown_nonempty_metadata_directory_refused)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests t4ujiya4/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_unrelated_launcher_with_matching_recorded_hash_is_refused (test_cli_install_migration.MigrationTests.test_unrelated_launcher_with_matching_recorded_hash_is_refused)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_unsupported_shell_fails_before_changes (test_cli_bootstrap.InstallTests.test_unsupported_shell_fails_before_changes)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_upgrade_from_asd_keeps_old_command_and_uses_asdg (test_cli_bootstrap.RenameTests.test_upgrade_from_asd_keeps_old_command_and_uses_asdg)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "AssertionError: 1 != 0"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_valid_packages (test_agent_packages.AgentPackageTests.test_valid_packages)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "Diff is 2498 characters long. Set self.maxDiff to None to see it."
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/.codex'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_verbose_saves_same_result_in_canonical_folder (test_advice_report.ReportTests.test_verbose_saves_same_result_in_canonical_folder)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests cn1tbxka/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_verify_after_init_structural_pass (test_cli_bootstrap.ProjectTests.test_verify_after_init_structural_pass)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests odqqsujg/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_verify_is_read_only (test_cli_bootstrap.ProjectTests.test_verify_is_read_only)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_write_failure_restores_original_paths_and_state (test_namespace_migration.NamespaceMigrationTests.test_write_failure_restores_original_paths_and_state)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "cli_files.Conflict: Legacy binding/catalogue is not the reviewed identity-only migration baseline."
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_write_failure_rolls_back_new_files (test_cli_bootstrap.ProjectTests.test_write_failure_rolls_back_new_files)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_yaml_front_matter_not_damaged (test_cli_bootstrap.ProjectTests.test_yaml_front_matter_not_damaged)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: \"/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg tests vtxbejyg/tools with spaces/ASDG 'repo'/asdg/docs/lifecycle-baseline.md\""
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_zdotdir_inside_home (test_cli_bootstrap.InstallTests.test_zdotdir_inside_home)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "legacy",
+    "test": "test_zsh_startup_targets_and_syntax (test_cli_bootstrap.InstallTests.test_zsh_startup_targets_and_syntax)",
+    "classification": "already failing; destination also exposes old provider-specific dependency",
+    "source": [
+      "FAIL",
+      "ModuleNotFoundError: No module named 'cli'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/status/lifecycle-baseline.md'"
+    ]
+  },
+  {
+    "suite": "video",
+    "test": "test_order (test_video.VideoTests.test_order)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/presentations/codex-agent-skills-and-adapters'"
+    ]
+  },
+  {
+    "suite": "video",
+    "test": "test_piper_video (unittest.loader._FailedTest.test_piper_video)",
+    "classification": "environment dependency missing in default Python (also source)",
+    "source": [
+      "ERROR",
+      "ModuleNotFoundError: No module named 'defusedxml'"
+    ],
+    "destination": [
+      "ERROR",
+      "ModuleNotFoundError: No module named 'defusedxml'"
+    ]
+  },
+  {
+    "suite": "video",
+    "test": "test_pptx_sources (unittest.loader._FailedTest.test_pptx_sources)",
+    "classification": "environment dependency missing in default Python (also source)",
+    "source": [
+      "ERROR",
+      "ModuleNotFoundError: No module named 'defusedxml'"
+    ],
+    "destination": [
+      "ERROR",
+      "ModuleNotFoundError: No module named 'defusedxml'"
+    ]
+  },
+  {
+    "suite": "video",
+    "test": "test_slide_discovery (test_video.VideoTests.test_slide_discovery)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/presentations/codex-agent-skills-and-adapters'"
+    ]
+  },
+  {
+    "suite": "presentation",
+    "test": "test_build (unittest.loader._FailedTest.test_build)",
+    "classification": "environment dependency missing in default Python (also source)",
+    "source": [
+      "ERROR",
+      "ModuleNotFoundError: No module named 'pptx'"
+    ],
+    "destination": [
+      "ERROR",
+      "ModuleNotFoundError: No module named 'pptx'"
+    ]
+  },
+  {
+    "suite": "presentation",
+    "test": "test_narration (unittest.loader._FailedTest.test_narration)",
+    "classification": "environment dependency missing in default Python (also source)",
+    "source": [
+      "ERROR",
+      "ModuleNotFoundError: No module named 'pptx'"
+    ],
+    "destination": [
+      "ERROR",
+      "ModuleNotFoundError: No module named 'pptx'"
+    ]
+  },
+  {
+    "suite": "video-renderer",
+    "test": "test_existing_deck_preserves_embedded_visuals_and_complete_notes (test_pptx_sources.PptxSourceTests.test_existing_deck_preserves_embedded_visuals_and_complete_notes)",
+    "classification": "already failing before migration",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/asdg-cutover-evidence/source/docs/presentations/codex-agent-skills-and-adapters/build/tmpccc3x05q'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/docs/presentations/codex-agent-skills-and-adapters/build/tmp13cp1wid'"
+    ]
+  },
+  {
+    "suite": "video-renderer",
+    "test": "test_full_detailed_range_and_coverage (test_piper_video.PiperVideoTests.test_full_detailed_range_and_coverage)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/docs/presentations'"
+    ]
+  },
+  {
+    "suite": "video-renderer",
+    "test": "test_intro_five_slides_keep_original_picture_placement (test_pptx_sources.PptxSourceTests.test_intro_five_slides_keep_original_picture_placement)",
+    "classification": "already failing before migration",
+    "source": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/asdg-cutover-evidence/source/docs/presentations/asdg-introduction/build/tmpy1jqfewh'"
+    ],
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/docs/presentations/asdg-introduction/build/tmpsk0w6io0'"
+    ]
+  },
+  {
+    "suite": "video-renderer",
+    "test": "test_invalid_range (test_piper_video.PiperVideoTests.test_invalid_range)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg/docs/presentations'"
+    ]
+  },
+  {
+    "suite": "video-renderer",
+    "test": "test_order (test_video.VideoTests.test_order)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/presentations/codex-agent-skills-and-adapters'"
+    ]
+  },
+  {
+    "suite": "video-renderer",
+    "test": "test_slide_discovery (test_video.VideoTests.test_slide_discovery)",
+    "classification": "old provider-specific assumption exposed by migration",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/docs/presentations/codex-agent-skills-and-adapters'"
+    ]
+  },
+  {
+    "suite": "presentation-renderer",
+    "test": "test_round_trip_notes (test_build.PresentationTests.test_round_trip_notes)",
+    "classification": "already failing before migration",
+    "source": [
+      "FAIL",
+      "AssertionError: PosixPath('/private/var/folders/sr/0mj2x8d536919gtgfc[41 chars]ild') != PosixPath('/var/folders/sr/0mj2x8d536919gtgfcz2qcp000[33 chars]ild')"
+    ],
+    "destination": [
+      "FAIL",
+      "AssertionError: PosixPath('/private/var/folders/sr/0mj2x8d536919gtgfc[41 chars]ild') != PosixPath('/var/folders/sr/0mj2x8d536919gtgfcz2qcp000[33 chars]ild')"
+    ]
+  },
+  {
+    "suite": "mechanical-tests.log",
+    "test": "test_repeat_setup_and_dry_run_create_nothing_new (test_portable.PortableTests.test_repeat_setup_and_dry_run_create_nothing_new)",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "FAIL",
+      "ERROR: Run the selected package's own asdg/scripts/init.py entry point."
+    ]
+  },
+  {
+    "suite": "final-tests.log",
+    "test": "test_both_routes_both_clients_preview_apply_verify_and_repeat (test_install.InstallTests.test_both_routes_both_clients_preview_apply_verify_and_repeat) (route='zip', client='claude')",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "AttributeError: 'PosixPath' object has no attribute 'removeprefix'"
+    ]
+  },
+  {
+    "suite": "final-tests.log",
+    "test": "test_both_routes_both_clients_preview_apply_verify_and_repeat (test_install.InstallTests.test_both_routes_both_clients_preview_apply_verify_and_repeat) (route='zip', client='codex')",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "AttributeError: 'PosixPath' object has no attribute 'removeprefix'"
+    ]
+  },
+  {
+    "suite": "final-tests.log",
+    "test": "test_both_routes_both_clients_preview_apply_verify_and_repeat (test_install.InstallTests.test_both_routes_both_clients_preview_apply_verify_and_repeat) (route='clone', client='claude')",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "AttributeError: 'PosixPath' object has no attribute 'removeprefix'"
+    ]
+  },
+  {
+    "suite": "final-tests.log",
+    "test": "test_both_routes_both_clients_preview_apply_verify_and_repeat (test_install.InstallTests.test_both_routes_both_clients_preview_apply_verify_and_repeat) (route='clone', client='codex')",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "AttributeError: 'PosixPath' object has no attribute 'removeprefix'"
+    ]
+  },
+  {
+    "suite": "final-tests.log",
+    "test": "test_clients_add_in_either_order_without_touching_the_other (test_portable.PortableTests.test_clients_add_in_either_order_without_touching_the_other)",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "FAIL",
+      "AssertionError: 1 != 0 : {\"error\": \"Run the selected package's own asdg/scripts/init.py entry point.\", \"operation\": \"init\"}"
+    ]
+  },
+  {
+    "suite": "final-tests.log",
+    "test": "test_fresh_setup_installs_only_the_selected_clients (test_portable.PortableTests.test_fresh_setup_installs_only_the_selected_clients)",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "FAIL",
+      "AssertionError: 1 != 0 : {\"error\": \"Run the selected package's own asdg/scripts/init.py entry point.\", \"operation\": \"init\"}"
+    ]
+  },
+  {
+    "suite": "final-tests.log",
+    "test": "test_repeat_setup_and_dry_run_create_nothing_new (test_portable.PortableTests.test_repeat_setup_and_dry_run_create_nothing_new)",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "FAIL",
+      "ERROR: Run the selected package's own asdg/scripts/init.py entry point."
+    ]
+  },
+  {
+    "suite": "verified-tests.log",
+    "test": "test_both_routes_both_clients_preview_apply_verify_and_repeat (test_install.InstallTests.test_both_routes_both_clients_preview_apply_verify_and_repeat) (route='zip', client='claude')",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "AttributeError: 'PosixPath' object has no attribute 'removeprefix'"
+    ]
+  },
+  {
+    "suite": "verified-tests.log",
+    "test": "test_both_routes_both_clients_preview_apply_verify_and_repeat (test_install.InstallTests.test_both_routes_both_clients_preview_apply_verify_and_repeat) (route='zip', client='codex')",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "AttributeError: 'PosixPath' object has no attribute 'removeprefix'"
+    ]
+  },
+  {
+    "suite": "verified-tests.log",
+    "test": "test_both_routes_both_clients_preview_apply_verify_and_repeat (test_install.InstallTests.test_both_routes_both_clients_preview_apply_verify_and_repeat) (route='clone', client='claude')",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "AttributeError: 'PosixPath' object has no attribute 'removeprefix'"
+    ]
+  },
+  {
+    "suite": "verified-tests.log",
+    "test": "test_both_routes_both_clients_preview_apply_verify_and_repeat (test_install.InstallTests.test_both_routes_both_clients_preview_apply_verify_and_repeat) (route='clone', client='codex')",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "ERROR",
+      "AttributeError: 'PosixPath' object has no attribute 'removeprefix'"
+    ]
+  },
+  {
+    "suite": "verified-tests.log",
+    "test": "test_clients_add_in_either_order_without_touching_the_other (test_portable.PortableTests.test_clients_add_in_either_order_without_touching_the_other)",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "FAIL",
+      "AssertionError: 1 != 0 : {\"error\": \"Run the selected package's own asdg/scripts/init.py entry point.\", \"operation\": \"init\"}"
+    ]
+  },
+  {
+    "suite": "verified-tests.log",
+    "test": "test_fresh_setup_installs_only_the_selected_clients (test_portable.PortableTests.test_fresh_setup_installs_only_the_selected_clients)",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "FAIL",
+      "AssertionError: 1 != 0 : {\"error\": \"Run the selected package's own asdg/scripts/init.py entry point.\", \"operation\": \"init\"}"
+    ]
+  },
+  {
+    "suite": "verified-tests.log",
+    "test": "test_repeat_setup_and_dry_run_create_nothing_new (test_portable.PortableTests.test_repeat_setup_and_dry_run_create_nothing_new)",
+    "classification": "migration/test-adaptation breakage corrected; exploratory run superseded by final 150-test pass",
+    "source": null,
+    "destination": [
+      "FAIL",
+      "ERROR: Run the selected package's own asdg/scripts/init.py entry point."
+    ]
+  }
+]

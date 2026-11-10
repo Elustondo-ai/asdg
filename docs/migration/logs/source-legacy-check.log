@@ -1,0 +1,17 @@
+FAIL: Catalogue mode must remain read-only-evaluation
+FAIL: Lifecycle baseline must retain the twelve ordered stages
+FAIL: Adapter is not read-only: asdg_coordinator
+FAIL: Adapter is not read-only: asdg_01
+FAIL: Adapter is not read-only: asdg_02
+FAIL: Adapter is not read-only: asdg_03
+FAIL: Adapter is not read-only: asdg_04
+FAIL: Adapter is not read-only: asdg_05
+FAIL: Adapter is not read-only: asdg_06
+FAIL: Adapter is not read-only: asdg_07
+FAIL: Adapter is not read-only: asdg_08
+FAIL: Adapter is not read-only: asdg_09
+FAIL: Adapter is not read-only: asdg_10
+FAIL: Adapter is not read-only: asdg_11
+FAIL: Adapter is not read-only: asdg_12
+FAIL: Missing legacy review marker or current hash-bound review receipt: asdg/04-benchmarks-and-eval-strategy/logs/README.md
+FAIL: Missing legacy review marker or current hash-bound review receipt: asdg/05-high-level-design-and-architecture/logs/README.md

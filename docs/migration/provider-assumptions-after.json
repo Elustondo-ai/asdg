@@ -1,0 +1,200 @@
+[
+  {
+    "path": "00-governance/docs/baseline-checkpoint-plan-r01.md",
+    "line": 16,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": "asdg_provider=\"$PWD/agentic-sdlc-governance\""
+  },
+  {
+    "path": "00-governance/docs/logging-acceptance.md",
+    "line": 7,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": "Open the existing agentic-sdlc-governance repository; wait for Drive synchronization."
+  },
+  {
+    "path": "00-governance/docs/state-engine-verification.md",
+    "line": 5,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": "Implementation and tests are confined to `agentic-sdlc-governance`; test projects live in temporary"
+  },
+  {
+    "path": "00-governance/src/agent_log_hook.py",
+    "line": 9,
+    "classification": "uncertain \u2014 retained legacy provider implementation; resolve before claiming full-source validation",
+    "text": "REPO = Path(__file__).resolve().parents[3]"
+  },
+  {
+    "path": "00-governance/src/cli_model.py",
+    "line": 18,
+    "classification": "uncertain \u2014 retained legacy provider implementation; resolve before claiming full-source validation",
+    "text": "REPO = Path(__file__).resolve().parents[3]"
+  },
+  {
+    "path": "00-governance/src/validate_agents.py",
+    "line": 164,
+    "classification": "uncertain \u2014 retained legacy provider implementation; resolve before claiming full-source validation",
+    "text": "    root = root or Path(__file__).resolve().parents[3]"
+  },
+  {
+    "path": "00-governance/tests/test_agent_config.py",
+    "line": 6,
+    "classification": "uncertain \u2014 retained legacy provider implementation; resolve before claiming full-source validation",
+    "text": "ROOT = Path(__file__).resolve().parents[3]"
+  },
+  {
+    "path": "00-governance/tests/test_agent_packages.py",
+    "line": 9,
+    "classification": "uncertain \u2014 retained legacy provider implementation; resolve before claiming full-source validation",
+    "text": "ROOT = Path(__file__).resolve().parents[3]"
+  },
+  {
+    "path": "00-governance/tests/test_cli_bootstrap.py",
+    "line": 14,
+    "classification": "uncertain \u2014 retained legacy provider implementation; resolve before claiming full-source validation",
+    "text": "REPO = Path(__file__).resolve().parents[3]"
+  },
+  {
+    "path": "00-governance/types/document-reviews.json",
+    "line": 28680,
+    "classification": "still correct or compatibility \u2014 root resolver, embedded consumer path, or historical explanation; see impact report",
+    "text": "      \"path\": \"scripts/prepare_commit.py\","
+  },
+  {
+    "path": "00-governance/types/document-reviews.json",
+    "line": 28693,
+    "classification": "still correct or compatibility \u2014 root resolver, embedded consumer path, or historical explanation; see impact report",
+    "text": "      \"path\": \"scripts/prepare_commit.md\","
+  },
+  {
+    "path": "00-governance/types/document-reviews.json",
+    "line": 28706,
+    "classification": "still correct or compatibility \u2014 root resolver, embedded consumer path, or historical explanation; see impact report",
+    "text": "      \"path\": \"scripts/tests/test_prepare_commit.py\","
+  },
+  {
+    "path": "00-governance/types/document-reviews.json",
+    "line": 28719,
+    "classification": "still correct or compatibility \u2014 root resolver, embedded consumer path, or historical explanation; see impact report",
+    "text": "      \"path\": \"scripts/tests/test_prepare_commit.md\","
+  },
+  {
+    "path": "00-governance/types/migrations/speaker-coach-exporters.patch",
+    "line": 12,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": " METHOD = CONSUMER.parent / \"agentic-sdlc-governance\""
+  },
+  {
+    "path": "00-governance/types/migrations/speaker-coach-exporters.patch",
+    "line": 23,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": " METHOD = CONSUMER.parent / \"agentic-sdlc-governance\""
+  },
+  {
+    "path": "components/video-builder/src/build_piper_video.py",
+    "line": 13,
+    "classification": "still correct or compatibility \u2014 root resolver, embedded consumer path, or historical explanation; see impact report",
+    "text": "CORE = Path(__file__).resolve().parents[3]"
+  },
+  {
+    "path": "components/video-builder/src/build_piper_video.py",
+    "line": 14,
+    "classification": "still correct or compatibility \u2014 root resolver, embedded consumer path, or historical explanation; see impact report",
+    "text": "REPO = CORE if (CORE / '.git').exists() else CORE.parent"
+  },
+  {
+    "path": "components/video-builder/tests/test_video.py",
+    "line": 9,
+    "classification": "must fix or explicitly retire \u2014 historical external deck/root dependency",
+    "text": "        root=Path(__file__).resolve().parents[4]/'docs'/'presentations'/'codex-agent-skills-and-adapters'"
+  },
+  {
+    "path": "components/video-builder/tests/test_video.py",
+    "line": 14,
+    "classification": "must fix or explicitly retire \u2014 historical external deck/root dependency",
+    "text": "        root=Path(__file__).resolve().parents[4]/'docs'/'presentations'/'codex-agent-skills-and-adapters'"
+  },
+  {
+    "path": "docs/provenance.md",
+    "line": 4,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": "[agentic-sdlc-governance](https://drive.google.com/drive/folders/1CzNrE_O6Vb39BK5d4EXtA3Uj2kSAYoqL)."
+  },
+  {
+    "path": "metadata/MANIFEST.json",
+    "line": 14,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": "      \"repository\": \"https://github.com/Elustondo-ai/agentic-sdlc-governance\","
+  },
+  {
+    "path": "metadata/MANIFEST.json",
+    "line": 20,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": "      \"repository\": \"https://github.com/Elustondo-ai/agentic-sdlc-governance\","
+  },
+  {
+    "path": "metadata/deliveries/0.3.0-pilot.2.json",
+    "line": 14,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": "      \"repository\": \"https://github.com/Elustondo-ai/agentic-sdlc-governance\","
+  },
+  {
+    "path": "metadata/deliveries/0.3.0-pilot.3.json",
+    "line": 14,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": "      \"repository\": \"https://github.com/Elustondo-ai/agentic-sdlc-governance\","
+  },
+  {
+    "path": "metadata/distribution.json",
+    "line": 27,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": "      \"repository\": \"https://github.com/Elustondo-ai/agentic-sdlc-governance\","
+  },
+  {
+    "path": "metadata/distribution.json",
+    "line": 33,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": "      \"repository\": \"https://github.com/Elustondo-ai/agentic-sdlc-governance\","
+  },
+  {
+    "path": "scripts/build_distribution.py",
+    "line": 65,
+    "classification": "still correct or compatibility \u2014 root resolver, embedded consumer path, or historical explanation; see impact report",
+    "text": "    parser.add_argument('--output', type=Path, default=(CORE if (CORE / '.git').exists() else CORE.parent) / 'build/distributions')"
+  },
+  {
+    "path": "scripts/lib/agent_log_hook.py",
+    "line": 9,
+    "classification": "still correct or compatibility \u2014 root resolver, embedded consumer path, or historical explanation; see impact report",
+    "text": "REPO = Path(__file__).resolve().parents[3]"
+  },
+  {
+    "path": "scripts/lib/cli_model.py",
+    "line": 19,
+    "classification": "still correct or compatibility \u2014 root resolver, embedded consumer path, or historical explanation; see impact report",
+    "text": "REPO = CORE if (CORE / '.git').exists() else CORE.parent"
+  },
+  {
+    "path": "skills/asdg-focus/installation-2026-10-18.json",
+    "line": 5,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": "  \"destination\": \"Drive project folder 1CzNrE_O6Vb39BK5d4EXtA3Uj2kSAYoqL (agentic-sdlc-governance)\","
+  },
+  {
+    "path": "skills/asdg-focus/installation-2026-10-19.json",
+    "line": 4,
+    "classification": "historical/reference only \u2014 preserve exact provenance",
+    "text": "  \"scope\": \"Existing Drive-backed agentic-sdlc-governance checkout; no change to consumer bindings, registry, native subagent definitions, permissions or lifecycle state\","
+  },
+  {
+    "path": "skills/asdg-presentation/src/sources.py",
+    "line": 7,
+    "classification": "still correct or compatibility \u2014 root resolver, embedded consumer path, or historical explanation; see impact report",
+    "text": "sys.path.insert(0, str(Path(__file__).resolve().parents[3] / \"00-governance/src\"))"
+  },
+  {
+    "path": "tests/test_distribution.py",
+    "line": 25,
+    "classification": "still correct or compatibility \u2014 root resolver, embedded consumer path, or historical explanation; see impact report",
+    "text": "        self.core = self.root / 'provider/asdg'"
+  }
+]

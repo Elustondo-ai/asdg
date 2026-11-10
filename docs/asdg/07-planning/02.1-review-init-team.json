@@ -1,0 +1,202 @@
+{
+  "status": "REVIEW_REQUIRED",
+  "requester": "Pablo",
+  "role": "ASDG-ADMIN",
+  "thread_id": "01a1c210-47d4-7012-bb25-a09c89e78b60",
+  "root": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg",
+  "starting_revision": null,
+  "recorded_at": "2026-11-09T21:58:42Z",
+  "human_approval": null,
+  "files": [
+    {
+      "path": "00-governance/docs/runtime-contract.md",
+      "purpose": "Recognize the exact Init approval as authorization for displayed team effects.",
+      "sha256": "16cb2c6c6af492bacb3404454d0dbd8976039d98cd5dd159ee39f07db58e06ef",
+      "previous_sha256": "b66c68e2413d893ef0ac47f114c879adca20550f8d6083c88a1d562f4dba2f4b"
+    },
+    {
+      "path": "00-governance/types/document-reviews.json",
+      "purpose": "Append exact-hash AI modification receipts without transferring approval.",
+      "sha256": "3cd83a247a9dbf17378d07b73447a8418f8d57ae7bbc255d35eca9099d111566",
+      "previous_sha256": "f4a058af7f8fe54aea0dee41e940a81bb30d8063f81d54789d15bb5ea0d4ff5f"
+    },
+    {
+      "path": "README.md",
+      "purpose": "State initialization prepares the client team.",
+      "sha256": "6f58bbc852619ccbacf4bf18b5428b3424cd353f376ffcb4f2e33e82fb7d11ba",
+      "previous_sha256": "fdc2df16406c79184f2b30e243d025fae602895a5c760260cdf5e9db52967093"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.1-review-init-team.md",
+      "purpose": "Record scope, design, evidence and review status.",
+      "sha256": "241f64ce61680c641a0263e27b227550ac4865bc7dc3ea889eedf9d5b2526437",
+      "previous_sha256": null
+    },
+    {
+      "path": "docs/client-integrations.md",
+      "purpose": "Define Codex versus Claude readiness and retained native limits.",
+      "sha256": "e86c7cfcb4adbb3a3e93e8c3cbe0201ea59f424dad284e87e742f2a5e31df82f",
+      "previous_sha256": "18f016cf295a1aef3752553ef1272ba46c07b0c0787a1f40fafc6c2489750397"
+    },
+    {
+      "path": "docs/images/installation-engine.svg",
+      "purpose": "Show team preparation and Governance Status after file installation.",
+      "sha256": "ab220eea4b0158238aacd26b79db40fce82b2ada858d925e7782173a7decfdf1",
+      "previous_sha256": "77898afc32a14f901dcc9be75106f9a42a27552356c67779f897e8e2ae3a7c91"
+    },
+    {
+      "path": "docs/install-clone-prompt.md",
+      "purpose": "Include automatic canonical team completion in the clone trial.",
+      "sha256": "6ee7fc0f556db1b05fdf0db831cc5baffe3877f02bf404c1a1aaf02c080b90ba",
+      "previous_sha256": "a83a01a7ffae9fefc1ae67c03e9df1428c371e98e5ba392335be809addcc9ef8"
+    },
+    {
+      "path": "docs/install-zip-prompt.md",
+      "purpose": "Include automatic canonical team completion in the ZIP trial.",
+      "sha256": "bc504ae71d717274d4252a8a0be6c52f2e78e6a4bc5bf3622ce2604ef6069a9f",
+      "previous_sha256": "6c4b50a98f5b62209558923d9c478d381b7f923ca112fbb488c16ff4428ee882"
+    },
+    {
+      "path": "docs/installation.md",
+      "purpose": "Document complete-plan approval, client completion and native failure boundaries.",
+      "sha256": "fef7ddc23d3bf16d26ef1da44b61e2c644a17af4d02bccbcc51ad5d29b515231",
+      "previous_sha256": "561c1ab5c859cdf6cf09e1d5197d057b54644e22cf76b10bd518fc559c8907d7"
+    },
+    {
+      "path": "metadata/package-files.json",
+      "purpose": "Ship the team plan helper, its companion and shared workflow guides.",
+      "sha256": "84095552c83e136abd9929e8d4b722fce9787907877a5987738f294aab05c8fd",
+      "previous_sha256": "e38bb870608cc7c60a78e4a8c3bf8a273c21ef01ed9fc1516bc344247169e8c2"
+    },
+    {
+      "path": "scripts/lib/cli.md",
+      "purpose": "Document the new input and file-only CLI completion.",
+      "sha256": "3ac73abdfd2e0d3136b268407dcbbd4464acebe9a73a6207d119204bde0d198b",
+      "previous_sha256": "a564ea8599114674fafd0f73d13d099a546697731ac1f9865b9cedab7b669680"
+    },
+    {
+      "path": "scripts/lib/cli.py",
+      "purpose": "Accept the external verified native inventory JSON for init.",
+      "sha256": "8640b3905a36c1ea4fe2c60625032878a6da00000c2f289e59fa8dbc1767c55c",
+      "previous_sha256": "0ce4d58e27c8e50d82d7d04001c40e1a2837d35f5f58a04fcbf40699fb7a7d65"
+    },
+    {
+      "path": "scripts/lib/cli_install.md",
+      "purpose": "Explain the shared plan and native transaction boundary.",
+      "sha256": "52a14ec666378c503031c37ec192c537de47e78d653661a8ce52514e05ac46ff",
+      "previous_sha256": "e8533f92bee7c7c56dc83146f31823bdb4063e4caedc6f33d91c255f488c1551"
+    },
+    {
+      "path": "scripts/lib/cli_install.py",
+      "purpose": "Bind team effects into plan tokens and report client completion pending.",
+      "sha256": "98c4d9ac1a38d266c25e697cad0a32f21f7c0c88cb230bee12afa7e3321082b3",
+      "previous_sha256": "1bb668a0dbe4672aae347da456c091d32397ffd8f316f938d06073564d4b64c4"
+    },
+    {
+      "path": "scripts/lib/cli_team.md",
+      "purpose": "Document inventory schema, collaborators and failure behavior.",
+      "sha256": "f6c6d95c58b58ba70311b372cba1759155d0834b9625686ad339380f1c748e86",
+      "previous_sha256": null
+    },
+    {
+      "path": "scripts/lib/cli_team.py",
+      "purpose": "Validate inventory and derive create/reuse effects from the existing catalogue.",
+      "sha256": "0bb3e9433fc5a4fc8b1ed55c02379a584d4e83edb227ed6d04fa3ad6743ce749",
+      "previous_sha256": null
+    },
+    {
+      "path": "skills/asdg-create-team/SKILL.md",
+      "purpose": "Reuse this single workflow from init and distinguish supported client modes.",
+      "sha256": "e6eb3318422a3a4100547f8d71302c812f5233f94bf8473f5ba56131bca813c8",
+      "previous_sha256": "1ad1b8d46e88ca647d79bc2b221c9cc1882ec1d9cc9793c4ee1c23e897bbcd5d"
+    },
+    {
+      "path": "skills/asdg-create-team/initialization.md",
+      "purpose": "Define read-only preparation, approved execution, readiness and safe resumption.",
+      "sha256": "b173bd632c754bf4c12ecf157ffef98636fde1e119facb87ce37ee279ac9e6cd",
+      "previous_sha256": null
+    },
+    {
+      "path": "skills/asdg-create-team/ordering.md",
+      "purpose": "Move existing ordering rules unchanged into a linked unit; retain separate shared-preference approval.",
+      "sha256": "bb72232e48c9a956ab4a9626092f652143cbb8848a9c882c1fdb1d5f23c406e1",
+      "previous_sha256": null
+    },
+    {
+      "path": "skills/asdg-focus/session-policy.md",
+      "purpose": "Recognize exact Init approval for initial team creation.",
+      "sha256": "aee49c00765bf45be61eeebe21a83707c5adb28c432590a196958544a4ea8b76",
+      "previous_sha256": "896692f69b7954ed6f77084d758119bb7039f4cbc0a4f9375c8f3b52450bbf1c"
+    },
+    {
+      "path": "skills/asdg-init/SKILL.md",
+      "purpose": "Continue from APPROVE through existing team setup and Governance Status.",
+      "sha256": "5fd244d761c3abd654d2d461b8e7b2555fa54a4426234dba08a9c02bcb9857c5",
+      "previous_sha256": "01cc09c79ffd3eb6f8ba95a5d7482f91b16407ff88c2dbffea9a40790e748668"
+    },
+    {
+      "path": "skills/asdg-status/SKILL.md",
+      "purpose": "Use readiness receipts and avoid redundant post-init setup recommendations.",
+      "sha256": "bdd8e5695e398e6fce54c9eaac48b2e2cd20f99298bd7a9ac9a87d806b29b32e",
+      "previous_sha256": "89687b96df20884b3ed774a6e2fe790c1328d1bd45a39ee0753b93323416d2bb"
+    },
+    {
+      "path": "templates/.agents/skills/asdg-init/SKILL.md",
+      "purpose": "Align the thin shared adapter description with approved initial activation.",
+      "sha256": "11641d2e0258dc3f4db7766522bb84dc5cb6c4ac5592d081465b40fd1b12550f",
+      "previous_sha256": "666e9006bdbcf25444e61ef24902f372a68de039cc3af99b5bfb12466d46bb44"
+    },
+    {
+      "path": "tests/test_install.md",
+      "purpose": "Update acceptance expectations and test boundaries.",
+      "sha256": "e88afd04b64fd73a3e4d5031d740fad0450ad3e935c9c30486c63528e15fe288",
+      "previous_sha256": "c2873672140b0cc0eeecd661d111dd4d411e79370c40bd76cc7d1cff956278aa"
+    },
+    {
+      "path": "tests/test_install.py",
+      "purpose": "Verify team preview, approval binding, Governance availability and preserved re-init.",
+      "sha256": "4a28a8dc1b4dde6459013a5cb40bf04fb05b4de0dbc9143d799ef49204e19e9d",
+      "previous_sha256": "3f0eb91f14cb242ffccb1dd1b797877e11c4690fca28836863eac45edd03f167"
+    },
+    {
+      "path": "tests/test_portable.md",
+      "purpose": "Document changed portable completion expectations.",
+      "sha256": "b8416f9eb2714496c162f6796fec7a33513a5ac350b890da7937056029af6472",
+      "previous_sha256": "e3cf6644ad9daf2f858e36a4ba7c061ee48d427595f39be380b28ed725c664d8"
+    },
+    {
+      "path": "tests/test_portable.py",
+      "purpose": "Update file-completion guidance assertions.",
+      "sha256": "0dd45b525860ca60775b1a249e0de637c5418264738e9e4f3808398fe0ef9ccf",
+      "previous_sha256": "9b48892890bc8f7d44c0209d5e80dd8fd1e5938405a20b2964969d93818321b7"
+    },
+    {
+      "path": "tests/test_team.md",
+      "purpose": "Explain coverage and explicit native-runtime limits.",
+      "sha256": "62de60df60293fb98b64bd174d339019bde34bae895866b37cabd03b0e191236",
+      "previous_sha256": null
+    },
+    {
+      "path": "tests/test_team.py",
+      "purpose": "Add seven native-inventory/client-mode and canonical workflow contract tests.",
+      "sha256": "84aded91b4f9f4cee952a96cdd0d564cb70755f47034a154cb92713065695402",
+      "previous_sha256": null
+    }
+  ],
+  "git_status_short": "?? .gitignore\n?? 00-governance/\n?? 01-context-and-domain-analysis/\n?? 02-purpose/\n?? 03-system-model-and-use-cases/\n?? 04-benchmarks-and-eval-strategy/\n?? 05-high-level-design-and-architecture/\n?? 06-viable-proof-of-concept/\n?? 07-planning/\n?? 08-low-level-design/\n?? 09-build-and-test-cycle/\n?? 10-document-review-and-release/\n?? 11-operational-reality-devops-and-user-acceptance/\n?? 12-observability-insights-and-learning/\n?? AGENTS.md\n?? CODEX-PROMPT.md\n?? LICENSE\n?? README.md\n?? README_NEW.md\n?? admin/\n?? agents/\n?? components/\n?? docs/\n?? metadata/\n?? scaffolds/\n?? scripts/\n?? skills/\n?? templates/\n?? tests/\n",
+  "git_diff_stat": "",
+  "tests": {
+    "full_suite": "158 tests; OK; skipped=2",
+    "final_install": "13 tests; OK",
+    "final_team": "7 tests; OK",
+    "portable": "PASS",
+    "delivered_integrity": "STALE_MANIFEST_EXPECTED"
+  },
+  "limits": [
+    "Native creation and activation not observed",
+    "Claude source loading not observed",
+    "No rendered visual QA",
+    "No real consumer modified",
+    "Delivered manifest preserved"
+  ]
+}

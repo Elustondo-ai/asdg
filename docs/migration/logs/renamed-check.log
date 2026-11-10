@@ -1,0 +1,5 @@
+FAIL: Package manifest differs: scripts/check.py
+FAIL: Package manifest differs: scripts/lib/cli_status.md
+FAIL: Package manifest differs: scripts/lib/cli_status.py
+FAIL: Package manifest differs: skills/asdg-init/SKILL.md
+FAIL: Package manifest differs: skills/asdg-update/SKILL.md

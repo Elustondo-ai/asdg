@@ -1,0 +1,48 @@
+test_piper_video (unittest.loader._FailedTest.test_piper_video) ... ERROR
+test_pptx_sources (unittest.loader._FailedTest.test_pptx_sources) ... ERROR
+test_markdown_clean (test_video.VideoTests.test_markdown_clean) ... ok
+test_order (test_video.VideoTests.test_order) ... ok
+test_slide_discovery (test_video.VideoTests.test_slide_discovery) ... ok
+
+======================================================================
+ERROR: test_piper_video (unittest.loader._FailedTest.test_piper_video)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_piper_video
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/loader.py", line 433, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/loader.py", line 374, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/private/tmp/asdg-cutover-evidence/source/asdg/components/video-builder/tests/test_piper_video.py", line 7, in <module>
+    from build_piper_video import REPO, select_slides, read_notes, check_media
+  File "/private/tmp/asdg-cutover-evidence/source/asdg/components/video-builder/src/build_piper_video.py", line 17, in <module>
+    from sources import discover, read_notes
+  File "/private/tmp/asdg-cutover-evidence/source/asdg/skills/asdg-presentation/src/sources.py", line 5, in <module>
+    from defusedxml import ElementTree as ET
+ModuleNotFoundError: No module named 'defusedxml'
+
+
+======================================================================
+ERROR: test_pptx_sources (unittest.loader._FailedTest.test_pptx_sources)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_pptx_sources
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/loader.py", line 433, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/loader.py", line 374, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/private/tmp/asdg-cutover-evidence/source/asdg/components/video-builder/tests/test_pptx_sources.py", line 8, in <module>
+    from build_piper_video import REPO, select_slides
+  File "/private/tmp/asdg-cutover-evidence/source/asdg/components/video-builder/src/build_piper_video.py", line 17, in <module>
+    from sources import discover, read_notes
+  File "/private/tmp/asdg-cutover-evidence/source/asdg/skills/asdg-presentation/src/sources.py", line 5, in <module>
+    from defusedxml import ElementTree as ET
+ModuleNotFoundError: No module named 'defusedxml'
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+FAILED (errors=2)
