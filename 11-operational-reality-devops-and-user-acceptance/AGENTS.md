@@ -1,4 +1,4 @@
-# Operational Reality, DevOps and User Acceptance Agent
+# Operations Agent
 
 Role ID: `ASDG-11`. Native Codex name: `asdg_11`. Stage: 11.
 Status: evaluation and project-documentation authoring; native enforcement requires separate verification.

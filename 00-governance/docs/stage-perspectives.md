@@ -11,9 +11,9 @@ Apply these views to the project's domain, purpose, use cases, design, evidence 
 Do not substitute an assessment of the specialist's maturity for the project's state.
 For ASDG itself, explicitly say whether the subject is the methodology, its implementation, or a consuming application.
 
-## Intended — what we want
+## Intended — approved engineering baseline
 
-Describe desired outcomes, target behavior/design, constraints and non-goals for the stated horizon.
+Cite the approved Purpose, use case, design or other engineering artifact and its decision for the stated horizon. If approval is missing, mark the baseline unknown and identify any draft separately.
 Distinguish aspirations, proposals and an explicitly accepted target; retain the source and decision status.
 A vision is not a delivery commitment, and an accepted target is not proof that it exists.
 
@@ -26,9 +26,9 @@ A written use case or architecture is evidence of a specification, not evidence 
 Include failures and deviations. Mark uninspected, unavailable or stale evidence explicitly; do not assume absence or success.
 Keep stakeholder reports and hypotheses distinguishable from direct observation.
 
-## Planned — selected next work
+## Planned — current planning record
 
-Describe selected changes, decisions or experiments addressing identified gaps; do not copy every unmet wish.
+Read the current Stage 07 record for proposed or selected changes, decisions or experiments. Identify its date, work item and decision status. If no record supports a next action, report it as unknown.
 Reference authoritative work items with owner, priority/sequence, dependencies, completion evidence and approval needs.
 Separate candidate next work from accepted commitments; a plan does not authorize execution.
 Stage 07 coordinates the integrated plan, dependencies and sequencing under 00 governance.
@@ -43,8 +43,6 @@ An actual observation may challenge the target; propose a target revision rather
 Do not promote Planned to Actual because an agent said done; require suitable evidence for each claim.
 Keep human review, operational authorization and evidence separate from these three perspectives.
 Maintain one authoritative record per artifact/work item; a snapshot links to records instead of copying entire documents.
-Use the [shared stage layout](stage-layout.md): Intended in `01` root files, Actual in `02` root files.
-Use `03` root files for Planned, with release/sprint horizons in filenames; consolidate verified outcomes into `02` Current at cycle closeout.
-Keep empty perspectives empty; preserve topic navigation and reference the integrated Stage 07 plan.
+The [stage layout](stage-layout.md) keeps each engineering artifact with its domain owner. Generate the three views from those sources for this assessment.
 Do not overwrite accepted baselines or rewrite historical reports; record changes and evidence provenance.
 All roles may save documentation under [shared documentation authority](documentation-authority.md); this model grants no code or state-transition authority.

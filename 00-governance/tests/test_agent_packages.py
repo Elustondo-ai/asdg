@@ -63,7 +63,7 @@ class AgentPackageTests(unittest.TestCase):
         self.assertNotEqual(ops, learning)
 
     def test_missing_package_directory(self):
-        shutil.rmtree(self.root / 'asdg/02-purpose/src')
+        shutil.rmtree(self.root / 'asdg/02-purpose/types')
         self.assert_fails('Missing directory')
 
     def test_missing_skill(self):
@@ -104,7 +104,7 @@ class AgentPackageTests(unittest.TestCase):
         self.assert_fails('flat role path')
 
     def test_line_limit(self):
-        p = self.root / 'asdg/02-purpose/docs/README.md'
+        p = self.root / 'asdg/02-purpose/README.md'
         p.write_text(p.read_text() + 'An additional nonblank line.\n' * 51)
         self.assert_fails('50 nonblank source lines')
 

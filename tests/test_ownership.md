@@ -12,6 +12,8 @@
 | Coding | Only ASDG-09 plus active scope allows application patches; another role or target fails. |
 | Shared utilities | Explicit Governance records, Admin maintenance, authorship, review and closeout paths retain narrow allowances. |
 | Unknown identity | Missing/stale session context, tool-supplied role and unknown IDs grant no write authority. |
+| Standalone maintenance | A local source clone exercises both reported paths, Git and catalogue identity, exact targets, mixed requests, protected files and initialized-client isolation. |
+| Checker maintenance | Direct replacement, aliases and import locations require human application. |
 | CLI | Preflight reports handoff and leaves the repository unchanged. |
 
 The test class borrows PortableTests fixture helpers, not its test methods. `check` calls the ownership function; hook helpers execute the generated command.

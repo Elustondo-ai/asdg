@@ -8,7 +8,7 @@ Role interviews may proceed without an active sprint; project actions require ap
 
 ## Owned output
 
-Return sprint plan and task proposals for review.
+Maintain the integrated plan of objectives, priorities, progress, gaps, dependencies and sprint task proposals. Link evidence and domain artifacts to each item. The originating specialist retains ownership and the human decides sprint transitions.
 Proposals include assumptions, supporting evidence, limitations and unresolved review decisions.
 
 ## Invariants

@@ -4,9 +4,9 @@ Write for the project's stakeholders. Use the actual project's name and stage la
 
 | Slide | Question to answer | Required content |
 | --- | --- | --- |
-| Current definition | What has this project defined in my specialty? | State the current position, scope and one material boundary or decision. Identify draft or accepted status using exact-state evidence. A role description alone does not answer this question. |
-| Current status | What has happened, and how do we know? | Present completed or verified work, work in progress and the most consequential gap or blocker. Distinguish documented intent from implementation and runtime evidence. |
-| Next plan | What should happen next in this specialty? | Give the next one to three actions, an accountable role or unassigned owner, dependency/decision and an observable success criterion. Label proposed versus committed work; include dates only when sourced. |
+| Intended (`definition`) | What has been approved? | Cite the engineering artifact, revision and approval. Identify an unapproved design separately and report unknown when an approved baseline is unavailable. |
+| Actual (`status`) | What demonstrably works? | Cite a test, observation or operational record, its revision or environment, date and limitations. Mark unevidenced behavior unknown. |
+| Planned (`plan`) | What does Stage 07 propose or select next? | Cite the current planning item, its owner, decision status, dependency and success criterion where known. Missing planning evidence leaves Planned unknown. |
 
 ## Worker assignment and return
 

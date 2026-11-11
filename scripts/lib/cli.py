@@ -15,6 +15,23 @@ from cli_sprint import check_implementation, start, stop
 from cli_status import project_status, render_next, render_status
 
 
+def evaluate_write(root, paths, context, *, provider_assignment=None):
+    """Evaluate client writes or the scope of an operator-reviewed provider patch."""
+    if context.get('workflow') == 'provider-component':
+        core = Path(__file__).resolve().parents[2]
+        if root != core or not (core / '.git').exists() or (core / '.asdg').exists():
+            return False, 'Provider assignment requires the standalone provider checkout.'
+        if provider_assignment is None:
+            return False, 'Use the operator patch review in the standalone provider.'
+        from provider_component.policy import evaluate
+        return evaluate(root, paths, context, provider_assignment)
+    from cli_ownership import ownership_decision
+    allowed, reason, application = ownership_decision(root, paths, context)
+    if allowed and application:
+        return check_implementation(root, application, guidance=True)
+    return allowed, reason
+
+
 def main(argv: list[str] | None = None) -> int:
     if not require_python():
         return 1
@@ -83,13 +100,10 @@ def main(argv: list[str] | None = None) -> int:
             parser.error('--json --verbose requires --advise; plain --json never invokes the coordinator')
     try:
         if args.operation == 'check-write':
-            from cli_ownership import ownership_decision
             context = json.loads(args.context)
             if not isinstance(context, dict):
                 raise Conflict('Write context must be a JSON object.')
-            allowed, reason, application = ownership_decision(REPO, args.path, context)
-            if allowed and application:
-                allowed, reason = check_implementation(REPO, application, guidance=True)
+            allowed, reason = evaluate_write(REPO, args.path, context)
             print(reason)
             return 0 if allowed else 1
         if args.operation in ('promote', 'upgrade'):

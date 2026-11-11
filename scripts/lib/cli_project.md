@@ -19,7 +19,7 @@ Owns initialization preflight, managed file plans, discovery-template copying, s
 
 ## Interface and data
 
-Inputs are project/repository Paths and optional project_state (`new`, `defining`, `defined`). Planning returns a report dictionary plus Change objects; the installation engine adds dry-run, apply and verification results. Initialization creates stage introductions only; numbered evidence and plan files are added when needed. Structural inspection requires stage READMEs, not perspective directories.
+Inputs are project/repository Paths and optional project_state (`new`, `defining`, `defined`). Planning returns a report dictionary plus Change objects; the installation engine adds dry-run, apply and verification results. Initialization creates stage introductions only; a new navigation index uses canonical stage display labels and links to the stable folders. Existing client indexes and documents are preserved. Structural inspection requires stage READMEs, not perspective directories.
 
 | Callable or interface | Contract |
 | --- | --- |

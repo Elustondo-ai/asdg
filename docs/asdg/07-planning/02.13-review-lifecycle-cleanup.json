@@ -1,0 +1,21 @@
+{
+  "requester": "Pablo",
+  "role": "ASDG-ADMIN",
+  "focus": "Resume Lifecycle Cleanup",
+  "attitude": "Black",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "starting_revision": "426e6783cccd3a9285776473fb0a98de83c6a0ae",
+  "owner_applied_repair_sha256": "0e5feed75132bdc1bf87dbbd67989747fb536043655aabd10cc8b2b443c03566",
+  "source": "Elustondo-ai/asdg",
+  "applied_deletions": 38,
+  "owner_patch_deletions": 50,
+  "authoritative_checks": {
+    "portable": {"run": 160, "skipped": 2, "failures": 0, "errors": 0},
+    "provider": {"run": 10, "failures": 0, "errors": 0},
+    "purpose_with_proposed_cases": {"run": 17, "failures": 0, "errors": 0},
+    "portable_structure": "PASS",
+    "delivery_manifest": {"historical": 26, "owner_applied_repair": 4, "additional_cleanup": 31},
+    "historical_fixture_suite": {"run": 257, "errors": 146, "skipped": 4}
+  }
+}

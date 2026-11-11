@@ -45,6 +45,34 @@ class PurposeReviewTests(unittest.TestCase):
         self.entry['reviews'].append(event)
         return event
 
+    def test_single_statement_review_preserves_both_gates(self):
+        for name in DOCUMENTS[1:]:
+            (self.folder / name).unlink()
+        self.entry['artifacts'] = [str(PREFIX / DOCUMENTS[0])]
+        self.assertEqual(completion_status(self.root, self.entry)['status'], 'IN_PROGRESS')
+        event = self.ready()
+        self.assertEqual(set(event['artifacts']), {str(PREFIX / n) for n in
+                         (DOCUMENTS[0], 'README.md', 'images/purpose.png')})
+        self.assertFalse(completion_status(self.root, self.entry)['user_accepted'])
+        self.accept()
+        self.assertTrue(completion_status(self.root, self.entry)['user_accepted'])
+
+    def test_dropping_supplement_requires_new_review(self):
+        self.ready()
+        self.accept()
+        self.entry['artifacts'].pop()
+        self.assertTrue(completion_status(self.root, self.entry)['review_stale'])
+        self.assertFalse(completion_status(self.root, self.entry)['user_accepted'])
+
+    def test_unchanged_nested_registration_remains_accepted(self):
+        for old, nested in zip(DOCUMENTS[1:], LEGACY_DOCUMENTS[1:]):
+            (self.folder / nested).parent.mkdir()
+            (self.folder / old).rename(self.folder / nested)
+        self.entry['artifacts'] = [str(PREFIX / n) for n in LEGACY_DOCUMENTS]
+        self.ready()
+        self.accept()
+        self.assertTrue(completion_status(self.root, self.entry)['user_accepted'])
+
     def test_file_presence_never_implies_readiness_or_user_acceptance(self):
         stage = evidence_status(self.root, self.rules, {'stages': {'02': self.entry}})[0]
         self.assertEqual(stage['readiness'], 'ESTABLISHED')

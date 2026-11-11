@@ -110,6 +110,18 @@ class PacketTests(unittest.TestCase):
         blocked = ordered_report(run, CATALOGUE)
         self.assertEqual((blocked['status'], blocked['slides']), ('BLOCKED', []))
 
+    def test_approved_design_and_proposed_plan_preserve_unknown_runtime(self):
+        run = fixture(owner='ASDG-05')
+        slides = run['outcomes']['ASDG-05']['packet']['slides']
+        inputs = [('Approved interface', 'Architecture decision ADR-2, revision 8'),
+                  ('Deployment unknown', 'No runtime evidence in the reviewed snapshot'),
+                  ('Proposed integration test', 'Stage 07 item P-4, awaiting selection')]
+        for slide, (claim, source) in zip(slides, inputs):
+            slide.update(headline=claim, sources=[source])
+        returned = ordered_report(run, CATALOGUE)['slides']
+        self.assertEqual([(s['kind'], s['headline'], s['sources']) for s in returned],
+                         [(kind, claim, [source]) for kind, (claim, source) in zip(KINDS, inputs)])
+
     def test_wrong_or_missing_packet_fields_fail(self):
         for key, value in [('run_id','old'), ('project','other'), ('snapshot','stale'),
                            ('role_id','ASDG-03'), ('loaded',[]), ('slides',[])]:

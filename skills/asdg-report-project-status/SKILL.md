@@ -15,7 +15,7 @@ description: Author an editable project status presentation in Markdown, visuals
 
 ## Specialist mode
 
-4. For an active lifecycle specialist, report only that stage. Author the three slide records in [the section contract](packets.md). Use an appropriate project example, evidence and narration. Dispatch no children.
+4. For an active lifecycle specialist, report only that stage. Derive Intended from approved domain artifacts, Actual from test or operating evidence, and Planned from current Stage 07 records. Author the three slide records in [the section contract](packets.md). Use an appropriate project example, evidence and narration. Dispatch no children.
 5. When explicitly assigned a section by Governance, return the packet directly to its parent. Do not build a deck, contact peers or invoke this skill recursively. In a direct human invocation, validate its single-role envelope with the same packet checker, then deliver the editable three-slide sources and make the final export.
 
 ## Governance mode

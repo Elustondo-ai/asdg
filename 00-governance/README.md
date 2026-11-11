@@ -23,8 +23,6 @@ Expect a truthful proposal or an `OUT_OF_SCOPE` return, never fabricated executi
 Owned documentation is writable without a sprint under [role ownership](../00-governance/docs/documentation-authority.md); application execution and native enforcement require separate evidence.
 See [package catalogue](../README.md) and [runtime rules](docs/runtime-contract.md).
 
-## Perspectives
+## Project status
 
-Client assessments follow the [stage layout](../00-governance/docs/stage-layout.md) under `docs/asdg/`.
-Use flat stage files: `01` Intended, `02` Current, `03` Planned; split topics with dotted numbers such as `01.1` and identify release/sprint horizons in plan filenames.
-Empty folders make no evidence or completion claim; use the [shared contract](docs/stage-perspectives.md).
+Read the [domain artifacts](docs/stage-layout.md), operational evidence and Stage 07 plan to produce the [Intended / Actual / Planned assessment](docs/stage-perspectives.md). Cite the source of each claim and report missing evidence as unknown.

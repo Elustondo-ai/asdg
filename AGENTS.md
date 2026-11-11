@@ -23,7 +23,7 @@ Purpose Focus begins a read-only opening assessment; assigned Purpose work produ
 Use the [continuation contract](00-governance/docs/continuation.md); other specialist openings await the pilot review.
 Human-directed [Sprint start](skills/asdg-sprint-start/SKILL.md), [review](skills/asdg-sprint-review/SKILL.md) and [close](skills/asdg-sprint-close/SKILL.md) preserve Focus and specialist delivery boundaries.
 Use client sources as evidence; definitions in this folder never establish application behavior.
-Apply [Intended / Actual / Planned](00-governance/docs/stage-perspectives.md) to the stated client subject.
+Derive [Intended / Actual / Planned](00-governance/docs/stage-perspectives.md) assessments from approved artifacts, observed evidence and current Stage 07 plans.
 Skills are written `$name` here, as in Codex; in Claude Code invoke them as `/name`, per [client integrations](docs/client-integrations.md).
 `$asdg-status` combines project facts with session progress; `$asdg-role` explains the current role's mandate; [`$asdg-admin`](skills/asdg-admin/SKILL.md) explicitly switches to ASDG Admin, and `$asdg-admin clear` returns to Governance.
 Keep client artifacts in `docs/asdg/` and durable state and review history in `.asdg/`, preserving both; root `logs/` holds disposable activity records, and no role may claim complete logging without evidence.

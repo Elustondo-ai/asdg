@@ -1,4 +1,4 @@
-# Observability, Insights and Learning Agent
+# Observability Agent
 
 Role ID: `ASDG-12`. Native Codex name: `asdg_12`. Stage: 12.
 Status: evaluation and project-documentation authoring; native enforcement requires separate verification.

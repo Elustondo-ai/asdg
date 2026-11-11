@@ -1,6 +1,7 @@
 """Ownership and hook regressions in disposable initialized client repositories."""
 import json
 import os
+import shutil
 import subprocess
 import unittest
 from unittest.mock import patch
@@ -87,6 +88,81 @@ class OwnershipTests(unittest.TestCase):
             self.assertFalse(self.check(role, ['.asdg/lifecycle.json'])[0])
         close = '.asdg/sprint-closeouts/12345678-1234-5678-1234-567812345678.json'
         self.assertTrue(self.check('ASDG-05', [close, '.asdg/sprint.json'], workflow='sprint-close', targets=[close, '.asdg/sprint.json'])[0])
+
+    stage_targets = ('00-governance/docs/stage-layout.md', '02-purpose/intended/.gitkeep')
+
+    def admin_preflight(self, source, paths, expected, *, cwd=None, **context):
+        declared = dict(role_id='ASDG-ADMIN', workflow='admin', targets=paths)
+        declared.update(context)
+        args = [arg for path in paths for arg in ('--path', path)]
+        return self.run_cli('check-write', '--context', json.dumps(declared), *args,
+                            entry=source / 'scripts/cli.py', cwd=cwd or source, expect=expected)
+
+    def provider_copy(self):
+        if not (portable.CORE / '.git').is_dir():
+            self.skipTest('provider identity tests require a standalone source clone')
+        source = self.root.parent / 'provider'
+        subprocess.run(['git', 'clone', '--quiet', '--no-local', portable.CORE, source], check=True)
+        checker = 'scripts/lib/cli_ownership.py'
+        shutil.copyfile(portable.CORE / checker, source / checker)
+        self.admin_preflight(source, self.stage_targets, 1)  # A local clone URL is not the canonical origin.
+        subprocess.run(['git', '-C', source, 'remote', 'set-url', 'origin',
+                        'https://github.com/Elustondo-ai/asdg.git'], check=True)
+        return source
+
+    def test_standalone_admin_exact_stage_targets(self):
+        source = self.provider_copy()
+        self.admin_preflight(source, self.stage_targets, 0)
+        for path in self.stage_targets:
+            with self.subTest(path=path):
+                self.admin_preflight(source, [path], 0)
+                self.admin_preflight(source, [path], 1, role_id='ASDG-02')
+                self.admin_preflight(source, [path], 1, role_id='ASDG-09')
+                self.admin_preflight(source, [path], 1, role_id='ASDG-08', workflow='openspec',
+                                    openspec_store=path.rsplit('/', 1)[0])
+                self.admin_preflight(source, [path], 1, workflow='')
+                self.admin_preflight(source, [path], 1, targets=[])
+        self.admin_preflight(source, self.stage_targets, 1, targets=self.stage_targets[:1])
+        self.admin_preflight(source, ['00-governance/types/lifecycle-rules.json'], 0)
+        self.admin_preflight(source, ['02-purpose/docs/new-guide.md'], 0)
+        forbidden = ('09-impostor/docs/example.md', 'asdg/' + self.stage_targets[0],
+                     '.git/config', '02-purpose/skills/x/SKILL.md',
+                     '02-purpose/.codex/instructions.md', '00-governance/types/document-reviews.json',
+                     'components/example/run.py', '02-purpose/../README.md', 'scripts/lib/cli_ownership.py',
+                     'scripts/lib', 'scripts/lib/cli_ownership/__init__.py',
+                     'scripts/lib/__pycache__/cli_ownership.cpython-39.pyc')
+        for path in forbidden:
+            with self.subTest(path=path):
+                self.admin_preflight(source, [self.stage_targets[0], path], 1)
+        self.admin_preflight(source, ['scripts/lib/cli_ownership.md'], 0)
+        (source / '02-purpose/link').symlink_to(self.root, target_is_directory=True)
+        self.admin_preflight(source, ['02-purpose/link/example.md'], 1)
+        os.link(source / 'scripts/lib/cli_ownership.py', source / '02-purpose/alias.md')
+        self.admin_preflight(source, ['02-purpose/alias.md'], 1)
+        os.link(source / 'scripts/lib/cli_ownership.py', source / 'scripts/alias.py')
+        self.admin_preflight(source, ['scripts/alias.py'], 1)
+        subprocess.run(['git', 'init', '--quiet', source / '02-purpose/docs/nested'], check=True)
+        self.admin_preflight(source, ['02-purpose/docs/nested/guide.md'], 1)
+
+    def test_standalone_identity_and_client_boundaries(self):
+        source = self.provider_copy()
+        self.init()
+        self.admin_preflight(self.root / 'asdg', self.stage_targets, 1, cwd=self.root)
+        self.admin_preflight(self.root / 'asdg', ['asdg/scripts/lib/cli_ownership.py'], 1, cwd=self.root)
+        self.admin_preflight(self.root / 'asdg', ['asdg/skills/asdg-documentation/SKILL.md'], 0, cwd=self.root)
+        self.admin_preflight(source, self.stage_targets, 1, cwd=self.root)
+        (source / '.asdg').mkdir()
+        self.admin_preflight(source, self.stage_targets, 1)
+        (source / '.asdg').rmdir()
+        catalogue = source / '00-governance/types/agent-catalog.json'
+        catalogue.write_bytes(catalogue.read_bytes() + b' ')
+        self.admin_preflight(source, self.stage_targets, 1)
+        subprocess.run(['git', '-C', source, 'restore', '--', str(catalogue.relative_to(source))], check=True)
+        metadata = source / 'metadata/distribution.json'
+        descriptor = json.loads(metadata.read_bytes())
+        descriptor['canonical_repository'] = 'https://github.com/example/client'
+        metadata.write_text(json.dumps(descriptor))
+        self.admin_preflight(source, self.stage_targets, 1)
 
     def test_unknown_stale_or_tool_supplied_identity_never_grants_writes(self):
         self.init()

@@ -41,3 +41,5 @@ Promote/upgrade require explicit source/target and either --dry-run or --apply; 
 `check-write --context JSON --path FILE` is a read-only ownership preflight; repeat --path for all targets. It checks application sprint scope separately and does not authenticate its declaration.
 
 Init accepts `--team-inventory PATH` for the canonical workflow’s externally verified native inventory; the resulting effects join the approval digest. Python completion remains file-only.
+
+The common evaluator routes operator patch reviews to the standalone provider policy. Direct provider write declarations are denied. Initialized clients use the ownership and sprint checks.

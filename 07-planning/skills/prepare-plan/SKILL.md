@@ -14,7 +14,7 @@ A non-owning caller may inspect the method, but must not use it to bypass role b
 
 1. Read the authorized scope and available baseline and closure evidence.
 2. List missing preflight facts rather than claiming the next sprint can start.
-3. Propose component-scoped tasks, dependencies, acceptance evidence and explicit exclusions.
+3. Integrate progress, gaps and priorities with component-scoped tasks, dependencies and acceptance evidence. Link each item to the domain owner’s source.
 4. Return plan and task proposals; do not create branches, commit, or start implementation.
 
 ## Output and checks

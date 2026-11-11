@@ -1,43 +1,31 @@
-# Stage documents: read the files in order
+# Organizing lifecycle documentation
 
-In every consuming project's stages 01–12, keep main perspective documents directly in the stage folder; named decision packages are the exception below.
-The filename communicates both reading order and perspective; no perspective subfolder is needed.
+Each specialist maintains the engineering artifacts for its domain under its existing client stage directory in `docs/asdg/`. Use the stage README to navigate the material. Name documents for the work they describe. Numbering may communicate reading order. Supporting images, sources and named [decision packages](../../skills/asdg-decision/record-format.md) stay with their owner.
 
-| File family | Reader's question | Example |
+| Domain | Authoritative record | Example |
 | --- | --- | --- |
-| `01` Intended | What do we want and why? | `01-purpose.md`, `01.1-outcomes-and-boundaries.md` |
-| `02` Current | What exists and what evidence supports it? | `02-current-capabilities.md`, `02.1-known-limitations.md` |
-| `03` Planned | What might or will change next? | `03-planned-improvements.md`, `03.1-release-plan.md`, `03.2-sprint-plan.md` |
+| Purpose | The system’s purpose, beneficiaries and boundaries | `02-purpose/01-purpose.md` |
+| Use Cases | System model and illustrated scenarios | A use case may describe behavior before implementation |
+| Architecture | Selected design, decisions and diagrams | A decision links to its reviewed design and alternatives |
+| POC and Build and Test | Experiments, revisions and test results | A dated run records its environment and limitations |
+| Planning | Integrated priorities, progress, gaps, dependencies and proposed or selected work | A sprint work item links to the responsible specialist’s artifact |
 
-Use descriptive names appropriate to each stage; the three families apply to all twelve specialists.
-Keep a useful main document, then split distinct topics using `.1`, `.2` and so on when needed.
-Each Markdown unit retains the 50-nonblank-line limit; do not create filler to populate a family.
-Keep README navigation at the root and supporting assets in folders such as `images/` and `sources/`.
-Do not create `intended/`, `current/`, `planned/`, `planned-release/` or `planned-sprint/` for new living documents.
+Keep each Markdown unit within 50 nonblank lines. Split a document when its topics merit separate treatment. A domain can have a single artifact. Skip empty directories, duplicate summaries and documents created solely to fill an assessment category.
 
-## Decision packages
+## Reporting and closeout
 
-Material decisions may use `decisions/<Decision name>/` within the responsible stage, following [ASDG Decision](../../skills/asdg-decision/record-format.md).
-Keep one or two introductions, meaningful option notes and editable visuals; numbering inside a decision folder expresses reading order, not stage perspective.
-Link packages from relevant stage navigation within the assigned scope; do not duplicate authoritative state or infer approval.
+```mermaid
+flowchart LR
+    A["Approved engineering artifacts"] --> I["Intended"]
+    E["Tests and operational observations"] --> R["Actual"]
+    P["Current Stage 07 work items"] --> N["Planned"]
+    I --> S["Dated project assessment"]
+    R --> S
+    N --> S
+```
 
-## Plans and completed work
+A [project assessment](stage-perspectives.md) reads the approved engineering artifacts, implementation or operational evidence, and current Stage 07 planning records. Cite the sources and mark missing evidence unknown. At closeout, retain the actual test or operating evidence with its owner and update the integrated work item with the result and any remaining gap.
 
-Use release or sprint in a plan's descriptive filename when its horizon is known.
-Inside each plan, state whether it is proposed or selected, and its cycle reference when known.
-Link selected work to the integrated Stage 07 plan and authoritative cycle state; filenames do not authorize work.
-After a cycle actually finishes, consolidate verified results and limitations into `02` Current documents.
-Update enduring intent only when an explicit decision changes it; retain unresolved work with its decision status.
-Remove only the completed cycle's temporary plans after preserving decisions, evidence and review history.
-Do not remove active or future plans, accepted evidence or durable review events as cleanup.
+## Existing clients
 
-## Existing projects and history
-
-Move living documents deliberately; update navigation, relative links and current registered artifact paths.
-Keep old review events and their hashes intact; relocation never transfers acceptance to a new bundle.
-Dated reports, receipts and source captures may remain in their existing archive folders to preserve provenance.
-This archive exception does not authorize new perspective folders; new living summaries use numbered root files.
-ASDG's reusable definitions supply this blueprint without duplicating themselves across all three perspectives.
-Initialization preserves existing project documents; migration is a separate explicit task.
-Apply [role ownership](documentation-authority.md) to edits, moves, cleanup and navigation; hand off changes to another owner.
-The layout does not start a sprint, grant implementation permission or approve a release.
+Initialization preserves existing documents. Leave historical paths, hashes, decisions and review events intact. A client may elect to migrate a living artifact as a separate, owner-scoped change. Update its links and registration together and reassess any changed review bundle before requesting fresh acceptance. The [ownership rules](documentation-authority.md) and human sprint and release gates still apply.

@@ -7,7 +7,7 @@ Use the [shared perspectives contract](stage-perspectives.md) and link authorita
 ## Intended
 
 <Explain the desired outcome, behavior or design, with constraints and non-goals.>
-<Identify whether the target is an aspiration, a proposal or an accepted decision; link its source.>
+<Link the approved artifact and exact-state decision. If unavailable, record Intended as unknown and label any draft separately.>
 
 ## Actual
 
@@ -17,7 +17,7 @@ Use the [shared perspectives contract](stage-perspectives.md) and link authorita
 
 ## Planned release / sprint
 
-<Link `03` release and sprint plan files at the stage root; leave unknown horizons explicit.>
+<Link the current Stage 07 planning record, its date and the work item. Record unknown when unavailable.>
 <Explain the selected next change, experiment or decision and the gap it addresses.>
 <Link its authoritative work item, owner, sequence, dependencies and completion evidence when known.>
 <Separate candidate actions from accepted commitments; reference the integrated Stage 07 plan.>
@@ -27,4 +27,4 @@ Use the [shared perspectives contract](stage-perspectives.md) and link authorita
 <Compare the cited Intended and Actual baselines; do not establish a competing truth store.>
 <Explain unresolved decisions and approval needs without silently changing the target.>
 
-Use these sections in an existing artifact where possible. This template is not a project assessment.
+Generate this assessment for the stated baseline. Link back to the domain records and planning items that support it.

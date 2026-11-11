@@ -1,4 +1,4 @@
-# Observability, Insights and Learning Agent — package
+# Observability
 
 Native name: `asdg_12`. Stable role: `ASDG-12`.
 This folder owns the specialization, not the consuming project's results.
@@ -6,9 +6,7 @@ This folder owns the specialization, not the consuming project's results.
 | Entry | Purpose |
 | --- | --- |
 | [AGENTS.md](AGENTS.md) | Role entry point, boundaries and self-explanation |
-| [docs](docs/README.md) | Package guide and relevant shared material |
 | [types](types/contract.md) | Input/output contract; no mandated type language |
-| [src](src/README.md) | Package-specific operations, when implemented |
 | [tests](tests/acceptance.md) | Role interview and negative-boundary acceptance cases |
 | [local skill](skills/derive-insights/SKILL.md) | Bounded procedure, explicitly loaded by this agent |
 
@@ -23,8 +21,8 @@ Expect a truthful proposal or an `OUT_OF_SCOPE` return, never fabricated executi
 Owned documentation is writable without a sprint under [role ownership](../00-governance/docs/documentation-authority.md); application execution and native enforcement require separate evidence.
 See [package catalogue](../README.md) and [runtime rules](../00-governance/docs/runtime-contract.md).
 
-## Perspectives
+## Project artifacts
 
-Client assessments follow the [stage layout](../00-governance/docs/stage-layout.md) under `docs/asdg/`.
-Use flat stage files: `01` Intended, `02` Current, `03` Planned; split topics with dotted numbers such as `01.1` and identify release/sprint horizons in plan filenames.
-Empty folders make no evidence or completion claim; use the [shared contract](../00-governance/docs/stage-perspectives.md).
+Link observations and feedback to measured signals, interpretations and lessons. See the [stage layout](../00-governance/docs/stage-layout.md).
+
+Analyze supplied latency observations and incident feedback; a request to implement a fix or reprioritize approved scope is OUT_OF_SCOPE.

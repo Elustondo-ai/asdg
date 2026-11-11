@@ -14,7 +14,7 @@ Include a readable UML diagram and editable source, such as PlantUML. Use actor 
 Each scenario links to a use case or flow in the overall model; several scenarios may illustrate the same use case. Choose representative scenarios rather than imposing a fixed count or treating every step as a use case.
 Each scenario document includes its goal, actors, trigger, relevant preconditions, main flow, alternatives or failures, observable outcome and open questions.
 Include a picture or short storyboard that explains the scenario, embedded with descriptive alt text. Label concept illustrations so they cannot be mistaken for current product screenshots.
-Keep prose, scenario names and diagram relationships consistent and navigable. Retain assumptions, source evidence, limitations and unresolved review decisions; distinguish Intended, Actual and Planned.
+Keep prose, scenario names and diagram relationships consistent and navigable. Retain assumptions, source evidence, limitations and unresolved review decisions; cite observed results for any claim that a specified use case operates.
 When artifacts are authorized, follow the client's established documentation format and destination. Review rendered documents and pictures, check links and preserve editable diagram source alongside the output.
 
 ## Invariants

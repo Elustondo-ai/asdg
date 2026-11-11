@@ -32627,6 +32627,1276 @@
         "requester": "Pablo",
         "thread_id": "01a1c210-47d4-7012-bb25-a09c89e78b60"
       }
+    },
+    {
+      "path": "README.md",
+      "sha256": "d0f52f3372da191de327f3dc4d87fa75b9c8f5b478818d9ea7acf3432eea3a2b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T22:22:57Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "6f58bbc852619ccbacf4bf18b5428b3424cd353f376ffcb4f2e33e82fb7d11ba",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli.md",
+      "sha256": "85e3eeb80965ec1f933a04be99937ab878e48ef339707ee48938bd5f18b48f43",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T22:22:57Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "3ac73abdfd2e0d3136b268407dcbbd4464acebe9a73a6207d119204bde0d198b",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/provider_component/policy.md",
+      "sha256": "f3edc6684aa9f408c1e15c8d864caed67a37869a230df22ae14dfa7d0ec7a9c0",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T22:22:57Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "scripts/provider_component/review.md",
+      "sha256": "fb8aa49b6bfbfb26ff1300e4ae08a837c96231b35d52516c7b5095c3714b545f",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T22:22:57Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "scripts/provider_component/receipts.md",
+      "sha256": "8bc33a73067518d573777713ba746fd410315e09ecdc03447f63e37317c62a66",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T22:22:57Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "scripts/provider_component/guard.md",
+      "sha256": "1c874babb77551c2dd744076d4d80215c39511b80cc967c93f5375995f5111c4",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T22:22:57Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "scripts/provider_component/test_policy.md",
+      "sha256": "1261beceb08b2ecf784b3ce8f1955c2c533bb581776a32ce065ee296d9ccfd21",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T22:22:57Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.11-review-provider-component.md",
+      "sha256": "f7ccb7edbe06120c34495119a98ac343e54257c543a003577a2be394de2a36f8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T22:22:57Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.12-review-disposable-component.md",
+      "sha256": "a7b060c0268bf207e2c42517967f01fc5a09a6a9b9ff8b352c724bfd8a38350a",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T22:22:57Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "00-governance/README.md",
+      "sha256": "229d1cafca549fc3db7620efa03aa055ce16b1753ea7011cfd1487104627e47f",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "b1502457cb9eafc1ff86e92a98547967b171ca69fcdd1763ea4da0c5bf4d906c",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/runtime-contract.md",
+      "sha256": "373be5d5fd74572135024a3de296a64097fb1d03e9c6e4b413fcffe0e9510f24",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "16cb2c6c6af492bacb3404454d0dbd8976039d98cd5dd159ee39f07db58e06ef",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/stage-layout.md",
+      "sha256": "de2e317d8b9c7d7f9b40ff271b49b9331a7973699b91a8b1b2e2b1f1ad216c95",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "99f90c1d3d9f2852d0d76b528590084cc5f377b9738719621b7c23c84008d0cd",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/stage-perspectives-map.md",
+      "sha256": "837542adb46c98d6121d7d814002759bf2d3beebf9ecfd5352b867376ce7fe17",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "b5f88f1ab74a915f4782ea4b941f3fe416e6844d45bc441c44bc065d67c62132",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/stage-perspectives.md",
+      "sha256": "570ebecf61ee75cf9bac1da224bba29e5532b43237c48e2dbad17bf0d5c10455",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "f2038c07afa175f46ee38313fe002173e2237d4c712da0dc6c771ce59508b905",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/stage-snapshot-template.md",
+      "sha256": "db8a9e3a7056bcc2d629957ac1e3f2478cd4fac98a41f6fbbfa85f2c3df3cee9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "937a92d9fb2ec5bded2a74f1cd2dd2edcc75af5cbd0326f43fb17d55c093911c",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/types/interaction-contract.md",
+      "sha256": "fd212be7584a3398cb824088005515121a4504d7251b9cba4dbdc06937b2e4a8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "772ea5f4c9fc2c9219fcc9abc09326f41ddeaa0ff5be0f0ee5f98f3872341b15",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "01-context-and-domain-analysis/README.md",
+      "sha256": "d74f82da1953b68df8fe79adc41fd2c6de55caefa03bf17d0286b95230206e23",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "e5b57dbad0556c5635b4c4ada1d69f9188df107b4fdb6463aed020b0cc113249",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "02-purpose/README.md",
+      "sha256": "4089392591193a51486a4b582429a8418476ee19110ff1185fd59d019d47dad5",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "d830c27389d5bdb7bd4e32c57643a60380b1403e93e23d9a78e48368b1334d78",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "02-purpose/tests/acceptance.md",
+      "sha256": "e585189158b87cdc802e1e96c068f6c0c232a981e5a87ad91ec1999b06bcf4d8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "c8951cfd1c4df9d60d969142b107c3bef8cdeb927e9cbd0ccd8323da02aa0b89",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "02-purpose/types/completion.md",
+      "sha256": "a41468ff6277fdcaf10cd9136892e793eb864893da807c926f5ff5141e033f16",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "78e0de270f1790ff97f492c07568f506cc6271df39982e48b91d43a9c7ab4b9c",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "02-purpose/types/contract.md",
+      "sha256": "5e6ef9cb07e8b305e3c74a13d8229624f42f096f78c4f2fdc1d18fda36995a26",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "1f1829566f063f1bf58d6c900fa95a9af4732db7a2f34c3cc21aa9a22488b1e6",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "03-system-model-and-use-cases/README.md",
+      "sha256": "01ced21a835f152d871fd9420c9e199505deb6ed17a7dda68e6ff83f0e308295",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "64c5302d8eebe0c032e2ee09799064bf11cd6f7b060c1b10836bcafadb0441c5",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "03-system-model-and-use-cases/types/contract.md",
+      "sha256": "0f11f0561bec06cba1758d73686428720f98ead78a42c66706881b30a5ae02c1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "1f54e68e602f3535d9b85986ccc55411db0f03888893d93d8da6b425da4ae3b8",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "04-benchmarks-and-eval-strategy/README.md",
+      "sha256": "4c09789b03fb58d99860491473e3895d1efdbd6ec97b3e454bcf933c75e5ecd6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "f1187a3a182344e4ec0a56814c273080be9c94aff9e860f1b3a85e29fee4719b",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "05-high-level-design-and-architecture/README.md",
+      "sha256": "a2a11520cb20006d888bc7e126e6252925d939661a785a72d022861fa6ac8ef5",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "867ccfbf0abf3919079908f5c93e0a39025a7f4b26ae95a2d9ade78ae56af7f9",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "06-viable-proof-of-concept/README.md",
+      "sha256": "75f12b40b88de3105ffdb6652bef3be01978d7663529a3cfdead0201b10fac62",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "0b322daad36ab53a71a51e269ae68c8fb54f8177f5b7280821230bc8f5ec4e6e",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "07-planning/README.md",
+      "sha256": "c7e0ad8c247ce69cf99086318d05ea1255b8b24ea77d7e22929ce5d7f12825a5",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "8ea28d9bfae4c4284e57fb65d52ee403e4692b053b1507cf0f01f597dca7c873",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "07-planning/types/contract.md",
+      "sha256": "7963eb70fa38237c399ee16ef37b12fced04e49c48ada9903d732dfde606adbd",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "e027687c50b4ac6d790a2209337c57df244d37a06865e2497c82aab422b81797",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "08-low-level-design/README.md",
+      "sha256": "33aebf4be1393e9251d34399491a3e6c11065865113dba6381bd578123e6e007",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "124ac26eb00cc63d80d62ccda09f086a69498fa31143dcd6be055306a009be74",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "09-build-and-test-cycle/README.md",
+      "sha256": "d44efa434d0e3533ddd6f41b9b6d1c920e9c24644c4344c13f4f2a7c1ce3b082",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "e50c93321e4847685af9b5ffc81039269b73cda204f35a0c857d09e16390944e",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "10-document-review-and-release/README.md",
+      "sha256": "be541d87c269722232a716a2fefbea9c55f8788baba20c38d7814e59f3e975a8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "af56dde80c90cbd00e5165af4772be43c103a38bf33611b741f2d95f044454cc",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "11-operational-reality-devops-and-user-acceptance/README.md",
+      "sha256": "a61f5f0434014da3033a442c5aaf31f84cbf6968566f81d5d7b23d07292633ca",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "a6b574504f6653fee36eeb0d5344d12e07d2eb01f8ecb729f65be22d3026ed27",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "12-observability-insights-and-learning/README.md",
+      "sha256": "8142b1d065be496e8908821257bd405338e6c84eb1fd4fdb7525d90a0f8cd28b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "3bfcced476c95a825d84b567fb602cfb79faac6949c16c43c3baa1640a00069a",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "d8e3edd6a3c0a62166b8e685e527fca70b3c39295e6f735cc8b58ca07642e897",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "c3e68d981f4979549774f74d2500d54b3294392d307ce53d55d0440f2d1d1fa2",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "README.md",
+      "sha256": "6a2c895a356a08ac93e3ff1a5b275e466a1989977a98368bb59b118afacf2668",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "6f58bbc852619ccbacf4bf18b5428b3424cd353f376ffcb4f2e33e82fb7d11ba",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_project.md",
+      "sha256": "6cd5ac822ea8d7614eee69e7a8e6244658ca1f3c0e92d61bf4ef77f9ad7f8ced",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "617183658d8d9350c9ec1b549c3a67f48bcc9e8ea2e78beee1754de0d0482039",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_status.md",
+      "sha256": "8a450092bf8d75812f22a0ab32aa891b97dc4b223135f063a6a16beae715f785",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "dd2ef03fdb723fffa8abe984541b06f7ddb63c2bb58d09926fa07f78008977d4",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/purpose_review.md",
+      "sha256": "7ea41e484176f5fc48426094e7dac9acaf0e255e868042a76328439a8189c1a3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "34a947bdacca901ef77ba86d59612f93cfe2474a91be2b2c00e4974fa4894e6e",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.13-review-lifecycle-cleanup.md",
+      "sha256": "c801d3f41e936b8bccc6af0c4de6bd75ce9378d4486dcac493cdafd812410e50",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:17:35Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "00-governance/src/validate_agents.md",
+      "sha256": "f86032c798548cf57924d3168d56967646c2d730960f27e8d43139f0e2a22b9c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "00-governance/tests/test_agent_packages.md",
+      "sha256": "a1332ccedaed9f737772cc0e456b7514674240c6034b0d6e3e15587a82cc261c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "01-context-and-domain-analysis/AGENTS.md",
+      "sha256": "faa88fe7662cfb87849f1eae557e3afc9451d5c89655e3d6da968dfe81897c29",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "8aa331d4b6ba69fe6e6c7cbd467ae0ffc186584d5826f993715e54fc1a41318b",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "01-context-and-domain-analysis/README.md",
+      "sha256": "b866041446d17b9a644c532842bfb5dc6d565a2e2ad53c3627b22d2907a1f28d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "d74f82da1953b68df8fe79adc41fd2c6de55caefa03bf17d0286b95230206e23",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "02-purpose/README.md",
+      "sha256": "57662f72fe337736f61a4cd243277a071e8a24fbe4d1705ed838a0ad667b1a06",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "4089392591193a51486a4b582429a8418476ee19110ff1185fd59d019d47dad5",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "02-purpose/skills/elicit-purpose/SKILL.md",
+      "sha256": "1bc52fd57e7767a0b208c492cd1768d0860bb362551727f70e765f124fecdbf0",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "de0f84bc037ea897b9bde80abee0f9d6c892ad3ad69432517ee9594326356585",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "03-system-model-and-use-cases/AGENTS.md",
+      "sha256": "10abb8cbc05e45e739d986b8d866825e9386c2ea3884ab95fdff4439c339f20b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "e62cc818b43d248e90bf1e6194b9ac9aa827227212505685d26f468caf80ac0c",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "03-system-model-and-use-cases/README.md",
+      "sha256": "0eadac044bbad65caf60dcb3cd5c41c993b5714d872bd8be4f20592795de1620",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "01ced21a835f152d871fd9420c9e199505deb6ed17a7dda68e6ff83f0e308295",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "04-benchmarks-and-eval-strategy/AGENTS.md",
+      "sha256": "48e535c83748a6533bd397ef12d01839d7b4110039813038b28fa22e8c5a1ccd",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "bd0c43dad7ed8138fca29439ea5206fb8443074d6a349dfcd764df569e804f91",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "04-benchmarks-and-eval-strategy/README.md",
+      "sha256": "6812c264f08248c992120f1665f193df9102f4658f5e5c9d107cc649bb8fce28",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "4c09789b03fb58d99860491473e3895d1efdbd6ec97b3e454bcf933c75e5ecd6",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "05-high-level-design-and-architecture/AGENTS.md",
+      "sha256": "934834601c045f784999c88171da3ca2b53e0db11a76f1a00a3d5795188d5b66",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "1e688556c991c957273b07b015a769df1e631015d4a82d19174305789ca457b6",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "05-high-level-design-and-architecture/README.md",
+      "sha256": "8f0940214ba3db54abcf85b6dd98e40ea45c5bea111fabd86886f6e14718b4bd",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "a2a11520cb20006d888bc7e126e6252925d939661a785a72d022861fa6ac8ef5",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "06-viable-proof-of-concept/AGENTS.md",
+      "sha256": "a0425ee495c359b0732986a7e744a300841b8cc03ba7452fddf31c6979d24fdf",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "debac0a5c1cba03ecebd0b709f2e2d16f8418eaa5bdbc8f6f67b3c245a6a11f7",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "06-viable-proof-of-concept/README.md",
+      "sha256": "43aed2261d98604eae5ed074b547318a9779d9fe8bca63c4d2369df85c082c82",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "75f12b40b88de3105ffdb6652bef3be01978d7663529a3cfdead0201b10fac62",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "07-planning/README.md",
+      "sha256": "4d217d93ea476f9ffc04afd14a80006f0709c9b0d7b829856dafd835e7155ff1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "c7e0ad8c247ce69cf99086318d05ea1255b8b24ea77d7e22929ce5d7f12825a5",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "07-planning/skills/prepare-plan/SKILL.md",
+      "sha256": "ac8215671d773679864023cb694b95f84553e28dd4c99e291d97a2ae3531356f",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "4de5fdf0bd1a940a27ac5dbef909de82d4afb96e416f9d798c6253889b4a97cb",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "08-low-level-design/AGENTS.md",
+      "sha256": "58c3ccdc0eb4417737f1a947fa08bc006b4d481fe4948e337c41e9af7624f4fc",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "cf0863c871ae84665becadb0e80bcac0ed785d4bf5fbed46483a709406dbdda6",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "08-low-level-design/README.md",
+      "sha256": "55260eefdc25b1165b02e218111c92ce8b6a444b831cd8810537981a55d4a3f4",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "33aebf4be1393e9251d34399491a3e6c11065865113dba6381bd578123e6e007",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "09-build-and-test-cycle/README.md",
+      "sha256": "257c139b9af87fd8469d06f7efdfc20881dc76844bf1e33f8bc78811d98da5e9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "d44efa434d0e3533ddd6f41b9b6d1c920e9c24644c4344c13f4f2a7c1ce3b082",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "10-document-review-and-release/AGENTS.md",
+      "sha256": "1dd22f96ed987d6ee0a589308020beb209383f3a2d825d6b4c5bd2dcff25863d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "b63f92147e8d7a175752a290e6b3ecfcd88796139364b0ea977f7c01c588ebf4",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "10-document-review-and-release/README.md",
+      "sha256": "adc70e8b34cc551a7c78e67852b8728ce230530cec0597009e5cf08160ca277c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "be541d87c269722232a716a2fefbea9c55f8788baba20c38d7814e59f3e975a8",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "11-operational-reality-devops-and-user-acceptance/AGENTS.md",
+      "sha256": "267e7eecb69425dce54d0577b55ebde0d24038c7a2e98df25b89b8ce8735fe0b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "a4467043ea9fddcb8765715b19e2d69af46add4ec2ff40bfca7ffb8c71d4b5f6",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "11-operational-reality-devops-and-user-acceptance/README.md",
+      "sha256": "73132cdf7b91de793b54419465efaa8f2242a8491331ed1f894f43f82fc87107",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "a61f5f0434014da3033a442c5aaf31f84cbf6968566f81d5d7b23d07292633ca",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "12-observability-insights-and-learning/AGENTS.md",
+      "sha256": "277fb0a4f6125114eb813d4cc547210323db835f31cc0782efea6116076bf83e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "805d85552fb0a63e4871604877677992d613be6f664930d4adc0c697bccbb9c8",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "12-observability-insights-and-learning/README.md",
+      "sha256": "13a88570b3b9b145d7c03b9ff0e3888a40cc2181decd99e89df5a409b6d7a940",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "8142b1d065be496e8908821257bd405338e6c84eb1fd4fdb7525d90a0f8cd28b",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/lifecycle-baseline.md",
+      "sha256": "bc9feadee92e698011d3cf63fbdbaa2474abc9b90ce219c66c3edaa4e0b42e20",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "c17dd80f5f74486749b8f24df4d1b9f8e0cc48d6184ae3e36a453d52b300de3a",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scaffolds/stages/01-context-and-domain-analysis.md",
+      "sha256": "a959964c2df935b0be3b5638d3ff6f6a2be890ea2b4440811a4a2b2fbbdbf8e5",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "f147c93534996005103c7f5fdbe9c5aaa9c4b75666edd65b796ea9f9765e44a1",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scaffolds/stages/02-purpose.md",
+      "sha256": "7706a98d97d01a68a7b1dc8d8cf9fc5bdb9921cb79dcff8fad5dcc33723ebeb4",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "68e087bed100518f2c88d971623b203b49eb0238891262581e0199c93fd62c9b",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scaffolds/stages/03-system-model-and-use-cases.md",
+      "sha256": "b004d3a50e6a39b64260653aa34cde005b9a2b5f6287f8e9f0467ff64acc02ca",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "f5dbe31d3dadd6919f887fa00e2a7a03e25d4a9e774114bff2229908350b06bc",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scaffolds/stages/04-benchmarks-and-eval-strategy.md",
+      "sha256": "10cb57ced2299d8434548052e25b993fda35ee20c4656ceb24374f1ab4793265",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "0b96095c17480f897de54ed856085d3f97e4b38190ea0517690aab9e2a0077c6",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scaffolds/stages/05-high-level-design-and-architecture.md",
+      "sha256": "dc3299853d2c60a05ca219732de61305b5ec82a078ae00660a21c4f49b21c10b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "20ec927545c2bdcf5033f9951ad6dfa0e66d9fa6bd1501891b39900fa1dedb92",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scaffolds/stages/06-viable-proof-of-concept.md",
+      "sha256": "794133410a753ecbe0b9e103223f416911c2d00869e4731f4f16e6db593ed7e9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "0f53f3de93da214477658f228dc744945ba59b08774ad5278028a364a1301a47",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scaffolds/stages/07-planning.md",
+      "sha256": "4dd0b70b98ed09024cda677cddc3a5fb8acd6c61244778c7cad806ddaf9f4ebc",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "ae52d29cf88fbf742896f3d48b3ab62e66aa7fd15a5b535c1d3d3f057d6b347d",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scaffolds/stages/08-low-level-design.md",
+      "sha256": "db4fcb98ecddbe31226b17faaa686d18d383a823e93eec72d49d3f31acd09079",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "38898c111840a97c58ac34411dcdf81521311229a31b3e7dbf46598c18c2c031",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scaffolds/stages/09-build-and-test-cycle.md",
+      "sha256": "7538230fa2e461c2db29fc8355628b3427538fc6689b6dc6a4295503cf485ab6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "1a765558feb4720f52a59df836c536d1824a00298a921c5e6ee483cecd3f7c43",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scaffolds/stages/10-document-review-and-release.md",
+      "sha256": "206f79041e6765771e59da5896ecec89059205eb0359857cb246bdee79ce2f33",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "49c774c317b0273304d04a6add20088a7646eb9e807cf16c9e8d57d37d22a2f0",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scaffolds/stages/11-operational-reality-devops-and-user-acceptance.md",
+      "sha256": "d1bfe76939986db629ccb2122dfb3cbbee4293cb0ff6fbdaaf16bf5e25eeae50",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "ff5b69f302e13f60df324a8d09bee5506bd9796db98cc38a1e032d2cd996e053",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scaffolds/stages/12-observability-insights-and-learning.md",
+      "sha256": "b5006c6291bb5bbe5df81715e2df45eb5ff3184ba9f9cc1dc41014e800abcc10",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "edd0d027488d6f8c6974d67dd9389769500be53f2a79e98c5b33f0515db5b79c",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-create-team/ordering.md",
+      "sha256": "93d6fa76d190fe062d689a9838362492598ce85ddb2a633329c4bdd342922e8e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "bb72232e48c9a956ab4a9626092f652143cbb8848a9c882c1fdb1d5f23c406e1",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-decision/record-format.md",
+      "sha256": "4b8bd8cf12bed5cbabf102a8c26374035ff18b0111c96413de25b63701d222da",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "fa666ddd939b31ba286b6f97a5c53a02408146ef137167a34966901092b7dd8f",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-documentation/SKILL.md",
+      "sha256": "4c3f4e0e49980282d341399464aa0bf320dc51192337443caf181d70d32623dd",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "ac404c9e1ceea7bca709b068396cb7c9ae9b11a42822d2f9aba9f2e44bc2d3bc",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-focus/focus-choices.md",
+      "sha256": "2f9a565b2c80ee4e9e68f2097c7007ea05e90a74020fd9dbac307bf311817fcc",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "f07c9832f6240191058b2697911a291796a9535ae82e5ffd22ebd72f48a790b0",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-report-project-status/SKILL.md",
+      "sha256": "1900a1b6a9ef6f8848a634739b317e1a641f4b9f757e6b2087d3875f324394ab",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "7b13e7bb2a457bbdef377ab7a30a882232f42b977a2dde377edd3a0fc82aefa2",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-report-project-status/TRY-IT.md",
+      "sha256": "0bb72572adfb57356ca86ffaf3d78969db9818423b060f80bed02403e875ed35",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "50d0b91328ed7d18f78084b1b985a949b1d2e7d0e519c309f0ea997861602c52",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-report-project-status/packets.md",
+      "sha256": "f07f7b0ae83600c8b57994d4a38f834d5e028bab9cb995525dd8a46e6c0a6567",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "62d1829fb6d7eaa145757704827e3b95a65da1b4ecd5e309db4cf9fdb87a8899",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-report-project-status/report_packets.md",
+      "sha256": "b3fe445689409b1fdf2cdc9c44b3641943c2b95178c483479995db5d4e059894",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "16248ef9b451a650714171fa011c9021a14b597a19989e9e833d83903b4f448f",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_portable.md",
+      "sha256": "d28e4225892f58b35cb4075ec068b0e7bc5bc9d3b85ad2b95adec25988eb0817",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "b8416f9eb2714496c162f6796fec7a33513a5ac350b890da7937056029af6472",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_purpose_review.md",
+      "sha256": "84c4c5e39ee3963b007fa86a4cf8891dc5b8cbd5059921df265b1eb4a0e4e16c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "4591d9cb5b2a59e75039101fb52fe70c5c9b894daeb1792ca1774f2402b0b886",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_report_project_status.md",
+      "sha256": "5d515c1e4a7d541d630fed73fd40edc95c1aa0e1694487c83f93ca813cdc8396",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-11T21:18:04Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "78404cdbc872117d931497c34be8c72f9ebe145cbb91c87809dc0376ebd9834a",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
     }
   ],
   "distribution_version": "0.3.0-pilot.2"

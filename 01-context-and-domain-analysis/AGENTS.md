@@ -1,4 +1,4 @@
-# Context and Domain Agent
+# Context Agent
 
 Role ID: `ASDG-01`. Native Codex name: `asdg_01`. Stage: 01.
 Status: evaluation and project-documentation authoring; native enforcement requires separate verification.

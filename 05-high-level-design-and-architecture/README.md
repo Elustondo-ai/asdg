@@ -1,4 +1,4 @@
-# High-Level Architecture Agent — package
+# Architecture
 
 Native name: `asdg_05`. Stable role: `ASDG-05`.
 This folder owns the specialization, not the consuming project's results.
@@ -6,9 +6,7 @@ This folder owns the specialization, not the consuming project's results.
 | Entry | Purpose |
 | --- | --- |
 | [AGENTS.md](AGENTS.md) | Role entry point, boundaries and self-explanation |
-| [docs](docs/README.md) | Package guide and relevant shared material |
 | [types](types/contract.md) | Input/output contract; no mandated type language |
-| [src](src/README.md) | Package-specific operations, when implemented |
 | [tests](tests/acceptance.md) | Role interview and negative-boundary acceptance cases |
 | [local skill](skills/propose-architecture/SKILL.md) | Architecture analysis and bounded decision documentation |
 | [Decision foundations](docs/architectural-decisions.md) | Why, alternatives, consequences and revisit evidence |
@@ -25,8 +23,6 @@ Expect a truthful proposal or an `OUT_OF_SCOPE` return, never fabricated executi
 The contract permits assigned decision documentation; production implementation remains excluded. Native behavior needs separate evidence.
 See [package catalogue](../README.md) and [runtime rules](../00-governance/docs/runtime-contract.md).
 
-## Perspectives
+## Project artifacts
 
-Client assessments follow the [stage layout](../00-governance/docs/stage-layout.md) under `docs/asdg/`.
-Use flat perspective files and the named `decisions/<Decision name>/` package exception; see the [decision format](../skills/asdg-decision/record-format.md).
-Empty folders make no evidence or completion claim; use the [shared contract](../00-governance/docs/stage-perspectives.md).
+Record the selected architecture, its constraints and design decisions. Link implementation evidence for as-built claims. See the [stage layout](../00-governance/docs/stage-layout.md).

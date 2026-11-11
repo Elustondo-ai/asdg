@@ -7,6 +7,7 @@
 | Small host pool | With a capacity of three, schedule twelve assignments in waves. Capture each completed packet before releasing its slot. Slide order stays stable when workers finish out of order. |
 | One unavailable specialist | Eleven valid sections and one coverage slide yield a 34-slide PARTIAL report. The missing role and reason are visible. No inferred content. |
 | A specialist has no current evidence | Its three returned slides identify the searched sources, unknowns and next evidence to collect. Its contribution counts as returned; its project status stays unknown. |
+| Approved API design, no run, proposed Stage 07 item | Intended cites the approved design. Actual is unknown. Planned cites the item as proposed. The design supplies no evidence of a working API. |
 | No native role delegation | Block the Governance run. Do not replace twelve native activations with a single narrator or twelve permanent chats. |
 | Admin, ambiguous binding or invalid role | Route only with a verified lifecycle/Governance role and client. No silent role switch. |
 | Malformed packet, stale snapshot or denial | Record the exact gap and retry only as allowed. A second run preserves prior evidence; no cross-owner or application writes. |

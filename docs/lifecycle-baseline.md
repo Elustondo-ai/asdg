@@ -9,18 +9,18 @@ The external comparison was not re-evaluated in this correction; no stage reconc
 
 | Step | Current display label |
 | --- | --- |
-| 01 | Context & Domain Analysis |
+| 01 | Context |
 | 02 | Purpose |
-| 03 | System Model & Use Cases |
-| 04 | Benchmarks, Test Strategy & Success Criteria |
-| 05 | High-Level Solution Design & Architecture |
-| 06 | Viable Proof of Concept |
+| 03 | Use Cases |
+| 04 | Benchmarks |
+| 05 | Architecture |
+| 06 | POC |
 | 07 | Planning |
-| 08 | Low-Level Design |
-| 09 | Build & Test Cycle |
-| 10 | Document, Review and Release |
-| 11 | Operational Reality, DevOps & User Acceptance |
-| 12 | Observability, Insights & Learning |
+| 08 | Detailed Design |
+| 09 | Build and Test |
+| 10 | Review and Release |
+| 11 | Operations |
+| 12 | Observability |
 
 The same areas recur in sprint and release cycles, guided by a product roadmap.
 Step 09 contains the build/test iteration. Step 10 makes changes understandable and reviewable.
@@ -31,8 +31,8 @@ The earlier October 8 foundational draft duplicated context and shifted stages; 
 Its spreadsheet also mislabeled the later stages. Those artifacts were not imported as policy.
 
 
-The [three-perspective model](../../asdg/00-governance/docs/stage-perspectives.md) applies to 00 governance and stages 01–12.
+The [three-perspective model](../00-governance/docs/stage-perspectives.md) applies to 00 governance and stages 01–12.
 This is not a renumbering. `ASDG-02`, `asdg_02`, `02-purpose` paths and callable skill names are preserved.
-Purpose identifies a responsibility; Intended / Actual / Planned classify statements within every responsibility.
+Specialists own their domain artifacts. Stage 07 integrates progress and future work. Project assessments derive Intended, Actual and Planned from cited records.
 
 See [source provenance](provenance.md) for the captured source and excluded presentation history.

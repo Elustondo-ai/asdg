@@ -10,7 +10,7 @@ Supply nonempty `run_id`, `project`, and `snapshot`. The snapshot identifies the
 
 `outcomes` is a JSON object keyed by expected role ID. Governance records all twelve. A direct specialist records only its own. Record one final outcome per role after any retries, retaining the individual attempts in the parent receipt. Use an object with a nonempty `reason` when a role could not return a valid packet. For a successful return supply `packet`. Governance also records a unique `worker_ref` pointing to its verified assignment/return receipt.
 
-Each packet repeats `run_id`, `project`, `snapshot` and supplies `role_id`, `loaded` (including that role’s catalogue entry and stage skill paths) and `slides`. Each slide supplies `kind`, `headline`, one to three visible `points`, a `visual_brief` describing what the editable visual should explain, spoken Markdown `notes` and nonempty `sources`. Record checked locations even when the substantive evidence is absent. Link individual claims in notes. The three kinds in order are `definition`, `status`, `plan`.
+Each packet repeats `run_id`, `project`, `snapshot` and supplies `role_id`, `loaded` (including that role’s catalogue entry and stage skill paths) and `slides`. Each slide supplies `kind`, `headline`, one to three visible `points`, a `visual_brief` describing what the editable visual should explain, spoken Markdown `notes` and nonempty `sources`. Record checked locations even when the substantive evidence is absent. Link individual claims in notes. The three kinds in order are `definition` (Intended), `status` (Actual), and `plan` (Planned). Workers assess the sources. The checker validates packet structure and carries the reported findings through to the deck.
 
 ## Interpret the result
 

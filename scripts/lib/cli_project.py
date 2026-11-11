@@ -304,7 +304,9 @@ def plan_initialization(root, repo=REPO, project_state=None, client=None, timest
     if read_bytes(safe_path(root, index)) is None:
         text = '# Project documentation\n\nExplore the project from its purpose through design, delivery and learning.\n'
         text += 'These introductions explain each area; project evidence and decisions are added as work progresses.\n\n'
-        text += '\n'.join(f"- [{Path(a['folder']).name.replace('-', ' ')}]({Path(a['folder']).name}/README.md)" for a in agents) + '\n'
+        entries = [('00 Governance', Path(agents[0]['folder']).name)]
+        entries.extend((f"{rule['number']:02d} {rule['name']}", rule['slug']) for rule in rules)
+        text += '\n'.join(f'- [{label}]({slug}/README.md)' for label, slug in entries) + '\n'
         changes.append(plan(root, index, text.encode()))
     for agent in agents:
         folder = ARTIFACTS / Path(agent['folder']).name

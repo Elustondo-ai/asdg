@@ -116,7 +116,15 @@ class PortableTests(unittest.TestCase):
         preserved = snapshot(self.root)
         self.init()
         self.assertEqual(snapshot(self.root), preserved)
+        index = (self.root / 'docs/asdg/README.md').read_text()
+        self.assertEqual([s['name'] for s in status['lifecycle_stages']],
+                         ['Context', 'Purpose', 'Use Cases', 'Benchmarks', 'Architecture', 'POC',
+                          'Planning', 'Detailed Design', 'Build and Test', 'Review and Release',
+                          'Operations', 'Observability'])
         for stage in status['lifecycle_stages']:
+            self.assertIn(f"[{stage['number']:02d} {stage['name']}]({stage['slug']}/README.md)", index)
+            introduction = (self.root / 'docs/asdg' / stage['slug'] / 'README.md').read_text()
+            self.assertNotIn('Read root files in order:', introduction)
             folder = self.root / 'docs/asdg' / stage['slug']
             for name in ('current', 'planned-release', 'planned-sprint'):
                 self.assertFalse((folder / name).exists())

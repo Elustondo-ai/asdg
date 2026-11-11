@@ -1,9 +1,14 @@
 """Best-effort role write ownership; independent of sprint authorization."""
 from __future__ import annotations
 
+import json
+import os
+import re
+import subprocess
 from pathlib import Path
 from cli_files import Conflict, safe_path
-from cli_model import REPO, catalogue
+from cli_model import CORE, REPO, catalogue, sha
+from cli_project import distribution
 
 
 def local_path(root: Path, value: str) -> Path:
@@ -27,6 +32,74 @@ def owned_directory(role: str, repo: Path = REPO) -> Path | None:
     return None
 
 
+def checker_target(root: Path, path: Path) -> bool:
+    """Reserve the checker, its import names and enclosing directories for owner application."""
+    checker = Path('scripts/lib/cli_ownership.py')
+    if root != CORE:
+        checker = Path('asdg') / checker
+    target = root / path
+    if target.exists() and (root / checker).exists() and target.samefile(root / checker):
+        return True
+    folded = Path(*(part.casefold() for part in path.parts))
+    if folded in checker.parents:
+        return True
+    if not folded.is_relative_to(checker.parent):
+        return False
+    names = folded.relative_to(checker.parent).parts
+    if names[0] == '__pycache__':
+        return len(names) == 1 or names[1].startswith('cli_ownership.')
+    return names[0] == checker.stem or (names[0].startswith('cli_ownership.') and names[0] != 'cli_ownership.md')
+
+
+def standalone_stage_target(root: Path, path: Path) -> bool:
+    """Recognize provider methodology in the checkout running this checker."""
+    if len(path.parts) < 2 or not (root / '.git').is_dir() or (root / '.git').is_symlink():
+        return False
+    roles, catalogue_hash = catalogue(CORE)
+    if path.parts[0] not in {Path(row['folder']).name for row in roles}:
+        return False
+    target = root / path
+    if target.exists() and (not target.is_file() or target.stat().st_nlink != 1):
+        return False
+    marker = path.parts[1:] in {('current', '.gitkeep'), ('intended', '.gitkeep'), ('planned', '.gitkeep')}
+    if not marker and any(part.startswith('.') for part in path.parts):
+        return False
+    names = tuple(part.casefold() for part in path.parts)
+    if any(name in {'agents.md', 'skill.md', 'logs', 'build', 'components', 'asdg'} for name in names):
+        return False
+    if names[:2] == ('00-governance', 'types') and len(names) > 2 and names[2] in {
+            'agent-catalog.json', 'document-reviews.json', 'migrations'}:
+        return False  # Catalogue, review ledger and historical records retain their own boundaries.
+    cwd = Path.cwd()
+    if any(os.path.lexists(parent / '.asdg') for parent in (*target.parents, cwd, *cwd.parents)):
+        return False
+    if any(os.path.lexists(root / parent / '.git') for parent in path.parents if parent.parts):
+        return False
+    canonical = 'https://github.com/Elustondo-ai/asdg'
+    origins = {canonical, canonical + '.git', 'git@github.com:Elustondo-ai/asdg.git',
+               'ssh://git@github.com/Elustondo-ai/asdg.git'}
+
+    def git(*args: str) -> bytes:
+        # Git's repository and configuration environment overrides must not supply the identity.
+        return subprocess.check_output(['/usr/bin/git', *args], stderr=subprocess.DEVNULL, timeout=5,
+                                       env={'PATH': os.defpath, 'GIT_CONFIG_NOSYSTEM': '1',
+                                            'GIT_CONFIG_GLOBAL': os.devnull})
+    try:
+        if (os.path.lexists(root / 'asdg') or distribution(root).get('canonical_repository') != canonical
+                or git('rev-parse', '--show-toplevel').rstrip(b'\n') != os.fsencode(root)
+                or git('config', '--local', '--get', 'remote.origin.url').decode().strip() not in origins):
+            return False
+        if sha(git('show', 'HEAD:00-governance/types/agent-catalog.json')) != catalogue_hash:
+            return False
+        # Ordinary stage documentation may be new. Other stage assets and definitions must be known to Git.
+        if marker or path.suffix == '.md':
+            return True
+        files = json.loads(git('show', 'HEAD:metadata/package-files.json'))['files']
+        return isinstance(files, list) and str(path) in files
+    except (subprocess.SubprocessError, OSError, ValueError, KeyError, TypeError):
+        return False
+
+
 def ownership_decision(root: Path, paths: list[str], context: dict, repo: Path = REPO) -> tuple[bool, str, list[str]]:
     """Return allow/reason/application targets; caller separately checks sprint scope.
 
@@ -44,10 +117,19 @@ def ownership_decision(root: Path, paths: list[str], context: dict, repo: Path =
     application = []
     for value in paths:
         path = local_path(root, value)
+        if checker_target(root, path):
+            return False, 'WRITE BLOCKED: ownership checker changes require the repository owner.', []
         # Policy/control paths are never application or ordinary documentation.
         protected = any(p in {'.git', '.codex', '.claude', '.agents', 'AGENTS.md', 'SKILL.md'} for p in path.parts)
-        if role == 'ASDG-ADMIN' and workflow == 'admin' and path in exceptions:
-            if '.git' not in path.parts and (path.parts[0] in {'asdg', 'scripts', 'bin'} or str(path) in {'AGENTS.md', 'README.md'} or (path.parts[:3] == ('docs', 'asdg', '07-planning') and path.name.startswith('02.') and path.suffix in {'.md', '.json'})):
+        admin_target = role == 'ASDG-ADMIN' and workflow == 'admin' and path in exceptions
+        # Reserve the source stage namespace before client exceptions or application fallback.
+        if root == CORE and re.match(r'^(?:0[0-9]|1[0-2])-', path.parts[0]):
+            if admin_target and not protected and standalone_stage_target(root, path):
+                continue
+            return False, f'WRITE BLOCKED: standalone methodology target {path} requires scoped provider maintenance.', []
+        if admin_target:
+            embedded = root != CORE and path.parts[0] == 'asdg'
+            if '.git' not in path.parts and (embedded or path.parts[0] in {'scripts', 'bin'} or str(path) in {'AGENTS.md', 'README.md'} or (path.parts[:3] == ('docs', 'asdg', '07-planning') and path.name.startswith('02.') and path.suffix in {'.md', '.json'})):
                 continue
         if protected or path.parts[0] == 'asdg':
             return False, f'WRITE BLOCKED: protected methodology/control target {path}.', []

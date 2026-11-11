@@ -13,3 +13,4 @@ These provider tests check the reporting contract using synthetic returns and th
 | Actual renderer | Builds and reopens 3-, 36- and 34-slide fixtures with the provider builder. Checks each slide’s title, narration, sources and order. Requires the provider’s pinned rendering dependencies and system Cairo. |
 
 The distribution suite independently checks a fresh ZIP installation, adapters, help and relocation. Fixture worker identifiers exercise accounting only. Real host dispatch, capability discovery, guard behavior and worker release require native client evidence.
+A staged design and planning fixture verifies that the packet processor preserves an explicitly unknown deployment and its evidence source.

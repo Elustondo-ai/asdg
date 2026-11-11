@@ -1,4 +1,4 @@
-# Benchmark and Test Strategy Agent
+# Benchmarks Agent
 
 Role ID: `ASDG-04`. Native Codex name: `asdg_04`. Stage: 04.
 Status: evaluation and project-documentation authoring; native enforcement requires separate verification.

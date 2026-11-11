@@ -8,7 +8,7 @@ import sys
 from agent_config import loads
 from documentation import nonblank_source_lines, recorded_document
 
-REQUIRED_DIRS = ('docs', 'types', 'src', 'tests', 'skills')
+REQUIRED_DIRS = ('types', 'tests', 'skills')
 REQUIRED_FILES = ('README.md', 'AGENTS.md', 'types/contract.md', 'tests/acceptance.md')
 
 
@@ -97,7 +97,7 @@ def validate(root: Path) -> list[str]:
                 issues.append(f'Skill outside owner package: {name}')
             if adapter != root / '.codex/agents' / f'{name}.toml':
                 issues.append(f'Incorrect native adapter path: {name}')
-            for directory in REQUIRED_DIRS:
+            for directory in (('docs', 'src') if stage == 0 else ()) + REQUIRED_DIRS:
                 if not (home / directory).is_dir():
                     issues.append(f'Missing directory: {folder}/{directory}')
             for filename in REQUIRED_FILES:

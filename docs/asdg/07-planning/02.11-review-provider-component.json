@@ -1,0 +1,270 @@
+{
+  "requester": "Pablo",
+  "role": "ASDG-ADMIN",
+  "session": "01a1c713-04cb-7111-b34c-a23c00d9b6e9",
+  "starting_revision": "426e6783cccd3a9285776473fb0a98de83c6a0ae",
+  "recorded_at": "2026-11-10T21:24:22.413011+00:00",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "integrity": [
+    {
+      "path": "00-governance/docs/runtime-contract.md",
+      "classification": "changed content",
+      "manifest": "b66c68e2413d893ef0ac47f114c879adca20550f8d6083c88a1d562f4dba2f4b",
+      "starting": "16cb2c6c6af492bacb3404454d0dbd8976039d98cd5dd159ee39f07db58e06ef",
+      "final": "16cb2c6c6af492bacb3404454d0dbd8976039d98cd5dd159ee39f07db58e06ef"
+    },
+    {
+      "path": "00-governance/types/document-reviews.json",
+      "classification": "changed content",
+      "manifest": "f4a058af7f8fe54aea0dee41e940a81bb30d8063f81d54789d15bb5ea0d4ff5f",
+      "starting": "3cd83a247a9dbf17378d07b73447a8418f8d57ae7bbc255d35eca9099d111566",
+      "final": "3cd83a247a9dbf17378d07b73447a8418f8d57ae7bbc255d35eca9099d111566"
+    },
+    {
+      "path": "README.md",
+      "classification": "changed content",
+      "manifest": "fdc2df16406c79184f2b30e243d025fae602895a5c760260cdf5e9db52967093",
+      "starting": "6f58bbc852619ccbacf4bf18b5428b3424cd353f376ffcb4f2e33e82fb7d11ba",
+      "final": "34185124a10844811c16c71750be9d626aef6a0bb7b3d4aec4dcf9136cc7e47f"
+    },
+    {
+      "path": "docs/client-integrations.md",
+      "classification": "changed content",
+      "manifest": "18f016cf295a1aef3752553ef1272ba46c07b0c0787a1f40fafc6c2489750397",
+      "starting": "e86c7cfcb4adbb3a3e93e8c3cbe0201ea59f424dad284e87e742f2a5e31df82f",
+      "final": "e86c7cfcb4adbb3a3e93e8c3cbe0201ea59f424dad284e87e742f2a5e31df82f"
+    },
+    {
+      "path": "docs/images/installation-engine.svg",
+      "classification": "changed content",
+      "manifest": "77898afc32a14f901dcc9be75106f9a42a27552356c67779f897e8e2ae3a7c91",
+      "starting": "ab220eea4b0158238aacd26b79db40fce82b2ada858d925e7782173a7decfdf1",
+      "final": "ab220eea4b0158238aacd26b79db40fce82b2ada858d925e7782173a7decfdf1"
+    },
+    {
+      "path": "docs/install-clone-prompt.md",
+      "classification": "changed content",
+      "manifest": "a83a01a7ffae9fefc1ae67c03e9df1428c371e98e5ba392335be809addcc9ef8",
+      "starting": "6ee7fc0f556db1b05fdf0db831cc5baffe3877f02bf404c1a1aaf02c080b90ba",
+      "final": "6ee7fc0f556db1b05fdf0db831cc5baffe3877f02bf404c1a1aaf02c080b90ba"
+    },
+    {
+      "path": "docs/install-zip-prompt.md",
+      "classification": "changed content",
+      "manifest": "6c4b50a98f5b62209558923d9c478d381b7f923ca112fbb488c16ff4428ee882",
+      "starting": "bc504ae71d717274d4252a8a0be6c52f2e78e6a4bc5bf3622ce2604ef6069a9f",
+      "final": "bc504ae71d717274d4252a8a0be6c52f2e78e6a4bc5bf3622ce2604ef6069a9f"
+    },
+    {
+      "path": "docs/installation.md",
+      "classification": "changed content",
+      "manifest": "561c1ab5c859cdf6cf09e1d5197d057b54644e22cf76b10bd518fc559c8907d7",
+      "starting": "fef7ddc23d3bf16d26ef1da44b61e2c644a17af4d02bccbcc51ad5d29b515231",
+      "final": "fef7ddc23d3bf16d26ef1da44b61e2c644a17af4d02bccbcc51ad5d29b515231"
+    },
+    {
+      "path": "metadata/package-files.json",
+      "classification": "changed content",
+      "manifest": "e38bb870608cc7c60a78e4a8c3bf8a273c21ef01ed9fc1516bc344247169e8c2",
+      "starting": "84095552c83e136abd9929e8d4b722fce9787907877a5987738f294aab05c8fd",
+      "final": "84095552c83e136abd9929e8d4b722fce9787907877a5987738f294aab05c8fd"
+    },
+    {
+      "path": "scripts/lib/cli.md",
+      "classification": "changed content",
+      "manifest": "a564ea8599114674fafd0f73d13d099a546697731ac1f9865b9cedab7b669680",
+      "starting": "3ac73abdfd2e0d3136b268407dcbbd4464acebe9a73a6207d119204bde0d198b",
+      "final": "5b10363c7d509ffe3e9d88e53cb29c69bbef9fc661affe4c9c6ee5885a0e5476"
+    },
+    {
+      "path": "scripts/lib/cli.py",
+      "classification": "changed content",
+      "manifest": "0ce4d58e27c8e50d82d7d04001c40e1a2837d35f5f58a04fcbf40699fb7a7d65",
+      "starting": "8640b3905a36c1ea4fe2c60625032878a6da00000c2f289e59fa8dbc1767c55c",
+      "final": "45ad8297e6ea4e275bc1b822dc3d72e0e4babde5fbbc83d60d195cc2948f5bac"
+    },
+    {
+      "path": "scripts/lib/cli_install.md",
+      "classification": "changed content",
+      "manifest": "e8533f92bee7c7c56dc83146f31823bdb4063e4caedc6f33d91c255f488c1551",
+      "starting": "52a14ec666378c503031c37ec192c537de47e78d653661a8ce52514e05ac46ff",
+      "final": "52a14ec666378c503031c37ec192c537de47e78d653661a8ce52514e05ac46ff"
+    },
+    {
+      "path": "scripts/lib/cli_install.py",
+      "classification": "changed content",
+      "manifest": "1bb668a0dbe4672aae347da456c091d32397ffd8f316f938d06073564d4b64c4",
+      "starting": "98c4d9ac1a38d266c25e697cad0a32f21f7c0c88cb230bee12afa7e3321082b3",
+      "final": "98c4d9ac1a38d266c25e697cad0a32f21f7c0c88cb230bee12afa7e3321082b3"
+    },
+    {
+      "path": "scripts/lib/cli_team.md",
+      "classification": "unmanifested package member",
+      "manifest": null,
+      "starting": "f6c6d95c58b58ba70311b372cba1759155d0834b9625686ad339380f1c748e86",
+      "final": "f6c6d95c58b58ba70311b372cba1759155d0834b9625686ad339380f1c748e86"
+    },
+    {
+      "path": "scripts/lib/cli_team.py",
+      "classification": "unmanifested package member",
+      "manifest": null,
+      "starting": "0bb3e9433fc5a4fc8b1ed55c02379a584d4e83edb227ed6d04fa3ad6743ce749",
+      "final": "0bb3e9433fc5a4fc8b1ed55c02379a584d4e83edb227ed6d04fa3ad6743ce749"
+    },
+    {
+      "path": "skills/asdg-create-team/SKILL.md",
+      "classification": "changed content",
+      "manifest": "1ad1b8d46e88ca647d79bc2b221c9cc1882ec1d9cc9793c4ee1c23e897bbcd5d",
+      "starting": "e6eb3318422a3a4100547f8d71302c812f5233f94bf8473f5ba56131bca813c8",
+      "final": "e6eb3318422a3a4100547f8d71302c812f5233f94bf8473f5ba56131bca813c8"
+    },
+    {
+      "path": "skills/asdg-create-team/initialization.md",
+      "classification": "unmanifested package member",
+      "manifest": null,
+      "starting": "b173bd632c754bf4c12ecf157ffef98636fde1e119facb87ce37ee279ac9e6cd",
+      "final": "b173bd632c754bf4c12ecf157ffef98636fde1e119facb87ce37ee279ac9e6cd"
+    },
+    {
+      "path": "skills/asdg-create-team/ordering.md",
+      "classification": "unmanifested package member",
+      "manifest": null,
+      "starting": "bb72232e48c9a956ab4a9626092f652143cbb8848a9c882c1fdb1d5f23c406e1",
+      "final": "bb72232e48c9a956ab4a9626092f652143cbb8848a9c882c1fdb1d5f23c406e1"
+    },
+    {
+      "path": "skills/asdg-focus/session-policy.md",
+      "classification": "changed content",
+      "manifest": "896692f69b7954ed6f77084d758119bb7039f4cbc0a4f9375c8f3b52450bbf1c",
+      "starting": "aee49c00765bf45be61eeebe21a83707c5adb28c432590a196958544a4ea8b76",
+      "final": "aee49c00765bf45be61eeebe21a83707c5adb28c432590a196958544a4ea8b76"
+    },
+    {
+      "path": "skills/asdg-init/SKILL.md",
+      "classification": "changed content",
+      "manifest": "01cc09c79ffd3eb6f8ba95a5d7482f91b16407ff88c2dbffea9a40790e748668",
+      "starting": "5fd244d761c3abd654d2d461b8e7b2555fa54a4426234dba08a9c02bcb9857c5",
+      "final": "5fd244d761c3abd654d2d461b8e7b2555fa54a4426234dba08a9c02bcb9857c5"
+    },
+    {
+      "path": "skills/asdg-status/SKILL.md",
+      "classification": "changed content",
+      "manifest": "89687b96df20884b3ed774a6e2fe790c1328d1bd45a39ee0753b93323416d2bb",
+      "starting": "bdd8e5695e398e6fce54c9eaac48b2e2cd20f99298bd7a9ac9a87d806b29b32e",
+      "final": "bdd8e5695e398e6fce54c9eaac48b2e2cd20f99298bd7a9ac9a87d806b29b32e"
+    },
+    {
+      "path": "templates/.agents/skills/asdg-init/SKILL.md",
+      "classification": "changed content",
+      "manifest": "666e9006bdbcf25444e61ef24902f372a68de039cc3af99b5bfb12466d46bb44",
+      "starting": "11641d2e0258dc3f4db7766522bb84dc5cb6c4ac5592d081465b40fd1b12550f",
+      "final": "11641d2e0258dc3f4db7766522bb84dc5cb6c4ac5592d081465b40fd1b12550f"
+    },
+    {
+      "path": "tests/test_install.md",
+      "classification": "changed content",
+      "manifest": "c2873672140b0cc0eeecd661d111dd4d411e79370c40bd76cc7d1cff956278aa",
+      "starting": "e88afd04b64fd73a3e4d5031d740fad0450ad3e935c9c30486c63528e15fe288",
+      "final": "e88afd04b64fd73a3e4d5031d740fad0450ad3e935c9c30486c63528e15fe288"
+    },
+    {
+      "path": "tests/test_install.py",
+      "classification": "changed content",
+      "manifest": "3f0eb91f14cb242ffccb1dd1b797877e11c4690fca28836863eac45edd03f167",
+      "starting": "4a28a8dc1b4dde6459013a5cb40bf04fb05b4de0dbc9143d799ef49204e19e9d",
+      "final": "4a28a8dc1b4dde6459013a5cb40bf04fb05b4de0dbc9143d799ef49204e19e9d"
+    },
+    {
+      "path": "tests/test_portable.md",
+      "classification": "changed content",
+      "manifest": "e3cf6644ad9daf2f858e36a4ba7c061ee48d427595f39be380b28ed725c664d8",
+      "starting": "b8416f9eb2714496c162f6796fec7a33513a5ac350b890da7937056029af6472",
+      "final": "b8416f9eb2714496c162f6796fec7a33513a5ac350b890da7937056029af6472"
+    },
+    {
+      "path": "tests/test_portable.py",
+      "classification": "changed content",
+      "manifest": "9b48892890bc8f7d44c0209d5e80dd8fd1e5938405a20b2964969d93818321b7",
+      "starting": "0dd45b525860ca60775b1a249e0de637c5418264738e9e4f3808398fe0ef9ccf",
+      "final": "0dd45b525860ca60775b1a249e0de637c5418264738e9e4f3808398fe0ef9ccf"
+    }
+  ],
+  "tests": {
+    "provider_passed": 7,
+    "portable_ran": 158,
+    "portable_skipped": 2
+  },
+  "events": [
+    {
+      "path": "README.md",
+      "event": "AI-MODIFIED",
+      "before": "6f58bbc852619ccbacf4bf18b5428b3424cd353f376ffcb4f2e33e82fb7d11ba",
+      "sha256": "34185124a10844811c16c71750be9d626aef6a0bb7b3d4aec4dcf9136cc7e47f",
+      "human_approval": null
+    },
+    {
+      "path": "scripts/lib/cli.py",
+      "event": "AI-MODIFIED",
+      "before": "8640b3905a36c1ea4fe2c60625032878a6da00000c2f289e59fa8dbc1767c55c",
+      "sha256": "45ad8297e6ea4e275bc1b822dc3d72e0e4babde5fbbc83d60d195cc2948f5bac",
+      "human_approval": null
+    },
+    {
+      "path": "scripts/lib/cli.md",
+      "event": "AI-MODIFIED",
+      "before": "3ac73abdfd2e0d3136b268407dcbbd4464acebe9a73a6207d119204bde0d198b",
+      "sha256": "5b10363c7d509ffe3e9d88e53cb29c69bbef9fc661affe4c9c6ee5885a0e5476",
+      "human_approval": null
+    },
+    {
+      "path": "scripts/provider_component/guard.md",
+      "event": "AI-MODIFIED",
+      "before": null,
+      "sha256": "abe61e05d3b575de3a2cc64e7b6457b8a68b91fcfd733f2aef6df9d1d8e501e8",
+      "human_approval": null
+    },
+    {
+      "path": "scripts/provider_component/guard.py",
+      "event": "AI-MODIFIED",
+      "before": null,
+      "sha256": "23f3db2d2b224c154c7a071a4ef1e982763f7e79111f3b7bb2b750d2250d5ab7",
+      "human_approval": null
+    },
+    {
+      "path": "scripts/provider_component/policy.md",
+      "event": "AI-MODIFIED",
+      "before": null,
+      "sha256": "3b322c4e7ee888c6e4585ccea9ceff66b1fcdc133df9a0125adbe15df8b6dc09",
+      "human_approval": null
+    },
+    {
+      "path": "scripts/provider_component/policy.py",
+      "event": "AI-MODIFIED",
+      "before": null,
+      "sha256": "ed7094d3b283fe8c257208b6f737aafcc85d4c74d681d23f5a365e9bfd7a1742",
+      "human_approval": null
+    },
+    {
+      "path": "scripts/provider_component/test_policy.md",
+      "event": "AI-MODIFIED",
+      "before": null,
+      "sha256": "a57a4c9a2141236d21e26f1d48db3203aad87d306efec1d4f9bef008fb08a9ee",
+      "human_approval": null
+    },
+    {
+      "path": "scripts/provider_component/test_policy.py",
+      "event": "AI-MODIFIED",
+      "before": null,
+      "sha256": "f4c2ab90bdc8618387fe63a4d79de1c319ca8e6949e2c62277677e68d36e7c67",
+      "human_approval": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.11-review-provider-component.md",
+      "event": "AI-MODIFIED",
+      "before": null,
+      "sha256": "f7ccb7edbe06120c34495119a98ac343e54257c543a003577a2be394de2a36f8",
+      "human_approval": null
+    }
+  ]
+}

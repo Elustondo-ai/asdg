@@ -1,4 +1,4 @@
-# Review and release
+# Review and Release
 
 Assess a candidate delivery using requirements, implementation, documentation and test evidence.
 
@@ -15,6 +15,4 @@ Record readiness findings and unresolved issues. Review recommendations do not t
 
 Project-specific details are not supplied by initialization. Existing evidence may be documented elsewhere; this introduction makes no claim about its presence or approval.
 
-Read root files in order: `01` Intended, `02` Current, `03` Planned. Additional topics use `01.1`, `02.1`, `03.1`, and so on; plan filenames identify release or sprint scope.
-
-Create only useful documents. After a cycle finishes, consolidate verified results into `02` Current files before removing only that cycle's temporary plans; preserve decisions and review history.
+Record review findings, exact-state decisions and evidence of release.

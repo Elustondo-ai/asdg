@@ -1,4 +1,4 @@
-# System Model and Use Cases Agent
+# Use Cases Agent
 
 Role ID: `ASDG-03`. Native Codex name: `asdg_03`. Stage: 03.
 Status: evaluation and project-documentation authoring; native enforcement requires separate verification.

@@ -1,4 +1,4 @@
-# High-Level Architecture Agent
+# Architecture Agent
 
 Role ID: `ASDG-05`. Native Codex name: `asdg_05`. Stage: 05.
 Mode: architecture evaluation and project-documentation authoring.

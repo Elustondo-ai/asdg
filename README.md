@@ -2,7 +2,7 @@
 
 ASDG initialization installs the methodology and prepares the project’s ASDG team through the [canonical init workflow](skills/asdg-init/SKILL.md). Codex gets Governance and twelve specialist chats; Claude gets role adapters with manual specialist selection. One complete-plan APPROVE covers setup; native capability failures remain incomplete initialization.
 
-ASDG carries twelve lifecycle stages, specialist responsibilities, evidence rules and sprint controls inside your project.
+Twelve specialists maintain the project’s engineering artifacts. Stage 07 integrates priorities and progress. The [project assessment](00-governance/docs/stage-perspectives.md) draws on approved artifacts, observed results and current plans.
 The canonical repository is [asdg](https://github.com/Elustondo-ai/asdg).
 This consolidated pilot is a review candidate; packaging does not establish human approval or native enforcement.
 
@@ -60,3 +60,7 @@ Client evidence belongs in `docs/asdg/`; durable workflow state belongs in `.asd
 
 Skill notation is `$name` in Codex and `/name` in Claude Code. Session roles and attitudes grant no extra authority.
 Initialization prepares the approved client team; it creates no sprint, release, human acceptance or hook trust.
+
+## Standalone component development
+
+Pablo assigns provider component work to ASDG-09 in a disposable checkout. He reviews the resulting Git patch and applies it from his own terminal. Admin maintains the policy and its checks. The source-only operator procedure is in `scripts/provider_component/review.md`.

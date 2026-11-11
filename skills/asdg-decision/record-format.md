@@ -11,7 +11,7 @@ Honor the owning contract's existing artifact format and destination; integrate 
 ASDG-05 defaults to `docs/asdg/05-high-level-design-and-architecture/decisions/<Decision name>/`; other roles use their own stage destinations under the shared documentation authority.
 Honor a supplied safe folder name; otherwise use a descriptive decision title. Search existing decisions first and avoid duplicates.
 For an undecided question, use a neutral title. A later choice can update the record without silently moving it or breaking links.
-This is a topic-folder exception to the shared flat stage layout; its numbered filenames express reading order, not Intended/Actual/Planned categories.
+A named decision package stays with its [domain owner](../../00-governance/docs/stage-layout.md). Its numbered files express reading order.
 
 | File | What the reader learns |
 | --- | --- |

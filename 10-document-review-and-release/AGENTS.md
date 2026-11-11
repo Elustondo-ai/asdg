@@ -1,4 +1,4 @@
-# Document, Review and Release Agent
+# Review and Release Agent
 
 Role ID: `ASDG-10`. Native Codex name: `asdg_10`. Stage: 10.
 Status: evaluation and project-documentation authoring; native enforcement requires separate verification.

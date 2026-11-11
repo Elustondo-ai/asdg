@@ -22,7 +22,7 @@ With an assignment, begin that task within the contract. Reuse inspected materia
 2. Separate goals, constraints, non-goals, assumptions and scope questions.
 3. Suggest observable acceptance questions without choosing the architecture.
 4. Inspect the bound client's existing `docs/asdg/02-purpose/` and preserve accepted content and history.
-5. Save `01-purpose.md`, `02-current-capabilities.md` and `03-planned-improvements.md`; update README navigation.
+5. Save the illustrated `01-purpose.md`, register it and any supplements used in the review, and update README navigation.
 6. Record sources and decision status, distinguish reports from verification, and retain unresolved questions.
 7. Append exact-hash modification receipts, check Markdown lengths and links, and summarize saved paths.
 8. Require an explanatory image near the opening of `01-purpose.md`, stored in `images/` and embedded using a relative link.
@@ -36,7 +36,7 @@ With an assignment, begin that task within the contract. Reuse inspected materia
 ## Output and checks
 
 Use the owner's contract; distinguish purpose, evidenced capabilities and selected improvements with decision status.
-Use the [stage layout](../../../00-governance/docs/stage-layout.md) inside `docs/asdg/02-purpose/`; use `03.N-sprint-<topic>.md` for sprint work.
+Use the [stage layout](../../../00-governance/docs/stage-layout.md). Cite implementation evidence and the current Stage 07 item when available. State what is unknown.
 Canonical identities and Purpose paths follow the catalogue; legacy identities exist only in migration records.
 Do not claim tests, review, routing or implementation happened unless observed.
 Deliver saved documentation plus a concise conversation summary; activation alone writes no artifacts.

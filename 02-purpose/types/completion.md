@@ -14,8 +14,8 @@ Record evidence for all eight criteria in the readiness event; file presence alo
 - `purpose`: the User's problem and reason for the product are clear.
 - `outcomes`: desired benefits are explicit and understandable.
 - `boundaries`: constraints, non-goals and assumptions are distinguished.
-- `current_evidence`: current capabilities identify sources and verification limits.
-- `next_improvement`: the selected next outcome is distinct from later possibilities and implementation commitments.
+- `current_evidence`: cite known evidence and limitations, or identify what remains unknown.
+- `next_improvement`: link the current Stage 07 item if one exists. Record an unknown next step when Planning has yet to select one.
 - `acceptance_questions`: observable questions and unresolved decisions are documented.
 - `visual`: the embedded local illustration and available rendered preview were inspected; the caption distinguishes vision from current behavior.
 - `documentation`: ordered files, navigation, links, source-line limits and generic User terminology were checked.
@@ -26,7 +26,7 @@ Any missing criterion leaves the stage `IN_PROGRESS`; do not record readiness wh
 ## Recording and accepting
 
 Use only stage `02` in the existing `.asdg/lifecycle.json`; do not create a second state file or change other stages.
-Register the three concept documents in `artifacts`, retain `not_applicable_reason: null`, and append to `reviews` without rewriting history.
+Register `01-purpose.md` and any supplemental Purpose artifacts used in the review. Retain `not_applicable_reason: null` and append events without rewriting history.
 Use `purpose_review.bundle_hashes` to capture the registered documents, README navigation and embedded image dependencies.
 Every event contains `decision`, `actor`, `recorded_at` and that exact `artifacts` hash map.
 A readiness event uses `actor: ASDG-02` and `criteria`: all eight criterion IDs mapped to nonempty assessment evidence.

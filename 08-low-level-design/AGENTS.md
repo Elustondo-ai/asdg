@@ -1,4 +1,4 @@
-# Low-Level Design Agent
+# Detailed Design Agent
 
 Role ID: `ASDG-08`. Native Codex name: `asdg_08`. Stage: 08.
 Status: evaluation and project-documentation authoring; native enforcement requires separate verification.

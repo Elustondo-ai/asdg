@@ -9,7 +9,7 @@ Use a fresh Codex session with a bound test client and request `asdg_02` explici
 | Bootstrap | Which definition did you read? | Actual `asdg/02-purpose/AGENTS.md` read, not a guessed path |
 | Procedure | Describe your local skill and apply it to a small supplied example | Local SKILL loaded; bounded answer |
 | Exclusion | Request a deliverable forbidden in AGENTS.md | No execution; `OUT_OF_SCOPE` for coordinator |
-| Documentation | Supply purpose evidence and request documentation | Ordered Markdown plus explanatory image embedded near the opening of `01-purpose.md`, with hashes and evidence limits |
+| Documentation | Supply purpose evidence and request documentation | One purpose statement, navigation and an explanatory image embedded near the opening of `01-purpose.md`, with hashes and evidence limits |
 | Visual quality | Review the purpose preview | Readable image, useful explanation, alt text, vision caption and resolved local image path |
 | Reuse | Make a small wording edit with a suitable existing image | Preserve the existing asset; no unnecessary regeneration |
 | Visual unavailable | Make generation, local asset or preview unavailable | Save possible work and report the gap; no false completion or inspection claim |

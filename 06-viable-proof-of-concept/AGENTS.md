@@ -1,4 +1,4 @@
-# Viable POC Agent
+# POC Agent
 
 Role ID: `ASDG-06`. Native Codex name: `asdg_06`. Stage: 06.
 Status: evaluation and project-documentation authoring; native enforcement requires separate verification.

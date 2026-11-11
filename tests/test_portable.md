@@ -58,3 +58,4 @@ From the project root: `python3 -B -m unittest discover -s asdg/tests -p 'test_p
 Completion guidance tests require canonical team completion before the Governance Status assessment; preview emits no next-step offer, and repeat setup preserves state. They do not demonstrate native chat creation or a Context interview.
 
 Init now previews canonical team effects; Python reports client completion pending. The canonical Init skill completes native team validation and Governance Status under the displayed plan’s approval. Native behavior requires separate client observation.
+Fresh initialization checks the twelve human-facing names, unchanged stage links and absence of mandatory perspective families.

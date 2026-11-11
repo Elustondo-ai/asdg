@@ -38,7 +38,7 @@ Direct coding requests do not bypass the gate; a trusted pre-tool hook enforces 
 For role interviews, no active sprint is needed. For project actions, missing gate evidence blocks them.
 Do not invent a state service or reconcile disputed sprint rules within a routing decision.
 Report proposed, attempted, observed, tested and approved states separately.
-Stage assessments use [Intended / Actual / Planned](stage-perspectives.md); neither a plan nor an approval proves implementation.
+Stage assessments derive [Intended / Actual / Planned](stage-perspectives.md) from approved domain artifacts, observed behavior and current Stage 07 plans. Missing evidence stays unknown.
 A different reviewer identity is not proof of independent evidence; disclose shared authorship.
 
 ## Skills and outputs

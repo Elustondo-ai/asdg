@@ -23,7 +23,7 @@ Scope/authority disagreements return to the human rather than widening a role si
 
 ## Stage assessments
 
-Within `result`, distinguish Intended, Actual and Planned using [the shared model](../docs/stage-perspectives.md).
+In assessment results, cite the approved artifact for Intended, observed evidence for Actual and the current Stage 07 work item for Planned. Use [the shared model](../docs/stage-perspectives.md) and identify unknowns.
 Identify subject/project, scope/version/environment, as-of date, evidence and approval separately.
 Use existing authoritative artifact and work-item references; do not create a second state store.
 Apply this to stage assessments and substantive stage proposals, not every greeting or plain session-status request.

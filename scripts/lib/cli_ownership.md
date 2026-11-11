@@ -16,3 +16,6 @@ Exceptions are path allowances, never authentication or semantic approval. Appen
 No writes, state transitions, title lookup or native discovery occur here. Invalid paths/context may raise ValueError, TypeError or Conflict; the CLI/hook fail closed.
 The hook's documentation classifier rejects policy names and source suffixes; content cannot be certified by a suffix.
 OpenSpec external/reserved-root stores are conservatively denied; no path is silently substituted.
+
+At the standalone source root, exact Admin targets in Governance and the twelve catalogue stages can include Markdown guidance, perspective markers and stage assets listed in the committed package index. The checker verifies the local Git root and origin, distribution identity and committed catalogue. Client workflow exceptions do not apply to these source paths.
+The repository owner applies changes to the ownership checker itself. Preflight reserves its source, import locations and enclosing directories in both layouts. Local Git identity and exact path declarations do not authenticate a person.

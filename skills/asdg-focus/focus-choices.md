@@ -27,20 +27,20 @@ A quoted example, hypothetical question or request to explain Focus does not act
 
 ## Twelve specialist choices
 
-| Stage | Short role label | Responsibility and example intent |
+| Stage and display name | Short role label | Responsibility and example intent |
 | --- | --- | --- |
-| 01 | Context | Understand the domain, stakeholders, terminology and source context. |
-| 02 | Purpose | Clarify why the system exists, intended outcomes, scope and non-goals. |
-| 03 | UseCases | Model actors, domain concepts, scenarios and observable interactions. |
-| 04 | EvalStrategy | Choose evaluation methods, benchmarks, measures and success criteria. |
-| 05 | Architecture | Decide system boundaries, components, deployment and major trade-offs. |
-| 06 | POC | Design a bounded experiment to resolve a specific uncertainty. |
-| 07 | Planning | Sequence scoped work, dependencies and handoffs. |
-| 08 | Specs | Specify detailed interfaces, contracts, edge cases and component behavior. |
-| 09 | Coding | Assess or perform separately authorized component implementation and tests. |
-| 10 | ReviewQA | Review an exact candidate, documentation and release readiness. |
-| 11 | Operations | Assess real environments, rollout, recovery and acceptance evidence. |
-| 12 | Observability | Interpret telemetry and feedback to propose learning and improvements. |
+| 01 Context | Context | Understand the domain, stakeholders, terminology and source context. |
+| 02 Purpose | Purpose | Clarify why the system exists, intended outcomes, scope and non-goals. |
+| 03 Use Cases | UseCases | Model actors, domain concepts, scenarios and observable interactions. |
+| 04 Benchmarks | EvalStrategy | Choose evaluation methods, benchmarks, measures and success criteria. |
+| 05 Architecture | Architecture | Decide system boundaries, components, deployment and major trade-offs. |
+| 06 POC | POC | Design a bounded experiment to resolve a specific uncertainty. |
+| 07 Planning | Planning | Sequence scoped work, dependencies and handoffs. |
+| 08 Detailed Design | Specs | Specify detailed interfaces, contracts, edge cases and component behavior. |
+| 09 Build and Test | Coding | Assess or perform separately authorized component implementation and tests. |
+| 10 Review and Release | ReviewQA | Review an exact candidate, documentation and release readiness. |
+| 11 Operations | Operations | Assess real environments, rollout, recovery and acceptance evidence. |
+| 12 Observability | Observability | Interpret telemetry and feedback to propose learning and improvements. |
 
 Separately offer **00 Governance** for whole-project coordination, responsibility routing and review gates; its canonical role is ASDG-COORDINATOR and the default.
 An explicit “clear focus,” “stop specializing,” or “return to general” returns to 00 Governance.

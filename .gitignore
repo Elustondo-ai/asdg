@@ -1,3 +1,17 @@
 /build/
 **/__pycache__/
 *.pyc
+
+# Legacy per-stage session records
+/01-context-and-domain-analysis/logs/sessions/
+/02-purpose/logs/sessions/
+/03-system-model-and-use-cases/logs/sessions/
+/04-benchmarks-and-eval-strategy/logs/sessions/
+/05-high-level-design-and-architecture/logs/sessions/
+/06-viable-proof-of-concept/logs/sessions/
+/07-planning/logs/sessions/
+/08-low-level-design/logs/sessions/
+/09-build-and-test-cycle/logs/sessions/
+/10-document-review-and-release/logs/sessions/
+/11-operational-reality-devops-and-user-acceptance/logs/sessions/
+/12-observability-insights-and-learning/logs/sessions/

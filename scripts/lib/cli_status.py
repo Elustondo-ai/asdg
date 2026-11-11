@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 
 from cli_files import Conflict, read_bytes, safe_path
-from cli_model import ARTIFACTS, PROVIDER, REPO, VERSION, catalogue, distribution_core, now
+from cli_model import ARTIFACTS, PROVIDER, REPO, VERSION, catalogue, distribution_core, now, sha
 from cli_policy import implementation_permission
 from cli_project import inspect, STAGE_NOTE
 from cli_session import governance_bootstrap
@@ -98,7 +98,10 @@ def context_is_empty(root: Path, rule: dict) -> bool:
         if not path.is_file() or path.name in ('.gitkeep', '.DS_Store'):
             continue
         data = path.read_bytes()
-        if path == folder / 'README.md' and data in (scaffold.encode(), modern.encode(), introduction):
+        # The previous packaged introduction can survive a client upgrade unchanged.
+        previous_intro = 'f147c93534996005103c7f5fdbe9c5aaa9c4b75666edd65b796ea9f9765e44a1'
+        if path == folder / 'README.md' and (data in (scaffold.encode(), modern.encode(), introduction)
+                                             or sha(data) == previous_intro):
             continue
         if data.strip():
             return False

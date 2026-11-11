@@ -16,12 +16,12 @@ Validates the two review gates, hashes Purpose documents/navigation/images and r
 
 ## Interface and data
 
-Review events have decision, actor, recorded_at and artifacts:path→SHA256, plus criteria for readiness or statement for acceptance. CRITERIA names eight required checks. DOCUMENTS defines the three flat root files; LEGACY_DOCUMENTS retains the older nested layout for historical reviews only. Dotted supplemental documents can join the registered review bundle.
+Review events have decision, actor, recorded_at and artifacts:path→SHA256, plus criteria for readiness or statement for acceptance. CRITERIA names eight required checks. The required statement is 01-purpose.md. All registered supplements, including older flat or nested documents, remain part of the exact reviewed bundle.
 
 | Callable or interface | Contract |
 | --- | --- |
 | `validate_reviews(reviews: list) -> None` | Checks event schema, stage-local hashes, eight readiness criteria and a matching earlier readiness event for User acceptance. |
-| `bundle_hashes(root: Path, files: list[str]) -> dict[str, str]` | Returns hashes for the three registered concept files, README and referenced images; validates local links and a required explanatory image. |
+| `bundle_hashes(root: Path, files: list[str]) -> dict[str, str]` | Returns hashes for the statement, registered supplements, README and referenced images; validates local links and a required explanatory image. |
 | `completion_status(root: Path, entry: dict) -> dict` | Returns status, agent_ready, user_accepted, review_stale and reason; compares the current bundle with the latest event. |
 
 ## Effects and failure behavior

@@ -4,7 +4,7 @@ Use only within [Create team](SKILL.md).
 
 ## Keep lifecycle order stable
 
-After setup, arrange only the verified target project's ASDG team chats in this fixed sequence:
+After setup, arrange only the verified target project's ASDG team chats by role selector in this fixed sequence. Human-facing stage names follow the [lifecycle table](../../docs/lifecycle-baseline.md):
 
 00 Governance → 01 Context → 02 Purpose → 03 UseCases → 04 EvalStrategy →
 05 Architecture → 06 POC → 07 Planning → 08 Specs → 09 Coding →

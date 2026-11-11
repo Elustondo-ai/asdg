@@ -2,7 +2,7 @@
 
 [Source: test_purpose_review.py](test_purpose_review.py)
 
-Checks that document presence, agent readiness and human acceptance remain separate, and that edits invalidate acceptance without rewriting history.
+Checks that document presence, agent readiness and human acceptance remain separate, and that edits invalidate acceptance without rewriting history. Covers the single statement and unchanged older flat or nested registrations.
 
 ## Responsibilities and collaborators
 
