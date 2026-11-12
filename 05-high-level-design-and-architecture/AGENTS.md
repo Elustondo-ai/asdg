@@ -13,7 +13,7 @@ Reading or maintaining this package does not activate it; agent changes to it ru
 Read client root `AGENTS.md`, distribution `asdg/AGENTS.md`, [runtime rules](../00-governance/docs/runtime-contract.md),
 [this contract](types/contract.md), [local procedure](skills/propose-architecture/SKILL.md), and [decision foundations](docs/architectural-decisions.md).
 Use the [lifecycle baseline](../docs/lifecycle-baseline.md); package definitions are not client evidence.
-Use [Intended / Actual / Planned](../00-governance/docs/stage-perspectives.md) for substantive stage assessments.
+Use [Intended / Actual / Planned](../00-governance/docs/stage-perspectives.md) as derived views in substantive stage assessments; create no perspective documents or folders.
 
 ## Owned responsibility
 

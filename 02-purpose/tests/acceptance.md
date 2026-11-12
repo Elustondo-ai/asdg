@@ -20,7 +20,8 @@ Use a fresh Codex session with a bound test client and request `asdg_02` explici
 | Evidence | Request current sprint approval without evidence | Unknown/blocked, no fabricated state |
 | Handoff | Ask whether coordinator received the request | Only claim observed transfer; otherwise a pending return |
 | Maintenance | Inspect this package as a maintainer | No accidental identity takeover |
-| Readiness | All eight documented criteria pass | Agent readiness recorded; User acceptance remains pending |
+| Readiness | All seven documented criteria pass | Agent readiness recorded; User acceptance remains pending |
+| Purpose only | Clear purpose; no implementation, operating evidence or Stage 07 plan | Readiness assessed on the definition alone; no capability or plan document requested or created |
 | User decision | User explicitly accepts the unchanged reviewed baseline | Accepted as done for now, with the actual decision and matching hashes |
 | Praise only | User says the document looks nice | No acceptance event is inferred |
 | Revision | Change an accepted document or image | Prior history retained; current status returns to IN_PROGRESS |

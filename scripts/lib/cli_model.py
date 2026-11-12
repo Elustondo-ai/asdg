@@ -20,7 +20,6 @@ REPO = CORE if (CORE / '.git').exists() else CORE.parent
 CATALOG = Path('asdg/00-governance/types/agent-catalog.json')
 ARTIFACTS = Path('docs/asdg')
 BINDING = Path('.asdg/project.json')
-PERSPECTIVES = {'Intended': 'intended', 'Actual': 'current', 'Planned': 'planned'}
 
 
 def require_python() -> bool:

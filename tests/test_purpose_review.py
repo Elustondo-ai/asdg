@@ -9,7 +9,10 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts/lib'))
 from cli_files import Conflict
 from cli_status import evidence_status, read_lifecycle, recommendation, render_status
-from purpose_review import CRITERIA, DOCUMENTS, LEGACY_DOCUMENTS, PREFIX, bundle_hashes, completion_status, validate_reviews
+from purpose_review import (CRITERIA, LEGACY_CRITERIA, LEGACY_FLAT_DOCUMENTS, LEGACY_NESTED_DOCUMENTS,
+                            PREFIX, PURPOSE_DOCUMENT, bundle_hashes, completion_status, validate_reviews)
+
+SUPPLEMENT = 'context-of-use.md'  # A generic registered supplement, not a perspective document.
 
 
 class PurposeReviewTests(unittest.TestCase):
@@ -20,21 +23,19 @@ class PurposeReviewTests(unittest.TestCase):
         self.folder = self.root / PREFIX
         (self.folder / 'images').mkdir(parents=True)
         (self.folder / 'images/purpose.png').write_bytes(b'fixture image bytes')
-        for name in DOCUMENTS:
-            (self.folder / name).parent.mkdir(parents=True, exist_ok=True)
-            (self.folder / name).write_text('# Purpose fixture\n\nObserved or proposed content.\n')
-        (self.folder / DOCUMENTS[0]).write_text(
+        (self.folder / PURPOSE_DOCUMENT).write_text(
             '# Purpose\n\n![Desired experience](images/purpose.png)\n\nVision, not implemented behavior.\n')
+        (self.folder / SUPPLEMENT).write_text('# Context of use\n\nWho meets the problem and where.\n')
         (self.folder / 'README.md').write_text('[Purpose](01-purpose.md)\n')
-        self.entry = {'artifacts': [str(PREFIX / name) for name in DOCUMENTS],
+        self.entry = {'artifacts': [str(PREFIX / name) for name in (PURPOSE_DOCUMENT, SUPPLEMENT)],
                       'not_applicable_reason': None, 'reviews': []}
         self.rules = [{'number': 2, 'slug': '02-purpose'}]
 
-    def ready(self):
+    def ready(self, criteria=CRITERIA):
         event = {'decision': 'READY_FOR_ACCEPTANCE', 'actor': 'ASDG-02',
                  'recorded_at': '2026-10-20T20:00:00Z',
                  'artifacts': bundle_hashes(self.root, self.entry['artifacts']),
-                 'criteria': {key: 'Observed fixture evidence for ' + key for key in CRITERIA}}
+                 'criteria': {key: 'Observed fixture evidence for ' + key for key in criteria}}
         self.entry['reviews'].append(event)
         return event
 
@@ -46,13 +47,12 @@ class PurposeReviewTests(unittest.TestCase):
         return event
 
     def test_single_statement_review_preserves_both_gates(self):
-        for name in DOCUMENTS[1:]:
-            (self.folder / name).unlink()
-        self.entry['artifacts'] = [str(PREFIX / DOCUMENTS[0])]
+        (self.folder / SUPPLEMENT).unlink()
+        self.entry['artifacts'] = [str(PREFIX / PURPOSE_DOCUMENT)]
         self.assertEqual(completion_status(self.root, self.entry)['status'], 'IN_PROGRESS')
         event = self.ready()
         self.assertEqual(set(event['artifacts']), {str(PREFIX / n) for n in
-                         (DOCUMENTS[0], 'README.md', 'images/purpose.png')})
+                         (PURPOSE_DOCUMENT, 'README.md', 'images/purpose.png')})
         self.assertFalse(completion_status(self.root, self.entry)['user_accepted'])
         self.accept()
         self.assertTrue(completion_status(self.root, self.entry)['user_accepted'])
@@ -65,11 +65,11 @@ class PurposeReviewTests(unittest.TestCase):
         self.assertFalse(completion_status(self.root, self.entry)['user_accepted'])
 
     def test_unchanged_nested_registration_remains_accepted(self):
-        for old, nested in zip(DOCUMENTS[1:], LEGACY_DOCUMENTS[1:]):
+        for nested in LEGACY_NESTED_DOCUMENTS:
             (self.folder / nested).parent.mkdir()
-            (self.folder / old).rename(self.folder / nested)
-        self.entry['artifacts'] = [str(PREFIX / n) for n in LEGACY_DOCUMENTS]
-        self.ready()
+            (self.folder / nested).write_text('# Earlier perspective supplement\n')
+        self.entry['artifacts'] = [str(PREFIX / n) for n in (PURPOSE_DOCUMENT, *LEGACY_NESTED_DOCUMENTS)]
+        self.ready(LEGACY_CRITERIA)
         self.accept()
         self.assertTrue(completion_status(self.root, self.entry)['user_accepted'])
 
@@ -86,7 +86,7 @@ class PurposeReviewTests(unittest.TestCase):
 
     def test_changed_document_image_and_navigation_invalidate_the_baseline(self):
         self.ready(); self.accept()
-        for name in (DOCUMENTS[0], DOCUMENTS[1], DOCUMENTS[2], 'images/purpose.png', 'README.md'):
+        for name in (PURPOSE_DOCUMENT, SUPPLEMENT, 'images/purpose.png', 'README.md'):
             with self.subTest(name=name):
                 path = self.folder / name
                 before = path.read_bytes()
@@ -118,7 +118,7 @@ class PurposeReviewTests(unittest.TestCase):
         self.assertEqual(stages[0]['artifacts'], [])
         self.assertEqual(stages[0]['completion']['basis'], 'HUMAN_PURPOSE_ACCEPTANCE_RULE')
         self.assertEqual(recommendation(stages, None, [])['stage']['number'], 3)
-        (self.folder / DOCUMENTS[1]).write_text('# Changed Purpose baseline\n')
+        (self.folder / SUPPLEMENT).write_text('# Changed Purpose baseline\n')
         self.assertEqual(self.context_status()[0]['readiness'], 'MISSING')
 
     def test_registered_and_unregistered_context_are_not_replaced_by_empty_acceptance(self):
@@ -149,12 +149,12 @@ class PurposeReviewTests(unittest.TestCase):
         index.write_text(scaffold + '\nAn existing system requires integration.\n')
         self.assertEqual(self.context_status()[0]['readiness'], 'MISSING')
         index.write_text(scaffold)
-        (folder / 'linked-context').symlink_to(self.folder / DOCUMENTS[0])
+        (folder / 'linked-context').symlink_to(self.folder / PURPOSE_DOCUMENT)
         self.assertEqual(self.context_status()[0]['readiness'], 'MISSING')
 
     def test_reassessment_requires_new_acceptance_and_preserves_history(self):
         self.ready(); self.accept()
-        (self.folder / DOCUMENTS[1]).write_text('# Revised capabilities\n')
+        (self.folder / SUPPLEMENT).write_text('# Revised context of use\n')
         self.ready()
         self.assertEqual(completion_status(self.root, self.entry)['status'], 'READY_FOR_ACCEPTANCE')
         self.assertEqual(len(self.entry['reviews']), 3)
@@ -171,7 +171,7 @@ class PurposeReviewTests(unittest.TestCase):
             with self.subTest(field=field), self.assertRaises(Conflict):
                 validate_reviews(invalid)
         invalid = copy.deepcopy(self.entry['reviews'])
-        invalid[-1]['artifacts'][str(PREFIX / DOCUMENTS[0])] = '0' * 64
+        invalid[-1]['artifacts'][str(PREFIX / PURPOSE_DOCUMENT)] = '0' * 64
         with self.assertRaises(Conflict):
             validate_reviews(invalid)
 
@@ -190,18 +190,20 @@ class PurposeReviewTests(unittest.TestCase):
         image = self.folder / 'images/purpose.png'
         image.unlink()
         self.assertTrue(completion_status(self.root, self.entry)['review_stale'])
-        image.symlink_to(self.folder / DOCUMENTS[1])
+        image.symlink_to(self.folder / SUPPLEMENT)
         self.assertEqual(completion_status(self.root, self.entry)['status'], 'IN_PROGRESS')
         image.unlink(); image.write_bytes(b'fixture image bytes')
         (self.folder / 'README.md').write_text('[Missing](does-not-exist.md)\n')
         self.assertIn('Broken Purpose link', completion_status(self.root, self.entry)['reason'])
 
     def test_layout_migration_preserves_legacy_history_without_transferring_acceptance(self):
-        self.ready(); self.accept()
+        for flat in LEGACY_FLAT_DOCUMENTS:
+            (self.folder / flat).write_text('# Earlier flat perspective supplement\n')
+        self.entry['artifacts'] += [str(PREFIX / n) for n in LEGACY_FLAT_DOCUMENTS]
+        self.ready(LEGACY_CRITERIA); self.accept()
         for event in self.entry['reviews']:
-            for current, legacy in zip(DOCUMENTS, LEGACY_DOCUMENTS):
-                if current != legacy:
-                    event['artifacts'][str(PREFIX / legacy)] = event['artifacts'].pop(str(PREFIX / current))
+            for flat, nested in zip(LEGACY_FLAT_DOCUMENTS, LEGACY_NESTED_DOCUMENTS):
+                event['artifacts'][str(PREFIX / nested)] = event['artifacts'].pop(str(PREFIX / flat))
         history = copy.deepcopy(self.entry['reviews'])
         validate_reviews(history)
         state = completion_status(self.root, self.entry)
@@ -228,9 +230,9 @@ class PurposeReviewTests(unittest.TestCase):
         (folder / 'planned-sprint/context.md').write_text('# Proposed context work\n')
         self.assertEqual(self.context_status()[0]['readiness'], 'MISSING')
 
-    def test_flat_current_document_can_reference_shared_stage_image(self):
-        current = self.folder / DOCUMENTS[1]
-        current.write_text('# Current evidence\n\n![Evidence](images/purpose.png)\n')
+    def test_supplement_can_reference_shared_stage_image(self):
+        current = self.folder / SUPPLEMENT
+        current.write_text('# Context of use\n\n![Setting](images/purpose.png)\n')
         self.ready()
         self.assertTrue(completion_status(self.root, self.entry)['agent_ready'])
         current.write_text('# Unsafe image\n\n![Evidence](../../outside.png)\n')
@@ -260,6 +262,29 @@ class PurposeReviewTests(unittest.TestCase):
         self.assertTrue(completion_status(self.root, self.entry)['agent_ready'])
         index.write_text('[Escape](../../../../outside.md)\n')
         self.assertEqual(completion_status(self.root, self.entry)['status'], 'IN_PROGRESS')
+
+    def test_definition_alone_is_acceptable_without_evidence_or_plan(self):
+        (self.folder / SUPPLEMENT).unlink()
+        self.entry['artifacts'] = [str(PREFIX / PURPOSE_DOCUMENT)]
+        event = self.ready()
+        self.assertEqual(set(event['criteria']), set(CRITERIA))
+        self.assertFalse({'current_evidence', 'next_improvement'} & set(CRITERIA))
+        self.accept()
+        self.assertEqual(completion_status(self.root, self.entry)['status'], 'ACCEPTED')
+        self.assertEqual(sorted(p.name for p in self.folder.iterdir()), ['01-purpose.md', 'README.md', 'images'])
+
+    def test_legacy_criteria_history_stays_valid_but_mixed_sets_fail(self):
+        self.ready(LEGACY_CRITERIA); self.accept()
+        validate_reviews(self.entry['reviews'])
+        self.assertTrue(completion_status(self.root, self.entry)['user_accepted'])
+        mixed = copy.deepcopy(self.entry['reviews'][0])
+        mixed['criteria']['coherence'] = 'Added to an earlier set.'
+        with self.assertRaises(Conflict):
+            validate_reviews([mixed])
+        current = self.ready()
+        del current['criteria']['coherence']
+        with self.assertRaises(Conflict):
+            validate_reviews([current])
 
 
 if __name__ == '__main__':

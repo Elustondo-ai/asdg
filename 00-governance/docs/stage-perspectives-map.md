@@ -1,6 +1,7 @@
 # Stage mapping — Intended / Actual / Planned
 
-This defines what each view covers; the rows below are NOT an audit of any project's actual state.
+This defines what each derived view covers; the rows below are NOT an audit of any project's actual state.
+No responsibility keeps perspective folders or per-view copies; each view is read from its cited records.
 Use with the [shared contract](stage-perspectives.md) and [current lifecycle](../../docs/lifecycle-baseline.md).
 The catalogue has thirteen responsibilities: 00 governance plus lifecycle stages 01–12.
 

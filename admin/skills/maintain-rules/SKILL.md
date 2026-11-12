@@ -16,17 +16,18 @@ Use only after Admin was explicitly selected and its [entry](../../AGENTS.md) an
 
 ## While editing
 
-5. Change the authoritative definition first; update references to link to it rather than restate it.
-6. Keep Markdown units within 50 nonblank lines and keep companions current for any changed source file.
-7. When a generated block changes, add the exact previous block to its legacy list so existing clients upgrade instead of conflicting.
-8. For a skill adapter, edit only the shared template in `asdg/templates/.agents/skills/`; setup renders the Claude adapter from it. Never hand-edit installed adapters.
-9. Do not edit project state, hooks trust or approvals; do not commit or push.
+5. Declare every target, both ends of a move and each deletion, as exact `targets` with `workflow: admin`; run `check-write`; then apply the change directly. There is no owner-patch step.
+6. Change the authoritative definition first; update references to link to it rather than restate it.
+7. Keep Markdown units within 50 nonblank lines and keep companions current for any changed source file.
+8. When a generated block changes, add the exact previous block to its legacy list so existing clients upgrade instead of conflicting.
+9. For a skill adapter, edit only the shared template in `asdg/templates/.agents/skills/`; setup renders the Claude adapter from it. Never hand-edit installed adapters.
+10. Do not edit project state, hook trust or approvals; do not stage, commit, push or publish. The unstaged diff is the proposal the human reviews.
 
 ## Verify and record
 
-10. Run `python3 asdg/scripts/cli.py verify` and the regression suite; add tests for new rules where code can check them.
-11. Label each result as an automated check, a manual scenario or behavior observed in a named client.
-12. Append exact-hash receipts for every changed document.
-13. Save a change record in `docs/asdg/07-planning/02.N-review-<topic>.md` with a JSON receipt, and report it.
+11. Run `python3 asdg/scripts/cli.py verify` and the regression suite; add tests for new rules where code can check them.
+12. Label each result as an automated check, a manual scenario or behavior observed in a named client.
+13. Append exact-hash receipts for every changed document.
+14. Save a change record in `docs/asdg/07-planning/02.N-review-<topic>.md` with a JSON receipt, and report it.
 
 A rule change is complete only as a proposal for human review; tests passing is not approval.

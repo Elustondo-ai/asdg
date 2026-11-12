@@ -2,7 +2,7 @@
 
 [Source: test_purpose_review.py](test_purpose_review.py)
 
-Checks that document presence, agent readiness and human acceptance remain separate, and that edits invalidate acceptance without rewriting history. Covers the single statement and unchanged older flat or nested registrations.
+Checks that document presence, agent readiness and human acceptance remain separate, and that edits invalidate acceptance without rewriting history. Covers a Purpose definition accepted with no implementation evidence or plan, generic supplements, and unchanged registrations and criteria from retired layouts.
 
 ## Responsibilities and collaborators
 
@@ -20,8 +20,8 @@ PurposeReviewTests extends unittest.TestCase. Test methods use per-test state; s
 
 | Callable or interface | Contract |
 | --- | --- |
-| `setUp() -> None` | Creates isolated Purpose documents, image bytes and an empty review entry. |
-| `ready() -> dict; accept() -> dict` | Appends synthetic readiness/acceptance events to the fixture and returns each event. |
+| `setUp() -> None` | Creates an isolated Purpose statement, one generic supplement, image bytes and an empty review entry. |
+| `ready(criteria=CRITERIA) -> dict; accept() -> dict` | Appends synthetic readiness/acceptance events, optionally with the legacy criteria set, and returns each event. |
 | `context_status(context=None) -> list[dict]` | Evaluates fixture Context, Purpose and Use Case stages. |
 
 The [test case guide](test_purpose_review-cases.md) lists every `test_*` method and the behavior it checks.

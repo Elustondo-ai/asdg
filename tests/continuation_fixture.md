@@ -11,7 +11,7 @@ Creates a new temporary-style project, copies the embedded package, initializes 
 ![New destination + scenario → Copy, initialize and seed → Disposable client fixture](images/continuation_fixture-flow.svg)
 
 - [cli_project](../scripts/lib/cli_project.md): Plans disposable integration; the fixture explicitly applies those changes through cli_files.
-- [purpose_review](../scripts/lib/purpose_review.md): Provides canonical Purpose filenames, criteria and bundle hashes.
+- [purpose_review](../scripts/lib/purpose_review.md): Provides the Purpose filename, current criteria and bundle hashes.
 
 ## Interface and data
 
@@ -19,7 +19,7 @@ scenario is 'empty' | 'partial' | 'accepted' | 'stale'; root is a Path that must
 
 | Callable or interface | Contract |
 | --- | --- |
-| `create_fixture(root: Path, scenario: str) -> Path` | Creates the requested scenario, writes FIXTURE.txt and returns its root. accepted/stale cases seed synthetic readiness and acceptance; stale then edits the reviewed purpose. |
+| `create_fixture(root: Path, scenario: str) -> Path` | Creates the requested scenario, writes FIXTURE.txt and returns its root. accepted/stale cases seed one illustrated purpose definition with synthetic readiness and acceptance, and no capability or plan documents; stale then edits the reviewed purpose. |
 
 ## Effects and failure behavior
 

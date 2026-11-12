@@ -1,6 +1,8 @@
-# Intended / Actual / Planned — shared stage contract v0.1
+# Intended / Actual / Planned — derived assessment views
 
-Applies to 00 Governance and all twelve lifecycle stages; it adds perspectives, not stages or agents.
+These are analytical views generated for an assessment; they add no stages, agents, documents or directories.
+Engineering artifacts stay authoritative in their owners' domains, and Stage 07 remains the authority for integrated planning.
+Any role may use the views when assessing; none must create perspective documents, folders or copies of its artifacts.
 Stage 02 is Purpose. Canonical role identities, callable names and paths use the ASDG namespace.
 Read the [stage mapping](stage-perspectives-map.md); use the [snapshot template](stage-snapshot-template.md).
 
@@ -37,7 +39,7 @@ Unknown owner, horizon or authority stays unknown; ask for the decision when nee
 
 ## Use and maintenance
 
-Distinguish these perspectives in substantive assessments; stage-specific concept names may express them without repeated headings.
+Distinguish these views in substantive assessments; stage-specific concept names may express them without repeated headings.
 Derive the gap by comparing Intended and Actual; label a cached comparison with its source versions.
 An actual observation may challenge the target; propose a target revision rather than silently changing goals.
 Do not promote Planned to Actual because an agent said done; require suitable evidence for each claim.

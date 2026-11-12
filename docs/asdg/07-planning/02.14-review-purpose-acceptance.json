@@ -1,0 +1,47 @@
+{
+  "requester": "Pablo",
+  "role": "ASDG-ADMIN",
+  "focus": "Final Documentation Model Consistency",
+  "attitude": "Black",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "starting_revision": "eb8b3a7e6144192a2aff8fc5f31e7f90829382b9",
+  "source": "Elustondo-ai/asdg",
+  "decision": "Engineering artifacts are authoritative within their disciplines; Intended / Actual / Planned are derived assessment perspectives, not mandatory content categories or storage structures.",
+  "purpose_criteria": {
+    "current": [
+      "purpose",
+      "outcomes",
+      "boundaries",
+      "coherence",
+      "acceptance_questions",
+      "visual",
+      "documentation"
+    ],
+    "legacy_input_only": [
+      "current_evidence",
+      "next_improvement"
+    ]
+  },
+  "manual_or_native": "No live Purpose worker, report worker, native invocation or hook trust observed.",
+  "completed_directly": true,
+  "superseded_delivery": "The earlier owner-patch proposal (SHA-256 b9201734b38d191f364ce244b823757810660645232a127cc310a29403931edb) was not applied; after record 02.15, Admin applied the same verified changes directly.",
+  "owner_actions": [
+    "Review the unstaged diff; stage, commit and push"
+  ],
+  "open_limitation": {
+    "issue": "Readiness events record criteria but not their contract; an eight-key legacy set still validates for a new review.",
+    "proposal": "criteria_version 2 required for seven criteria; unversioned events must carry exactly the eight legacy criteria; anything else fails.",
+    "status": "proposed, not authorized"
+  },
+  "automated_checks": {
+    "environment": "Linux VM, Python 3.10.12, owner checkout",
+    "portable": {
+      "run": 174,
+      "skipped": 3,
+      "failures": 0,
+      "errors": 0
+    }
+  },
+  "placeholder_deletions": "Admin was refused a repository-wide delete grant; Pablo deleted 00-governance/current, intended and planned/.gitkeep himself."
+}

@@ -10,12 +10,18 @@ from cli_files import Conflict, read_bytes, safe_path
 
 PREFIX = Path('docs/asdg/02-purpose')
 PURPOSE_DOCUMENT = '01-purpose.md'
-# Earlier clients can still register either three-document layout.
-DOCUMENTS = (PURPOSE_DOCUMENT, '02-current-capabilities.md', '03-planned-improvements.md')
-LEGACY_DOCUMENTS = ('01-purpose.md', 'current/02-current-capabilities.md',
-                    'planned-release/03-planned-improvements.md')
-CRITERIA = ('purpose', 'outcomes', 'boundaries', 'current_evidence', 'next_improvement',
-            'acceptance_questions', 'visual', 'documentation')
+# Supplements of the retired perspective layouts. Unchanged registrations of these
+# still review and hash normally; ASDG no longer generates them.
+LEGACY_FLAT_DOCUMENTS = ('02-current-capabilities.md', '03-planned-improvements.md')
+LEGACY_NESTED_DOCUMENTS = ('current/02-current-capabilities.md',
+                           'planned-release/03-planned-improvements.md')
+# Purpose readiness assesses the definition itself, independent of evidence and plans.
+CRITERIA = ('purpose', 'outcomes', 'boundaries', 'coherence', 'acceptance_questions',
+            'visual', 'documentation')
+# Readiness histories recorded under the earlier rule remain valid input, never new output.
+LEGACY_CRITERIA = ('purpose', 'outcomes', 'boundaries', 'current_evidence', 'next_improvement',
+                   'acceptance_questions', 'visual', 'documentation')
+CRITERIA_SETS = (frozenset(CRITERIA), frozenset(LEGACY_CRITERIA))
 
 
 def validate_reviews(reviews: list) -> None:
@@ -50,7 +56,7 @@ def validate_reviews(reviews: list) -> None:
         if decision == 'READY_FOR_ACCEPTANCE':
             criteria = event['criteria']
             if (event['actor'] != 'ASDG-02' or not isinstance(criteria, dict)
-                    or set(criteria) != set(CRITERIA)
+                    or frozenset(criteria) not in CRITERIA_SETS
                     or any(not isinstance(v, str) or not v.strip() for v in criteria.values())):
                 raise Conflict('Agent readiness requires evidence for every Purpose criterion.')
             ready.append(hashes)

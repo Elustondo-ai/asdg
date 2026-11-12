@@ -232,7 +232,8 @@ class ProviderTests(unittest.TestCase):
                 receipts.append_receipts(self.root, role, [target])
             self.assertEqual(ledger.read_bytes(), saved)
         context = dict(role_id='ASDG-ADMIN', workflow='admin', targets=[str(receipts.LEDGER)])
-        self.assertFalse(cli.evaluate_write(self.root, context['targets'], context)[0])
+        # Admin maintains the ledger as a methodology record; receipts still never describe the ledger itself.
+        self.assertTrue(cli.evaluate_write(self.root, context['targets'], context)[0])
         (self.root / '.asdg').mkdir()
         with self.assertRaises(ValueError):
             receipts.append_receipts(self.root, 'ASDG-ADMIN', [name])

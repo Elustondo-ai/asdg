@@ -1,13 +1,12 @@
 """Best-effort role write ownership; independent of sprint authorization."""
 from __future__ import annotations
 
-import json
 import os
 import re
 import subprocess
 from pathlib import Path
 from cli_files import Conflict, safe_path
-from cli_model import CORE, REPO, catalogue, sha
+from cli_model import CORE, REPO, catalogue
 from cli_project import distribution
 
 
@@ -51,29 +50,12 @@ def checker_target(root: Path, path: Path) -> bool:
     return names[0] == checker.stem or (names[0].startswith('cli_ownership.') and names[0] != 'cli_ownership.md')
 
 
-def standalone_stage_target(root: Path, path: Path) -> bool:
-    """Recognize provider methodology in the checkout running this checker."""
-    if len(path.parts) < 2 or not (root / '.git').is_dir() or (root / '.git').is_symlink():
+def standalone_source(root: Path) -> bool:
+    """Verify that root is the canonical standalone ASDG source, not a client or a copy."""
+    if not (root / '.git').is_dir() or (root / '.git').is_symlink() or os.path.lexists(root / 'asdg'):
         return False
-    roles, catalogue_hash = catalogue(CORE)
-    if path.parts[0] not in {Path(row['folder']).name for row in roles}:
-        return False
-    target = root / path
-    if target.exists() and (not target.is_file() or target.stat().st_nlink != 1):
-        return False
-    marker = path.parts[1:] in {('current', '.gitkeep'), ('intended', '.gitkeep'), ('planned', '.gitkeep')}
-    if not marker and any(part.startswith('.') for part in path.parts):
-        return False
-    names = tuple(part.casefold() for part in path.parts)
-    if any(name in {'agents.md', 'skill.md', 'logs', 'build', 'components', 'asdg'} for name in names):
-        return False
-    if names[:2] == ('00-governance', 'types') and len(names) > 2 and names[2] in {
-            'agent-catalog.json', 'document-reviews.json', 'migrations'}:
-        return False  # Catalogue, review ledger and historical records retain their own boundaries.
     cwd = Path.cwd()
-    if any(os.path.lexists(parent / '.asdg') for parent in (*target.parents, cwd, *cwd.parents)):
-        return False
-    if any(os.path.lexists(root / parent / '.git') for parent in path.parents if parent.parts):
+    if any(os.path.lexists(parent / '.asdg') for parent in (root, *root.parents, cwd, *cwd.parents)):
         return False
     canonical = 'https://github.com/Elustondo-ai/asdg'
     origins = {canonical, canonical + '.git', 'git@github.com:Elustondo-ai/asdg.git',
@@ -81,23 +63,45 @@ def standalone_stage_target(root: Path, path: Path) -> bool:
 
     def git(*args: str) -> bytes:
         # Git's repository and configuration environment overrides must not supply the identity.
-        return subprocess.check_output(['/usr/bin/git', *args], stderr=subprocess.DEVNULL, timeout=5,
-                                       env={'PATH': os.defpath, 'GIT_CONFIG_NOSYSTEM': '1',
-                                            'GIT_CONFIG_GLOBAL': os.devnull})
+        return subprocess.check_output(['/usr/bin/git', '-C', str(root), *args], stderr=subprocess.DEVNULL,
+                                       timeout=5, env={'PATH': os.defpath, 'GIT_CONFIG_NOSYSTEM': '1',
+                                                       'GIT_CONFIG_GLOBAL': os.devnull})
     try:
-        if (os.path.lexists(root / 'asdg') or distribution(root).get('canonical_repository') != canonical
-                or git('rev-parse', '--show-toplevel').rstrip(b'\n') != os.fsencode(root)
-                or git('config', '--local', '--get', 'remote.origin.url').decode().strip() not in origins):
-            return False
-        if sha(git('show', 'HEAD:00-governance/types/agent-catalog.json')) != catalogue_hash:
-            return False
-        # Ordinary stage documentation may be new. Other stage assets and definitions must be known to Git.
-        if marker or path.suffix == '.md':
-            return True
-        files = json.loads(git('show', 'HEAD:metadata/package-files.json'))['files']
-        return isinstance(files, list) and str(path) in files
+        return (distribution(root).get('canonical_repository') == canonical
+                and git('rev-parse', '--show-toplevel').rstrip(b'\n') == os.fsencode(root)
+                and git('config', '--local', '--get', 'remote.origin.url').decode().strip() in origins)
     except (subprocess.SubprocessError, OSError, ValueError, KeyError, TypeError):
         return False
+
+
+def admin_refusal(root: Path, path: Path) -> str | None:
+    """Scope of human-authorized Admin maintenance; None permits the exact target.
+
+    Standalone source: every methodology file in the verified checkout.
+    Embedded client: the `asdg/` copy, the generated root bootstrap and Admin's
+    Stage 07 change records. Never Git metadata, client application files or state.
+    """
+    if any(part.casefold() == '.git' for part in path.parts):
+        return f'WRITE BLOCKED: Git metadata and Git operations remain human-controlled: {path}.'
+    target = root / path
+    if any(parent.is_symlink() for parent in (target, *target.parents) if root in parent.parents):
+        return f'WRITE BLOCKED: Admin target crosses a symbolic link: {path}.'
+    if target.exists() and (not target.is_file() or target.stat().st_nlink != 1):
+        return f'WRITE BLOCKED: Admin targets are single-link files, not directories or aliases: {path}.'
+    if any(os.path.lexists(root / parent / '.git') for parent in path.parents if parent.parts):
+        return f'WRITE BLOCKED: {path} belongs to a nested repository.'
+    # Source mode follows verified identity, not the location of the running checker.
+    if standalone_source(root):
+        if path.parts[0] == 'asdg':
+            return f'WRITE BLOCKED: {path}: `asdg/` is the consumer layout, not part of the standalone source.'
+        return None
+    if root == CORE:
+        return f'WRITE BLOCKED: {path}: this checkout is not the verified standalone ASDG source.'
+    record = (len(path.parts) == 4 and path.parts[:3] == ('docs', 'asdg', '07-planning')
+              and path.name.startswith('02.') and path.suffix in {'.md', '.json'})
+    if path.parts[0] == 'asdg' or path == Path('AGENTS.md') or record:
+        return None
+    return f'OUT_OF_SCOPE: {path} is outside the embedded methodology; Admin does not own client application files or state.'
 
 
 def ownership_decision(root: Path, paths: list[str], context: dict, repo: Path = REPO) -> tuple[bool, str, list[str]]:
@@ -117,20 +121,20 @@ def ownership_decision(root: Path, paths: list[str], context: dict, repo: Path =
     application = []
     for value in paths:
         path = local_path(root, value)
+        # Admin is an authority class, not a list of exceptions: an exact target the human
+        # authorized for this maintenance task is decided by the methodology scope alone.
+        if role == 'ASDG-ADMIN' and workflow == 'admin' and path in exceptions:
+            refusal = admin_refusal(root, path)
+            if refusal:
+                return False, refusal, []
+            continue
         if checker_target(root, path):
-            return False, 'WRITE BLOCKED: ownership checker changes require the repository owner.', []
+            return False, 'WRITE BLOCKED: ownership checker changes require authorized ASDG Admin maintenance.', []
         # Policy/control paths are never application or ordinary documentation.
         protected = any(p in {'.git', '.codex', '.claude', '.agents', 'AGENTS.md', 'SKILL.md'} for p in path.parts)
-        admin_target = role == 'ASDG-ADMIN' and workflow == 'admin' and path in exceptions
         # Reserve the source stage namespace before client exceptions or application fallback.
         if root == CORE and re.match(r'^(?:0[0-9]|1[0-2])-', path.parts[0]):
-            if admin_target and not protected and standalone_stage_target(root, path):
-                continue
-            return False, f'WRITE BLOCKED: standalone methodology target {path} requires scoped provider maintenance.', []
-        if admin_target:
-            embedded = root != CORE and path.parts[0] == 'asdg'
-            if '.git' not in path.parts and (embedded or path.parts[0] in {'scripts', 'bin'} or str(path) in {'AGENTS.md', 'README.md'} or (path.parts[:3] == ('docs', 'asdg', '07-planning') and path.name.startswith('02.') and path.suffix in {'.md', '.json'})):
-                continue
+            return False, f'WRITE BLOCKED: standalone methodology target {path} requires authorized ASDG Admin maintenance.', []
         if protected or path.parts[0] == 'asdg':
             return False, f'WRITE BLOCKED: protected methodology/control target {path}.', []
         if path == Path('.asdg/document-reviews.json') and workflow == 'review-receipt':

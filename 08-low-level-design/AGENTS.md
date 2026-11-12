@@ -44,7 +44,7 @@ Return low-level design and actionable contracts for the implementation agent.
 Use the [shared response envelope](../00-governance/types/interaction-contract.md).
 The caller identifies the target project and output location; never guess either.
 Save substantive documentation within the role's owned directory and link it in the conversation; follow [shared documentation authority](../00-governance/docs/documentation-authority.md).
-Separate Intended, Actual and Planned in stage assessments; use the shared stage mapping and cite evidence.
+Separate Intended, Actual and Planned in stage assessments as derived views; cite evidence and create no perspective documents or folders.
 
 ## Evaluation boundary
 

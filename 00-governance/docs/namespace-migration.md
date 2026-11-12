@@ -1,5 +1,8 @@
 # Migrating a project to ASDG
 
+> **Historical.** This records the retained provider migration runtime in `00-governance/src/`, outside the portable package.
+> Its `intended/`, `current/` and `planned/` folders are retired; current clients follow the [stage layout](stage-layout.md).
+
 The namespace migration preserves an existing project rather than initializing another one.
 It updates the reviewed provider binding, role identities and path references together.
 The [identity map](../types/migrations/namespace-map.json) records the old and new names.

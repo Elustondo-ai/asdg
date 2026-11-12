@@ -89,7 +89,13 @@ class OwnershipTests(unittest.TestCase):
         close = '.asdg/sprint-closeouts/12345678-1234-5678-1234-567812345678.json'
         self.assertTrue(self.check('ASDG-05', [close, '.asdg/sprint.json'], workflow='sprint-close', targets=[close, '.asdg/sprint.json'])[0])
 
-    stage_targets = ('00-governance/docs/stage-layout.md', '02-purpose/intended/.gitkeep')
+    stage_targets = ('00-governance/docs/stage-layout.md', '02-purpose/docs/new-guide.md')
+    # Methodology files the old exception list reserved for the owner; Admin now maintains them.
+    protected_methodology = ('00-governance/AGENTS.md', '02-purpose/skills/elicit-purpose/SKILL.md',
+                             'scripts/lib/cli_ownership.py', 'tests/test_ownership.py',
+                             'metadata/package-files.json', '00-governance/types/document-reviews.json',
+                             '00-governance/types/agent-catalog.json', 'templates/.agents/skills/asdg-admin/SKILL.md',
+                             'docs/asdg/07-planning/02.99-review-example.md', 'components/example/run.py')
 
     def admin_preflight(self, source, paths, expected, *, cwd=None, **context):
         declared = dict(role_id='ASDG-ADMIN', workflow='admin', targets=paths)
@@ -110,35 +116,42 @@ class OwnershipTests(unittest.TestCase):
                         'https://github.com/Elustondo-ai/asdg.git'], check=True)
         return source
 
-    def test_standalone_admin_exact_stage_targets(self):
+    def test_authorized_admin_maintains_protected_methodology_directly(self):
         source = self.provider_copy()
-        self.admin_preflight(source, self.stage_targets, 0)
-        for path in self.stage_targets:
+        self.admin_preflight(source, self.protected_methodology, 0)
+        for path in self.protected_methodology:
             with self.subTest(path=path):
-                self.admin_preflight(source, [path], 0)
                 self.admin_preflight(source, [path], 1, role_id='ASDG-02')
                 self.admin_preflight(source, [path], 1, role_id='ASDG-09')
-                self.admin_preflight(source, [path], 1, role_id='ASDG-08', workflow='openspec',
-                                    openspec_store=path.rsplit('/', 1)[0])
-                self.admin_preflight(source, [path], 1, workflow='')
-                self.admin_preflight(source, [path], 1, targets=[])
-        self.admin_preflight(source, self.stage_targets, 1, targets=self.stage_targets[:1])
-        self.admin_preflight(source, ['00-governance/types/lifecycle-rules.json'], 0)
-        self.admin_preflight(source, ['02-purpose/docs/new-guide.md'], 0)
-        forbidden = ('09-impostor/docs/example.md', 'asdg/' + self.stage_targets[0],
-                     '.git/config', '02-purpose/skills/x/SKILL.md',
-                     '02-purpose/.codex/instructions.md', '00-governance/types/document-reviews.json',
-                     'components/example/run.py', '02-purpose/../README.md', 'scripts/lib/cli_ownership.py',
-                     'scripts/lib', 'scripts/lib/cli_ownership/__init__.py',
-                     'scripts/lib/__pycache__/cli_ownership.cpython-39.pyc')
+                self.admin_preflight(source, [path], 1, role_id='ASDG-COORDINATOR')
+
+    def test_authorized_admin_deletes_and_moves_within_bounds(self):
+        source = self.provider_copy()
+        self.admin_preflight(source, ['docs/usage.md', 'docs/guides/usage.md'], 0)
+        (source / 'docs/usage.md').unlink()
+        self.admin_preflight(source, ['docs/usage.md'], 0)
+        self.admin_preflight(source, ['docs/usage.md', 'docs/guides/usage.md'], 1,
+                             targets=['docs/guides/usage.md'])
+
+    def test_unauthorized_admin_claims_grant_nothing(self):
+        source = self.provider_copy()
+        path = self.protected_methodology[0]
+        self.admin_preflight(source, [path], 1, workflow='')
+        self.admin_preflight(source, [path], 1, targets=[])
+        self.admin_preflight(source, self.protected_methodology[:2], 1, targets=self.protected_methodology[:1])
+        self.admin_preflight(source, [path], 1, role_id='ASDG-08', workflow='openspec',
+                             openspec_store=path.rsplit('/', 1)[0])
+        self.admin_preflight(source, [path], 1, role_id='ASDG-05', workflow='admin')
+
+    def test_admin_traversal_links_git_and_nested_repositories_stay_blocked(self):
+        source = self.provider_copy()
+        forbidden = ('.git/config', '.git/hooks/pre-commit', 'asdg/' + self.stage_targets[0],
+                     '02-purpose/../README.md', 'scripts/lib', str(self.root / 'outside.md'))
         for path in forbidden:
             with self.subTest(path=path):
                 self.admin_preflight(source, [self.stage_targets[0], path], 1)
-        self.admin_preflight(source, ['scripts/lib/cli_ownership.md'], 0)
         (source / '02-purpose/link').symlink_to(self.root, target_is_directory=True)
         self.admin_preflight(source, ['02-purpose/link/example.md'], 1)
-        os.link(source / 'scripts/lib/cli_ownership.py', source / '02-purpose/alias.md')
-        self.admin_preflight(source, ['02-purpose/alias.md'], 1)
         os.link(source / 'scripts/lib/cli_ownership.py', source / 'scripts/alias.py')
         self.admin_preflight(source, ['scripts/alias.py'], 1)
         subprocess.run(['git', 'init', '--quiet', source / '02-purpose/docs/nested'], check=True)
@@ -147,22 +160,39 @@ class OwnershipTests(unittest.TestCase):
     def test_standalone_identity_and_client_boundaries(self):
         source = self.provider_copy()
         self.init()
-        self.admin_preflight(self.root / 'asdg', self.stage_targets, 1, cwd=self.root)
-        self.admin_preflight(self.root / 'asdg', ['asdg/scripts/lib/cli_ownership.py'], 1, cwd=self.root)
-        self.admin_preflight(self.root / 'asdg', ['asdg/skills/asdg-documentation/SKILL.md'], 0, cwd=self.root)
+        client = self.root / 'asdg'
+        for path in ('asdg/scripts/lib/cli_ownership.py', 'asdg/skills/asdg-documentation/SKILL.md',
+                     'asdg/tests/test_ownership.py', 'AGENTS.md', 'docs/asdg/07-planning/02.9-review-x.md'):
+            with self.subTest(client_allowed=path):
+                self.admin_preflight(client, [path], 0, cwd=self.root)
+        for path in ('README.md', 'src/app.py', '.asdg/sprint.json', '.codex/hooks.json',
+                     'docs/asdg/02-purpose/01-purpose.md', '.git/config', self.stage_targets[0]):
+            with self.subTest(client_blocked=path):
+                self.admin_preflight(client, [path], 1, cwd=self.root)
         self.admin_preflight(source, self.stage_targets, 1, cwd=self.root)
         (source / '.asdg').mkdir()
         self.admin_preflight(source, self.stage_targets, 1)
         (source / '.asdg').rmdir()
-        catalogue = source / '00-governance/types/agent-catalog.json'
-        catalogue.write_bytes(catalogue.read_bytes() + b' ')
-        self.admin_preflight(source, self.stage_targets, 1)
-        subprocess.run(['git', '-C', source, 'restore', '--', str(catalogue.relative_to(source))], check=True)
+        self.admin_preflight(source, self.stage_targets, 0)
         metadata = source / 'metadata/distribution.json'
         descriptor = json.loads(metadata.read_bytes())
         descriptor['canonical_repository'] = 'https://github.com/example/client'
         metadata.write_text(json.dumps(descriptor))
         self.admin_preflight(source, self.stage_targets, 1)
+
+    def test_admin_grants_no_git_operations_or_application_implementation(self):
+        self.init()
+        admin = {'role_id': 'ASDG-ADMIN', 'workflow': 'admin', 'targets': ['asdg/docs/usage.md', 'app.js']}
+        self.assertEqual(self.hook(self.payload(['asdg/docs/usage.md']), context=admin), {})
+        for payload in (self.payload(['app.js']),
+                        *({'tool_name': 'Bash', 'cwd': str(self.root), 'tool_input': {'command': command}}
+                          for command in ('git commit -am maintenance', 'git push', 'git add -A'))):
+            with self.subTest(payload=payload['tool_input']):
+                decision_out = self.hook(payload, context=admin)
+                self.assertEqual(decision_out['hookSpecificOutput']['permissionDecision'], 'deny')
+        allowed, _, application = self.check('ASDG-09', ['app.js'])
+        self.assertEqual((allowed, application), (True, ['app.js']))
+        self.run_cli('check-write', '--context', json.dumps({'role_id': 'ASDG-09'}), '--path', 'app.js', expect=1)
 
     def test_unknown_stale_or_tool_supplied_identity_never_grants_writes(self):
         self.init()

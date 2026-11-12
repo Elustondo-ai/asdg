@@ -30,13 +30,13 @@ With an assignment, begin that task within the contract. Reuse inspected materia
    Include descriptive alt text and a caption that distinguishes vision from implemented behavior.
 9. Reuse a suitable existing visual; generate or revise it when missing, misleading or requested, rather than on every edit.
 10. Inspect the image and, when available, the rendered Markdown for legibility, composition, spacing and text accuracy.
-11. Assess all eight completion criteria; record `READY_FOR_ACCEPTANCE` only when each has supporting evidence.
+11. Assess all seven completion criteria on the definition itself; record `READY_FOR_ACCEPTANCE` only when each has supporting evidence.
 12. Present the current document links; record `ACCEPTED` only after an explicit User decision for that unchanged reviewed baseline.
 
 ## Output and checks
 
-Use the owner's contract; distinguish purpose, evidenced capabilities and selected improvements with decision status.
-Use the [stage layout](../../../00-governance/docs/stage-layout.md). Cite implementation evidence and the current Stage 07 item when available. State what is unknown.
+Use the owner's contract and the [stage layout](../../../00-governance/docs/stage-layout.md); the definition must stand on its own.
+Create no capability or plan documents. Link implementation evidence or a Stage 07 item only when it clarifies the purpose; those records stay with their owners.
 Canonical identities and Purpose paths follow the catalogue; legacy identities exist only in migration records.
 Do not claim tests, review, routing or implementation happened unless observed.
 Deliver saved documentation plus a concise conversation summary; activation alone writes no artifacts.

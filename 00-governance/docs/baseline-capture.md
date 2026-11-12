@@ -1,5 +1,8 @@
 # Brownfield baseline capture — v0.1.4 trial contract
 
+> **Historical.** This trial contract and its `baseline-*` companions describe the retained provider runtime in `00-governance/src/`, outside the portable package.
+> Its `current/baselines/` destination predates the [stage layout](stage-layout.md) and is not a current client structure.
+
 `asdg baseline capture --source <legacy-project>` reconstructs existing-system evidence.
 It never imports application code, starts a sprint, changes hook trust or grants approval.
 

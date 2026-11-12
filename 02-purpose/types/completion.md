@@ -9,19 +9,21 @@ Purpose is done for the reviewed baseline when two separate decisions have been 
 
 ## Agent criteria
 
-Record evidence for all eight criteria in the readiness event; file presence alone is insufficient.
+Assess the Purpose definition on its own terms. Record evidence for all seven criteria in the readiness event; file presence alone is insufficient.
 
-- `purpose`: the User's problem and reason for the product are clear.
-- `outcomes`: desired benefits are explicit and understandable.
-- `boundaries`: constraints, non-goals and assumptions are distinguished.
-- `current_evidence`: cite known evidence and limitations, or identify what remains unknown.
-- `next_improvement`: link the current Stage 07 item if one exists. Record an unknown next step when Planning has yet to select one.
+- `purpose`: the rationale is clear: whose problem it is, what the problem is and why the system should exist.
+- `outcomes`: desired benefits are explicit, understandable and observable.
+- `boundaries`: scope, constraints, non-goals and assumptions are distinguished.
+- `coherence`: statement, outcomes, boundaries and acceptance questions agree and leave no gap that makes the purpose ambiguous.
 - `acceptance_questions`: observable questions and unresolved decisions are documented.
-- `visual`: the embedded local illustration and available rendered preview were inspected; the caption distinguishes vision from current behavior.
+- `visual`: the embedded local illustration and available rendered preview were inspected; the caption presents the intended vision, not implemented behavior.
 - `documentation`: ordered files, navigation, links, source-line limits and generic User terminology were checked.
 
+Purpose needs no implementation, operational evidence or Stage 07 plan to be accepted; their absence is not a defect of the definition.
+A Purpose document may link implementation evidence or a Stage 07 item. Those records stay authoritative in their own domains and are not assessed here.
 Unresolved feasibility or design choices can remain documented; they do not prevent a clear purpose baseline.
 Any missing criterion leaves the stage `IN_PROGRESS`; do not record readiness when a required inspection is unavailable.
+Readiness recorded under the earlier eight-criterion rule, with `current_evidence` and `next_improvement`, remains valid history. Record new readiness only with the seven criteria above.
 
 ## Recording and accepting
 
@@ -29,7 +31,7 @@ Use only stage `02` in the existing `.asdg/lifecycle.json`; do not create a seco
 Register `01-purpose.md` and any supplemental Purpose artifacts used in the review. Retain `not_applicable_reason: null` and append events without rewriting history.
 Use `purpose_review.bundle_hashes` to capture the registered documents, README navigation and embedded image dependencies.
 Every event contains `decision`, `actor`, `recorded_at` and that exact `artifacts` hash map.
-A readiness event uses `actor: ASDG-02` and `criteria`: all eight criterion IDs mapped to nonempty assessment evidence.
+A readiness event uses `actor: ASDG-02` and `criteria`: the seven criterion IDs above, each mapped to nonempty assessment evidence.
 Validate with `purpose_review.validate_reviews`; confirm the result through `python3 asdg/scripts/cli.py status --json`.
 
 Present the reviewed document links and pending status to the User.

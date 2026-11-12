@@ -27,4 +27,4 @@ Use the [shared perspectives contract](stage-perspectives.md) and link authorita
 <Compare the cited Intended and Actual baselines; do not establish a competing truth store.>
 <Explain unresolved decisions and approval needs without silently changing the target.>
 
-Generate this assessment for the stated baseline. Link back to the domain records and planning items that support it.
+Generate this assessment for the stated baseline only when one is requested; it is a view over linked records, not a required stage document. Link back to the domain records and planning items that support it.

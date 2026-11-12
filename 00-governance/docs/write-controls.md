@@ -5,6 +5,18 @@ These controls reduce accidental cross-role edits; they do not restrict the repo
 
 ![Shared reads feed owned documentation; approvals and implementation keep separate gates.](images/documentation-authority.svg)
 
+## Four authority classes
+
+| Class | May write | Authorized by |
+| --- | --- | --- |
+| Governance and the twelve specialists | Their owned `docs/asdg/` stage and the listed [exceptions](write-exceptions.md) | Role selection |
+| Build and Test | Application code, tests and technical documentation in scope | An active human-started sprint and per-target checks |
+| ASDG Admin | Any methodology file the bounded task needs, deletions included | Explicit Admin selection and a bounded human maintenance task, declared as exact `targets` |
+| Human owner | Everything, plus approval, commit, push, release, publication, deployment and hook trust | Repository ownership |
+
+Admin scope is the verified standalone source, except Git metadata, or in a client the `asdg/` copy, the root `AGENTS.md` bootstrap and Admin's Stage 07 `02.*` records.
+Admin never writes application files, other `.asdg/` state, symlinked or multi-link targets or nested repositories. Client adapters are regenerated from `asdg/templates/` through the explicit update engine.
+
 ## Shared preflight in Codex and Claude
 
 Before creating, modifying, moving or deleting a file, recover the acting role from this conversation's loaded selection/assignment receipt.
@@ -40,3 +52,5 @@ Claude receives the same canonical ownership instructions and read-only checker 
 Calling preflight and obeying its result is instructional in both clients; only an actually invoked/trusted hook intercepts tool execution.
 Tests with synthetic session payloads prove checker/guard decisions, not native discovery, role recovery, hook trust or actual platform invocation.
 Do not change hook trust as part of ownership maintenance. Unknown identity must never silently fall back to unrestricted documentation writes.
+The checker cannot verify that a human authorized a declared Admin task; only a session-bound launcher context is outside the agent's control.
+Without one, Admin authority rests on explicit selection, the recorded human request and the human's review of the unstaged diff, plus the platform's own permissions such as delete prompts.

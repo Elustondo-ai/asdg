@@ -1,0 +1,62 @@
+{
+  "requester": "Pablo",
+  "role": "ASDG-ADMIN",
+  "focus": "Foundational Admin Authorization Redesign",
+  "attitude": "Black",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "starting_revision": "eb8b3a7e6144192a2aff8fc5f31e7f90829382b9",
+  "source": "Elustondo-ai/asdg",
+  "decision": "ASDG Admin is a privileged methodology maintainer: powerful enough to maintain ASDG, never able to approve itself or override the human owner.",
+  "root_cause": "Admin was modelled as path exceptions to specialist ownership, so protected names, the ledger, tests, metadata and the checker's self-reservation still applied to it.",
+  "changed": [
+    "scripts/lib/cli_ownership.py",
+    "scripts/lib/cli_ownership.md",
+    "00-governance/docs/write-controls.md",
+    "00-governance/docs/write-exceptions.md",
+    "00-governance/docs/documentation-authority.md",
+    "admin/AGENTS.md",
+    "admin/types/contract.md",
+    "admin/skills/maintain-rules/SKILL.md",
+    "tests/test_ownership.py",
+    "tests/test_ownership.md",
+    "scripts/provider_component/test_policy.py",
+    "metadata/MANIFEST.json",
+    "admin/AGENTS.md: Governance without captivity section"
+  ],
+  "trust_limitation": "The checker cannot verify human authorization; only a session-bound launcher context is outside agent control. Otherwise authority rests on explicit selection, the recorded request, owner diff review and platform permissions.",
+  "automated_checks": {
+    "environment": "Linux VM, Python 3.10.12, owner checkout",
+    "portable": {
+      "run": 174,
+      "skipped": 3,
+      "failures": 0,
+      "errors": 0
+    },
+    "ownership": {
+      "run": 14,
+      "skipped": 1,
+      "skip_reason": "OpenSpec CLI not installed"
+    },
+    "negative_control_old_checker": {
+      "failing_cases": 4
+    },
+    "provider": {
+      "run": 10,
+      "errors": 1,
+      "note": "copytree FileExistsError reproduced on HEAD in this environment"
+    },
+    "historical_00_governance": {
+      "errors": 134,
+      "identical_to_head": true
+    },
+    "portable_structure": "PASS"
+  },
+  "manifest": {
+    "process": "build_distribution.py --refresh-manifest --output outside the repository, after receipts",
+    "integrity": "PASS after refresh; existing build/distributions ZIP untouched"
+  },
+  "not_done": [],
+  "manual_or_native": "No live Codex launcher, native Admin session or hook trust observed.",
+  "placeholder_deletions": "Admin was refused a repository-wide delete grant; Pablo deleted the three placeholders himself."
+}

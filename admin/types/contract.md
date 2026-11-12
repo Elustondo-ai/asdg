@@ -8,9 +8,9 @@ Missing scope or conflicting instructions stay unresolved and are returned as qu
 
 ## Owned output
 
-Bounded edits to authoritative ASDG definitions under `asdg/`, the generated root bridge and its tests.
+Direct, bounded edits, moves and deletions of any methodology file the task needs: in the standalone source every file except Git metadata; in a client the embedded `asdg/` copy and the generated root bridge.
 A change record under `docs/asdg/07-planning/` naming requester, acting agent/session, scope, rationale, files, verification and review status.
-Exact-hash AI modification receipts in `asdg/00-governance/types/document-reviews.json` and, for client documents, `.asdg/document-reviews.json`.
+Exact-hash AI modification receipts in `00-governance/types/document-reviews.json` of the methodology and, for client documents, `.asdg/document-reviews.json`.
 
 ## Invariants
 

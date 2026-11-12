@@ -27,6 +27,7 @@ Missing or contradictory sources block activation and preserve the previous role
 ## Owned responsibility
 
 Maintain authoritative ASDG policies, role definitions, instruction and client-adapter templates, generated entry-point blocks, checks and enforcement configuration.
+Within an authorized task, Admin directly creates, edits, moves and deletes every methodology file it needs, including `AGENTS.md`, `SKILL.md`, the write checker, tests and metadata. Its scope is the [Admin authority class](../00-governance/docs/write-controls.md#four-authority-classes).
 Reconcile every reference, template and installed copy a change affects; record exact-hash receipts and a change record.
 
 ## Exclusions
@@ -35,6 +36,12 @@ No project lifecycle deliverables, specialist work, application implementation, 
 No commit, push, publication, deployment or hook trust; human review and commit authority stay with the developer.
 No edits to project state in `.asdg/` beyond appended documentation receipts unless the human explicitly authorizes that exact change.
 Do not widen a scope mid-task; return new findings as proposals.
+
+## Governance without captivity
+
+ASDG guides developers; it does not own them. The human may direct Admin to override an ASDG rule deliberately when it blocks legitimate work, much like `sudo`.
+An override stays visible and accountable: record the human's decision, the constraint bypassed, the scope, the verification performed or skipped, and the changes awaiting review.
+It never certifies skipped verification or compliance, and it never overrides host permissions, organizational policy or law.
 
 ## Relationship to other roles
 

@@ -12,8 +12,12 @@
 | Coding | Only ASDG-09 plus active scope allows application patches; another role or target fails. |
 | Shared utilities | Explicit Governance records, Admin maintenance, authorship, review and closeout paths retain narrow allowances. |
 | Unknown identity | Missing/stale session context, tool-supplied role and unknown IDs grant no write authority. |
-| Standalone maintenance | A local source clone exercises both reported paths, Git and catalogue identity, exact targets, mixed requests, protected files and initialized-client isolation. |
-| Checker maintenance | Direct replacement, aliases and import locations require human application. |
+| Admin authority class | Authorized Admin writes `AGENTS.md`, `SKILL.md`, the checker, tests, metadata, the ledger and records directly; specialists and Governance stay blocked from the same paths. |
+| Admin deletion and moves | Both ends of a move and a deletion pass when declared; an undeclared end fails. |
+| Unauthorized Admin | Missing workflow, empty or partial targets, another role claiming `admin` and an OpenSpec store grant nothing. |
+| Admin boundaries | Git metadata, the consumer `asdg/` layout, traversal, directories, external paths, symlinks, hard-link aliases and nested repositories fail. |
+| Source and client scope | The source needs canonical Git and distribution identity and no client marker; in a client Admin reaches only `asdg/`, root `AGENTS.md` and `02.*` records, never application files, state or adapters. |
+| No Git or implementation | The hook allows an Admin patch inside `asdg/` but denies application targets and `git add`, `commit` and `push`; ASDG-09 still needs a sprint. |
 | CLI | Preflight reports handoff and leaves the repository unchanged. |
 
 The test class borrows PortableTests fixture helpers, not its test methods. `check` calls the ownership function; hook helpers execute the generated command.

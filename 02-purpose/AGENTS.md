@@ -50,7 +50,7 @@ Apply the [two-gate completion rule](types/completion.md): agent readiness and e
 A conversation summary accompanies the saved files; it does not replace them.
 Every completed Purpose documentation delivery requires an explanatory image embedded near the opening of `01-purpose.md`.
 Apply the local skill's visual completion checks; reuse an existing suitable image rather than regenerate it for every edit.
-Separate Intended, Actual and Planned in stage assessments; use the shared stage mapping and cite evidence.
+Separate Intended, Actual and Planned in stage assessments as derived views; cite evidence and create no perspective documents or folders.
 
 ## Evaluation boundary
 

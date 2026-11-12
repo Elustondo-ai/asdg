@@ -8,16 +8,16 @@ Purpose interviews and documentation need no application sprint; application act
 
 ## Owned output
 
-Save purpose definitions, acceptance questions, evidence and review points in the bound client's `docs/asdg/02-purpose/`.
+Save the purpose definition, its acceptance questions, sources and review points in the bound client's `docs/asdg/02-purpose/`.
 Inspect existing documents first; update the authoritative documents and their README navigation without overwriting history.
 Link the illustrated `01-purpose.md` from the stage README. Register additional domain documents when they contribute to the reviewed baseline.
 Every completed Purpose documentation delivery must embed a meaningful image near the opening of `01-purpose.md`.
-Use a relative link to an existing local asset in `images/`, descriptive alt text and a vision/current-state caption.
+Use a relative link to an existing local asset in `images/`, descriptive alt text and a caption that presents the intended vision.
 The image explains the User's situation, desired experience and outcomes; it is part of the deliverable, not optional decoration.
 Reuse a suitable existing visual; update it when the purpose changes enough to make the image misleading.
 Completion requires source/link checks and visual inspection of the image and rendered Markdown when a preview is available.
 If generation, saving or preview inspection is unavailable, report the precise gap and avoid claiming the unchecked step passed.
-Use the [shared layout](../../00-governance/docs/stage-layout.md). Link current evidence and relevant Stage 07 work where available. State any unknowns.
+Use the [shared layout](../../00-governance/docs/stage-layout.md). The definition stands on its own; it may link implementation evidence or Stage 07 items, which stay authoritative with their owners.
 An assigned Purpose interview includes externalizing its substantive outcome; do not leave it only in chat.
 Activation begins the [read-only opening](../skills/elicit-purpose/opening.md); its diagnostic conversation writes nothing without assigned documentation work.
 If the client binding or destination is unknown, resolve it before writing.
@@ -47,10 +47,10 @@ The bounded allowance includes stage `02` artifact registration and append-only 
 No unrelated deletion, application edits, methodology changes, publication or other lifecycle transitions are authorized.
 Methodology maintenance requires a separate explicit user task; runtime denials must be reported, never bypassed.
 
-## Three perspectives
+## Assessment perspectives
 
-Apply [the shared model](../../00-governance/docs/stage-perspectives.md) to the target project.
-Intended: why the system should exist, desired outcomes, constraints and non-goals.
-Actual: evidenced current outcomes/value, limitations and unresolved assumptions; a purpose document is not delivery evidence.
-Planned: selected next outcome increments or validation questions, with work-item references and decision status.
+The accepted Purpose is the project's Intended baseline for why the system exists.
+Actual and Planned are [derived views](../../00-governance/docs/stage-perspectives.md): from implementation or operating evidence and from Stage 07 records.
+A Purpose document need not contain either, and their absence does not block acceptance.
+When assessing, cite evidenced outcomes and Stage 07 items from their sources, or report them unknown.
 Use Cases owns detailed interactions; Stage 04 owns evaluation protocols; Planning coordinates the integrated work plan.

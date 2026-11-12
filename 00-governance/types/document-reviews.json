@@ -33897,6 +33897,821 @@
         "visible_review_markers": [],
         "approval_binding": "Legacy declarations only; no approval inferred or transferred."
       }
+    },
+    {
+      "path": "00-governance/AGENTS.md",
+      "sha256": "bd34bd6b4aac193ea65f2bd1a2741db72d71f3eeea23cc1267b189909766be84",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "29e1490f1534602cb6fb2101c787274fc3a343e9f4036d349e525d6a3e6a142d",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/baseline-capture.md",
+      "sha256": "24026411b24d1a3f77f1a7869ae6b51974e04ff287da7ebfc0f997cfba904f25",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "d374a1118ad96f0944997a793981119b156e66382eaa4de27de5f5ea0e0dab4d",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/documentation-authority.md",
+      "sha256": "3acb3e153062a73f7d9a98ff11d40518af90e52569516ddd70059fd98e7d4414",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "c145a732238a8995650bc5eebab7355bc3c243a75942d1b80994d65838e9e652",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/namespace-migration.md",
+      "sha256": "6225d4e710af95b14bc155c3cb4f89d7742ea76d85376dd20fcbb062eebdc0ae",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "d816583dfae63edd2a42d4403f5cd3139e47cacbf8cbfcbb04c4ec7daaa3bdd0",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/stage-perspectives-map.md",
+      "sha256": "6c08cd9f09baad82afe64b70b73d20b5cb7d278067513b95b7f5acc9dc518075",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "837542adb46c98d6121d7d814002759bf2d3beebf9ecfd5352b867376ce7fe17",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/stage-perspectives.md",
+      "sha256": "03b465737eee2444b816e861b6a91d1829e0ad5bd8a829bd21bb87782eef2ff9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "570ebecf61ee75cf9bac1da224bba29e5532b43237c48e2dbad17bf0d5c10455",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/stage-snapshot-template.md",
+      "sha256": "179f62d0495d1d65db8ebd3274f4d928c6ebe5fae8882125c0a87b3ef5acefae",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "db8a9e3a7056bcc2d629957ac1e3f2478cd4fac98a41f6fbbfa85f2c3df3cee9",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/write-controls.md",
+      "sha256": "8fe43416ab7cc3ab97191092d914205c4f0954e1cf413f8ad1208512e5e69047",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "c1e88b0ca532ae2f7f1901673716e190ae056d20e3dcfe88c9d1d10a929958d9",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "00-governance/docs/write-exceptions.md",
+      "sha256": "ed9173401d51152f77abf96c8c7ea10df9d8cc0a4d872bb5ce01008f1a6a74e7",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "be74d521b59cb4a7a75c37991984dceb0a5be0747c2d85c918c4417d8ae7b5fb",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "01-context-and-domain-analysis/AGENTS.md",
+      "sha256": "40f215f45326be4745e578635693ee1e4bcbb1acecdf50132953755aaa8f181d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "faa88fe7662cfb87849f1eae557e3afc9451d5c89655e3d6da968dfe81897c29",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "02-purpose/AGENTS.md",
+      "sha256": "4fbd3f18fad3c79fac563c48b9e7407458ee693f5aedb50fda16fa54adcbf8b4",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "f2b38bff26a4f0b4c9088a74c2b7e7772e5075cdf8ef5b6c50504c4d31b4a1b0",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "02-purpose/skills/elicit-purpose/SKILL.md",
+      "sha256": "1419a6f3ea9159a41439f2f7e689b3fe7560064a53b14d4e64c85e756643a738",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "1bc52fd57e7767a0b208c492cd1768d0860bb362551727f70e765f124fecdbf0",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "02-purpose/tests/acceptance.md",
+      "sha256": "29fe90a222e2fcdca65f54807fd0b987471ce0ab71ab42190f3f0315135ba2e9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "e585189158b87cdc802e1e96c068f6c0c232a981e5a87ad91ec1999b06bcf4d8",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "02-purpose/types/completion.md",
+      "sha256": "da5f91370b19b03ab49dfb472253db46046e1fa3f6af027c1e005d143f66b926",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "a41468ff6277fdcaf10cd9136892e793eb864893da807c926f5ff5141e033f16",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "02-purpose/types/contract.md",
+      "sha256": "83f1dc05c526cdfbcbf216b23b3ea62c7be7f4d71f1dba7e6ee77a84dc4a6beb",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "5e6ef9cb07e8b305e3c74a13d8229624f42f096f78c4f2fdc1d18fda36995a26",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "03-system-model-and-use-cases/AGENTS.md",
+      "sha256": "9cffe11872a8cc451ac05ef0bf755a763011d6de2f90801b75e6cfce5408c8b8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "10abb8cbc05e45e739d986b8d866825e9386c2ea3884ab95fdff4439c339f20b",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "04-benchmarks-and-eval-strategy/AGENTS.md",
+      "sha256": "e17be3acd1bd5725dfa27ce0db6a4787e7a099dd5625a2f7a77d583d0be43046",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "48e535c83748a6533bd397ef12d01839d7b4110039813038b28fa22e8c5a1ccd",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "05-high-level-design-and-architecture/AGENTS.md",
+      "sha256": "00763e6864f25d716005d7c6ccbe368f57d0154ff9bb39e7ef1b7e3384b35c21",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "934834601c045f784999c88171da3ca2b53e0db11a76f1a00a3d5795188d5b66",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "06-viable-proof-of-concept/AGENTS.md",
+      "sha256": "147df3732e1137fc287dbc7989172cb227cc1fa9c5a43c5cdec6b8884a8b210d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "a0425ee495c359b0732986a7e744a300841b8cc03ba7452fddf31c6979d24fdf",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "07-planning/AGENTS.md",
+      "sha256": "9bf1d4e956a3a66494f84c335acb4834de4bef02eac33a755a4129da198178b3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "9fbf50e35e67675aab2b38ba8c92903a91fd77d9082720c5b67a822a7b3b6381",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "08-low-level-design/AGENTS.md",
+      "sha256": "839f6e9e04d4c8d7c58ab1bc91cb44077acead80e6118480716aa42d0bd5f7b3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "58c3ccdc0eb4417737f1a947fa08bc006b4d481fe4948e337c41e9af7624f4fc",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "09-build-and-test-cycle/AGENTS.md",
+      "sha256": "52fc4ed5d01eb88205b99f419020b91c52dfe61230e44caa85fec1d0f4506bcf",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "f6b0ed3cb2d0fd783c943b62d9cf9fc00297099b559d3c8068aa5e65d9f93709",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "10-document-review-and-release/AGENTS.md",
+      "sha256": "d1e78f9dcf306cfa3cadec12548cc958fbbd97c723cc98a7bad3162bc3f03f67",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "1dd22f96ed987d6ee0a589308020beb209383f3a2d825d6b4c5bd2dcff25863d",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "11-operational-reality-devops-and-user-acceptance/AGENTS.md",
+      "sha256": "d7b86483472f62ef9f1610a6c339c4998503d3b4a00b3090a5c9e37ddb375fc6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "267e7eecb69425dce54d0577b55ebde0d24038c7a2e98df25b89b8ce8735fe0b",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "12-observability-insights-and-learning/AGENTS.md",
+      "sha256": "3e360bc56529f058d617a3dcb90f2d54d9ed1b772bd6b50c0decb01175030dac",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "277fb0a4f6125114eb813d4cc547210323db835f31cc0782efea6116076bf83e",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "admin/AGENTS.md",
+      "sha256": "2bbf87d94653911d1e386518106ec5e8faf5ac5fb6953ee5b69516460a030586",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "39f6d79e1296f467e028a8a347ccbe2f03be04eb488a4ea5f0cffb5ad101bcf1",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "admin/skills/maintain-rules/SKILL.md",
+      "sha256": "b11b26a6d447cc1514dc39cc3f20cc78e10d2129935b48fe285d90aeb7543032",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "f350795689f0f2c121a90e7c3ab3e7d70d6f160a49e31c8dda0a3abf35f32952",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "admin/types/contract.md",
+      "sha256": "f078bbfc0cb3ccf00e720e3e37b6ae2620800dd63403e220f33d1f1073bcfa11",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "c8e22e5f6782f0bd4df545433e8f060d9f6f67d22f38629e95d75c36d559f590",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "metadata/package-files.json",
+      "sha256": "fbd4085e32736960d8d559fb706a5d9738566d7539e5fc82c8b7e309212e6246",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "b234bee8558345620a0df05a6e937c11fa922fea54efd905fa3d85d1363ba4e7",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_model.md",
+      "sha256": "da735049a74831e90ec271d57de362b3d80090e1f07b85b3622413a4f1bfe207",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "ef92b1d948aa1206e55498875d8a5b895eb79b9399ea9b539d8471d60156cba3",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_model.py",
+      "sha256": "d6594e947351a9d73cf38dc2111c5ec2784eb46b7c3859e414b4e5b0b7de411e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "585c349449390944d673f3607c403f9329a1720e617b7632a7a95a983d54d1e2",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_ownership.md",
+      "sha256": "c335ecdc53dc181f4b83348ed4dfc2f3af815bb15ea1bd8a934ee8e71dde0776",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "869c7cce3083366639f43abe6748dea72fc2949f770ff2db6476ce153b254d9d",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_ownership.py",
+      "sha256": "7a9d72f38d85ca7ae86bfa8a8ca46854ffb6f4debc3aeb9a730697580dde95de",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "b9b7a0d601d510adc92b13a23dda42fdbb11232bc5db94224f392b1f35d9287c",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/purpose_review.md",
+      "sha256": "036f3c6fff5e41dd8e8eaa8c075c65178664a3881ff4535f13eae4cca97cc6c1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "7ea41e484176f5fc48426094e7dac9acaf0e255e868042a76328439a8189c1a3",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/purpose_review.py",
+      "sha256": "b76ae90a11823315f9c0871fafb1e5dbffa7f61dc35f6ca221597ff4049d876d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "788d665292f8e96d019126bf4f75195dcff80897a912718fc1ce797ee6adaf7f",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/provider_component/test_policy.py",
+      "sha256": "1e5856a9791705853e541c7ba198540cb54c900f7ce21cc53a1fa146ac45cd13",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "35bdbdcdcad64ceb6ff82a5ade2d0c481b0674fdd1073eaa6c1545152e2c7502",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/README.md",
+      "sha256": "7726f6d96210ff06bea2c061bb7fd5e0cd98c53c6fc2022e7c51bf66d4317eb3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "21253c771c9ac0edfc4018d7e0a1f9ad4a1319fa9577b81d9f3ab3f93eeffef9",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/continuation_fixture.md",
+      "sha256": "d72bb1c991c600bed37465460505ef12fe6c348c577f952164c5f7f9d2f4c0c3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "99e866f04bb13b863e7bc5d1aaf5996b489baff5eeba4cb79cd6e6571b5f0ab4",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/continuation_fixture.py",
+      "sha256": "e4a220196434f5449416e1ac1033ca6d1e5d80a78e037d0ce1c31a545197c9f1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "1500934546705e17c0687d370a0457d1a5f15bda5311f97a38ebba64e191013a",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_ownership.md",
+      "sha256": "541fa6de8e17392e8c87b09aed462e7a77213d1389a9c797c9597dd0b98b61ea",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "22188ac2cc91d4cdc0609d8f9de4c9b62eea496f15028e04d751e5f48e15d406",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_ownership.py",
+      "sha256": "2bce445c3a73bd84c00c03aadf750eec30a1aebc233d7144ee9fbd6850c892fe",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "6a0d9c2f8597e39c1f4c2643fb2663c5f677e2059024905cfaa8b52ae06d53e6",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_purpose_review-cases.md",
+      "sha256": "a470e13e59098b330876117e9d97ba04bbff72762c03f5b36075c9d1ec181916",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "7700591981e35de266145c7469e1786395ec8f8407d9788efbc82704344ebfb5",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_purpose_review.md",
+      "sha256": "e280d7d1c53d195eb5cb8fd6cb11f3691cb06f69f1c8055dd1bb2accfa22f0f4",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "84c4c5e39ee3963b007fa86a4cf8891dc5b8cbd5059921df265b1eb4a0e4e16c",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_purpose_review.py",
+      "sha256": "163f88f5cbe71c4d2202e7fe3de2699d118c1f91b4d8f9dc13dfc0cf785ee078",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "d544fe0a94748132630c5c17207a4948ae6bc6506ad2debea1c8b4f5f26f6d2c",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.14-review-legacy-classification.md",
+      "sha256": "b2116633bd8e3b65a720acd7e46e025474ed4bd60de6111231c0791e52846a9f",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.14-review-purpose-acceptance.json",
+      "sha256": "ee6d209929f66ae57465d2efaed8db1bc4a2ca5c1ba5014f24c674a69539c8d7",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.14-review-purpose-acceptance.md",
+      "sha256": "8fe9b0db2b7fc3f081a20305c9a4506d122bca089d6295c0ade73304ef56e829",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.15-review-admin-authority.json",
+      "sha256": "08abbba6f5150b27222292801bd27b9e959f4554ffff8ba3b0f61398778c93dd",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.15-review-admin-authority.md",
+      "sha256": "96bd372aff9678914156ad103cdd0938f167280c5bf68891c4b4f31cc4ccf62c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "tests/images/test_purpose_only_status-flow.svg",
+      "sha256": "6ea4b479826ee8f0bd3182adfe49d13be5f410dbcc13a44c8ec06ae4fa3a6bc5",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "tests/test_purpose_only_status.md",
+      "sha256": "0370edbfdbcacebe792267ec906c54ed885f0cc6cd986abc66beed1fad9ef081",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "tests/test_purpose_only_status.py",
+      "sha256": "aaa3a01d2a4c38710251d722ad552109e48479b7c82319a5e7c1638fc90ac9b1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.15-review-admin-authority.json",
+      "sha256": "ccfff9cc34a089d933e208147d4cc203fc33429ea7c89ff9f2ff5f9fa11f5c5a",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T02:35:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "admin/AGENTS.md",
+      "sha256": "9f636bbdff9a9750960c3ea596a16ab93428dfd6e10482b8ba28cc8ee59a7c30",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T03:10:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      },
+      "previous_state": {
+        "sha256": "39f6d79e1296f467e028a8a347ccbe2f03be04eb488a4ea5f0cffb5ad101bcf1",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.14-review-purpose-acceptance.md",
+      "sha256": "58d2ddcbfebbc8de7dc25d11b65b6bbe3f845080ff7aed2610afa8ad01af7e54",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T03:10:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.14-review-purpose-acceptance.json",
+      "sha256": "2c8e345873252ce464142c30146a6e7ed6256f1eb0dff38db5af5bc52bacbfd0",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T03:10:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.14-review-legacy-classification.md",
+      "sha256": "6ae49ee55c3b3444b2d8ea41f8e597e986171a14c69c94566c8dc2b889f7fe90",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T03:10:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.15-review-admin-authority.md",
+      "sha256": "f032b6edf37c335a89a8a64c8fc440ad6bb8e1a163d3082e2df179f2fc097e2b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T03:10:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.15-review-admin-authority.json",
+      "sha256": "15bec65bd7cf0eaae4c5987e34174a34b5ed1838ededbef5d9286be42425dc42",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-12T03:10:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN"
+      }
     }
   ],
   "distribution_version": "0.3.0-pilot.2"

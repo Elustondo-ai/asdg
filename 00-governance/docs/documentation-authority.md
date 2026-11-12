@@ -22,7 +22,7 @@ A brief answer, status-only request, role activation or explicit chat-only assig
 [Write exceptions](write-exceptions.md) enumerate all shared workflows, with their authorization and limits.
 [The ownership checker](../../scripts/lib/cli_ownership.md) derives role destinations from the catalogue and implements supported path checks; do not duplicate permission tables in skills.
 Specifications retains its resolved OpenSpec store exception. Coding retains sprint-gated application, test and related technical documentation writes. Neither may rewrite another specialist's documents.
-Governance maintains its coordination artifacts and explicitly assigned shared records; Admin maintains methodology only under explicit selection and bounded human scope.
+Governance maintains its coordination artifacts and explicitly assigned shared records. ASDG Admin maintains the methodology itself as a separate [authority class](write-controls.md#four-authority-classes), only under explicit selection and a bounded human task.
 
 ## Before writing
 
