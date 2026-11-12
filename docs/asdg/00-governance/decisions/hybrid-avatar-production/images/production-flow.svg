@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Reuse the baseline before adding presenters</title>
+<desc id="desc">The existing deck, Kokoro and FFmpeg pipeline leads to review. A proposed private Qwen experiment must pass listening before avatar and hybrid scenes are introduced.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#52657a" stroke-width="1.5"/></marker></defs>
+<rect width="900" height="560" fill="#f6f8fc"/>
+<g font-family="Arial, sans-serif" fill="#172c43">
+<text x="32" y="42" font-size="25" font-weight="bold">Reuse production. Test the voice. Then add presenters.</text>
+<text x="32" y="75" font-size="17">Blue: existing local capability · Amber: proposed experiment · Gray: later work</text>
+<g fill="#dfedff" stroke="#3473ae" stroke-width="2">
+<rect x="32" y="112" width="240" height="100" rx="10"/><rect x="330" y="112" width="240" height="100" rx="10"/><rect x="628" y="112" width="240" height="100" rx="10"/>
+</g>
+<g font-size="20" text-anchor="middle"><text x="152" y="149">Deck + audited notes</text><text x="450" y="149">Local Kokoro voice</text><text x="748" y="149">FFmpeg + verification</text></g>
+<g font-size="16" text-anchor="middle"><text x="152" y="182">Preserve sources and lineage</text><text x="450" y="182">Cached WAV + sentence times</text><text x="748" y="182">MP4, captions and review</text></g>
+<g stroke="#52657a" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M272 162H321"/><path d="M570 162H619"/><path d="M450 212V273"/></g>
+<rect x="190" y="282" width="520" height="112" rx="10" fill="#fff1ce" stroke="#b28117" stroke-width="2"/>
+<text x="450" y="316" text-anchor="middle" font-size="22" font-weight="bold">Gate 1: local Qwen voice comparison</text>
+<text x="450" y="346" text-anchor="middle" font-size="17">Private reference + exact transcript → one-minute reading</text>
+<text x="450" y="375" text-anchor="middle" font-size="17">Measure memory and speed · Pablo accepts likeness and delivery</text>
+<path d="M450 394V440" fill="none" stroke="#52657a" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="190" y="450" width="520" height="70" rx="10" fill="#e9edf2" stroke="#75859a" stroke-width="2"/>
+<text x="450" y="479" text-anchor="middle" font-size="20">Later: real video + synthetic inset + hybrid scenes</text>
+<text x="450" y="505" text-anchor="middle" font-size="16">Separate avatar feasibility, approval and scale tests</text>
+<text x="32" y="548" font-size="16">No automatic upload or publication. Existing narration remains the fallback.</text>
+</g></svg>

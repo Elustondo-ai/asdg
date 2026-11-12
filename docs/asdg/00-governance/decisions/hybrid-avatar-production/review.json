@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "status": "REVIEW_REQUIRED",
+  "role_id": "ASDG-COORDINATOR",
+  "recorded_at": "2026-11-10T20:12:05.471343+00:00",
+  "baseline": {
+    "remote": "https://github.com/Elustondo-ai/asdg.git",
+    "branch": "main",
+    "commit": "426e678",
+    "initial_git_status": "clean excluding ignored files",
+    "host": "Apple M5, 16 GB RAM",
+    "title_requested": "00 Governance",
+    "title_action": "acknowledged by native tool; UI readback uninspected"
+  },
+  "events": [
+    {
+      "path": "docs/asdg/00-governance/decisions/hybrid-avatar-production/01-existing-pipeline.md",
+      "sha256": "e470c8bcc658bfe63b5af694e7906cd11b9af43c70e7a2a9644e9a24f3c621ba",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T20:12:05.471343+00:00",
+      "human_approval": null,
+      "provenance": {
+        "scope": "Governance discovery and routing proposal; no implementation or human approval",
+        "visual": "images/production-flow.svg",
+        "inspection": "SVG rendered with rsvg-convert at 780 px and inspected; embedded Markdown page preview not inspected. Command appendix links to substantive visual."
+      }
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/hybrid-avatar-production/02-extension-proposal.md",
+      "sha256": "1dd19ea5a5a8a2bac2c6045e16c35a8c794413e71951d9c689ccca8a57799ab8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T20:12:05.471343+00:00",
+      "human_approval": null,
+      "provenance": {
+        "scope": "Governance discovery and routing proposal; no implementation or human approval",
+        "visual": "images/production-flow.svg",
+        "inspection": "SVG rendered with rsvg-convert at 780 px and inspected; embedded Markdown page preview not inspected. Command appendix links to substantive visual."
+      }
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/hybrid-avatar-production/03-voice-experiment.md",
+      "sha256": "3d0d88b6832b1417ccbbaeb3e4794affafdd832154c0c3fc69f39b93b434e6ba",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T20:12:05.471343+00:00",
+      "human_approval": null,
+      "provenance": {
+        "scope": "Governance discovery and routing proposal; no implementation or human approval",
+        "visual": "images/production-flow.svg",
+        "inspection": "SVG rendered with rsvg-convert at 780 px and inspected; embedded Markdown page preview not inspected. Command appendix links to substantive visual."
+      }
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/hybrid-avatar-production/04-commands-and-passage.md",
+      "sha256": "3c52a438e1a83f74cd47466ce3b054e38ace59dc367515a68349e674f0955034",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T20:12:05.471343+00:00",
+      "human_approval": null,
+      "provenance": {
+        "scope": "Governance discovery and routing proposal; no implementation or human approval",
+        "visual": "images/production-flow.svg",
+        "inspection": "SVG rendered with rsvg-convert at 780 px and inspected; embedded Markdown page preview not inspected. Command appendix links to substantive visual."
+      }
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/hybrid-avatar-production/README.md",
+      "sha256": "8040d8a048f288cd51cf6ad631af8bc8dc23e04383a9f3227751a4eeab5b8cad",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T20:12:05.471343+00:00",
+      "human_approval": null,
+      "provenance": {
+        "scope": "Governance discovery and routing proposal; no implementation or human approval",
+        "visual": "images/production-flow.svg",
+        "inspection": "SVG rendered with rsvg-convert at 780 px and inspected; embedded Markdown page preview not inspected. Command appendix links to substantive visual."
+      }
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/hybrid-avatar-production/images/production-flow.svg",
+      "sha256": "751c282d9acc1914d1db6b5e399b18f2b81163e77a5039329a7c4002f2c966c3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-10T20:12:05.471343+00:00",
+      "human_approval": null,
+      "provenance": {
+        "scope": "Governance discovery and routing proposal; no implementation or human approval",
+        "visual": "editable SVG",
+        "inspection": "SVG rendered with rsvg-convert at 780 px and inspected; embedded Markdown page preview not inspected. Command appendix links to substantive visual."
+      }
+    }
+  ],
+  "checks": [
+    {
+      "command": "python3 -B -m unittest discover -s build/publication-pipeline -p 'test_*.py' -v",
+      "exit_code": 0,
+      "ran": 25,
+      "result": "OK; no live inference or upload"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "ran": 158,
+      "skipped": 2,
+      "seconds": 129.053,
+      "result": "OK"
+    },
+    {
+      "command": "python3 -B scripts/check.py --integrity",
+      "exit_code": 1,
+      "result": "26 baseline manifest mismatches observed before edits; no repair or manifest refresh"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 build/publication-pipeline/asdg-publish-presentations scan --presentation nov-2026-11-05-expanded-28 --dry-run",
+      "exit_code": 0,
+      "slide_count": 28,
+      "blockers": []
+    },
+    {
+      "command": "ffprobe -v error -show_entries format=duration:stream=codec_name,codec_type,width,height,r_frame_rate -of json <local flagship MP4>",
+      "exit_code": 0,
+      "duration": 2357.604667,
+      "video": "h264 1920x1080 24/1",
+      "audio": "aac"
+    },
+    {
+      "command": "per-target scripts/cli.py check-write with ASDG-COORDINATOR",
+      "exit_code": 0,
+      "result": "all seven authored documentation/asset/receipt paths permitted"
+    }
+  ],
+  "source_hashes": {
+    "build/publication-pipeline/asdg_publish_presentations.py": "bfc8684a2845c90fb3dfe5295ee3b09f3c718bdb9d9f53fc24e0502e738ca6d7",
+    "build/publication-pipeline/tts_kokoro.py": "6afa1da552eb4d225b24ed0bee49dc8c3014e453584d1b758980fc0f60244706",
+    "build/publication-pipeline/inputs/november-05-expanded-28-onboarding-corrected.pptx": "03e16cb8cd0cbbe4d2b3fe9f5ab999a5d2915797dd7b66616230b563d7b90070",
+    "build/publication-pipeline/output/nov-2026-11-05-expanded-28/nov-2026-11-05-expanded-28.mp4": "651585625ae2963300953c4f7cbc0254e7293aa11a8c9f32462b888d69462dcb"
+  },
+  "limitations": [
+    "No synthesis, rendering rebuild, full video decoding, listening review or live YouTube check this turn.",
+    "No Qwen runtime/model/tokenizer installed or benchmarked. Exact dependency lock and full model revision remain pending implementation-owner preparation before approval.",
+    "SVG asset inspected; complete Markdown page rendering not inspected. Documentation remains a draft.",
+    "No role change, sprint transition, governance definition edit, commit, push, upload or publication."
+  ]
+}
