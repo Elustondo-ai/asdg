@@ -220,7 +220,9 @@ def stage_label(stage: dict | None) -> str:
 
 
 def render_status(status: dict) -> str:
-    lines = ['ASDG STATUS', '', f"Project: {status['project_name']}",
+    build = status.get('build') or {'display': 'ASDG build unknown'}
+    lines = ['ASDG STATUS', '', build['display'], f"Release label: {status['cli_version']}",
+             f"Project: {status['project_name']}",
              f"Project status: {status['project_status'].upper()}",
              'Release: ' + ('None declared' if status['release_status'] == 'none' else
                             f"{status['release_status'].upper()}" +

@@ -19,6 +19,7 @@ Factual operations use the standard library; optional coordinator advice require
 | [cli_runtime_env.py](cli_runtime_env.md) | Bounded coordinator environment. |
 | [agent_config.py](agent_config.md) | Read agent adapter configuration. |
 | [documentation.py](documentation.md) | Documentation length and review receipts. |
+| [build_identity.py](build_identity.md) | Derive, verify and read the commit-based ASDG build identity and installed baselines. |
 | [distribution_files.py](distribution_files.md) | Resolve the portable file list for checks and builds. |
 | [cli_sync.py](cli_sync.md) | Preview and explicitly apply both methodology synchronization directions. |
 | [cli_sync_manifest.py](cli_sync_manifest.md) | Read repository identities, snapshots and adoption baselines. |

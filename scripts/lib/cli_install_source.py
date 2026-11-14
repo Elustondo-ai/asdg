@@ -1,13 +1,12 @@
 """Freeze a selected portable package; optionally prove its local canonical commit."""
 from __future__ import annotations
 
-import hashlib
 import json
 import re
-import subprocess
 from pathlib import Path
 
-from cli_files import Conflict, read_bytes, safe_path
+from build_identity import commit_build, commit_mismatch, package_build
+from cli_files import Conflict, read_bytes
 from cli_model import distribution_core, git_value, json_bytes, sha
 from cli_project import distribution
 from cli_sync_manifest import methodology_path, repository_id
@@ -45,6 +44,7 @@ def source_snapshot(repo: Path, commit: str | None) -> tuple[dict, dict]:
     info, entries = package(repo)
     info.update(kind='EXTRACTED_PACKAGE', commit=None, path=str(repo))
     if commit is None:
+        info['build'] = package_build(distribution_core(repo), info)
         return info, entries
     git_root(repo)
     if not re.fullmatch(r'[0-9a-f]{40}|[0-9a-f]{64}', commit):
@@ -55,22 +55,11 @@ def source_snapshot(repo: Path, commit: str | None) -> tuple[dict, dict]:
     if not origin or repository_id(origin) != repository_id(info['canonical_repository'] or ''):
         raise Conflict('Source origin does not identify the canonical methodology repository.')
     prefix = '' if distribution_core(repo) == repo else 'asdg/'
-    try:
-        result = subprocess.run(['git', '-C', str(repo), 'ls-tree', '-rz', commit, '--', prefix or '.'],
-                                capture_output=True, timeout=15, check=True)
-    except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as exc:
-        raise Conflict('Cannot inspect the selected source commit.') from exc
-    tree = {}
-    for row in result.stdout.split(b'\0'):
-        if row:
-            attributes, name = row.split(b'\t', 1)
-            mode, kind, oid = attributes.decode().split()
-            tree[name.decode()] = (mode, kind, oid)
-    algorithm = hashlib.sha1 if len(commit) == 40 else hashlib.sha256
-    for name, data in entries.items():
-        mode, kind, oid = tree.get(prefix + name, ('', '', ''))
-        actual = algorithm(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
-        if mode not in ('100644', '100755') or kind != 'blob' or oid != actual:
-            raise Conflict('Selected package file does not match source commit: ' + prefix + name)
+    mismatch = commit_mismatch(repo, commit, entries, prefix)
+    if mismatch == '(commit tree unavailable)':
+        raise Conflict('Cannot inspect the selected source commit.')
+    if mismatch:
+        raise Conflict('Selected package file does not match source commit: ' + mismatch)
+    info['build'] = commit_build(repo, commit, info['version'], entries, prefix)
     info.update(kind='VERIFIED_LOCAL_CLONE', commit=commit)
     return info, entries

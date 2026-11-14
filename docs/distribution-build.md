@@ -39,7 +39,8 @@ python3 -B -m unittest discover -s tests -v
 
 The builder refreshes the candidate manifest and writes a ZIP and SHA-256 sidecar under ignored `build/distributions/`. There is no enclosing provider wrapper in this source repository.
 Review/include the refreshed manifest in your commit; re-run after further package edits. No hook is installed; commit, push and publication remain human actions.
-The ZIP contains working-tree bytes. Regeneration replaces the local same-version artifact; it does not increment the version, and unchanged inputs produce identical bytes.
+Commit first, then build: the ZIP carries `metadata/build.json` naming the commit (`ASDG build <UTC committer time> · <short hash>`) only when its bytes equal that commit; otherwise it is unattributed. See [build identity](../scripts/lib/build_identity.md).
+Build identity replaces pilot increments for telling builds apart; change the named version in `metadata/distribution.json` and `scripts/lib/cli_model.py` only for a deliberate release.
 Stable file order, timestamps and permissions make repeated local builds byte-identical.
 Without `--refresh-manifest`, changed or missing package bytes fail the build.
 The manifest binds content, not approval; historical delivery manifests stay unchanged.

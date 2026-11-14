@@ -23,7 +23,8 @@ An adopted snapshot supplies ancestry without treating the target's local change
 | `read_json(path)` / `hash_map(value)` | Validates bounded JSON objects and path-to-SHA-256 maps; no writes. |
 | `read_state(core)` | Returns schema-1 local adoption state or an empty state; corrupt identities or snapshot hashes fail. |
 | `snapshot(location)` | Requires an exact Git root, identifiable origin/HEAD, versioned metadata and the thirteen stable lifecycle identities. Returns bytes, hashes, history, binding and a public identity summary. |
-| `baseline(source, target)` | Uses a recorded adoption, otherwise an exact shared current manifest or one unambiguous shared archive; absent/ambiguous ancestry makes differing existing files conflict. |
+| `baseline(source, target)` | Uses a recorded adoption, then the installed commit, otherwise an exact shared current manifest or one unambiguous shared archive; absent/ambiguous ancestry makes differing existing files conflict. |
+| `installed_baseline(client, canonical)` | For a never-synchronized client, reads the commit named by its `metadata/build.json` (or the binding's `installation_source.commit`) from the canonical history and uses it only when the [package snapshot](build_identity.md) equals the recorded one. |
 | `adopted_binding(root, raw, version, catalog_hash)` | True only for an upgrade receipt matching this repository, original binding hash, adopted version and catalogue hash. |
 
 An explicit package list may describe uncommitted candidate files. A legacy pilot without a list selects only Git-tracked ASDG paths.

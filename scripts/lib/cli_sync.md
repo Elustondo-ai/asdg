@@ -19,6 +19,7 @@ It plans local distribution edits, retains local differences and applies only a 
 | `classify(old, incoming, local)` | Accepts SHA-256 strings or None and returns `(status, reason)`; equal bytes are unchanged, source-only changes can apply, target-only changes remain local. |
 | `preview(operation, source_path, target_path)` | Returns `(report, changes, source, target)` with no writes; checks actual destination bytes even for unlisted addition collisions. |
 | `synchronize(operation, source_path, target_path, *, apply=False, expected_plan=None)` | Returns a JSON-ready report; apply requires matching digest, zero conflicts and, for upgrade, a current canonical delivery manifest. |
+| `source_build(source)` | For upgrade, attributes the canonical snapshot to HEAD only when its selected bytes equal HEAD ([build identity](build_identity.md)); the plan writes or, when unattributed, removes the client's `metadata/build.json`, and the adoption record keeps `build`. |
 | `render(report)` | Produces all file statuses, reasons, totals, warnings and the review digest as text. |
 
 Reports include source/target identity, HEAD, version, snapshot hash, baseline provenance and one row per relevant path.

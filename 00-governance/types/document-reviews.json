@@ -34712,6 +34712,522 @@
       "provenance": {
         "role": "ASDG-ADMIN"
       }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.16-review-build-identity.json",
+      "sha256": "227e0293aa600dc07a1ab73619c5b45eafade777d5d3399fb2f7cab1ca730025",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      },
+      "exists": true
+    },
+    {
+      "path": "docs/asdg/07-planning/02.16-review-build-identity.md",
+      "sha256": "d4c055014c1d4686ad13396a19225fc7615c637543f87b2c3fcb2de1e111e4e1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      },
+      "exists": true
+    },
+    {
+      "path": "docs/distribution-build.md",
+      "sha256": "9dff6197f759bfd8d608c3bed4c652c2bc3248f706eb620567a9cccfd2c76c07",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "cab3701f3c3f646bd5999f8d51d0b184162e58a4ca41fbcb55a2aed3c8518689",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "metadata/package-files.json",
+      "sha256": "eb96949c14d1c2a00cdf05242dcda52d12e83661f2a4afefd913bfd7d7f53abb",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "fbd4085e32736960d8d559fb706a5d9738566d7539e5fc82c8b7e309212e6246",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/build_distribution.md",
+      "sha256": "3c99d4e0e3dc89bfb617708897442bf124203683467c3df709598f0e40278e82",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "5a3bf22b227360dfac770772553caef70ea998c5b947babd2dd28bfc317f6ecb",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/build_distribution.py",
+      "sha256": "fbb19e94b2648273ad2a7b1ab06c09c74b6014dc7880a2474bab71e1784110cf",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "ca15eb2556416403d0b33295b0cbda46e1861eab6d51d9316cda7b88529d8e05",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/README.md",
+      "sha256": "f177548cfd28eaa3c2537ff20ac080e90bf36740388e867bedbe5df180edd44c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "d04ff4757b94beaf1f1042b6e1c0e529c2896ca785e4a88fff37f7cb9a67cca5",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/build_identity.md",
+      "sha256": "ff2c0e43efc62b91def79ee4875ec12124b9c64d2f46d0acb66d3ad994687823",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      },
+      "exists": true
+    },
+    {
+      "path": "scripts/lib/build_identity.py",
+      "sha256": "2165340a52e37c175be309b9191e70e89cfe1f07c23b25f470814e4826e63f2b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      },
+      "exists": true
+    },
+    {
+      "path": "scripts/lib/cli_install.md",
+      "sha256": "b2cbc99d8768e273f2a5290b44097e50bec5df28898c30e3d60fbb1617567e65",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "52a14ec666378c503031c37ec192c537de47e78d653661a8ce52514e05ac46ff",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_install.py",
+      "sha256": "25f88fb4c7eff58f8d0ae13976eb3426be98f80a684b9694951624a581183e07",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "98c4d9ac1a38d266c25e697cad0a32f21f7c0c88cb230bee12afa7e3321082b3",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_install_source.md",
+      "sha256": "de5931e4f9772bc3879044b18d2303e3f58c37da4ef23e0d6d2d7b5b042c16be",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "c16350866d4b99a16cacf19533bf510d2b06dfa6b2b21ba84b08340ea75231ea",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_install_source.py",
+      "sha256": "1a92221c0332b37541d9777f68eeab21996bfc1ae9eeeab8c1ec262966925b81",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "196370a6752d8e0108e5006f9848ec0f4536b9d09400275bed6a4ee3ca8717fd",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_project.md",
+      "sha256": "88a99afb74922390e3d745addd4d927f06d05d406893ae5720b8abe8deb4cfc9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "6cd5ac822ea8d7614eee69e7a8e6244658ca1f3c0e92d61bf4ef77f9ad7f8ced",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_project.py",
+      "sha256": "b79645c4e7ea45e5b85b6fd9338253012c82d0fc6aee8e0250b766d8ea551b75",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "828e65c3988fa8a367f759768e7c2df8096be32180b7b202cd857b535c7fc690",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_status.md",
+      "sha256": "24900834f1fb1b61f52c07e1ed4a03d57ee4bc8d2904bb17e56e855b55a20403",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "8a450092bf8d75812f22a0ab32aa891b97dc4b223135f063a6a16beae715f785",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_status.py",
+      "sha256": "2b83b30c7a2638d5b1dff68c7cfaff2b73c9927515b75a5e8f27e23e0b57b19b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "e576c8f0b589d9f4e59a9fb162b16230d041c7e48547efe86a8d59f793e1943d",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_sync.md",
+      "sha256": "d6b3e754d24ed46dc3e289690b3bb082910afb1d7e1b4f053983e51ba25d2e9e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "5a00983ffc79dadf9b56c856c7dd1b3f67d570fe143f5f19463d6944103b4629",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_sync.py",
+      "sha256": "96f200e9c64f0e359c0b1e9cb91a11672ba4c06a2e273035dd2bfb7299cdb172",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "a677df53ceaf52c784fe5e67c43287081b6c0b94413ce27060a6d7dfb2c3d55a",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_sync_manifest.md",
+      "sha256": "20f75c2a23a9c395ef6da8b06fba345a31bf8f1543519f1d0db998ad1941cf9d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "efe3526d0d2fbe37853db3368bd3d67a4188f20b7574861ec83f1315bce83d2c",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_sync_manifest.py",
+      "sha256": "5a997ec9148f46611761bcda675c5538091e822dba64ac8d9a9fc1028c308aaf",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "c67e890622bef90e2c9d276377376d953260b30d9b3a2fba2bf47ef05a667811",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/distribution_files.md",
+      "sha256": "4b1c4b804f637592dafd41b2b82ee461279da7745ae5871b1e98171b9aa23747",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "9cb48f3dd5a2f57a4ffa29eb5c5b982e901c69fa4dd85587233ad572ca01efbc",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/distribution_files.py",
+      "sha256": "e197126aa3b8b84380495e6318530a751e558b05a25dd6de26b4d9fea2da04df",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "87210721a1fb587759c20ea286a76de7de3ad84eeb5ce9f32d48f1760621dd1b",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-status/SKILL.md",
+      "sha256": "1e60088c63ad9c746a69e3941178cba0d6fdd43f392facf35efbfa573e49707e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "bdd8e5695e398e6fce54c9eaac48b2e2cd20f99298bd7a9ac9a87d806b29b32e",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-status/status-format.md",
+      "sha256": "ff99d7de30344477e9750527cc80ac9ac3c1bdfee53b8c7fd634653b042a8d1e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "919364ce1d320a64684a3be69847666188138bd453a5c79b0733ba7c356efb9e",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/README.md",
+      "sha256": "0e0ae4571bdc8bddaf26e7558d0269ae421823fa6249c690909334676780f9b3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "7726f6d96210ff06bea2c061bb7fd5e0cd98c53c6fc2022e7c51bf66d4317eb3",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_build_identity.md",
+      "sha256": "17a2248c35ad4e67e18002755c95156a6c365b5648998c73a62d38d47568058c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      },
+      "exists": true
+    },
+    {
+      "path": "tests/test_build_identity.py",
+      "sha256": "666e6ba4792272810a18a31b0e9b0cc8e6b08c49d1d54ba242f3eedab15415c9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      },
+      "exists": true
+    },
+    {
+      "path": "tests/test_sync.md",
+      "sha256": "150d047193d3552bcb5dbe6516528ea43205cb9205ae3f5b3d41fc61861a6be2",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "7865e0409acd0bb5b4d9afe3dd0923d3cdaf52229d8654f72e22d62c0a435e7b",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_sync.py",
+      "sha256": "7891b3de7b0f6aa27dac069cbc243de776adcffe3bb5fd4acaca891c69178b05",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T02:40:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Commit-based build identity and installed update baseline",
+        "review": "docs/asdg/07-planning/02.16-review-build-identity.json"
+      },
+      "previous_state": {
+        "sha256": "ad0e4972e895fa5b72545cb6469a4ce7aeb6dc0ec08e3834cab90eeb912cef52",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
     }
   ],
   "distribution_version": "0.3.0-pilot.2"

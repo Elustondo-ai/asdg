@@ -35,7 +35,8 @@ Inputs are project/repository Paths and optional project_state (`new`, `defining
 | `client_report(root, repo, installed)` | Returns each client's selection, `NOT_SELECTED`, `COMPLETE` or `DAMAGED` status, problems and `runtime: NOT_VERIFIED`, plus all problems. |
 | `preflight_package(repo)` | Checks thirteen role definitions/adapters, the separate Admin package through `cli_session.validate_admin`, and exactly one shared Focus picker template; rejects missing metadata or retired per-role Focus templates. Returns agents and catalogue digest. |
 | `plan_initialization(root, repo=REPO, project_state=None, client=None, timestamp=None, source=None)` | Returns report and Change objects for shared files, selected clients, bridges and receipts; never writes. A supplied timestamp freezes generated content; portable provenance records version/commit/hashes without an absolute source path. |
-| `inspect(root, repo=REPO)` | Returns structure_ok, missing items, binding/version details, sprint state and per-client `integrations`; a damaged selected client fails the structure, an unselected one does not. |
+| `inspect(root, repo=REPO)` | Returns structure_ok, missing items, binding/version details, `build`, sprint state and per-client `integrations`; a damaged selected client fails the structure, an unselected one does not. |
+| `build_report(repo, value)` | Describes the installed [build](build_identity.md) from the client's own `asdg/metadata/build.json`; without one it shows the release label and, until any synchronization, the binding's install commit. Never reads Git. |
 
 ## Effects and failure behavior
 

@@ -22,7 +22,7 @@ def package_files(core: Path) -> list[Path]:
     for name in sorted(names):
         relative = PurePosixPath(name)
         if (not name or relative.is_absolute() or '..' in relative.parts or '\\' in name
-                or relative.as_posix() != name or name == 'metadata/sync-state.json'
+                or relative.as_posix() != name or name in ('metadata/sync-state.json', 'metadata/build.json')
                 or any(part in {'.git', '__pycache__', '.asdg', 'build', 'logs'} for part in relative.parts)
                 or relative.suffix == '.pyc'):
             raise ValueError('Unsafe package path: ' + name)

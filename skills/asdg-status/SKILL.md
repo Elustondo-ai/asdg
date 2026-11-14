@@ -13,7 +13,7 @@ Keep three concerns separate: Status reports facts; [Role](../asdg-role/SKILL.md
 ## Collect current evidence
 
 Identify the target project from explicit context or its verified binding; never substitute the methodology provider.
-Run `python3 asdg/scripts/cli.py status --json` from the client root for recorded lifecycle, release, sprint and structural facts.
+Run `python3 asdg/scripts/cli.py status --json` from the client root for recorded build, lifecycle, release, sprint and structural facts; its `build.display` is the installed ASDG build.
 Use this deterministic command without SDK advice. If denied or unavailable, report the exact gap once and qualify retained facts as stale.
 Inspect relevant project artifacts under `docs/asdg/` and durable review records when needed to explain actual progress or pending decisions.
 Report observed but unregistered work separately from registered stage evidence; an empty index never proves no work exists.

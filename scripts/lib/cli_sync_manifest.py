@@ -62,7 +62,7 @@ def methodology_path(name: str) -> str:
     roots = {'AGENTS.md', 'README.md', 'LICENSE', 'CODEX-PROMPT.md',
              'admin', 'docs', 'metadata', 'scripts', 'skills', 'templates', 'tests', 'scaffolds'}
     if (not name or p.is_absolute() or p.as_posix() != name or '..' in p.parts or '\\' in name
-            or any(c in name for c in '\n\r\0') or name == STATE
+            or any(c in name for c in '\n\r\0') or name in (STATE, 'metadata/build.json')
             or any(part in {'.git', '.asdg', '__pycache__', 'logs', 'build', 'components'} for part in p.parts)
             or (top not in roots and not re.fullmatch(r'(?:0[0-9]|1[0-2])-[a-z0-9-]+', top))
             or (len(p.parts) > 1 and top == 'docs' and p.parts[1] == 'asdg')
@@ -193,6 +193,10 @@ def baseline(source: dict, target: dict) -> tuple[dict, str]:
             if entry.get('target_repository') != owner['info']['repository']:
                 raise Conflict('Adoption record belongs to another repository.')
             return entry['files'], 'adopted snapshot from ' + other
+    for client, canonical in ((target, source), (source, target)):
+        found = installed_baseline(client, canonical)
+        if found:
+            return found
     # An exact shared delivery manifest establishes ancestry for older pilots.
     candidates = []
     for item in (source, target):
@@ -216,6 +220,28 @@ def baseline(source: dict, target: dict) -> tuple[dict, str]:
     if common:
         return {}, 'none: multiple shared historical deliveries; reconcile or restore an adoption record'
     return {}, 'none: differing existing files require reconciliation'
+
+
+def installed_baseline(client: dict, canonical: dict) -> tuple[dict, str] | None:
+    """Recover what a never-synchronized client installed from the canonical commit it records."""
+    from build_identity import commit_package, read_record, snapshot_sha256
+    if client['binding_raw'] is None or client['state']['upstreams']:
+        return None
+    record = read_record(client['core'])
+    binding = json.loads(client['binding_raw'])
+    source = binding.get('installation_source') if isinstance(binding, dict) else None
+    if record:
+        commit, expected = record['commit'], record['snapshot_sha256']
+    elif isinstance(source, dict) and source.get('commit'):
+        commit, expected = source['commit'], source.get('snapshot_sha256')
+    else:
+        return None
+    prefix = '' if canonical['core'] == canonical['root'] else 'asdg/'
+    entries = commit_package(canonical['root'], commit, prefix)
+    # Only an exact snapshot match proves these bytes are what the client received.
+    if not entries or snapshot_sha256(entries) != expected:
+        return None
+    return {name: digest(data) for name, data in entries.items()}, 'installed commit ' + commit[:7]
 
 
 def adopted_binding(root: Path, raw: bytes, version: str, catalog_hash: str) -> bool:

@@ -12,6 +12,7 @@ from unittest.mock import patch
 
 CORE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(CORE / 'scripts/lib'))
+from build_identity import BUILD
 from cli_files import Conflict
 from cli_sync import synchronize
 from cli_sync_manifest import DESCRIPTOR, INDEX, MANIFEST, STATE, digest, encoded
@@ -88,6 +89,22 @@ class SyncTests(unittest.TestCase):
         self.assertFalse((self.canonical / 'asdg').exists())
         self.assertTrue((self.canonical / STATE).is_file())
         self.assertEqual((self.pilot / 'app.py').read_bytes(), before)
+
+    def test_upgrade_records_a_build_only_for_committed_canonical_bytes(self):
+        self.edit(self.canonical, 'docs/a.md', 'Canonical change\n')
+        self.commit(self.canonical)
+        head = git(self.canonical, 'rev-parse', 'HEAD').strip()
+        report = self.apply('upgrade')
+        self.assertEqual(report['build']['commit'], head)
+        record = json.loads((self.pilot / 'asdg' / BUILD).read_text())
+        self.assertEqual(record, report['build'])
+        state = json.loads((self.pilot / 'asdg' / STATE).read_text())
+        self.assertEqual(state['upstreams'][next(iter(state['upstreams']))]['build'], record)
+        self.assertEqual(self.apply('upgrade')['written_files'], [])
+        self.edit(self.canonical, 'docs/b.md', 'Uncommitted canonical edit\n')
+        self.assertIsNone(self.preview('upgrade')['build'])
+        self.apply('upgrade')
+        self.assertFalse((self.pilot / 'asdg' / BUILD).exists())  # Never claim the earlier build.
 
     def commit(self, root):
         git(root, 'add', '.')

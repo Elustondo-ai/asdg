@@ -14,3 +14,4 @@ The list includes itself and the current manifest. The manifest excludes its own
 Traversal, absolute paths, Git metadata, client state, local `metadata/sync-state.json` adoption records, logs, build output and Python caches are rejected.
 Changing the list is a reviewable source edit; file presence alone never adds a file to a release.
 See the [build workflow](../../docs/distribution-build.md) for the distribution diagram and commands.
+`metadata/sync-state.json` and `metadata/build.json` can never be listed: both are written per client, and a build record cannot hash itself.

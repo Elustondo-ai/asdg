@@ -1,0 +1,78 @@
+{
+  "requester": "Pablo",
+  "role": "ASDG-ADMIN",
+  "focus": "Commit-based build identity",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "starting_revision": "fbea1f96166f5ca42eef0549f4092aa234f9b90e",
+  "branch": "build-identity",
+  "source": "Elustondo-ai/asdg",
+  "decision": "Identify every build by its canonical commit: UTC committer timestamp plus hash, full hash stored, seven characters displayed. Named release labels remain for deliberate releases.",
+  "display": "ASDG build <UTC committer timestamp> · <short hash>",
+  "attribution_rule": "A build is attributed to a commit only when every selected package file equals that commit's blob; otherwise no build record is produced.",
+  "client_record": "asdg/metadata/build.json, written by ZIP install, direct Git install and update; installs also keep installation_source.build in .asdg/project.json. Status never reads Git.",
+  "update_baseline_fix": "Never-synchronized clients use the commit named by build.json or installation_source.commit as the update baseline, only when the package snapshot matches. A copy of Alice went from 22 conflicts to 0.",
+  "compatibility": "Installs without a record, including 0.3.0-pilot.4 clients, report the release label and, when still valid, the binding commit.",
+  "changed": [
+    "00-governance/types/document-reviews.json",
+    "docs/distribution-build.md",
+    "metadata/MANIFEST.json",
+    "metadata/package-files.json",
+    "scripts/build_distribution.md",
+    "scripts/build_distribution.py",
+    "scripts/lib/README.md",
+    "scripts/lib/build_identity.md",
+    "scripts/lib/build_identity.py",
+    "scripts/lib/cli_install.md",
+    "scripts/lib/cli_install.py",
+    "scripts/lib/cli_install_source.md",
+    "scripts/lib/cli_install_source.py",
+    "scripts/lib/cli_project.md",
+    "scripts/lib/cli_project.py",
+    "scripts/lib/cli_status.md",
+    "scripts/lib/cli_status.py",
+    "scripts/lib/cli_sync.md",
+    "scripts/lib/cli_sync.py",
+    "scripts/lib/cli_sync_manifest.md",
+    "scripts/lib/cli_sync_manifest.py",
+    "scripts/lib/distribution_files.md",
+    "scripts/lib/distribution_files.py",
+    "skills/asdg-status/SKILL.md",
+    "skills/asdg-status/status-format.md",
+    "tests/README.md",
+    "tests/test_build_identity.md",
+    "tests/test_build_identity.py",
+    "tests/test_sync.md",
+    "tests/test_sync.py"
+  ],
+  "automated_checks": {
+    "environment": "macOS, owner checkout, Git 2.50.1",
+    "integrity": "python3 -B scripts/check.py --integrity: PASS on the final tree",
+    "portable_python_3_15_0": {
+      "run": 182,
+      "skipped": 2,
+      "failures": 0,
+      "errors": 0
+    },
+    "portable_python_3_9_6": {
+      "run": 182,
+      "skipped": 2,
+      "failures": 0,
+      "errors": 0
+    },
+    "skip_reason": "Two report renderer tests require reviewed provider renderer dependencies.",
+    "new_tests": [
+      "tests/test_build_identity.py: 7 tests",
+      "tests/test_sync.py: test_upgrade_records_a_build_only_for_committed_canonical_bytes"
+    ]
+  },
+  "rehearsals": [
+    "Pinned-commit direct Git install into a disposable copy of Alice: status showed the build line, unchanged after a client-only commit.",
+    "Update of a disposable copy of Alice's fbea1f9 installation: baseline 'installed commit fbea1f9', 0 conflicts, verify ALL GOOD."
+  ],
+  "known_gaps": [
+    "The dashboard does not show the build line.",
+    "Adapter refresh remains a separate step from update."
+  ],
+  "trust_limitation": "Checks are automated; native client invocation and hook trust were not exercised. Committing was explicitly requested by the owner; push, merge and release remain human actions."
+}

@@ -239,6 +239,21 @@ def preflight_package(repo):
     return agents, digest
 
 
+def build_report(repo, value):
+    """Installed build identity from the client's own record; legacy installs fall back to the binding."""
+    from build_identity import installed_build
+    from distribution_files import package_files
+    core = distribution_core(repo)
+    try:
+        entries = {p.relative_to(core).as_posix(): p.read_bytes() for p in package_files(core)}
+    except (OSError, ValueError) as exc:
+        return {'state': 'INVALID', 'display': 'ASDG build unknown', 'release': VERSION, 'problem': str(exc)}
+    source = (value or {}).get('installation_source') or {}
+    # After any synchronization the init-time commit no longer describes the installed bytes.
+    legacy = None if (core / 'metadata/sync-state.json').exists() else source.get('commit')
+    return installed_build(core, entries, VERSION, legacy)
+
+
 def plan_initialization(root, repo=REPO, project_state=None, client=None, timestamp=None, source=None):
     from cli_status import LIFECYCLE, PROJECT_STATUSES, lifecycle_rules, read_lifecycle
     timestamp = timestamp or now()
@@ -384,7 +399,8 @@ def inspect(root, repo=REPO):
             'implementation_enforcement': 'HOOK_TRUST_NOT_ASSESSED' if codex else 'NO_ASDG_GUARD_INSTALLED',
             'methodology_root': str(repo / 'asdg'), 'catalog_sha256': digest,
             'methodology_revision_now': None, 'methodology_revision_at_init': (value or {}).get('methodology_revision_at_init'),
-            'distribution_version': VERSION, 'installation_mode': 'embedded-distribution',
+            'distribution_version': VERSION, 'build': build_report(repo, value),
+            'installation_mode': 'embedded-distribution',
             'runtime_contract': str(repo / 'asdg/00-governance/docs/runtime-contract.md'),
             'coordinator_entry': str(repo / 'asdg/00-governance/AGENTS.md'),
             'native_agent_registration': 'CONFIGURED_NOT_LIVE_VERIFIED' if codex else 'NOT_INSTALLED',

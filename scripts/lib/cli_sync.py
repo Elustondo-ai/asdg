@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from build_identity import BUILD, commit_build, record_bytes
 from cli_files import Conflict, apply as apply_changes, plan, read_bytes, safe_path
 from cli_sync_manifest import (PROVIDER, STATE, MANIFEST, adopted_binding, baseline, digest,
                                encoded, methodology_path, repository_id, snapshot)
@@ -34,6 +35,15 @@ def endpoints(operation: str, source: dict, target: dict) -> None:
         catalog_hash = pilot['hashes'].get('00-governance/types/agent-catalog.json')
         if not adopted_binding(pilot['root'], pilot['binding_raw'], pilot['info']['version'], catalog_hash):
             raise Conflict('Pilot version differs from its binding without an adopted upgrade.')
+
+
+def source_build(source: dict) -> dict | None:
+    """Attribute the canonical snapshot only when its selected bytes equal HEAD."""
+    prefix = '' if source['core'] == source['root'] else 'asdg/'
+    try:
+        return commit_build(source['root'], source['info']['head'], source['info']['version'], source['data'], prefix)
+    except Conflict:
+        return None
 
 
 def classify(old: str | None, incoming: str | None, local: str | None) -> tuple[str, str]:
@@ -80,6 +90,13 @@ def preview(operation: str, source_path, target_path):
         report['warnings'].append('Source worktree differs from its delivery manifest; snapshot hashes identify the actual proposed bytes.')
     if operation == 'upgrade' and not source['info']['manifest_matches_worktree']:
         report['warnings'].append('Upgrade apply requires a verified canonical manifest; refresh/review it before applying.')
+    if operation == 'upgrade':
+        report['build'] = source_build(source)
+        relative = (target['core'] / BUILD).relative_to(target['root']).as_posix()
+        # An unattributed source removes a stale record rather than claiming the old build.
+        change = plan(target['root'], relative, record_bytes(report['build']) if report['build'] else None, replace=True)
+        if change:
+            changes.append(change)
     report['plan_id'] = digest(encoded(report))
     return report, changes, source, target
 
@@ -103,6 +120,8 @@ def synchronize(operation: str, source_path, target_path, *, apply=False, expect
               'validation_status': source['info']['validation_status'],
               'human_approval_status': source['info']['human_approval_status'],
               'files': source['hashes']}
+    if report.get('build'):
+        record['build'] = report['build']
     state = target['state']
     state['upstreams'][source['info']['repository']] = record
     receipt_path = (target['core'] / STATE).relative_to(target['root']).as_posix()

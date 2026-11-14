@@ -6,6 +6,7 @@ import re
 import tempfile
 from pathlib import Path
 
+from build_identity import BUILD, label, record_bytes
 from cli_files import Conflict, apply, plan
 from cli_install_source import git_root, package, source_snapshot
 from cli_model import REPO, git_value, json_bytes, now, sha
@@ -52,6 +53,14 @@ def install(*, source=None, target=None, commit=None, client=None, project_state
                 changes.append(change)
             files.append({'path': relative, 'action': 'added' if change else 'unchanged',
                           'sha256': sha(data), 'kind': 'distribution'})
+        if info.get('build'):
+            # The client keeps its own build record; status never needs the canonical repository.
+            data = record_bytes(info['build'])
+            change = plan(root, 'asdg/' + BUILD, data)
+            if change:
+                changes.append(change)
+            files.append({'path': 'asdg/' + BUILD, 'action': 'added' if change else 'unchanged',
+                          'sha256': sha(data), 'kind': 'build-identity'})
         report, generated = plan_initialization(root, repo=normalized, project_state=project_state,
                                                 client=client, timestamp=stamp, source=info)
         if not source and any(client_files(root, origin, name) != client_files(root, normalized, name)
@@ -105,6 +114,8 @@ def render(report):
              'Target: ' + report['project_root']]
     if report['source']['commit']:
         lines.append('Verified source commit: ' + report['source']['commit'])
+    lines.append(label(report['source']['build']) if report['source'].get('build')
+                 else 'ASDG build: not recorded by this package')
     for row in report['files']:
         lines.append(f"{row['action']:9} {row['path']}  sha256={row['sha256']}")
         if row.get('diff'):

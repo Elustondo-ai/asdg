@@ -15,6 +15,7 @@ Both acquisition paths normalize only selected distribution members into a tempo
 | `install(...)` | Defaults to preview. Accepts source/commit for a clone, target, client, initial status, apply_changes, expected_plan and optional team_inventory. Returns source identity, every distribution file, generated diffs, planned paths and verification results. |
 | `render(report)` | Shows the full file/team plan or file completion with client work pending; it never runs Status or creates chats. |
 
+A source with a [build record](build_identity.md) plans `asdg/metadata/build.json` (kind `build-identity`) and records it as `installation_source.build` in `.asdg/project.json`; the preview text shows `ASDG build <UTC> · <short hash>`.
 The timestamp in the plan token freezes generated timestamps across preview and apply. Replanning hashes source bytes, target Git identity, destination bytes, client choice and initial status; changed inputs require another preview.
 No plan file is written. Temporary normalization is removed after both preview and apply; target and source are unchanged during preview.
 The token identifies reviewed bytes; it is not human authentication or methodology approval. Prompts must wait for explicit developer approval.
