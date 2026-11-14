@@ -60,7 +60,7 @@ footer{{font-size:13px;color:var(--muted);padding:4px 0 20px}}a{{color:var(--tea
 <section><div class="eyebrow">Purpose completion</div><h2>{escaped(completion['status'])}</h2>
 <p>{escaped(completion['reason'])}</p></section>
 <section><div class="eyebrow">Project binding</div><dl><dt>Provider</dt><dd>{escaped(status['provider'])}</dd>
-<dt>CLI version</dt><dd>{escaped(status['cli_version'])}</dd><dt>Hook config</dt><dd>{escaped(status['guard']['configuration'])}</dd>
+<dt>ASDG build</dt><dd>{escaped((status.get('build') or {}).get('display', 'ASDG build unknown'))}</dd><dt>Hook config</dt><dd>{escaped(status['guard']['configuration'])}</dd>
 <dt>Hook trust</dt><dd>{escaped(status['guard']['runtime_trust'])}</dd></dl>
 <p class="muted">{escaped(status['project_root'])}</p></section></div></div>
 <footer>Read-only · Evaluated {escaped(status['evaluated_at'])} · Refreshes every 30 seconds · <a href="/status.json">JSON status</a><br>

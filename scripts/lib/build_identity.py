@@ -146,9 +146,8 @@ def installed_build(core: Path, entries: dict, release: str, legacy_commit: str 
     except Conflict as exc:
         return {'state': 'INVALID', 'display': 'ASDG build record invalid', 'release': release, 'problem': str(exc)}
     if record is None:
-        shown = f'ASDG {release}' + (f' · {legacy_commit[:SHORT]}' if legacy_commit else '')
         return {'state': 'NOT_RECORDED', 'release': release, 'commit': legacy_commit,
-                'display': shown + (' (build time not recorded)' if legacy_commit else ' (build not recorded)')}
+                'display': 'ASDG build not recorded' + (f' · {legacy_commit[:SHORT]}' if legacy_commit else '')}
     matches = record['snapshot_sha256'] == snapshot_sha256(entries)
     return dict(record, state='RECORDED' if matches else 'LOCAL_CHANGES',
                 display=label(record) + ('' if matches else ' (local methodology changes)'))

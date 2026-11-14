@@ -7,7 +7,7 @@ Use a neutral project voice; the selected specialist remains conversation contex
 ## 1. Status lines
 
 Start with the build line exactly as status reports it in `build.display`, such as `ASDG build 2026-11-14T02:13:52Z · af85794`, then the compact role/subject/attitude declaration from the session receipt, a factual summary and an Area / Current status table or equivalent lines.
-Show the named release label separately; a `NOT_RECORDED`, `LOCAL_CHANGES` or `INVALID` build state is a fact to report, never inferred from Git.
+The build line is the displayed ASDG version; do not show the internal release label. A `NOT_RECORDED`, `LOCAL_CHANGES` or `INVALID` build state is a fact to report, never inferred from Git.
 Include project state, structure, stage progress/acceptance, sprint/release and implementation permission; show goal, role, subject and attitude/scope separately when known.
 Distinguish agent readiness from human acceptance, including review staleness where recorded.
 Reflect explicit user deferrals separately from the CLI's missing-evidence heuristic.

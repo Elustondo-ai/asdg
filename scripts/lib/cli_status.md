@@ -31,7 +31,7 @@ Lifecycle data is schema_version:1 with stages keyed by two-digit strings. Stage
 | `recommendation(stages: list[dict], sprint: dict \| None, errors: list[str]) -> dict` | Returns a deterministic suggestion from errors and earliest missing evidence; it is not a human priority decision. |
 | `project_status(root: Path, repo: Path=REPO, requested_paths: list[str] \| None=None) -> dict` | Returns the complete snapshot for root/repo and optional requested implementation paths; collects structural errors. |
 | `stage_label(stage: dict \| None) -> str` | Formats a stage number and name, or UNKNOWN. |
-| `render_status(status: dict) -> str` | Opens with the installed build line (`ASDG build <UTC> · <short hash>`) and `Release label`, then formats the factual snapshot for console output, including each client integration's status; the guard reads `NOT_INSTALLED` when Codex is not selected. |
+| `render_status(status: dict) -> str` | Opens with the installed build line (`ASDG build <UTC> · <short hash>`) as the displayed ASDG version, then formats the factual snapshot for console output, including each client integration's status; the guard reads `NOT_INSTALLED` when Codex is not selected. |
 | `render_next(status: dict) -> str` | Formats the deterministic next-action guidance and any implementation block. |
 
 ## Effects and failure behavior

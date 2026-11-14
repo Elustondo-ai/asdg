@@ -16,6 +16,7 @@ sys.path.insert(0, str(CORE / 'scripts/lib'))
 from build_distribution import build, refresh_manifest
 from build_identity import BUILD, label
 from cli_install import install
+from cli_dashboard import render_dashboard
 from cli_sync import synchronize
 from distribution_files import package_files
 
@@ -145,7 +146,15 @@ class BuildIdentityTests(unittest.TestCase):
         (client / 'app.py').write_text('print("client-only change")\n')
         git(client, 'commit', '-qam', 'Client-only change', date='2026-12-02T00:00:00+00:00')
         self.assertEqual(self.status_build(client), before)
-        self.assertIn(label(record), self.cli(client, 'status').stdout)
+        text = self.cli(client, 'status').stdout
+        self.assertEqual(text.splitlines()[2], label(record))  # The build line is the displayed version.
+        self.assertNotIn('Release label', text)
+        self.assertNotIn(record['release'], text)
+        status = json.loads(self.cli(client, 'status', '--json').stdout)
+        self.assertEqual((status['cli_version'], status['distribution_version']), (record['release'],) * 2)
+        page = render_dashboard(status)
+        self.assertIn(label(record), page)
+        self.assertNotIn(record['release'], page)
         (client / 'asdg/README.md').write_text('Local methodology edit\n')
         self.assertEqual(self.status_build(client)['state'], 'LOCAL_CHANGES')
 
@@ -166,7 +175,7 @@ class BuildIdentityTests(unittest.TestCase):
         self.assertIn('build record does not match', result.stdout + result.stderr)
         self.assertFalse((foreign / '.asdg').exists())
 
-    def test_installations_without_a_record_keep_reporting_their_release(self):
+    def test_installations_without_a_record_keep_their_release_internal(self):
         plain = self.root / 'unversioned copy'
         shutil.copytree(self.source, plain, ignore=shutil.ignore_patterns('.git'))
         archive = build(plain, self.root / 'legacy')
@@ -175,12 +184,13 @@ class BuildIdentityTests(unittest.TestCase):
         self.zip_install(legacy_zip, archive)
         legacy = self.status_build(legacy_zip)
         self.assertEqual(legacy['state'], 'NOT_RECORDED')
-        self.assertEqual(legacy['display'], f"ASDG {legacy['release']} (build not recorded)")
+        self.assertEqual(legacy['display'], 'ASDG build not recorded')
+        self.assertEqual(legacy['release'], json.loads((CORE / 'metadata/distribution.json').read_text())['version'])
+        self.assertNotIn(legacy['release'], self.cli(legacy_zip, 'status').stdout)
         legacy_clone = self.client('legacy clone client')
         self.clone_install(legacy_clone)
         (legacy_clone / 'asdg' / BUILD).unlink()  # As in an existing 0.3.0-pilot.4 clone installation.
-        self.assertEqual(self.status_build(legacy_clone)['display'],
-                         f"ASDG {legacy['release']} · {self.head[:7]} (build time not recorded)")
+        self.assertEqual(self.status_build(legacy_clone)['display'], 'ASDG build not recorded · ' + self.head[:7])
 
 
     def test_update_after_a_fresh_install_uses_the_installed_commit_as_baseline(self):

@@ -1,0 +1,63 @@
+{
+  "requester": "Pablo",
+  "role": "ASDG-ADMIN",
+  "focus": "Build line as the displayed ASDG version",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "starting_revision": "1154edf1e53e48ced53b8dbe37a30456b10cfb7f",
+  "branch": "status-build-version",
+  "source": "Elustondo-ai/asdg",
+  "decision": "Status views display 'ASDG build <UTC committer timestamp> · <short hash>' as the ASDG version and no longer show the release label.",
+  "removed_from_display": [
+    "CLI status text line 'Release label: <version>'",
+    "/asdg-status report release label",
+    "Dashboard 'CLI version' row",
+    "Pilot label in the display for installs without a build record"
+  ],
+  "preserved_internal": [
+    "scripts/lib/cli_model.py VERSION",
+    "metadata/distribution.json version",
+    ".asdg/project.json distribution_version and cli_version",
+    "status JSON cli_version and distribution_version",
+    "build.release"
+  ],
+  "legacy_display": "ASDG build not recorded[ · <binding commit>]",
+  "unchanged_out_of_scope": [
+    "asdg --version",
+    "installer preview header"
+  ],
+  "changed": [
+    "00-governance/types/document-reviews.json",
+    "docs/asdg/07-planning/02.17-review-build-as-version.json",
+    "docs/asdg/07-planning/02.17-review-build-as-version.md",
+    "metadata/MANIFEST.json",
+    "scripts/lib/build_identity.md",
+    "scripts/lib/build_identity.py",
+    "scripts/lib/cli_dashboard.md",
+    "scripts/lib/cli_dashboard.py",
+    "scripts/lib/cli_project.md",
+    "scripts/lib/cli_status.md",
+    "scripts/lib/cli_status.py",
+    "skills/asdg-status/status-format.md",
+    "tests/test_build_identity.md",
+    "tests/test_build_identity.py"
+  ],
+  "automated_checks": {
+    "environment": "macOS, owner checkout, Git 2.50.1",
+    "integrity": "python3 -B scripts/check.py --integrity: PASS on the final tree",
+    "portable_python_3_15_0": {
+      "run": 182,
+      "skipped": 2,
+      "failures": 0,
+      "errors": 0
+    },
+    "portable_python_3_9_6": {
+      "run": 182,
+      "skipped": 2,
+      "failures": 0,
+      "errors": 0
+    },
+    "skip_reason": "Two report renderer tests require reviewed provider renderer dependencies."
+  },
+  "trust_limitation": "Automated checks only; native client invocation and hook trust were not exercised. Commit, push, merge and the real Alice update remain owner decisions."
+}

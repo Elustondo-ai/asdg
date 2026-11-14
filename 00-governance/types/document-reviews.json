@@ -35228,6 +35228,212 @@
         "visible_review_markers": [],
         "approval_binding": "No approval inferred or transferred."
       }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.17-review-build-as-version.json",
+      "sha256": "ee6581de4d192b5c5c1590e726e7e2853a1a59b7c19afe2c0902e5c37a8aa94d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T03:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Build line as the displayed ASDG version",
+        "review": "docs/asdg/07-planning/02.17-review-build-as-version.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      },
+      "exists": true
+    },
+    {
+      "path": "docs/asdg/07-planning/02.17-review-build-as-version.md",
+      "sha256": "4cc56c9ccd34391b92b529c12e35ce761b21fec269448ee5efa958bf56b0c2c6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T03:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Build line as the displayed ASDG version",
+        "review": "docs/asdg/07-planning/02.17-review-build-as-version.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      },
+      "exists": true
+    },
+    {
+      "path": "scripts/lib/build_identity.md",
+      "sha256": "c0a97127a42ccf719a2b46b638863620cbe50a8ed2ed8a08609f673653e127e3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T03:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Build line as the displayed ASDG version",
+        "review": "docs/asdg/07-planning/02.17-review-build-as-version.json"
+      },
+      "previous_state": {
+        "sha256": "ff2c0e43efc62b91def79ee4875ec12124b9c64d2f46d0acb66d3ad994687823",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/build_identity.py",
+      "sha256": "1e38d57181e192875c66cdf79d322258cf04e02777c2bc72c1dc54d10d5f969c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T03:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Build line as the displayed ASDG version",
+        "review": "docs/asdg/07-planning/02.17-review-build-as-version.json"
+      },
+      "previous_state": {
+        "sha256": "2165340a52e37c175be309b9191e70e89cfe1f07c23b25f470814e4826e63f2b",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_dashboard.md",
+      "sha256": "95bac0f2cf98d6acd84e60497a4e54bda5c8a481f16a7bdaba8402295915d28c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T03:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Build line as the displayed ASDG version",
+        "review": "docs/asdg/07-planning/02.17-review-build-as-version.json"
+      },
+      "previous_state": {
+        "sha256": "c31c0396d126f1331b1183ff41d33051adcd0813fe85785f772e2f7a93f4ed2d",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_dashboard.py",
+      "sha256": "a6f687913165a74cd2eef901aa2a6b231617b064ff1bfc031d1bd7dbf2fbc28c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T03:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Build line as the displayed ASDG version",
+        "review": "docs/asdg/07-planning/02.17-review-build-as-version.json"
+      },
+      "previous_state": {
+        "sha256": "02cdde1942dd4b1d99adf0dbe9b848f7517ca997bc8605e57be8167a48ab9e3d",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_project.md",
+      "sha256": "259034cf35b7de01a71a053c2499232e5659b8056ce5c56a131fdef7fae0acdb",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T03:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Build line as the displayed ASDG version",
+        "review": "docs/asdg/07-planning/02.17-review-build-as-version.json"
+      },
+      "previous_state": {
+        "sha256": "88a99afb74922390e3d745addd4d927f06d05d406893ae5720b8abe8deb4cfc9",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_status.md",
+      "sha256": "be456f65cc49d105857b5374d951194bb2aa092fdb8c97514b2f830f44f25987",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T03:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Build line as the displayed ASDG version",
+        "review": "docs/asdg/07-planning/02.17-review-build-as-version.json"
+      },
+      "previous_state": {
+        "sha256": "24900834f1fb1b61f52c07e1ed4a03d57ee4bc8d2904bb17e56e855b55a20403",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "scripts/lib/cli_status.py",
+      "sha256": "14bfad895c96223f73a69bb369d7594c4f7e1a3508ea32fc7bc2fd3c020e8233",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T03:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Build line as the displayed ASDG version",
+        "review": "docs/asdg/07-planning/02.17-review-build-as-version.json"
+      },
+      "previous_state": {
+        "sha256": "2b83b30c7a2638d5b1dff68c7cfaff2b73c9927515b75a5e8f27e23e0b57b19b",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-status/status-format.md",
+      "sha256": "37200c661bb7aca591938ef0486856fc8838595d4618f9db333c829aa0eb0d8a",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T03:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Build line as the displayed ASDG version",
+        "review": "docs/asdg/07-planning/02.17-review-build-as-version.json"
+      },
+      "previous_state": {
+        "sha256": "ff99d7de30344477e9750527cc80ac9ac3c1bdfee53b8c7fd634653b042a8d1e",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_build_identity.md",
+      "sha256": "51a13c55f2e6a759e46d6228af144fd13bf707d7ac89cf513b3cfdb14419eee0",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T03:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Build line as the displayed ASDG version",
+        "review": "docs/asdg/07-planning/02.17-review-build-as-version.json"
+      },
+      "previous_state": {
+        "sha256": "17a2248c35ad4e67e18002755c95156a6c365b5648998c73a62d38d47568058c",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_build_identity.py",
+      "sha256": "f04b77fc84eaa30cb35fe8aa9c3253a215b9ebcf51548beeb4d4efe4b3db10a2",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T03:30:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Build line as the displayed ASDG version",
+        "review": "docs/asdg/07-planning/02.17-review-build-as-version.json"
+      },
+      "previous_state": {
+        "sha256": "666e6ba4792272810a18a31b0e9b0cc8e6b08c49d1d54ba242f3eedab15415c9",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
     }
   ],
   "distribution_version": "0.3.0-pilot.2"

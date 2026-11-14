@@ -18,7 +18,7 @@ commit ──► commit_build ──► build.json ──► ZIP / clone install
 - `commit_build(repo, commit, release, entries, prefix='')` returns the record below or raises `Conflict` when the commit cannot be read, is not a full ID, or any selected file differs (`commit_mismatch`).
 - `commit_mismatch(repo, commit, entries, prefix)` returns the first differing path, `'(commit tree unavailable)'`, or `None`.
 - `package_build(core, info)` accepts a shipped record only when its `snapshot_sha256` and `release` equal the frozen package; a mismatch raises.
-- `installed_build(core, entries, release, legacy_commit)` never reads Git. States: `RECORDED`, `LOCAL_CHANGES` (selected files differ from the recorded snapshot), `NOT_RECORDED` (legacy install; shows the binding commit when still valid) and `INVALID`.
+- `installed_build(core, entries, release, legacy_commit)` never reads Git. States: `RECORDED`, `LOCAL_CHANGES` (selected files differ from the recorded snapshot), `NOT_RECORDED` (legacy install; displays `ASDG build not recorded`, plus the binding commit when still valid) and `INVALID`.
 - `commit_package(repo, commit, prefix='')` reads the package list and every selected file as the commit recorded them (one `git cat-file --batch`), or returns `None`; update uses it to recover an installed baseline.
 - `snapshot_sha256(entries)` equals the installer's package snapshot digest; `label(record)` gives the display text.
 
@@ -35,4 +35,4 @@ record = commit_build(repo, head, '0.3.0-pilot.4', entries)
 print(label(record))  # ASDG build 2026-11-14T01:33:34Z · 1a2b3c4
 ```
 
-Client commits never change the record; only an install or upgrade writes it. Named release labels stay in `metadata/distribution.json` for deliberate releases.
+Client commits never change the record; only an install or upgrade writes it. The named release label stays internal (`metadata/distribution.json`, `VERSION`, the binding and `release`) for compatibility checks and deliberate releases; status views never display it.

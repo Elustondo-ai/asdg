@@ -15,7 +15,7 @@ Owns display formatting and HTTP transport; delegates all readiness and permissi
 
 ## Interface and data
 
-render_dashboard accepts a status dict and returns HTML:str. make_server returns ThreadingHTTPServer; root/repo are Paths and port:int defaults to 8765.
+render_dashboard accepts a status dict and returns HTML:str; its binding section shows the installed build line (`build.display`), never the internal release label. make_server returns ThreadingHTTPServer; root/repo are Paths and port:int defaults to 8765.
 
 | Callable or interface | Contract |
 | --- | --- |

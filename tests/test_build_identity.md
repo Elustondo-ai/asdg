@@ -23,6 +23,7 @@ Covered behavior:
 - clone and ZIP installs record the build in the client; later client-only commits leave `status` unchanged, while a local methodology edit reports `LOCAL_CHANGES`;
 - a ZIP whose record does not describe its files is refused before any write;
 - an update after a fresh install, with or without a build record, uses the installed commit as its baseline, has no conflicts and records the new build;
-- installations without a record, like existing `0.3.0-pilot.4` clients, still report their release label (and binding commit when known).
+- installations without a record, like existing `0.3.0-pilot.4` clients, display `ASDG build not recorded` (with the binding commit when known) while JSON keeps the release;
+- status text and the dashboard show the build line as the version and never the release label.
 
 [`test_sync.py`](test_sync.md) covers the upgrade path. Run `python3 -B -m unittest tests.test_build_identity -v` from the canonical root; no network, model or real repository is touched.
