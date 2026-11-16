@@ -1,0 +1,840 @@
+{
+  "schema_version": 1,
+  "status": "REVIEW_REQUIRED",
+  "role_id": "ASDG-COORDINATOR",
+  "recorded_at": "2026-11-14T03:55:45.004436+00:00",
+  "baseline_commit": "f2b8591a39ff7b65f820baaa2b54b572763363e2",
+  "scope": "User-requested documentation proposal for Claude manual, delegated, and experimental collaborative teams; multiple named instances.",
+  "human_approval": null,
+  "events": [
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/01-team-contract.md",
+      "event": "AI-MODIFIED",
+      "sha256": "ae263205ab3d8aaa4ac911ac924c86eb35c9b8bd56226122f4cc442435e32199",
+      "human_approval": null
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/02-runtime-and-state.md",
+      "event": "AI-MODIFIED",
+      "sha256": "b56ba9774e5c1d4ebc62afa56a81d92ae0682bd01bb573dc583ef869c10cb085",
+      "human_approval": null
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/03-delivery-and-acceptance.md",
+      "event": "AI-MODIFIED",
+      "sha256": "860945e8ec0e3dc6b59a2332e15c144ea04a5052d5bc3e0d41a078ec26170c1c",
+      "human_approval": null
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/04-evidence.md",
+      "event": "AI-MODIFIED",
+      "sha256": "bce29f04400f6a6f8cd460c65ca4fb4c10156c52e89cfd39a440454cc47f80c4",
+      "human_approval": null
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/README.md",
+      "event": "AI-MODIFIED",
+      "sha256": "d6e48f622375eaefc111bb6c0ef068ba086d6ab37b08c3ae97f37abfa946f0c9",
+      "human_approval": null
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/images/team-types.svg",
+      "event": "AI-MODIFIED",
+      "sha256": "8e99ff52c7515ddd0726ccc44ee917ebee45e0dbc97314d1f0376692dd9d91ef",
+      "human_approval": null
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/README.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:02:39.593277+00:00",
+      "sha256": "be6c82e5501b912fd240d3b0fd3993a71dff82fd584bb48fc7512d8f97837b05",
+      "previous_sha256": "d6e48f622375eaefc111bb6c0ef068ba086d6ab37b08c3ae97f37abfa946f0c9",
+      "human_approval": null,
+      "reason": "User-selected three discoverable typed skills and immediate name prompting; retained one shared implementation."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/01-team-contract.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:02:39.593712+00:00",
+      "sha256": "1535328f8b440a85b23cac1bc743ad9918627399a5a8e2f47cfadec1b12be9cd",
+      "previous_sha256": "ae263205ab3d8aaa4ac911ac924c86eb35c9b8bd56226122f4cc442435e32199",
+      "human_approval": null,
+      "reason": "User-selected three discoverable typed skills and immediate name prompting; retained one shared implementation."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/02-runtime-and-state.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:02:39.593946+00:00",
+      "sha256": "3bac3f4b198e439d4ef9f957ae2084256e3972100fd0b3d10a234562ffc1fcbd",
+      "previous_sha256": "b56ba9774e5c1d4ebc62afa56a81d92ae0682bd01bb573dc583ef869c10cb085",
+      "human_approval": null,
+      "reason": "User-selected three discoverable typed skills and immediate name prompting; retained one shared implementation."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/03-delivery-and-acceptance.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:02:39.594159+00:00",
+      "sha256": "d6ae6af93cfd3b5e1904460b33e0e7a3a125c4c9582e7c9091dfebd40810a5a3",
+      "previous_sha256": "860945e8ec0e3dc6b59a2332e15c144ea04a5052d5bc3e0d41a078ec26170c1c",
+      "human_approval": null,
+      "reason": "User-selected three discoverable typed skills and immediate name prompting; retained one shared implementation."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/04-evidence.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:02:39.594351+00:00",
+      "sha256": "81658010ee68cc298a564437485f3ac115deeddd1844832cf3b0a38ad38879fb",
+      "previous_sha256": "bce29f04400f6a6f8cd460c65ca4fb4c10156c52e89cfd39a440454cc47f80c4",
+      "human_approval": null,
+      "reason": "User-selected three discoverable typed skills and immediate name prompting; retained one shared implementation."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/README.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:42:27.991286+00:00",
+      "sha256": "9b8c3954b99ab950f7813b82626a7293f95318a704482555ff7a6aa4c0d8e488",
+      "previous_sha256": "be6c82e5501b912fd240d3b0fd3993a71dff82fd584bb48fc7512d8f97837b05",
+      "human_approval": null,
+      "reason": "Record user choices for persistent JSON team specifications and creation-skill-owned generation and repair; whole-document approval remains unset."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/02-runtime-and-state.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:42:27.991654+00:00",
+      "sha256": "07e2ae55d2b1c493acf105998be5a1ad888be795fe32d2bfc3a604b3e54b2337",
+      "previous_sha256": "3bac3f4b198e439d4ef9f957ae2084256e3972100fd0b3d10a234562ffc1fcbd",
+      "human_approval": null,
+      "reason": "Record user choices for persistent JSON team specifications and creation-skill-owned generation and repair; whole-document approval remains unset."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/03-delivery-and-acceptance.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:42:27.991799+00:00",
+      "sha256": "5e692fac15458a1649b6eb2426ceecdeb63adb7428712ade4cccf06f9854bc83",
+      "previous_sha256": "d6ae6af93cfd3b5e1904460b33e0e7a3a125c4c9582e7c9091dfebd40810a5a3",
+      "human_approval": null,
+      "reason": "Record user choices for persistent JSON team specifications and creation-skill-owned generation and repair; whole-document approval remains unset."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/04-evidence.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:42:27.991912+00:00",
+      "sha256": "f50123592a9560e3c62fb37599c1292eee2b9d7fe2206346371f4a0cae3035e8",
+      "previous_sha256": "81658010ee68cc298a564437485f3ac115deeddd1844832cf3b0a38ad38879fb",
+      "human_approval": null,
+      "reason": "Record user choices for persistent JSON team specifications and creation-skill-owned generation and repair; whole-document approval remains unset."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/README.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:45:47.952366+00:00",
+      "previous_sha256": "9b8c3954b99ab950f7813b82626a7293f95318a704482555ff7a6aa4c0d8e488",
+      "sha256": "fe9bb3c2a4b88ec7e58e92645f302251b5bda47f4d0e5b6d66fa48548abe5fda",
+      "human_approval": null,
+      "reason": "Record user decision 3: honor selected team type and resolve incompatible runtime settings before launch."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/02-runtime-and-state.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:45:47.952764+00:00",
+      "previous_sha256": "07e2ae55d2b1c493acf105998be5a1ad888be795fe32d2bfc3a604b3e54b2337",
+      "sha256": "32b50f91b2de362cf2964a96b133d38d5abd1379e0695af2531362424971d6ef",
+      "human_approval": null,
+      "reason": "Record user decision 3: honor selected team type and resolve incompatible runtime settings before launch."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/03-delivery-and-acceptance.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:45:47.952924+00:00",
+      "previous_sha256": "5e692fac15458a1649b6eb2426ceecdeb63adb7428712ade4cccf06f9854bc83",
+      "sha256": "9bbc686672901891754c356d0b7ac842fabf5ba6ebdb4329e6ff13668906e8f7",
+      "human_approval": null,
+      "reason": "Record user decision 3: honor selected team type and resolve incompatible runtime settings before launch."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/04-evidence.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T04:45:47.953073+00:00",
+      "previous_sha256": "f50123592a9560e3c62fb37599c1292eee2b9d7fe2206346371f4a0cae3035e8",
+      "sha256": "9ac55bcdb4974adae2a997693d243ddfa52e601a6f6a3c15f72052c92c0395bf",
+      "human_approval": null,
+      "reason": "Record user decision 3: honor selected team type and resolve incompatible runtime settings before launch."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/05-concurrency-and-ownership.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T05:24:38.469363+00:00",
+      "previous_sha256": null,
+      "sha256": "f852f21a068dacb20a87279243f010244034411f35c4df71ba0522921487609e",
+      "human_approval": null,
+      "reason": "Proposed concurrency rule combining Claude best practices with ASDG specialist and subspecialist ownership."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/images/work-ownership.svg",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T05:24:38.469743+00:00",
+      "previous_sha256": null,
+      "sha256": "f3e4d42c514e3561c55670b3d25cda3205eb78386f4951b997bf9cf01cc60c52",
+      "human_approval": null,
+      "reason": "Proposed concurrency rule combining Claude best practices with ASDG specialist and subspecialist ownership."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/README.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T05:24:38.469896+00:00",
+      "previous_sha256": "fe9bb3c2a4b88ec7e58e92645f302251b5bda47f4d0e5b6d66fa48548abe5fda",
+      "sha256": "310c228f56a7b600106749fc054df57cc0edcf6a413f751b8e8d99fee66d3fd1",
+      "human_approval": null,
+      "reason": "Proposed concurrency rule combining Claude best practices with ASDG specialist and subspecialist ownership."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/02-runtime-and-state.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T05:24:38.470053+00:00",
+      "previous_sha256": "32b50f91b2de362cf2964a96b133d38d5abd1379e0695af2531362424971d6ef",
+      "sha256": "e5cde66d8b75e897bc09a073b4af025dc583b8ec001928f0a269c537e50b57d0",
+      "human_approval": null,
+      "reason": "Proposed concurrency rule combining Claude best practices with ASDG specialist and subspecialist ownership."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/03-delivery-and-acceptance.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T05:24:38.470210+00:00",
+      "previous_sha256": "9bbc686672901891754c356d0b7ac842fabf5ba6ebdb4329e6ff13668906e8f7",
+      "sha256": "419ffc316bb5e2590517e082881065d6bfeb7d2fc55d6e7a27437ea3385e8d81",
+      "human_approval": null,
+      "reason": "Proposed concurrency rule combining Claude best practices with ASDG specialist and subspecialist ownership."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/04-evidence.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T05:24:38.470330+00:00",
+      "previous_sha256": "9ac55bcdb4974adae2a997693d243ddfa52e601a6f6a3c15f72052c92c0395bf",
+      "sha256": "b6555ecac6d47c2a20eec706c0d1fe7307f7921bf2b94c72348670c6c43429eb",
+      "human_approval": null,
+      "reason": "Proposed concurrency rule combining Claude best practices with ASDG specialist and subspecialist ownership."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/README.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T06:04:20.861615+00:00",
+      "previous_sha256": "310c228f56a7b600106749fc054df57cc0edcf6a413f751b8e8d99fee66d3fd1",
+      "sha256": "8e51b504b4681208d57e61b58cb8bd6e999a03a7c5cf78d4c3de3b1076e8d8b4",
+      "human_approval": null,
+      "reason": "User-selected one active team per project and reusable collaboration agreements; Claude guidance rechecked; teams of teams deferred."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/01-team-contract.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T06:04:20.861936+00:00",
+      "previous_sha256": "1535328f8b440a85b23cac1bc743ad9918627399a5a8e2f47cfadec1b12be9cd",
+      "sha256": "195c29645e59e21f597158f325af5dee9ca6a328a7dfe3b59a32aa9d1f9c2116",
+      "human_approval": null,
+      "reason": "User-selected one active team per project and reusable collaboration agreements; Claude guidance rechecked; teams of teams deferred."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/02-runtime-and-state.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T06:04:20.862068+00:00",
+      "previous_sha256": "e5cde66d8b75e897bc09a073b4af025dc583b8ec001928f0a269c537e50b57d0",
+      "sha256": "8d090caa65e93f9b1f5c47f4d72e98f03e8206cc2b05e41e57da743f146773f6",
+      "human_approval": null,
+      "reason": "User-selected one active team per project and reusable collaboration agreements; Claude guidance rechecked; teams of teams deferred."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/03-delivery-and-acceptance.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T06:04:20.862194+00:00",
+      "previous_sha256": "419ffc316bb5e2590517e082881065d6bfeb7d2fc55d6e7a27437ea3385e8d81",
+      "sha256": "6f88829fe3a2b319fa6fe084c6b47537c2c94ba723262232f4c1579ac0d6285a",
+      "human_approval": null,
+      "reason": "User-selected one active team per project and reusable collaboration agreements; Claude guidance rechecked; teams of teams deferred."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/04-evidence.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T06:04:20.862315+00:00",
+      "previous_sha256": "b6555ecac6d47c2a20eec706c0d1fe7307f7921bf2b94c72348670c6c43429eb",
+      "sha256": "9e969db50c8fc6f87205cf4e072b9086b144325d583b9a22f4ed5db23e7ea551",
+      "human_approval": null,
+      "reason": "User-selected one active team per project and reusable collaboration agreements; Claude guidance rechecked; teams of teams deferred."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/05-concurrency-and-ownership.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T06:04:20.862440+00:00",
+      "previous_sha256": "f852f21a068dacb20a87279243f010244034411f35c4df71ba0522921487609e",
+      "sha256": "4903223257deadca1fea31e1fa1ea0d61bd8a9fb17ac01ad6c6d0bcca87f19db",
+      "human_approval": null,
+      "reason": "User-selected one active team per project and reusable collaboration agreements; Claude guidance rechecked; teams of teams deferred."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/images/team-types.svg",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T06:04:20.862568+00:00",
+      "previous_sha256": "8e99ff52c7515ddd0726ccc44ee917ebee45e0dbc97314d1f0376692dd9d91ef",
+      "sha256": "4b59e7d42baa4e776bd07f005baffc9c21065830d400afb4d5e49030a045cf05",
+      "human_approval": null,
+      "reason": "User-selected one active team per project and reusable collaboration agreements; Claude guidance rechecked; teams of teams deferred."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/06-review-claude-code.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T17:56:23.607356+00:00",
+      "previous_sha256": null,
+      "sha256": "0309c8b1376d3010eb04090116b3728ce334163523765216dd5d9cc59e1b3e99",
+      "human_approval": null,
+      "reason": "Independent review by Claude Code, saved at the user's request; feedback only, no other page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/README.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:08:17.715307+00:00",
+      "previous_sha256": "8e51b504b4681208d57e61b58cb8bd6e999a03a7c5cf78d4c3de3b1076e8d8b4",
+      "sha256": "37e0e4285146f581a728bf2c14bb15af29f1ed48f130f1b013eb5de749c5a532",
+      "human_approval": null,
+      "reason": "Reconcile Claude review round 1; explicit surface/loading/write gates, one writer, claim recovery, Claude-only delivery; request round 2."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/01-team-contract.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:08:17.715646+00:00",
+      "previous_sha256": "195c29645e59e21f597158f325af5dee9ca6a328a7dfe3b59a32aa9d1f9c2116",
+      "sha256": "b2df81c87cb90a339cc5b68aa2fad40daf792be31cce38cff10065de571aae90",
+      "human_approval": null,
+      "reason": "Reconcile Claude review round 1; explicit surface/loading/write gates, one writer, claim recovery, Claude-only delivery; request round 2."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/02-runtime-and-state.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:08:17.715835+00:00",
+      "previous_sha256": "8d090caa65e93f9b1f5c47f4d72e98f03e8206cc2b05e41e57da743f146773f6",
+      "sha256": "a949edecd0444807fe350500ac36517c7eb5974032feb661305015f6a7c64399",
+      "human_approval": null,
+      "reason": "Reconcile Claude review round 1; explicit surface/loading/write gates, one writer, claim recovery, Claude-only delivery; request round 2."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/03-delivery-and-acceptance.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:08:17.716047+00:00",
+      "previous_sha256": "6f88829fe3a2b319fa6fe084c6b47537c2c94ba723262232f4c1579ac0d6285a",
+      "sha256": "a7337ecaa843d5b6b525da4474fba2ea11b35d2aa466cf427f56365c7c6fc8d9",
+      "human_approval": null,
+      "reason": "Reconcile Claude review round 1; explicit surface/loading/write gates, one writer, claim recovery, Claude-only delivery; request round 2."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/04-evidence.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:08:17.716219+00:00",
+      "previous_sha256": "9e969db50c8fc6f87205cf4e072b9086b144325d583b9a22f4ed5db23e7ea551",
+      "sha256": "bff301af57572c3d28e520d9dc3b3f1e30b12d671d62af5014591f2cf206c3fd",
+      "human_approval": null,
+      "reason": "Reconcile Claude review round 1; explicit surface/loading/write gates, one writer, claim recovery, Claude-only delivery; request round 2."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/05-concurrency-and-ownership.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:08:17.716464+00:00",
+      "previous_sha256": "4903223257deadca1fea31e1fa1ea0d61bd8a9fb17ac01ad6c6d0bcca87f19db",
+      "sha256": "286ce6fabc10c60060d6074c98555dde1b5f4f83fc51cfc064be52dcafcc0238",
+      "human_approval": null,
+      "reason": "Reconcile Claude review round 1; explicit surface/loading/write gates, one writer, claim recovery, Claude-only delivery; request round 2."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/07-review-response.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:08:17.716570+00:00",
+      "previous_sha256": null,
+      "sha256": "be27cdb7ff0fd682c98ca7387c40d6d2da4ada9a7e4ac29e13f034f9537dc693",
+      "human_approval": null,
+      "reason": "Reconcile Claude review round 1; explicit surface/loading/write gates, one writer, claim recovery, Claude-only delivery; request round 2."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/08-writer-and-policy.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:08:17.716690+00:00",
+      "previous_sha256": null,
+      "sha256": "9df5e243149e3e497207bd2afb3dc89c447b7c4a9a106df79a155f423ee0479d",
+      "human_approval": null,
+      "reason": "Reconcile Claude review round 1; explicit surface/loading/write gates, one writer, claim recovery, Claude-only delivery; request round 2."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/09-review-claude-round2.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:12:18.303063+00:00",
+      "previous_sha256": null,
+      "sha256": "5feda50d35b073e4aa5f76f15a12b6b2eb0187d362ec976585a9198f99382297",
+      "human_approval": null,
+      "reason": "Round 2 review by Claude Code at the user's request, relayed by Codex; feedback only, no other page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/01-team-contract.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:13:53.191242+00:00",
+      "previous_sha256": "b2df81c87cb90a339cc5b68aa2fad40daf792be31cce38cff10065de571aae90",
+      "sha256": "fa5ef2451c071d877ca55e0327ff643046f653b372911af2219dca5a639b8707",
+      "human_approval": null,
+      "reason": "Address all seven Claude round-2 corrections and three smaller points; request final consistency review."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/02-runtime-and-state.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:13:53.192079+00:00",
+      "previous_sha256": "a949edecd0444807fe350500ac36517c7eb5974032feb661305015f6a7c64399",
+      "sha256": "e2225d268ffb9109b514ffe23f0a4d4a3d1cf43a2e17ee371ec4aaa1c806c004",
+      "human_approval": null,
+      "reason": "Address all seven Claude round-2 corrections and three smaller points; request final consistency review."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/03-delivery-and-acceptance.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:13:53.192717+00:00",
+      "previous_sha256": "a7337ecaa843d5b6b525da4474fba2ea11b35d2aa466cf427f56365c7c6fc8d9",
+      "sha256": "234d86cf7af6f6a76dbaeba3ef89298a2078f0d5acee5c4734749750dacbaba4",
+      "human_approval": null,
+      "reason": "Address all seven Claude round-2 corrections and three smaller points; request final consistency review."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/04-evidence.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:13:53.193326+00:00",
+      "previous_sha256": "bff301af57572c3d28e520d9dc3b3f1e30b12d671d62af5014591f2cf206c3fd",
+      "sha256": "7c1e5e7397aaa26bbe3de9d7c95513f87c7b4c926ff6b8b2ef0385405469aff5",
+      "human_approval": null,
+      "reason": "Address all seven Claude round-2 corrections and three smaller points; request final consistency review."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/05-concurrency-and-ownership.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:13:53.193918+00:00",
+      "previous_sha256": "286ce6fabc10c60060d6074c98555dde1b5f4f83fc51cfc064be52dcafcc0238",
+      "sha256": "58dc1fec62a7e2a07fd48c15f61a8aa3354fb1b943fa5380c662a859ce6be2f8",
+      "human_approval": null,
+      "reason": "Address all seven Claude round-2 corrections and three smaller points; request final consistency review."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/08-writer-and-policy.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:13:53.194207+00:00",
+      "previous_sha256": "9df5e243149e3e497207bd2afb3dc89c447b7c4a9a106df79a155f423ee0479d",
+      "sha256": "50be799e2840bca24264c21b6c8b4af7b1b34804076513c57793ab9a3e41e290",
+      "human_approval": null,
+      "reason": "Address all seven Claude round-2 corrections and three smaller points; request final consistency review."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/README.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:13:53.194561+00:00",
+      "previous_sha256": "37e0e4285146f581a728bf2c14bb15af29f1ed48f130f1b013eb5de749c5a532",
+      "sha256": "a83d5334c2b22773e337b4f8aaf1c2f62202a90f8da238de75312b136ce057b9",
+      "human_approval": null,
+      "reason": "Address all seven Claude round-2 corrections and three smaller points; request final consistency review."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/10-round2-corrections.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:13:53.194797+00:00",
+      "previous_sha256": null,
+      "sha256": "cba2d10bbbda35f0abbbcd25ee663b59c44bb6f6300643458f9d692efe2f68c6",
+      "human_approval": null,
+      "reason": "Address all seven Claude round-2 corrections and three smaller points; request final consistency review."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/11-review-claude-round3.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:19:34.986011+00:00",
+      "previous_sha256": null,
+      "sha256": "87bf91c67cf23853a83c64706de3491a1d732aecc0b4fcaf32e047986424cabf",
+      "human_approval": null,
+      "reason": "Round 3 review by Claude Code at the user's request, relayed by Codex; design ready for Gate 1, not user-approved or natively verified; no other page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/README.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:23:52.574010+00:00",
+      "previous_sha256": "a83d5334c2b22773e337b4f8aaf1c2f62202a90f8da238de75312b136ce057b9",
+      "sha256": "4a5a236c0db7b0eb212ab74db2a77a92e2c233affce3797de8c82d23afcf6c4d",
+      "human_approval": null,
+      "reason": "Link Claude final no-blocker verdict and incorporate its non-blocking clarifications; final editorial changes not independently re-reviewed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/02-runtime-and-state.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:23:52.574853+00:00",
+      "previous_sha256": "e2225d268ffb9109b514ffe23f0a4d4a3d1cf43a2e17ee371ec4aaa1c806c004",
+      "sha256": "debc39d35f98ff6ebe1a37e8809903b8d0e1d0e9a0d2534e0d9fcb55eed9d14d",
+      "human_approval": null,
+      "reason": "Link Claude final no-blocker verdict and incorporate its non-blocking clarifications; final editorial changes not independently re-reviewed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/03-delivery-and-acceptance.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:23:52.575202+00:00",
+      "previous_sha256": "234d86cf7af6f6a76dbaeba3ef89298a2078f0d5acee5c4734749750dacbaba4",
+      "sha256": "0eff7a426a842686a7a5124ce7a573dd71eb96b6375e5240309c633e56a9c519",
+      "human_approval": null,
+      "reason": "Link Claude final no-blocker verdict and incorporate its non-blocking clarifications; final editorial changes not independently re-reviewed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/04-evidence.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:23:52.575576+00:00",
+      "previous_sha256": "7c1e5e7397aaa26bbe3de9d7c95513f87c7b4c926ff6b8b2ef0385405469aff5",
+      "sha256": "76d615c64c83e0484f88ca6d6e805031b9aa5321938c5718f835d9000ace6bb5",
+      "human_approval": null,
+      "reason": "Link Claude final no-blocker verdict and incorporate its non-blocking clarifications; final editorial changes not independently re-reviewed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/08-writer-and-policy.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:23:52.575843+00:00",
+      "previous_sha256": "50be799e2840bca24264c21b6c8b4af7b1b34804076513c57793ab9a3e41e290",
+      "sha256": "5d3cc2f9e6f3587622c51b695e7cd072f58851a6b05a54e0fe8ebadc5d0fff73",
+      "human_approval": null,
+      "reason": "Link Claude final no-blocker verdict and incorporate its non-blocking clarifications; final editorial changes not independently re-reviewed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/10-round2-corrections.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:23:52.576268+00:00",
+      "previous_sha256": "cba2d10bbbda35f0abbbcd25ee663b59c44bb6f6300643458f9d692efe2f68c6",
+      "sha256": "98bb623ac0384918c8675f7f02dbeac29822381db10e5b01c5fb6d37e450f1b6",
+      "human_approval": null,
+      "reason": "Link Claude final no-blocker verdict and incorporate its non-blocking clarifications; final editorial changes not independently re-reviewed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/12-implementation-roadmap.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:34:00.592495+00:00",
+      "previous_sha256": null,
+      "sha256": "1b406f1d804a169fbf9d069785472a603bc9e96b2d044601db353b2926c2cfa4",
+      "human_approval": null,
+      "reason": "User-requested step-by-step implementation roadmap: Manual, Delegated, Collaborative; no implementation performed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/images/implementation-roadmap.svg",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:34:00.592859+00:00",
+      "previous_sha256": null,
+      "sha256": "61b8f16fa3f70e8a68df9f470ca3b2c904733c5e860a1e22db53c45cc4fecffd",
+      "human_approval": null,
+      "reason": "User-requested step-by-step implementation roadmap: Manual, Delegated, Collaborative; no implementation performed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/README.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:34:00.593028+00:00",
+      "previous_sha256": "4a5a236c0db7b0eb212ab74db2a77a92e2c233affce3797de8c82d23afcf6c4d",
+      "sha256": "97e82b1c712c7fec6ea408bac9728e3e9fd3c2dccbccd55c1e5ba98b0323b470",
+      "human_approval": null,
+      "reason": "User-requested step-by-step implementation roadmap: Manual, Delegated, Collaborative; no implementation performed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/03-delivery-and-acceptance.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:34:00.593185+00:00",
+      "previous_sha256": "0eff7a426a842686a7a5124ce7a573dd71eb96b6375e5240309c633e56a9c519",
+      "sha256": "993bfe62d103abdcfac22d6341b5be4af23266909dbf2659ee0e1e8cb628dc38",
+      "human_approval": null,
+      "reason": "User-requested step-by-step implementation roadmap: Manual, Delegated, Collaborative; no implementation performed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/13-implementer-signoff-claude.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:38:44.035251+00:00",
+      "previous_sha256": null,
+      "sha256": "0177de4f2c4be2db3802ec9b691f93a066081ed8f5d5e397cd5eaf6a16688535",
+      "human_approval": null,
+      "reason": "Implementer review by Claude Code at the user's request, relayed by Codex; verdict CHANGES REQUIRED (adapter update path); no other page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/12-implementation-roadmap.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:40:04.681766+00:00",
+      "previous_sha256": "1b406f1d804a169fbf9d069785472a603bc9e96b2d044601db353b2926c2cfa4",
+      "sha256": "ce62ffc3716ef3be616afa76ed988ec3140ac6df1a7053247497b92293c41613",
+      "human_approval": null,
+      "reason": "Implementer-review corrections: ownership-aware adapter update, Collaborative deferred at Gate 1, foundation delivery and actual-client exercise sequence."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/08-writer-and-policy.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:40:04.682521+00:00",
+      "previous_sha256": "5d3cc2f9e6f3587622c51b695e7cd072f58851a6b05a54e0fe8ebadc5d0fff73",
+      "sha256": "36e86fd2e9a58ad865b5ba728cf17014abf83cec2f0276a4931a4ebfbd8b189d",
+      "human_approval": null,
+      "reason": "Implementer-review corrections: ownership-aware adapter update, Collaborative deferred at Gate 1, foundation delivery and actual-client exercise sequence."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/01-team-contract.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:40:04.683016+00:00",
+      "previous_sha256": "fa5ef2451c071d877ca55e0327ff643046f653b372911af2219dca5a639b8707",
+      "sha256": "331c869dff932a3be59efc8212fe351bb968404d10e545dc4fc986f2133d21f9",
+      "human_approval": null,
+      "reason": "Implementer-review corrections: ownership-aware adapter update, Collaborative deferred at Gate 1, foundation delivery and actual-client exercise sequence."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/02-runtime-and-state.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:40:04.683450+00:00",
+      "previous_sha256": "debc39d35f98ff6ebe1a37e8809903b8d0e1d0e9a0d2534e0d9fcb55eed9d14d",
+      "sha256": "b57e41a8e28d6d5bc1a6859522eb0664f453f2417cb37854f56ba95dd9d5ca27",
+      "human_approval": null,
+      "reason": "Implementer-review corrections: ownership-aware adapter update, Collaborative deferred at Gate 1, foundation delivery and actual-client exercise sequence."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/03-delivery-and-acceptance.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:40:04.684033+00:00",
+      "previous_sha256": "993bfe62d103abdcfac22d6341b5be4af23266909dbf2659ee0e1e8cb628dc38",
+      "sha256": "436da5389881eb335534cb858751be1cc2544830ede3233df9366cef05fb7999",
+      "human_approval": null,
+      "reason": "Implementer-review corrections: ownership-aware adapter update, Collaborative deferred at Gate 1, foundation delivery and actual-client exercise sequence."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/14-implementer-signoff-final.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:41:13.098147+00:00",
+      "previous_sha256": null,
+      "sha256": "4a7b6a036f02af065ab177350a8a64dae0527045302368e2cef5b4d6ed5079e4",
+      "human_approval": null,
+      "reason": "Final implementer sign-off by Claude Code at the user's request, relayed by Codex; SIGNED OFF as an executable roadmap for roadmap sha256 ce62ffc3716ef3be616afa76ed988ec3140ac6df1a7053247497b92293c41613; technical only, not user approval or native verification; no other page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/15-timeboxed-execution-plan.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:46:03.023345+00:00",
+      "previous_sha256": null,
+      "sha256": "ec824eb45cb46078ae7d7bccc25bee9db7f6d366494195592d88ea0c5a133b36",
+      "human_approval": null,
+      "reason": "Timeboxed scheduling addendum by Claude Code at the user's request, relayed by Codex; estimates only, no design or roadmap page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/15.1-chunks-gate1-foundation-manual.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:46:03.023518+00:00",
+      "previous_sha256": null,
+      "sha256": "cc134ba1c4a3d73fe2cc9fec929719e2ede1898b7cfa880ffa8783dd0321b29b",
+      "human_approval": null,
+      "reason": "Timeboxed scheduling addendum by Claude Code at the user's request, relayed by Codex; estimates only, no design or roadmap page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/15.2-chunks-delegated-collaborative.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:46:03.023539+00:00",
+      "previous_sha256": null,
+      "sha256": "c8e6d2dadc51866a0a2bcb5fcc1ee4b39c1ff65aee205305a37f6dd792308f4c",
+      "human_approval": null,
+      "reason": "Timeboxed scheduling addendum by Claude Code at the user's request, relayed by Codex; estimates only, no design or roadmap page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/15-timeboxed-execution-plan.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T18:47:22.803648+00:00",
+      "previous_sha256": "ec824eb45cb46078ae7d7bccc25bee9db7f6d366494195592d88ea0c5a133b36",
+      "sha256": "663ba0a850920ebdd637370801f59c6db0e890de8779a4ecc4e6f337e8d06d26",
+      "human_approval": null,
+      "reason": "Scheduling addendum amended at the user's request, relayed by Codex: the 10-minute checkpoint is wall-clock from run start including tool waiting; a chunk is a reporting boundary, not a new approval. No design, roadmap or sign-off page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/16-gate1-native-report.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T19:46:02.464482+00:00",
+      "previous_sha256": null,
+      "sha256": "ef09f38f562137c4ab144a4cc001721ce63b138f245296f3ba57d88a8a957352",
+      "human_approval": null,
+      "reason": "Gate 1 native report (chunk G4) by Claude Code, authorized by Codex under the user's delegation; documentation only; partial result with an open outside-boundary exception; no signed page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/16-gate1-native-report.json",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T19:46:02.464508+00:00",
+      "previous_sha256": null,
+      "sha256": "8575f9340ab79fe50f065b8b8c0b567f8ab97f18ddf1b4185dbbb94761e99e62",
+      "human_approval": null,
+      "reason": "Gate 1 native report (chunk G4) by Claude Code, authorized by Codex under the user's delegation; documentation only; partial result with an open outside-boundary exception; no signed page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/16-gate1-native-report.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T19:47:50.335680+00:00",
+      "previous_sha256": "ef09f38f562137c4ab144a4cc001721ce63b138f245296f3ba57d88a8a957352",
+      "sha256": "36394fdd75748e81524db29b875dc5b23176b6949e599ef5343c3bda803d69f4",
+      "human_approval": null,
+      "reason": "G4 corrections requested by Codex: exception recorded as accepted per the user's decision \"Leave the rule and continue.\"; Collaborative marked DEFERRED with CLI feasibility untested; full RESULTS.md and hook log embedded in the evidence companion. No signed page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/16-gate1-native-report.json",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-14T19:47:50.335711+00:00",
+      "previous_sha256": "8575f9340ab79fe50f065b8b8c0b567f8ab97f18ddf1b4185dbbb94761e99e62",
+      "sha256": "8099b7f5ce02d33d19c4332465ca9191c9a453cfecbd81f972a27bece6c1e4a0",
+      "human_approval": null,
+      "reason": "G4 corrections requested by Codex: exception recorded as accepted per the user's decision \"Leave the rule and continue.\"; Collaborative marked DEFERRED with CLI feasibility untested; full RESULTS.md and hook log embedded in the evidence companion. No signed page changed."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/README.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "97e82b1c712c7fec6ea408bac9728e3e9fd3c2dccbccd55c1e5ba98b0323b470",
+      "sha256": "f3c4d8c23d5130110c3d2ceb7e92a73e51a8afa24d288d959156a4e88209aa1d",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/01-team-contract.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "331c869dff932a3be59efc8212fe351bb968404d10e545dc4fc986f2133d21f9",
+      "sha256": "85d8b8126daf1c5391caaaff10b7d1e7134b73023c2af6db8ec5c14a96707099",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/02-runtime-and-state.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "b57e41a8e28d6d5bc1a6859522eb0664f453f2417cb37854f56ba95dd9d5ca27",
+      "sha256": "db96a62ab0dc9be96ea26d8c872aeca342fa84b823f670e89ac1699829a2ba73",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/03-delivery-and-acceptance.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "436da5389881eb335534cb858751be1cc2544830ede3233df9366cef05fb7999",
+      "sha256": "e9d393343003737a4eb488ab21113f077928c552888929abd3a626c94aa65e39",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/04-evidence.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "76d615c64c83e0484f88ca6d6e805031b9aa5321938c5718f835d9000ace6bb5",
+      "sha256": "a0989c99370b3fdbb86a2eb68a11e77f57a17f3ed21b2dbaaf668fee1a27b2c4",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/05-concurrency-and-ownership.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "58dc1fec62a7e2a07fd48c15f61a8aa3354fb1b943fa5380c662a859ce6be2f8",
+      "sha256": "6f11dded819fdb0ff59e11c8dd4d8a4bea9bcbaa44b2b0b3f4f4bb528805e071",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/08-writer-and-policy.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "36e86fd2e9a58ad865b5ba728cf17014abf83cec2f0276a4931a4ebfbd8b189d",
+      "sha256": "fb3d554067292bf9e11ced2e809345eeb41ac0c505df3a78dabd93037d1d450e",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/12-implementation-roadmap.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "ce62ffc3716ef3be616afa76ed988ec3140ac6df1a7053247497b92293c41613",
+      "sha256": "bad18e5623225258ab55655bd56e8feccd982e3d23090951a998456a698360f5",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/15-timeboxed-execution-plan.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "663ba0a850920ebdd637370801f59c6db0e890de8779a4ecc4e6f337e8d06d26",
+      "sha256": "b5337e1b76008075cb421448c242b9735ef89bb8491e5b612d1b63e00b8b9e26",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/15.1-chunks-gate1-foundation-manual.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "cc134ba1c4a3d73fe2cc9fec929719e2ede1898b7cfa880ffa8783dd0321b29b",
+      "sha256": "3e8ad10819cdafc2b3dfada924cb1be4959a7a782be997561d2d22f76e328187",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/15.2-chunks-delegated-collaborative.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "c8e6d2dadc51866a0a2bcb5fcc1ee4b39c1ff65aee205305a37f6dd792308f4c",
+      "sha256": "781fddbc269c19f8c77d1fb51c27507e9732a8ebb6e0230af48388c74dd9b611",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/images/team-types.svg",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "4b59e7d42baa4e776bd07f005baffc9c21065830d400afb4d5e49030a045cf05",
+      "sha256": "3aa26993b874469567eb9c3cea6f76688c7f29621e2c916a72c33304fb450104",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/images/implementation-roadmap.svg",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": "61b8f16fa3f70e8a68df9f470ca3b2c904733c5e860a1e22db53c45cc4fecffd",
+      "sha256": "7eca7fa5d1e784f081ab9d7f4f7712f91c55953b5d08abe9f6fb7709f76f57c9",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/17-team-materialization-names.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:03:09.707862+00:00",
+      "previous_sha256": null,
+      "sha256": "05908ea18653dc9b261d7b480518ee0bb40280c9026df3ea04edddb5971325d6",
+      "human_approval": null,
+      "reason": "User-approved terminology amendment: Sessions, Subagents, and Teammates; all collaborate. Current plan names and diagrams updated; historical reviews, sign-off and native evidence preserved. Implementation rename and implementer acknowledgment pending."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/18-naming-amendment-acknowledgment.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:23:06.091071+00:00",
+      "previous_sha256": null,
+      "sha256": "0a70988e5c0813c1f2dbb5e5d8501b3ff850ff6aad979d32a0b667ba8eba8e17",
+      "human_approval": null,
+      "reason": "Claude Code's narrow implementer acknowledgment of the Sessions, Subagents and Teammates naming amendment, with exact hashes of the active plan pages and assets. Not a new technical sign-off, user approval or runtime verification."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/README.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:23:06.091322+00:00",
+      "previous_sha256": "f3c4d8c23d5130110c3d2ceb7e92a73e51a8afa24d288d959156a4e88209aa1d",
+      "sha256": "3789d3e59d78bfb4a352556545c08c177432271f3c11cfc1ed715937d65603c4",
+      "human_approval": null,
+      "reason": "Status only: links the implementer acknowledgment and records that the F1/F2 rename is applied, uncommitted and awaiting supervisor review. Technical scope unchanged."
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/claude-team-materialization/17-team-materialization-names.md",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-15T01:23:06.091343+00:00",
+      "previous_sha256": "05908ea18653dc9b261d7b480518ee0bb40280c9026df3ea04edddb5971325d6",
+      "sha256": "1584070ea0af188a21368609a834bca9820694da4dc83004bd7b87e8b8358661",
+      "human_approval": null,
+      "reason": "Status only: the handoff was sent and the implementer acknowledgment is linked. Decision and technical scope unchanged."
+    }
+  ],
+  "verification": {
+    "source_review": "Canonical team, role, runtime, and documentation contracts inspected. Public Claude documentation consulted.",
+    "native_runtime": "Not tested; claude executable unavailable on this shell PATH.",
+    "visual": "team-types.svg rendered at 850 px with rsvg-convert and visually inspected for text, layout, and relationships.",
+    "markdown_preview": "Embedded full Markdown page rendering not inspected.",
+    "links": "Local links and anchors checked separately against destination.",
+    "implementation": "No runtime implementation or client configuration changes.",
+    "ownership_visual": "work-ownership.svg rendered and visually checked separately; full Markdown rendering not inspected.",
+    "roadmap_visual": "implementation-roadmap.svg rendered and inspected separately; full Markdown rendering not inspected."
+  }
+}

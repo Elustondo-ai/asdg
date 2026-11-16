@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="510" viewBox="0 0 1020 510" role="img" aria-labelledby="title desc">
+  <title id="title">One ASDG role catalogue, three team types, many named teams</title>
+  <desc id="desc">Governance and twelve specialists feed Sessions, Subagents, and Teammates teams. A project may contain multiple named teams of each type. Only one team is active per project; other named definitions remain saved.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#66758a"/></marker></defs>
+  <rect width="1020" height="510" rx="16" fill="#f5f7fb"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="510" y="35" font-size="22" font-weight="700" fill="#16273c">Shared roles. Saved teams. One active team.</text>
+    <rect x="275" y="56" width="470" height="66" rx="10" fill="#1f3b59"/>
+    <text x="510" y="83" font-size="18" font-weight="700" fill="white">ASDG role catalogue</text>
+    <text x="510" y="107" font-size="16" fill="#e1ebf4">Governance + twelve specialists</text>
+    <g stroke="#66758a" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M510 122 V145 H170 V172"/><path d="M510 122 V172"/><path d="M510 122 V145 H850 V172"/></g>
+    <rect x="30" y="180" width="280" height="275" rx="12" fill="#ffffff" stroke="#b6c8dd"/>
+    <rect x="370" y="180" width="280" height="275" rx="12" fill="#ffffff" stroke="#b6c8dd"/>
+    <rect x="710" y="180" width="280" height="275" rx="12" fill="#ffffff" stroke="#b6c8dd"/>
+    <g fill="#16273c" font-size="20" font-weight="700"><text x="170" y="211">Sessions</text><text x="510" y="211">Subagents</text><text x="850" y="211">Teammates</text></g>
+    <g fill="#465c74" font-size="16"><text x="170" y="240">You select role conversations</text><text x="510" y="240">Lead assigns specialist tasks</text><text x="850" y="240">Lead + direct teammate access</text></g>
+    <g fill="#edf3f9"><rect x="48" y="259" width="244" height="67" rx="8"/><rect x="48" y="339" width="244" height="67" rx="8"/><rect x="388" y="259" width="244" height="67" rx="8"/><rect x="388" y="339" width="244" height="67" rx="8"/><rect x="728" y="259" width="244" height="67" rx="8"/><rect x="728" y="339" width="244" height="67" rx="8"/></g>
+    <g font-size="17" font-weight="700" fill="#233c57"><text x="170" y="285">personal</text><text x="170" y="365">planning</text><text x="510" y="285">delivery</text><text x="510" y="365">research</text><text x="850" y="285">architecture-review</text><text x="850" y="365">security-review</text></g>
+    <g font-size="15" fill="#465c74"><text x="170" y="309">Persistent specialist chats</text><text x="170" y="389">Another named roster</text><text x="510" y="309">Lead A → specialist results</text><text x="510" y="389">Lead B → specialist results</text><text x="850" y="309">Saved Teammates roster C</text><text x="850" y="389">Saved Teammates roster D</text></g>
+    <g font-size="15" fill="#465c74"><text x="170" y="435">Direct access + handoffs</text><text x="510" y="435">On-demand subagents</text><text x="850" y="435">Experimental native teams</text></g>
+    <text x="510" y="484" font-size="16" fill="#233c57">Many saved definitions; only one active team per project. Verify each run.</text>
+  </g>
+</svg>

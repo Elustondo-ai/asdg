@@ -48,7 +48,7 @@ Mode changes, selected hats, agent readiness and successful structural checks ne
 [Status](../asdg-status/SKILL.md) reports project facts and separate session fields; it never reactivates a role or silently renames.
 Direct Suggestion follows the selected role; Status requests project-wide advice under [continuation](../../00-governance/docs/continuation.md).
 An advisory recommendation can suggest a different role, subject or attitude but cannot activate it.
-Explicit [Create team](../asdg-create-team/SKILL.md), or APPROVE of an exact Init plan including team effects, permits initial role-chat creation, preserving the caller's fields and existing peers.
+Explicit [Create team](../asdg-create-team/SKILL.md), or APPROVE of an exact Init plan including team effects, permits initial role-chat creation, preserving the caller's fields and existing peers. A managed team under [team workflows](../../00-governance/docs/team-workflows.md) is an agreement, not a role: membership, assignment or a run claim never selects, restores or widens any session's role.
 Routing verifies project, role, subject and stable thread ID; report ambiguous candidates without silently choosing a title match.
 
 ## Current-chat title and acceptance

@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-14T19:46:02.463759+00:00",
+  "gate": "Gate 1 (roadmap step 1), chunks G2-G4",
+  "status": "PARTIAL: conditional verdicts with one accepted outside-boundary exception; not a full pass",
+  "surface": {
+    "app_version": "5.11492.5 (relayed by Codex)",
+    "model_shown": "Opus 5.5 Medium, Auto (relayed by Codex)",
+    "permission_mode_in_hooks": "auto"
+  },
+  "sessions": {
+    "A": {
+      "desktop_id": "local_70dc4356-f3e4-4e2f-9ba2-eb6751eacc52",
+      "hook_session_id": "c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d"
+    },
+    "B": {
+      "desktop_id": "local_8b478bd1-7f2d-4dd0-b3a6-517812c78a7c",
+      "hook_session_id": "0bc99a73-4cc2-4f6a-993c-792d77ff7c27"
+    }
+  },
+  "evidence_root": "/private/tmp/asdg-team-gate1-fPAmNA",
+  "evidence_note": "Evidence lives under /private/tmp and can be lost on reboot or cleanup. The full results text and the full hook log are embedded below; each embedded text hashes to the sha256 recorded for its source file.",
+  "evidence": {
+    "results": {
+      "path": "project/gate1/RESULTS.md",
+      "sha256": "1caffd10f4eedbcfa308e3441803d0f4c272e1c9f2dad4a43f374441372e2185"
+    },
+    "hook_log": {
+      "path": "project/gate1/hook-events.jsonl",
+      "sha256": "6366972753905fec71bd8c0b6b1adc9647bfa62a8726b2c9426f7f9bcdc3d962"
+    },
+    "checklist": {
+      "path": "project/gate1/CHECKLIST.md",
+      "sha256": "c763e993a2c9dc60a8b2ec2f685012bba716d3135364f350be9f76500b4472a8"
+    },
+    "g1_result": {
+      "path": "G1-RESULT.md",
+      "sha256": "453822d5684fd4b64f8dd1aa7590c0c217f867162125b8e9da96df4af9ac30a9"
+    },
+    "reviewer_definition": {
+      "path": "project/.claude/agents/asdg-gate1-reviewer.md",
+      "sha256": "3d6f48933eb90cea7dc3c3ab2f695e141f92c56d6270b365fb117033b35cd47b"
+    },
+    "second_definition": {
+      "path": "project/.claude/agents/asdg-gate1-second.md",
+      "sha256": "26bf4a0e38f74ff956d5fd0017d9b2ab6288ccd7a32ece9faa69e2bdbfd70b9c"
+    },
+    "probe_settings": {
+      "path": "project/.claude/settings.json",
+      "sha256": "9f0ded098d5de03a9e31d91d1bd53858e75b2b9d891a6b85f61333f9200a347c"
+    }
+  },
+  "verdicts": {
+    "manual": "CONDITIONAL GO to implement",
+    "delegated_read_only": "CONDITIONAL GO to implement",
+    "delegated_document_writing": "NOT ASSESSED; stays Unsupported",
+    "collaborative": "DEFERRED to roadmap step 9; CLI feasibility untested"
+  },
+  "untested": [
+    "linked worktree actual common-directory write from a worktree session",
+    "user-local host identity path",
+    "exercised policy denial of a worker write or spawn (tools were absent, nothing was refused)",
+    "hook failure behaviour",
+    "any other app version or permission mode"
+  ],
+  "hook_events": [
+    {
+      "at": "2026-11-14T19:37:35Z",
+      "hook_event_name": "SessionStart",
+      "session_id": "c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d"
+    },
+    {
+      "at": "2026-11-14T19:37:50Z",
+      "hook_event_name": "PreToolUse",
+      "session_id": "c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d",
+      "tool_name": "Read",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:37:58Z",
+      "hook_event_name": "PreToolUse",
+      "session_id": "c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d",
+      "tool_name": "Edit",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:38:14Z",
+      "hook_event_name": "SubagentStop",
+      "session_id": "c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d",
+      "agent_id": "a923687c4967eef0e",
+      "agent_type": "",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:38:24Z",
+      "hook_event_name": "PreToolUse",
+      "session_id": "c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d",
+      "tool_name": "Edit",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:38:37Z",
+      "hook_event_name": "SubagentStop",
+      "session_id": "c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d",
+      "agent_id": "a6ec49ada0c76e6cd",
+      "agent_type": "",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:38:55Z",
+      "hook_event_name": "PreToolUse",
+      "session_id": "c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d",
+      "tool_name": "Edit",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:39:54Z",
+      "hook_event_name": "PreToolUse",
+      "session_id": "c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d",
+      "tool_name": "Read",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:40:06Z",
+      "hook_event_name": "PreToolUse",
+      "session_id": "c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d",
+      "tool_name": "Edit",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:40:23Z",
+      "hook_event_name": "SubagentStop",
+      "session_id": "c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d",
+      "agent_id": "a3a549625a4432b88",
+      "agent_type": "",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:40:53Z",
+      "hook_event_name": "SessionStart",
+      "session_id": "0bc99a73-4cc2-4f6a-993c-792d77ff7c27"
+    },
+    {
+      "at": "2026-11-14T19:41:17Z",
+      "hook_event_name": "SubagentStart",
+      "session_id": "0bc99a73-4cc2-4f6a-993c-792d77ff7c27",
+      "agent_id": "a2201d2727df1970e",
+      "agent_type": "asdg-gate1-reviewer"
+    },
+    {
+      "at": "2026-11-14T19:41:19Z",
+      "hook_event_name": "PreToolUse",
+      "session_id": "0bc99a73-4cc2-4f6a-993c-792d77ff7c27",
+      "agent_id": "a2201d2727df1970e",
+      "agent_type": "asdg-gate1-reviewer",
+      "tool_name": "Read",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:41:23Z",
+      "hook_event_name": "SubagentStop",
+      "session_id": "0bc99a73-4cc2-4f6a-993c-792d77ff7c27",
+      "agent_id": "a69e84ffecd484be9",
+      "agent_type": "",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:41:25Z",
+      "hook_event_name": "SubagentStop",
+      "session_id": "0bc99a73-4cc2-4f6a-993c-792d77ff7c27",
+      "agent_id": "a2201d2727df1970e",
+      "agent_type": "asdg-gate1-reviewer",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:41:57Z",
+      "hook_event_name": "SubagentStart",
+      "session_id": "0bc99a73-4cc2-4f6a-993c-792d77ff7c27",
+      "agent_id": "a9e6659d01165d700",
+      "agent_type": "asdg-gate1-second"
+    },
+    {
+      "at": "2026-11-14T19:42:00Z",
+      "hook_event_name": "SubagentStop",
+      "session_id": "0bc99a73-4cc2-4f6a-993c-792d77ff7c27",
+      "agent_id": "a9e6659d01165d700",
+      "agent_type": "asdg-gate1-second",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:42:53Z",
+      "hook_event_name": "SubagentStop",
+      "session_id": "0bc99a73-4cc2-4f6a-993c-792d77ff7c27",
+      "agent_id": "aa8634bfff2716017",
+      "agent_type": "",
+      "permission_mode": "auto"
+    },
+    {
+      "at": "2026-11-14T19:43:58Z",
+      "hook_event_name": "SubagentStop",
+      "session_id": "0bc99a73-4cc2-4f6a-993c-792d77ff7c27",
+      "agent_id": "ae442aba47fb2b49d",
+      "agent_type": "",
+      "permission_mode": "auto"
+    }
+  ],
+  "amended_at": "2026-11-14T19:47:50.334241+00:00",
+  "accepted_exception": {
+    "path": "~/.config/git/ignore",
+    "content": "**/.claude/settings.local.json",
+    "sha256": "1a377e8e10315d1e8b44caf5bfe181da8320a024e4f3316b1cf1d91f9db274b3",
+    "created_and_modified_utc": "2026-11-14T19:40:42Z",
+    "origin": "UNCONFIRMED",
+    "documented_match": "Claude Code settings documentation: it adds **/.claude/settings.local.json to the global git excludes the first time it writes that file in a repository that does not ignore it",
+    "state": "ACCEPTED by Pablo; file left unchanged",
+    "user_decision": {
+      "quote": "Leave the rule and continue.",
+      "relayed_by": "Codex",
+      "meaning": "Acceptance of this exception and continuation of the planned implementation. Not retroactive proof of who created the file, and not permission for other global writes."
+    }
+  },
+  "embedded": {
+    "results": {
+      "source": "project/gate1/RESULTS.md",
+      "sha256": "1caffd10f4eedbcfa308e3441803d0f4c272e1c9f2dad4a43f374441372e2185",
+      "text": "# Gate 1 results\n\nFill in what was observed. Use ALLOWED, DENIED, PROMPTED, LITERAL, ABSENT or UNKNOWN where a short answer fits. Leave nothing blank; write UNKNOWN if it could not be observed.\n\n## Part A — session A\n\n- A0 App version (from Pablo): 5.11492.5 (app bundle version, observed by Codex and relayed; not seen by the session itself)\n- A0 Trust prompt shown: YES (relayed by Codex) — Desktop trust prompt named this folder and `.claude/settings.json`; Codex clicked \"Trust workspace\" after Pablo approved. Not observed directly by the session.\n- A1 Date and working directory: 2026-11-14, shell `date -u` = Sat Nov 14 19:37:47 UTC 2026; cwd `/private/tmp/asdg-team-gate1-fPAmNA/project`\n- A1 Delegation tool and listed agent types: AVAILABLE — `Agent` tool. Listed types: claude, claude-code-guide, Explore, general-purpose, Plan, statusline-setup, web-fetch. No asdg-gate1-* type listed. (Not invoked yet.)\n- A2 `.claude/agents` absent at start: ABSENT (confirmed by `test -e`; `.claude/` holds only `settings.json` and `skills/gate1-probe/SKILL.md`)\n- A2 SessionStart logged, with session_id: YES — one line, at 2026-11-14T19:37:35Z, hook_event_name SessionStart, session_id `c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d`, cwd matches. Payload keys: cwd, hook_event_name, scratchpad_dir, session_id, source, transcript_path. (Matches this session's scratchpad path UUID.)\n- A3 Skill shown in slash menu (from Pablo): YES (UI observation relayed by Codex) — typing `/gate1-probe` showed slash-menu item `gate1-probe` with description \"Gate 1 probe. Records the session ID expansion and the raw arguments. Disposable test skill. (project)\"\n- A3 Session ID expansion: `c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d` (expanded, not LITERAL)\n- A3 Raw arguments: `--name \"Architecture review\"`\n- A3 Expansion equals hook session_id: YES — identical to SessionStart session_id `c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d`\n- A4.1 Shell write to `.claude/skills`: ALLOWED (no prompt; file exists, 6 bytes)\n- A4.2 Shell write of `.claude/settings.local.json`: ALLOWED (no prompt; file exists, contents `{}`)\n- A4.3 Shell write under `.git/asdg-gate1`: ALLOWED (no prompt; file exists, 6 bytes)\n- A4.4 Shell write outside the working directory (stand-in only, not the worktree common directory): ALLOWED (no prompt; `../project-wt/outside-cwd-probe.txt` exists, 6 bytes)\n- A4.5 Shell creation of `.claude/agents` and first file: ALLOWED (no prompt; `.claude/agents/asdg-gate1-reviewer.md` exists, 783 bytes)\n- A5 Human-run fallback needed for A4.5 (no retry through another tool): NO — A4.5 succeeded via shell; no fallback needed, no retry made\n- A6 Worker available in the same session (or BLOCKED): NOT AVAILABLE (tested, not blocked). At ~19:39 UTC, `Agent` with subagent_type `asdg-gate1-reviewer` returned error: \"Agent type 'asdg-gate1-reviewer' not found. Available agents: claude, claude-code-guide, Explore, general-purpose, Plan, statusline-setup, web-fetch\". The worker returned nothing. Not retried by any other route. (Called within ~30 s of A4.5; Part B's B4 tests hot reload after a 15 s wait.)\n- Linked worktree's actual common directory, from a worktree session: UNTESTED\n- User-local host identity path: UNTESTED\n- Notes: All A4 probes ran as separate Bash commands under auto mode with no permission prompt or denial. Hook log at 19:39:51 UTC: SessionStart (19:37:35Z) plus PreToolUse for this session's Read/Edit calls, all with session_id `c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d`. It also holds two unexplained SubagentStop events (19:38:14Z agent_id `a923687c4967eef0e`, 19:38:37Z agent_id `a6ec49ada0c76e6cd`, agent_type empty, same session_id) with no matching SubagentStart. This session spawned no subagent at those times, so they are likely app-internal helper agents (UNKNOWN). The failed A6 call logged no SubagentStart. `git status --short` after Part A: ` M gate1/CHECKLIST.md`, ` M gate1/RESULTS.md`, `?? .claude/agents/`, `?? .claude/settings.local.json`, `?? .claude/skills/gate1-probe/shell-probe.txt`, `?? gate1/hook-events.jsonl` (`.git/asdg-gate1/` and `../project-wt/` don't show, as expected). Part A ended at about 19:40 UTC. No commit or push. Part B not started.\n\n## Part B — session B\n\n- B1 `asdg-gate1-reviewer` listed: YES — present in session B's initial Agent-type list as `asdg-gate1-reviewer` (\"Gate 1 probe worker. Read-only...\", Tools: Read, Grep, Glob), alongside claude, claude-code-guide, Explore, general-purpose, Plan, statusline-setup, web-fetch. Session B SessionStart at 19:40:53Z, session_id `0bc99a73-4cc2-4f6a-993c-792d77ff7c27` (matches this session's scratchpad UUID).\n- B2 Step 1, first line of role source: `ROLE-SOURCE-CANARY: gate1 reviewer role source was read.` (worker: \"I read `/private/tmp/asdg-team-gate1-fPAmNA/project/gate1/role-source.md`\"; matches `head -1` run by session B). Delegated at ~19:41:12 UTC via `Agent` subagent_type `asdg-gate1-reviewer` with the exact B2 request text; it ran async, 2 tool uses, ~8.4 s.\n- B2 Step 2, fingerprint returned: `GATE1-FP-27ec6bb828dd` (exact match to `.claude/agents/asdg-gate1-reviewer.md`)\n- B2 Step 3, tools listed: \"Read, Grep, Glob and SubagentHandback. The environment also included setup instructions from some MCP servers (Claude Docs, Figma, easel), but none of their tools were in my callable tool list.\" (SubagentHandback is a harness report-back tool, not declared in the definition.)\n- B2 Step 4, write attempt: MISSING TOOL, not a policy denial — \"Not attempted. None of my tools can create or edit files, so `gate1/worker-write-attempt.txt` was not created. I did not look for a workaround.\" No Write/Edit PreToolUse was logged for the worker.\n- B2 Step 5, spawn attempt: MISSING TOOL, not a policy denial — \"Not attempted. I have no tool for starting agents or subagents.\" Worker also noted it did the steps itself since it could not start an asdg-gate1-reviewer from inside (request text is phrased for the parent).\n- B2 `gate1/worker-write-attempt.txt` absent: ABSENT (`test -e` at 19:41:30 and again at 19:42:05 UTC)\n- B3 SubagentStart (session_id, agent_id, agent_type): YES — 19:41:17Z, session_id `0bc99a73-4cc2-4f6a-993c-792d77ff7c27`, agent_id `a2201d2727df1970e`, agent_type `asdg-gate1-reviewer` (agent_id equals the id the Agent tool returned for this launch)\n- B3 SubagentStop (session_id, agent_id, agent_type): YES — 19:41:25Z, session_id `0bc99a73-...c27`, agent_id `a2201d2727df1970e`, agent_type `asdg-gate1-reviewer` (matched pair with the Start). Separately, an unmatched SubagentStop at 19:41:23Z, agent_id `a69e84ffecd484be9`, agent_type empty, same session_id, no Start — ignored as proof (same pattern as G2's unexplained ones; UNKNOWN origin).\n- B3 PreToolUse for the worker's Read (agent_id, agent_type): YES — 19:41:19Z, tool_name Read, file_path `.../gate1/role-source.md`, session_id `0bc99a73-...c27` (parent's), agent_id `a2201d2727df1970e`, agent_type `asdg-gate1-reviewer`, permission_mode auto. Parent-session PreToolUse events carry no agent_id/agent_type keys.\n- B4 Hot reload, second worker available and fingerprint: AVAILABLE without restart — `cp` at 19:41:37 UTC; waited to 19:41:53; harness then announced \"New agent types are now available: asdg-gate1-second (Tools: Read)\". Delegated; returned exactly `GATE1-FP2-04d8eb519364`. Hooks: SubagentStart 19:41:57Z and SubagentStop 19:42:00Z, both agent_id `a9e6659d01165d700`, agent_type `asdg-gate1-second`, session_id `0bc99a73-...c27`; no PreToolUse (it made no Read). Note: contrasts with A6, where a call ~30 s after first creating `.claude/agents/` in session A found no new type — difference may be new-file-in-watched-dir vs directory created mid-session (UNKNOWN).\n- B5 `git status --short`: ` M gate1/CHECKLIST.md`, ` M gate1/RESULTS.md`, `?? .claude/agents/`, `?? .claude/skills/gate1-probe/shell-probe.txt`, `?? gate1/hook-events.jsonl` (19:42:05 UTC, before this results edit). `.claude/settings.local.json` still exists (3 bytes) but no longer shows because the user-global git ignore `~/.config/git/ignore:1:**/.claude/settings.local.json` matches it; Part A listed it as `??`. See the outside-boundary side effect in Notes: the global ignore file was created at about the time session B opened.\n- Notes: Session B started ~19:40:53 UTC, finished ~19:43 UTC. Session B ran only Bash, Agent, ToolSearch (Monitor schema load, unused) and a background Bash wait; no file writes besides `.claude/agents/asdg-gate1-second.md` (B4) and this file. No tool denials or permission prompts observed. Session B's own commands wrote nothing outside the boundary, changed no settings, installed nothing, and made no commit or push. G4 not started. Full elapsed time for G3 about 2 minutes (session start 19:40:53Z to results written ~19:42:32Z, including waits).\n- OUTSIDE-BOUNDARY SIDE EFFECT (supervisor-observed, recorded after G3 review): global state outside the boundary DID change during this window. \"No global writes by session B's own commands\" holds, but \"no global state changed\" is FALSE. Codex observed G2 `git status` at 19:39:36Z listing `.claude/settings.local.json` as untracked. After G3 opened, that file is ignored by `/Users/pablo.elustondo/.config/git/ignore:1:**/.claude/settings.local.json`. Per Codex's `stat`, that global ignore file was both created and modified at 2026-11-14 14:40:42 -0500 (19:40:42Z), about 11 s before session B's SessionStart hook at 19:40:53Z, so around when the fresh G3 session was opened. Origin: UNKNOWN, not proven. No tool or component is assigned blame here, and it is not asserted that the app created it. Nobody authorized a global ignore change. The file was not edited or reverted by this session. Escalated by Codex to Pablo.\n"
+    },
+    "hook_log": {
+      "source": "project/gate1/hook-events.jsonl",
+      "sha256": "6366972753905fec71bd8c0b6b1adc9647bfa62a8726b2c9426f7f9bcdc3d962",
+      "text": "{\"at\": \"2026-11-14T19:37:35Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"hook_event_name\": \"SessionStart\", \"keys\": [\"cwd\", \"hook_event_name\", \"scratchpad_dir\", \"session_id\", \"source\", \"transcript_path\"], \"session_id\": \"c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d\"}\n{\"at\": \"2026-11-14T19:37:50Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"file_path\": \"/private/tmp/asdg-team-gate1-fPAmNA/project/gate1/RESULTS.md\", \"hook_event_name\": \"PreToolUse\", \"keys\": [\"cwd\", \"effort\", \"hook_event_name\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_id\", \"tool_input\", \"tool_name\", \"tool_use_id\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d\", \"tool_name\": \"Read\"}\n{\"at\": \"2026-11-14T19:37:58Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"file_path\": \"/private/tmp/asdg-team-gate1-fPAmNA/project/gate1/RESULTS.md\", \"hook_event_name\": \"PreToolUse\", \"keys\": [\"cwd\", \"effort\", \"hook_event_name\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_id\", \"tool_input\", \"tool_name\", \"tool_use_id\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d\", \"tool_name\": \"Edit\"}\n{\"agent_id\": \"a923687c4967eef0e\", \"agent_type\": \"\", \"at\": \"2026-11-14T19:38:14Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"hook_event_name\": \"SubagentStop\", \"keys\": [\"agent_id\", \"agent_transcript_path\", \"agent_type\", \"background_tasks\", \"cwd\", \"effort\", \"hook_event_name\", \"last_assistant_message\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_crons\", \"session_id\", \"stop_hook_active\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d\"}\n{\"at\": \"2026-11-14T19:38:24Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"file_path\": \"/private/tmp/asdg-team-gate1-fPAmNA/project/gate1/RESULTS.md\", \"hook_event_name\": \"PreToolUse\", \"keys\": [\"cwd\", \"effort\", \"hook_event_name\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_id\", \"tool_input\", \"tool_name\", \"tool_use_id\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d\", \"tool_name\": \"Edit\"}\n{\"agent_id\": \"a6ec49ada0c76e6cd\", \"agent_type\": \"\", \"at\": \"2026-11-14T19:38:37Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"hook_event_name\": \"SubagentStop\", \"keys\": [\"agent_id\", \"agent_transcript_path\", \"agent_type\", \"background_tasks\", \"cwd\", \"effort\", \"hook_event_name\", \"last_assistant_message\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_crons\", \"session_id\", \"stop_hook_active\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d\"}\n{\"at\": \"2026-11-14T19:38:55Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"file_path\": \"/private/tmp/asdg-team-gate1-fPAmNA/project/gate1/RESULTS.md\", \"hook_event_name\": \"PreToolUse\", \"keys\": [\"cwd\", \"effort\", \"hook_event_name\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_id\", \"tool_input\", \"tool_name\", \"tool_use_id\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d\", \"tool_name\": \"Edit\"}\n{\"at\": \"2026-11-14T19:39:54Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"file_path\": \"/private/tmp/asdg-team-gate1-fPAmNA/project/gate1/RESULTS.md\", \"hook_event_name\": \"PreToolUse\", \"keys\": [\"cwd\", \"effort\", \"hook_event_name\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_id\", \"tool_input\", \"tool_name\", \"tool_use_id\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d\", \"tool_name\": \"Read\"}\n{\"at\": \"2026-11-14T19:40:06Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"file_path\": \"/private/tmp/asdg-team-gate1-fPAmNA/project/gate1/RESULTS.md\", \"hook_event_name\": \"PreToolUse\", \"keys\": [\"cwd\", \"effort\", \"hook_event_name\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_id\", \"tool_input\", \"tool_name\", \"tool_use_id\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d\", \"tool_name\": \"Edit\"}\n{\"agent_id\": \"a3a549625a4432b88\", \"agent_type\": \"\", \"at\": \"2026-11-14T19:40:23Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"hook_event_name\": \"SubagentStop\", \"keys\": [\"agent_id\", \"agent_transcript_path\", \"agent_type\", \"background_tasks\", \"cwd\", \"effort\", \"hook_event_name\", \"last_assistant_message\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_crons\", \"session_id\", \"stop_hook_active\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"c0cd3ed8-9a5d-4341-90a0-e8b09a2ac87d\"}\n{\"at\": \"2026-11-14T19:40:53Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"hook_event_name\": \"SessionStart\", \"keys\": [\"cwd\", \"hook_event_name\", \"scratchpad_dir\", \"session_id\", \"source\", \"transcript_path\"], \"session_id\": \"0bc99a73-4cc2-4f6a-993c-792d77ff7c27\"}\n{\"agent_id\": \"a2201d2727df1970e\", \"agent_type\": \"asdg-gate1-reviewer\", \"at\": \"2026-11-14T19:41:17Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"hook_event_name\": \"SubagentStart\", \"keys\": [\"agent_id\", \"agent_type\", \"cwd\", \"hook_event_name\", \"prompt_id\", \"scratchpad_dir\", \"session_id\", \"transcript_path\"], \"session_id\": \"0bc99a73-4cc2-4f6a-993c-792d77ff7c27\"}\n{\"agent_id\": \"a2201d2727df1970e\", \"agent_type\": \"asdg-gate1-reviewer\", \"at\": \"2026-11-14T19:41:19Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"file_path\": \"/private/tmp/asdg-team-gate1-fPAmNA/project/gate1/role-source.md\", \"hook_event_name\": \"PreToolUse\", \"keys\": [\"agent_id\", \"agent_type\", \"cwd\", \"effort\", \"hook_event_name\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_id\", \"tool_input\", \"tool_name\", \"tool_use_id\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"0bc99a73-4cc2-4f6a-993c-792d77ff7c27\", \"tool_name\": \"Read\"}\n{\"agent_id\": \"a69e84ffecd484be9\", \"agent_type\": \"\", \"at\": \"2026-11-14T19:41:23Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"hook_event_name\": \"SubagentStop\", \"keys\": [\"agent_id\", \"agent_transcript_path\", \"agent_type\", \"background_tasks\", \"cwd\", \"effort\", \"hook_event_name\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_crons\", \"session_id\", \"stop_hook_active\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"0bc99a73-4cc2-4f6a-993c-792d77ff7c27\"}\n{\"agent_id\": \"a2201d2727df1970e\", \"agent_type\": \"asdg-gate1-reviewer\", \"at\": \"2026-11-14T19:41:25Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"hook_event_name\": \"SubagentStop\", \"keys\": [\"agent_id\", \"agent_transcript_path\", \"agent_type\", \"background_tasks\", \"cwd\", \"effort\", \"hook_event_name\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_crons\", \"session_id\", \"stop_hook_active\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"0bc99a73-4cc2-4f6a-993c-792d77ff7c27\"}\n{\"agent_id\": \"a9e6659d01165d700\", \"agent_type\": \"asdg-gate1-second\", \"at\": \"2026-11-14T19:41:57Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"hook_event_name\": \"SubagentStart\", \"keys\": [\"agent_id\", \"agent_type\", \"cwd\", \"hook_event_name\", \"prompt_id\", \"scratchpad_dir\", \"session_id\", \"transcript_path\"], \"session_id\": \"0bc99a73-4cc2-4f6a-993c-792d77ff7c27\"}\n{\"agent_id\": \"a9e6659d01165d700\", \"agent_type\": \"asdg-gate1-second\", \"at\": \"2026-11-14T19:42:00Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"hook_event_name\": \"SubagentStop\", \"keys\": [\"agent_id\", \"agent_transcript_path\", \"agent_type\", \"background_tasks\", \"cwd\", \"effort\", \"hook_event_name\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_crons\", \"session_id\", \"stop_hook_active\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"0bc99a73-4cc2-4f6a-993c-792d77ff7c27\"}\n{\"agent_id\": \"aa8634bfff2716017\", \"agent_type\": \"\", \"at\": \"2026-11-14T19:42:53Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"hook_event_name\": \"SubagentStop\", \"keys\": [\"agent_id\", \"agent_transcript_path\", \"agent_type\", \"background_tasks\", \"cwd\", \"effort\", \"hook_event_name\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_crons\", \"session_id\", \"stop_hook_active\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"0bc99a73-4cc2-4f6a-993c-792d77ff7c27\"}\n{\"agent_id\": \"ae442aba47fb2b49d\", \"agent_type\": \"\", \"at\": \"2026-11-14T19:43:58Z\", \"cwd\": \"/private/tmp/asdg-team-gate1-fPAmNA/project\", \"hook_event_name\": \"SubagentStop\", \"keys\": [\"agent_id\", \"agent_transcript_path\", \"agent_type\", \"background_tasks\", \"cwd\", \"effort\", \"hook_event_name\", \"permission_mode\", \"prompt_id\", \"scratchpad_dir\", \"session_crons\", \"session_id\", \"stop_hook_active\", \"transcript_path\"], \"permission_mode\": \"auto\", \"session_id\": \"0bc99a73-4cc2-4f6a-993c-792d77ff7c27\"}\n"
+    }
+  },
+  "hook_events_note": "hook_events is a reduced view derived from embedded.hook_log.text; the embedded text is the evidence."
+}
