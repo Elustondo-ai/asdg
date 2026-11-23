@@ -16,7 +16,7 @@ Retain every confirmed generic role's ID and activation receipt. A title is insu
 A fresh project with confirmed empty inventory has `roles: []`; do not infer emptiness from missing files.
 Save a unique temporary JSON file outside the target with the [inventory schema](../../scripts/lib/cli_team.md). Pass it as `--team-inventory PATH` on both preview and apply.
 Include that inventory and the resulting `team` effects beside the complete file report in the approval presentation: all roles, create/reuse IDs, project ID, initial activation prompts and capability limits.
-For Claude use the parent workflow's client mode: installed adapters and role sources, Governance default, manual specialist Focus; no native chat creation is promised.
+For Claude use the parent workflow's verification: installed adapters and role sources, Governance default, manual specialist Focus. The Init plan includes no Claude chat creation; role chats there need a direct Create team request afterwards.
 For both clients prepare both modes; lack of Codex tools blocks Codex team readiness.
 
 ## Apply the approved effects

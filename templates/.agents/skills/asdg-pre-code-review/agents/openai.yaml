@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG Pre-code review"
+  short_description: "Pre-code review deck from stages 01 to 08"
+  default_prompt: "Use $asdg-pre-code-review to assemble the stage documentation into a pre-code review PowerPoint with speaker notes."

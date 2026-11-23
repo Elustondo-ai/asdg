@@ -14,7 +14,7 @@ A non-owning caller may inspect the method, but must not use it to bypass role b
 
 1. Inspect the named task, scope, governing design and available approval evidence.
 2. Check the approved component task, active sprint, scope and acceptance criteria before each implementation target; otherwise return the proposed changes without executing writes.
-3. Flag missing design or authorization and any work outside the named component.
+3. Flag missing design or authorization and any work outside the named component. For product implementation, require a current `READY_FOR_09` result under the [Sprint align rule](../../../skills/asdg-sprint-align/SKILL.md#the-rule); when it is missing or stale, forward an alignment request to the coordinator through its [routing](../../../skills/asdg-sprint-align/routing.md) and return the task as blocked. A readiness report never widens this role's authority.
 4. Within existing execution permissions, implement and test the approved bounded task; otherwise return a proposed approach. Claim only observed coding and test results.
 
 ## Output and checks

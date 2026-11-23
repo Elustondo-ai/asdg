@@ -36,7 +36,7 @@ The skill preserves Focus and explicit selections; recording a decision does not
 
 ## Sprint transitions
 
-Use `$asdg-sprint-start` to verify a clean worktree, create a short sprint branch and activate the chosen scope; `$asdg-sprint-review` assesses evidence without changing state.
+Use `$asdg-sprint-start` to verify a clean worktree, create a short sprint branch and activate the chosen scope; `$asdg-sprint-review` assesses evidence without changing state, and [`$asdg-sprint-align`](../skills/asdg-sprint-align/SKILL.md) has the team check the sprint from purpose to specifications before new code.
 If anything is staged, unstaged or untracked, start stops and asks the developer to commit/check it in. `SPRINT-000` uses `sprint-00` unless another name is selected.
 Use `$asdg-sprint-close` to preserve a review and end the explicitly selected sprint, including an unfinished or cancelled one. These utilities preserve Focus.
 The existing local CLI remains available; perform the [clean-worktree and branch preflight](../skills/asdg-sprint-start/git-preflight.md) before a manual start:

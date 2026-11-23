@@ -16,7 +16,7 @@ python3 asdg/scripts/cli.py sprint stop
 ```
 `--scope` and `--acceptance` are repeatable; all fields are required to start.
 Scope is an exact repository-relative file or directory ending in `/`, without globs/traversal.
-Scope bounds paths only; work inside it must still serve the sprint objective and meet its acceptance criteria.
+Scope bounds paths only; work inside it must still serve the sprint objective and meet its acceptance criteria. Whether the sprint is ready to implement is a separate assessment under the [Sprint align rule](../../skills/asdg-sprint-align/SKILL.md#the-rule), not a field of this state.
 Protected agent-policy/state paths cannot be scope. The guard must receive EVERY target.
 Guard exit 0 means all targets are allowed; exit 1 means blocked. Missing, malformed,
 unsupported or symlink state fails closed; active state without supplied targets also blocks.

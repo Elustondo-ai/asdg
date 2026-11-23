@@ -21,8 +21,13 @@ def git_root(path: Path, *, exact=True) -> Path:
     return Path(found).resolve(strict=True)
 
 
-def package(repo: Path) -> tuple[dict, dict]:
-    """Manifest equality establishes integrity, not release approval or authenticity."""
+def package(repo: Path, *, local_changes: bool = False) -> tuple[dict, dict]:
+    """Manifest equality establishes integrity, not release approval or authenticity.
+
+    `local_changes` is for an initialized client refreshing its own integration files: its
+    methodology was edited in place, so a mismatch is reported as LOCAL_CHANGES instead of refused.
+    The delivery manifest is never rewritten; it stays as provenance of what was delivered.
+    """
     metadata = distribution(repo)
     core = distribution_core(repo)
     entries = {methodology_path(p.relative_to(core).as_posix()): read_bytes(p)
@@ -30,21 +35,31 @@ def package(repo: Path) -> tuple[dict, dict]:
     manifest = json.loads(entries[MANIFEST])
     hashes = {name: sha(data) for name, data in entries.items() if name != MANIFEST}
     if (not isinstance(manifest, dict) or manifest.get('schema_version') != 1
-            or manifest.get('version') != metadata['version'] or manifest.get('files') != hashes):
+            or manifest.get('version') != metadata['version']):
+        raise Conflict('Package integrity failed: delivery manifest is invalid or names another version. '
+                       'Obtain a matching package.')
+    matched = manifest.get('files') == hashes
+    if not matched and not local_changes:
         raise Conflict('Package integrity failed: delivery manifest is stale or invalid; '
                        'working-tree snapshots cannot be installed. Obtain a matching package.')
     info = {'version': metadata['version'], 'manifest_sha256': sha(entries[MANIFEST]),
             'snapshot_sha256': sha(json_bytes({n: sha(b) for n, b in entries.items()})),
-            'integrity': 'MANIFEST_MATCHED', 'release_approval': 'NOT_ESTABLISHED',
+            'integrity': 'MANIFEST_MATCHED' if matched else 'LOCAL_CHANGES', 'release_approval': 'NOT_ESTABLISHED',
             'canonical_repository': metadata.get('canonical_repository')}
     return info, entries
 
 
-def source_snapshot(repo: Path, commit: str | None) -> tuple[dict, dict]:
-    info, entries = package(repo)
+def source_snapshot(repo: Path, commit: str | None, *, local_changes: bool = False) -> tuple[dict, dict]:
+    info, entries = package(repo, local_changes=local_changes and commit is None)
     info.update(kind='EXTRACTED_PACKAGE', commit=None, path=str(repo))
     if commit is None:
-        info['build'] = package_build(distribution_core(repo), info)
+        if not local_changes:
+            info['build'] = package_build(distribution_core(repo), info)
+            return info, entries
+        try:  # Locally changed bytes are never attributed to a build; the stored record is left alone.
+            info['build'] = package_build(distribution_core(repo), info) if info['integrity'] == 'MANIFEST_MATCHED' else None
+        except Conflict:
+            info.update(build=None, integrity='LOCAL_CHANGES')
         return info, entries
     git_root(repo)
     if not re.fullmatch(r'[0-9a-f]{40}|[0-9a-f]{64}', commit):

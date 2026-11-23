@@ -1,4 +1,4 @@
-"""Choose client integrations and render Claude skill adapters from the shared adapter templates."""
+"""Choose client integrations; render Claude skill adapters and copy Claude mods from the distribution."""
 from __future__ import annotations
 
 import json
@@ -13,6 +13,9 @@ CHOICES = {'codex': ('codex',), 'claude': ('claude',), 'both': ('codex', 'claude
 INTEGRATIONS = Path('.asdg/integrations.json')
 SKILL_TEMPLATES = Path('asdg/templates/.agents/skills')
 CLAUDE_SKILLS = Path('.claude/skills')
+MODS = Path('asdg/mods')
+# A mod's runtime files. Its companions and tests stay in the distribution and are never installed.
+MOD_FILES = ('.claude-plugin/plugin.json', 'hooks/hooks.json', 'hooks/register.tsx', 'types/index.d.ts')
 # Any of these, in the project or a parent folder, makes Claude Code skip its native AGENTS.md read.
 SUPPRESSORS = ('CLAUDE.md', '.claude/CLAUDE.md', 'CLAUDE.local.md')
 BRIDGE_BEGIN, BRIDGE_END = '<!-- ASDG:BEGIN claude-bridge-v1 -->', '<!-- ASDG:END claude-bridge -->'
@@ -87,8 +90,36 @@ def claude_adapter(repo: Path, name: str) -> bytes:
     return (head + '---\n' + text[match.end():]).encode('utf-8')
 
 
+def mod_names(repo: Path) -> list[str]:
+    """Claude mods: folders under asdg/mods that carry a plugin manifest. None in a package without mods."""
+    base = safe_path(repo, MODS)
+    if not base.is_dir():
+        return []
+    return sorted(path.parent.parent.name for path in base.glob('*/.claude-plugin/plugin.json'))
+
+
+def claude_mod(repo: Path, name: str) -> list[tuple[Path, bytes]]:
+    """Copy one mod's runtime files unchanged; Claude loads the folder from the project's skills directory."""
+    files = []
+    for relative in MOD_FILES:
+        data = read_bytes(safe_path(repo, MODS / name / relative))
+        if data is None:
+            raise Conflict(f'Claude mod {name} is missing {relative}')
+        files.append((CLAUDE_SKILLS / name / relative, data))
+    try:
+        manifest = json.loads(files[0][1])
+    except ValueError as exc:
+        raise Conflict(f'Claude mod {name} has an invalid manifest: {exc}') from exc
+    if not isinstance(manifest, dict) or manifest.get('name') != name:
+        raise Conflict(f'Claude mod manifest name must equal its folder: {name}')
+    if name in skill_names(repo):
+        raise Conflict(f'Claude mod and skill share one installed folder: {name}')
+    return files
+
+
 def claude_files(repo: Path) -> list[tuple[Path, bytes]]:
-    return [(CLAUDE_SKILLS / name / 'SKILL.md', claude_adapter(repo, name)) for name in skill_names(repo)]
+    adapters = [(CLAUDE_SKILLS / name / 'SKILL.md', claude_adapter(repo, name)) for name in skill_names(repo)]
+    return adapters + [row for name in mod_names(repo) for row in claude_mod(repo, name)]
 
 
 def suppressors(root: Path) -> list[str]:

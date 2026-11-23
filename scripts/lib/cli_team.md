@@ -16,6 +16,6 @@ Distinct subject or attitude sessions remain preserved; unresolved candidates bl
 Duplicate roles/IDs, foreign projects, incomplete inventory and unconfirmed activation fail before file writes.
 A complete inventory with missing roles plans only those missing roles. A matching team plans reuse of all thirteen IDs.
 Absent inventory reports `NATIVE_INVENTORY_REQUIRED`; it never means an empty native project.
-Claude uses the installed role/skill sources with manual Focus selection; no automatic Claude chat API exists in ASDG.
+For Claude the plan reports role adapters with `native_chats: UNSUPPORTED`: this engine plans no Claude chats. A direct Create team request may still open role chats on a surface with session tools.
 No shared active-role state or native chat database is introduced. The inventory is an external temporary review artifact.
 Native actions happen after file verification, outside filesystem rollback. A partial native result is preserved and rediscovered before retry.

@@ -50,3 +50,4 @@ A directory scope should be checked with a concrete file beneath it. Sprint perm
 If the outcome is uncertain, read back before retrying; report observed state and any remaining uncertainty.
 Report the sprint, objective, scope, criteria, new branch and starting commit with the actual command outcome. Sprint-state changes after activation are expected uncommitted work.
 No application edits, approvals, commits, installs, deployment, chat creation or Focus changes occur merely from starting.
+An active sprint is not a ready one: before new code, [Sprint align](../asdg-sprint-align/SKILL.md#the-rule) applies, and it also applies when the goal, scope or a criterion is being defined or materially changed. Recommend it; starting never runs it.

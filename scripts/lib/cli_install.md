@@ -12,13 +12,15 @@ Both acquisition paths normalize only selected distribution members into a tempo
 
 | Interface | Contract |
 | --- | --- |
-| `install(...)` | Defaults to preview. Accepts source/commit for a clone, target, client, initial status, apply_changes, expected_plan and optional team_inventory. Returns source identity, every distribution file, generated diffs, planned paths and verification results. |
+| `install(...)` | Defaults to preview. Accepts source/commit for a clone, target, client, initial status, apply_changes, expected_plan, optional team_inventory and `openspec` (default true). Returns source identity, every distribution file, generated diffs, planned paths and verification results. |
 | `render(report)` | Shows the full file/team plan or file completion with client work pending; it never runs Status or creates chats. |
 
 A source with a [build record](build_identity.md) plans `asdg/metadata/build.json` (kind `build-identity`) and records it as `installation_source.build` in `.asdg/project.json`; the preview text shows `ASDG build <UTC> · <short hash>`.
+[`cli_openspec`](cli_openspec.md) adds OpenSpec's missing project files for the clients of this run as rows of kind `openspec`, without diffs, and records its report under `openspec`; a missing or failing `openspec` command adds a note and never stops the plan.
 The timestamp in the plan token freezes generated timestamps across preview and apply. Replanning hashes source bytes, target Git identity, destination bytes, client choice and initial status; changed inputs require another preview.
 No plan file is written. Temporary normalization is removed after both preview and apply; target and source are unchanged during preview.
 The token identifies reviewed bytes; it is not human authentication or methodology approval. Prompts must wait for explicit developer approval.
-Missing approval tokens, collisions, stale manifests, mismatched commits and incompatible bindings fail before target writes. Verification runs inside the existing rollback boundary.
+A target that already holds `.asdg/project.json` and names no `--source` is refreshing its own integration files: local methodology edits are then reported, not refused. The report's source says `integrity: LOCAL_CHANGES`, a note explains it, no build record is planned, and the text never says the package matched.
+Missing approval tokens, collisions, stale manifests on a first install, mismatched commits and incompatible bindings fail before target writes. Verification runs inside the existing rollback boundary.
 Integrity and structure are deterministic checks; native application discovery, invocation and hook trust remain unverified.
 After file application, `installation_complete` describes files only; `initialization_complete` remains false in Python. The canonical Init skill continues the approved Create team workflow, validates actual receipts, then reports Governance Status. This avoids claiming native side effects from filesystem checks.

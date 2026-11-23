@@ -16,7 +16,7 @@ Existing `asdg-prepare-plan`, `asdg-propose-architecture` and native `openspec-p
 Read client instructions and [session policy](../asdg-focus/session-policy.md); preserve role, subject, attitude and goal. Only ASDG-08 may write native artifacts under the [OpenSpec exception](../../00-governance/docs/write-exceptions.md); other roles return a proposal/handoff.
 Resolve the ASDG client root from this canonical directory as `../../..`; distinguish it from any external OpenSpec planning home.
 Check the current runtime skill catalogue for `openspec-propose`, then read that installed skill in full at its advertised path. Report catalogue discovery separately from successful file loading; neither proves workflow execution.
-If the skill is absent or unreadable, report the missing dependency and stop; do not install it, invent a native invocation or substitute a copied workflow.
+If the skill is absent or unreadable, report the missing dependency and stop; do not install it, invent a native invocation or substitute a copied workflow. Repeating ASDG setup adds it for a selected client when the `openspec` command is installed; that is the human's separately approved step.
 Read [the evidence and traceability contract](evidence.md) before drafting; it defines source selection, approval checks and authoritative locations.
 Resolve the user's bounded change. A bare invocation with no clear request asks what to propose; it does not choose a feature automatically.
 Report material conflicts or missing decisions before creating a change, and ask only for information that affects scope, behavior, compatibility or acceptance. Record minor assumptions explicitly.

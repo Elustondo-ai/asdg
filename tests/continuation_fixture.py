@@ -13,6 +13,8 @@ sys.path.insert(0, str(CORE / 'scripts/lib'))
 from cli_project import plan_initialization
 from cli_files import apply
 from purpose_review import CRITERIA, PREFIX, PURPOSE_DOCUMENT, bundle_hashes
+import os
+os.environ.setdefault('ASDG_OPENSPEC', '0')  # Hermetic: setup's OpenSpec step would run a separately installed command.
 
 
 def create_fixture(root: Path, scenario: str) -> Path:

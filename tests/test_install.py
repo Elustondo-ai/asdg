@@ -17,6 +17,7 @@ sys.path.insert(0, str(CORE / 'scripts/lib'))
 from cli_files import Conflict
 from cli_install import install, render
 from distribution_files import package_files
+os.environ.setdefault('ASDG_OPENSPEC', '0')  # Hermetic: setup's OpenSpec step would run a separately installed command.
 
 
 def tree(root):

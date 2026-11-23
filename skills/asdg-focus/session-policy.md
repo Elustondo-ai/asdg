@@ -48,13 +48,13 @@ Mode changes, selected hats, agent readiness and successful structural checks ne
 [Status](../asdg-status/SKILL.md) reports project facts and separate session fields; it never reactivates a role or silently renames.
 Direct Suggestion follows the selected role; Status requests project-wide advice under [continuation](../../00-governance/docs/continuation.md).
 An advisory recommendation can suggest a different role, subject or attitude but cannot activate it.
-Explicit [Create team](../asdg-create-team/SKILL.md), or APPROVE of an exact Init plan including team effects, permits initial role-chat creation, preserving the caller's fields and existing peers.
+Explicit [Create team](../asdg-create-team/SKILL.md), or APPROVE of an exact Init plan including team effects, permits initial role-chat creation, preserving the caller's fields and existing peers. A managed team under [team workflows](../../00-governance/docs/team-workflows.md) is an agreement, not a role: membership, assignment or a run claim never selects, restores or widens any session's role.
 Routing verifies project, role, subject and stable thread ID; report ambiguous candidates without silently choosing a title match.
 
 ## Current-chat title and acceptance
 
 After required sources load, sync the title via [current-chat renaming](rename-chat.md) on: new-session Governance start, legacy None migration, clear to Governance, explicit role (including Admin), subject or attitude change, repeat selection, expiry or refresh.
-Titles show the short role name, selected focus and selected attitude; omit the project suffix and all empty-field labels.
+Titles show the short role name, selected focus and selected attitude; omit the project suffix and all empty-field labels. The one project-named title is the [team lead's](rename-chat.md#team-lead-title).
 This narrow metadata allowance permits no file rename, peer change, internal-store edits or expanded project authority.
 Keep valid state if renaming fails; distinguish the computed title from actual native outcomes and observed UI.
 Use [the behavioral exercise](TRY-IT.md) and [attitude acceptance cases](../asdg-attitude/TRY-IT.md); scenarios are not test results.

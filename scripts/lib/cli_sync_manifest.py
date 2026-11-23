@@ -60,7 +60,7 @@ def methodology_path(name: str) -> str:
     p = PurePosixPath(name)
     top = p.parts[0] if p.parts else ''
     roots = {'AGENTS.md', 'README.md', 'LICENSE', 'CODEX-PROMPT.md',
-             'admin', 'docs', 'metadata', 'scripts', 'skills', 'templates', 'tests', 'scaffolds'}
+             'admin', 'docs', 'metadata', 'mods', 'scripts', 'skills', 'templates', 'tests', 'scaffolds'}
     if (not name or p.is_absolute() or p.as_posix() != name or '..' in p.parts or '\\' in name
             or any(c in name for c in '\n\r\0') or name in (STATE, 'metadata/build.json')
             or any(part in {'.git', '.asdg', '__pycache__', 'logs', 'build', 'components'} for part in p.parts)

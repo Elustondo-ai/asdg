@@ -17,6 +17,7 @@ Every workflow preserves existing records, exact hashes, role assessments and hu
 | Generated coordinator advice | Existing `status --advise --verbose` writer may create only unique `02.1-status-*.md` reports and matching JSON receipts in Stage 07; it cannot overwrite planning documents. This is a utility allowance, not general Governance ownership of Planning. |
 | Installation and synchronization | Existing explicit preview → approval → apply engines keep their exact reviewed-plan writes and preservation rules. Update/team setup keep their existing separately requested integration/chat capabilities. No generic file-write exception is inferred. |
 | Runtime recorder | Existing reviewed/trusted logging hooks may write public activity summaries under `logs/`; this does not grant the acting role arbitrary log or shell writes. |
+| Managed teams | Where the installed package provides the team command, explicit Create Team and Start requests permit only its controlled writer and the exact registered stores listed in [team workflows](team-workflows.md): preview, exact token and rechecked apply for configuration; claim transitions for the one started run. Observer setup is a separate request. No stage, application, unrelated project-state or general filesystem write. Unavailable otherwise. |
 
 ## Store and control limits
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG Sprint align"
+  short_description: "Check a sprint is ready to implement"
+  default_prompt: "Use $asdg-sprint-align to check the current sprint from purpose to specifications before implementation."

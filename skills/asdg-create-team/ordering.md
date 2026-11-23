@@ -19,3 +19,12 @@ If supported tools cannot set fixed project-chat order, explain the limitation a
 Record intended order, target IDs, preference approval if needed, attempted operations and acknowledgements. Separate tool readback from visually verified results; say when visual verification was unavailable. An acknowledgement alone never proves visible order or stability after activity.
 Creation and ordering must not start project work or a sprint; editing this policy authorizes neither team creation nor reordering.
 
+## In Claude
+
+Use this part only on a surface with native sidebar tools, such as the Claude desktop app, after the roster is confirmed.
+Role chats started from the team lead chat are listed under it, and role titles begin with 01–12, so sorting the sidebar by name shows lifecycle order. No drag order, pin or numeric prefix on the lead is needed.
+Read the current sidebar sort first. If it is already by name, change nothing and say so.
+Otherwise offer this as the default step, once: set the sort to name (`sort_by: alpha` in the desktop app's sidebar view tool). Say that the setting is shared by every project in the sidebar, and change it only on the user's yes; a no leaves it as it is.
+Title the calling chat as the [team lead](../asdg-focus/rename-chat.md#team-lead-title).
+Report the setting's readback separately from what was visually verified; a readback of `alpha` does not prove the visible order.
+

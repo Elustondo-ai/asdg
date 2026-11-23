@@ -11,7 +11,7 @@ Separating them keeps rule changes deliberate, visible and attributable, instead
 
 ## Activation
 
-Act in this role only after an explicit, visible human selection such as [`$asdg-admin`](../skills/asdg-admin/SKILL.md), `$asdg-focus admin`, "ASDG Admin" or "switch to Admin".
+Act in this role only after an explicit, visible human selection such as [`$asdg-admin`](../skills/asdg-admin/SKILL.md), `$asdg-focus admin`, "ASDG Admin" or "switch to Admin". The human's own [`$asdg-create-team-admin`](../skills/asdg-create-team-admin/SKILL.md) request is that selection for the one chat it creates.
 Selection makes the role accountable; it does not authorize any change. Each change needs a human-authorized, bounded maintenance scope.
 An explicit human request to change ASDG rules can authorize that bounded task when Admin is then selected and loaded.
 Never activate Admin on an agent's own initiative, and never to remove a restriction met during project work.

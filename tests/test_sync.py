@@ -19,6 +19,7 @@ from cli_sync_manifest import DESCRIPTOR, INDEX, MANIFEST, STATE, digest, encode
 
 CANONICAL = 'https://example.test/team/asdg.git'
 PILOT = 'git@example.test:team/pilot.git'
+os.environ.setdefault('ASDG_OPENSPEC', '0')  # Hermetic: setup's OpenSpec step would run a separately installed command.
 
 
 def git(root, *args):

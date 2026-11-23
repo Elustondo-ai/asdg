@@ -1,0 +1,6 @@
+interface:
+  display_name: "ASDG create team admin"
+  short_description: "Create an admin team in its own worktree"
+  default_prompt: "Use $asdg-create-team-admin to create an admin team for changes to ASDG."
+policy:
+  allow_implicit_invocation: false

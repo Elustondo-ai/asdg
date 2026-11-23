@@ -8,6 +8,7 @@ from unittest.mock import patch
 import test_portable as portable
 from cli_ownership import owned_directory, ownership_decision
 from cli_hook import decision
+os.environ.setdefault('ASDG_OPENSPEC', '0')  # Hermetic: setup's OpenSpec step would run a separately installed command.
 
 
 class OwnershipTests(unittest.TestCase):

@@ -26,7 +26,8 @@ For “all commands,” include the terminal commands in [the reference](command
 | [/asdg-help](SKILL.md) | Explain commands and examples; changes nothing. |
 | [/asdg-update](../asdg-update/SKILL.md) | As selected Admin, preview a distribution update and separate adapter refresh; approve each plan before apply. |
 | [/asdg-init](../asdg-init/SKILL.md) | Preview installation; apply only after explicit approval of the exact preview. |
-| [/asdg-create-team](../asdg-create-team/SKILL.md) | Reuse/create the thirteen role chats and arrange lifecycle order; shared sorting changes need approval. |
+| [/asdg-create-team](../asdg-create-team/SKILL.md) | Reuse/create the thirteen role chats, or the next numbered team in its own worktree and branch; shared sorting changes need approval. |
+| [/asdg-create-team-admin](../asdg-create-team-admin/SKILL.md) | Create one ASDG Admin chat in its own numbered worktree and branch; authorizes no rule change. |
 | [/asdg-focus](../asdg-focus/SKILL.md) | Select a role, or use `subject` to change its topic independently. |
 | [/asdg-attitude](../asdg-attitude/SKILL.md) | Select a thinking attitude and scope, clear it, or report it. |
 | [/asdg-status](../asdg-status/SKILL.md) | Report project/session facts and one project-wide next step; facts-only omits advice. |
@@ -35,6 +36,8 @@ For “all commands,” include the terminal commands in [the reference](command
 | [/asdg-admin](../asdg-admin/SKILL.md) | Explicitly select methodology Admin, or `clear` back to Governance; selection authorizes no edits. |
 | [/asdg-approve](../asdg-approve/SKILL.md) | Record explicit human acceptance of a previously presented exact documentation bundle. |
 | [/asdg-sprint-start](../asdg-sprint-start/SKILL.md) | Start a human-requested scoped sprint from clean Git on a new sprint branch. |
+| [/asdg-sprint-align](../asdg-sprint-align/SKILL.md) | Have the team check a sprint from purpose to specifications before coding; reports readiness only. |
+| [/asdg-pre-code-review](../asdg-pre-code-review/SKILL.md) | Build a pre-code review PowerPoint with speaker notes from stages 01 to 08. |
 | [/asdg-sprint-review](../asdg-sprint-review/SKILL.md) | Assess the active sprint's evidence without changing its state. |
 | [/asdg-sprint-close](../asdg-sprint-close/SKILL.md) | Preserve review/unfinished work and end the explicitly selected sprint. |
 | [/asdg-suggestion](../asdg-suggestion/SKILL.md) | Recommend one useful next contribution; advice only. |

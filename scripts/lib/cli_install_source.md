@@ -7,8 +7,10 @@
 | Interface | Responsibility |
 | --- | --- |
 | `git_root(path, exact=True)` | Require an existing Git root; caller-directory discovery may allow a subdirectory. Never creates a repository. |
-| `package(repo)` | Read selected regular files, restrict methodology paths, validate descriptor/version and exact manifest hashes. Return provenance and frozen bytes. |
-| `source_snapshot(repo, commit)` | For clones, also require an explicit full commit matching HEAD, normalized canonical origin and regular-file Git blob equality for every selected member, then set `info['build']` from that commit. For extracted ZIPs, accept a shipped `metadata/build.json` only when it describes exactly the frozen bytes. |
+| `package(repo, local_changes=False)` | Read selected regular files, restrict methodology paths, validate descriptor/version and exact manifest hashes. Return provenance and frozen bytes. With `local_changes`, differing hashes return `integrity: LOCAL_CHANGES` instead of raising; an invalid manifest or another version still raises. |
+| `source_snapshot(repo, commit, local_changes=False)` | For clones, also require an explicit full commit matching HEAD, normalized canonical origin and regular-file Git blob equality for every selected member, then set `info['build']` from that commit. For extracted ZIPs, accept a shipped `metadata/build.json` only when it describes exactly the frozen bytes. |
+
+`local_changes` applies only without a commit, for an initialized client refreshing its own integration files. Changed bytes are never attributed: `info['build']` is `None` and a build record that no longer matches also yields `LOCAL_CHANGES`. Nothing rewrites the manifest or the record.
 
 Collaborates with [`build_identity`](build_identity.md) (`commit_mismatch`, `commit_build`, `package_build`), `distribution_files`, `cli_project.distribution`, `cli_sync_manifest` path/identity normalization and `cli_files` safe reads.
 Unselected provider files and their local edits are excluded. Selected dirty or untracked files fail even when a locally refreshed manifest matches them.

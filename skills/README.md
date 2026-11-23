@@ -7,7 +7,8 @@ Canonical workflows live here; native discovery adapters remain thin references.
 | [Update](asdg-update/SKILL.md) | Preview a selected distribution update and separate adapter refresh; explicit approval per plan |
 | [Help](asdg-help/SKILL.md) | Explain all ASDG commands, examples and invocation syntax without executing them |
 | [Initialize](asdg-init/SKILL.md) | Bootstrap the explicitly identified client |
-| [Create team](asdg-create-team/SKILL.md) | Set up governance and twelve specialist chats, reusing existing focused chats |
+| [Create team](asdg-create-team/SKILL.md) | Set up governance and twelve specialist chats, or the next numbered team in its own worktree and branch |
+| [Create team admin](asdg-create-team-admin/SKILL.md) | On explicit request, create one ASDG Admin chat in its own numbered worktree and branch for changes to ASDG |
 | [Focus](asdg-focus/SKILL.md) | Select a role; use `subject` to change its topic independently |
 | [Attitude](asdg-attitude/SKILL.md) | Choose a thinking approach, temporary scope, NoAttitude or read-only status |
 | [Status](asdg-status/SKILL.md) | Show status, a suggested next step, then observations and technical debt |
@@ -16,6 +17,8 @@ Canonical workflows live here; native discovery adapters remain thin references.
 | [Admin](asdg-admin/SKILL.md) | Explicitly switch this chat to ASDG Admin for rule maintenance, or clear back to 00 Governance |
 | [Approve](asdg-approve/SKILL.md) | Resolve the current reviewed documentation baseline and record explicit human acceptance |
 | [Sprint start](asdg-sprint-start/SKILL.md) | Require clean Git status, create a sprint branch, then activate the chosen scope |
+| [Sprint align](asdg-sprint-align/SKILL.md) | Coordinate stage reviews from purpose to specifications and report implementation readiness; no state change |
+| [Pre-code review](asdg-pre-code-review/SKILL.md) | Assemble stages 01 to 08 into a pre-code review PowerPoint with speaker notes; no state change |
 | [Sprint review](asdg-sprint-review/SKILL.md) | Assess evidence against the sprint criteria without changing state |
 | [Sprint close](asdg-sprint-close/SKILL.md) | Preserve the review and end the explicitly selected sprint, retaining unfinished work |
 | [Suggestion](asdg-suggestion/SKILL.md) | Recommend one useful next step from project evidence and priorities |

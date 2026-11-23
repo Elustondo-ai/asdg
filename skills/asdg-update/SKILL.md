@@ -35,7 +35,7 @@ Upgrade synchronizes `asdg/` only. It does not install skill adapters; a new can
 After successful upgrade, use the target's own `asdg/scripts/cli.py init --dry-run --json`, omitting `--client` to retain recorded clients. Never add another client or change hook trust as a side effect.
 Present the exact integration plan, including any changes outside adapters. New missing adapters can be added; differing existing managed files are conflicts requiring separately authorized reconciliation, not blind overwrite.
 Follow [Init's approval presentation](../asdg-init/SKILL.md#mandatory-approval-presentation--both-clients). Apply only after explicit approval of this fresh integration preview, using the same options with `--apply --plan <token>`.
-If retained local package edits or incompatible metadata prevent init verification, report the exact gap and preserve them; never restore the incoming manifest over local bytes or run a first-time reinstall.
+Retained local package edits no longer block this preview: an initialized client's init reports `LOCAL CHANGES` and plans from the local copy. If incompatible metadata still prevents it, report the exact gap and preserve it; never restore the incoming manifest over local bytes, refresh a manifest or run a first-time reinstall.
 No-change integration previews need no apply. If integration fails after a successful upgrade, report methodology updated / integration pending; do not claim atomic completion or silently roll back adopted work.
 
 ## Verify and hand off

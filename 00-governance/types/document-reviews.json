@@ -35434,6 +35434,652 @@
         "visible_review_markers": [],
         "approval_binding": "No approval inferred or transferred."
       }
+    },
+    {
+      "path": "skills/asdg-focus/rename-chat.md",
+      "sha256": "7ddcacc1bb9b102bb01b113c2901d65fab32d2ba952bd24a5461bce2ea3235c8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T16:54:18Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Team lead title and name sort for Claude role teams",
+        "review": "docs/asdg/07-planning/02.23-review-team-lead-title-and-name-sort.json"
+      },
+      "previous_state": {
+        "sha256": "e37c9284a61db66d7e18482e4e565015826551bf4a4cc1939aa4463cfd3e5e79",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-focus/session-policy.md",
+      "sha256": "cfed2204ce19d0c721845ba8ef050d24a1aeacac344c5f3a5a96cc40d124e47a",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T16:54:18Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Team lead title and name sort for Claude role teams",
+        "review": "docs/asdg/07-planning/02.23-review-team-lead-title-and-name-sort.json"
+      },
+      "previous_state": {
+        "sha256": "3c52c70c2d05b2528f493121a431700c9caf4ac69828a27fc6eb3b91f3f63c1a",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-create-team/ordering.md",
+      "sha256": "fc1ff279110f0fe0a0e548511ce448283c9a94bf3ee0de8c8e2ef719a4b918b0",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T16:54:18Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Team lead title and name sort for Claude role teams",
+        "review": "docs/asdg/07-planning/02.23-review-team-lead-title-and-name-sort.json"
+      },
+      "previous_state": {
+        "sha256": "93d6fa76d190fe062d689a9838362492598ce85ddb2a633329c4bdd342922e8e",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-create-team/create-chats.md",
+      "sha256": "5296df04210a34df2b802b6e5812b220e9bae904ce787a04281d7c8d109ad90f",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T16:54:18Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Team lead title and name sort for Claude role teams",
+        "review": "docs/asdg/07-planning/02.23-review-team-lead-title-and-name-sort.json"
+      },
+      "previous_state": {
+        "sha256": "03be339d5d7d36887bbc108135e15c800b36231bfc15e4e4f0cd18500d32428a",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-pre-code-review/SKILL.md",
+      "sha256": "a8bc8505d494dc0ecc0160c7e3e3a16d4bc926c8210ec3aa563fee11a0bde863",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T18:07:45Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Pre-code review skill",
+        "review": "docs/asdg/07-planning/02.24-review-pre-code-review-skill.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-pre-code-review/build_deck.md",
+      "sha256": "3aad2fb1961f025584c0c685a111a168fef21f8b842094bf2a52da1803b4cedf",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T18:07:45Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Pre-code review skill",
+        "review": "docs/asdg/07-planning/02.24-review-pre-code-review-skill.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-pre-code-review/build_deck.py",
+      "sha256": "d3b4e7d0f68aa5af5e3ca6dfa760e68f194a0a1f219847ffb0f5b3b3f580f206",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T18:07:45Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Pre-code review skill",
+        "review": "docs/asdg/07-planning/02.24-review-pre-code-review-skill.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "templates/.agents/skills/asdg-pre-code-review/SKILL.md",
+      "sha256": "959770350a685a1623a4e67ca6a3f4cbbe60a6170c5a5f267ff261dee304c992",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T18:07:45Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Pre-code review skill",
+        "review": "docs/asdg/07-planning/02.24-review-pre-code-review-skill.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "templates/.agents/skills/asdg-pre-code-review/agents/openai.yaml",
+      "sha256": "babf3c66312cf450b6d661a79110b46878f2c770be2f7f2d46ff1db51245b5da",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T18:07:45Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Pre-code review skill",
+        "review": "docs/asdg/07-planning/02.24-review-pre-code-review-skill.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_pre_code_review.md",
+      "sha256": "68e33de17da4acfd7255fc8a4ed537f51fc38c91ba9a55933cb20e28d0cb6ef8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T18:07:45Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Pre-code review skill",
+        "review": "docs/asdg/07-planning/02.24-review-pre-code-review-skill.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_pre_code_review.py",
+      "sha256": "41da13e1e656a26b98b40771503b9ff64d60d7b6f60753c50bcc7058461871cb",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T18:07:45Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Pre-code review skill",
+        "review": "docs/asdg/07-planning/02.24-review-pre-code-review-skill.json"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "metadata/package-files.json",
+      "sha256": "ad9b506a0b4b211091554dc438d58e337f69af3baa6be925b4f4556d4c488e19",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T18:07:45Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Pre-code review skill",
+        "review": "docs/asdg/07-planning/02.24-review-pre-code-review-skill.json"
+      },
+      "previous_state": {
+        "sha256": "1b2840ebc59a88353695d532cc2b10f20e25bc72b1a648a2ad0fc7958d6cd7ac",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/README.md",
+      "sha256": "e911357ab43dd92ee046b79deadc280a46c070dd0d250985dbbf428697035935",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T18:07:45Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Pre-code review skill",
+        "review": "docs/asdg/07-planning/02.24-review-pre-code-review-skill.json"
+      },
+      "previous_state": {
+        "sha256": "f2ae206071847eb7d2b63882f254a118a4c3730cfa5d15067ff012f4ed83c55b",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-help/SKILL.md",
+      "sha256": "45847a72b703f94f8b9446950e9e61e98a98526eeff40cbd4e4ce37be80ebe6b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T18:07:45Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Pre-code review skill",
+        "review": "docs/asdg/07-planning/02.24-review-pre-code-review-skill.json"
+      },
+      "previous_state": {
+        "sha256": "23e80d273ee22e2cc934f2aeef10e48e3512b6c913d6d49b32e6eec5b9a469c8",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/README.md",
+      "sha256": "8ed14adaae8436e9989361ab8fd577e5f2e8db583c229c12257a261d19fb9cb1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-18T18:07:45Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Pre-code review skill",
+        "review": "docs/asdg/07-planning/02.24-review-pre-code-review-skill.json"
+      },
+      "previous_state": {
+        "sha256": "37eea668c4048dac8c9f066617d984c0d6ad6178953eb5d039137fb49d918793",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "mods/asdg-sprint-status/hooks/register.tsx",
+      "sha256": "a8101b903375c5aa9c0a30cb6806714b039a4b61b84c8ef7036dc0820fcabdd7",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-19T18:15:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Sprint status mod: show the proposed next sprint",
+        "review": "docs/asdg/07-planning/02.25-review-sprint-status-next-sprint.md"
+      },
+      "previous_state": {
+        "sha256": "5768a0fdef9ab95e1d24c4a4f6ea9c769c62b996efc82b2f784e979738635a9f",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "mods/asdg-sprint-status/hooks/register.md",
+      "sha256": "a04bdc4dab85c2f1f1fd79f77cacd5ca45efb2724cbcd216c0c84cae4bb05ba8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-19T18:15:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Sprint status mod: show the proposed next sprint",
+        "review": "docs/asdg/07-planning/02.25-review-sprint-status-next-sprint.md"
+      },
+      "previous_state": {
+        "sha256": "380f618f90119f8d5894f64211fb590abf731d2dc56582c19dd6a626023ed559",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "mods/asdg-sprint-status/hooks/register.test.tsx",
+      "sha256": "0884de23b98f05bebf57c5ab6144197d4cd3097bb344db0c3c9d23c6f94e3786",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-19T18:15:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Sprint status mod: show the proposed next sprint",
+        "review": "docs/asdg/07-planning/02.25-review-sprint-status-next-sprint.md"
+      },
+      "previous_state": {
+        "sha256": "b3f2fa26dfa851cddb81ca975cddb5d2631163f89e72b01afbd238ec88c864ae",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "mods/asdg-sprint-status/hooks/register.test.md",
+      "sha256": "844548ab2bc63438edc41f4de395bc38e877481a699e4adc0cc25bc44eb52be9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-19T18:15:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Sprint status mod: show the proposed next sprint",
+        "review": "docs/asdg/07-planning/02.25-review-sprint-status-next-sprint.md"
+      },
+      "previous_state": {
+        "sha256": "f6c58f956671ff514d35d5f0dafbfd2dc2672a5ff77cc782926ff34be39630e9",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "mods/asdg-sprint-status/types/index.d.ts",
+      "sha256": "af482ff0fa1fd3b614e3675542da76f35a1e7057784531c6d9ba6b41d1293f52",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-19T18:15:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Sprint status mod: show the proposed next sprint",
+        "review": "docs/asdg/07-planning/02.25-review-sprint-status-next-sprint.md"
+      },
+      "previous_state": {
+        "sha256": "ed69a5036bb0549e46eafa135678f63af177a8051f2c599b73550d68b362eb36",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "mods/asdg-sprint-status/types/index.d.md",
+      "sha256": "7560d731de23c5e0fe42c5f0618cc0d11d623036c59ce12a5362ec0a15934e85",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-19T18:15:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Sprint status mod: show the proposed next sprint",
+        "review": "docs/asdg/07-planning/02.25-review-sprint-status-next-sprint.md"
+      },
+      "previous_state": {
+        "sha256": "b07501076e77e18540c2cf3772739b20e1ea0a1ba313e4c965160653eeb19bef",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "mods/asdg-sprint-status/.claude-plugin/plugin.json",
+      "sha256": "06e402628b33dbe870cd758b7047cb7a0c44229bd0d68f96880e87f5cc3a54f0",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-19T18:15:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Sprint status mod: show the proposed next sprint",
+        "review": "docs/asdg/07-planning/02.25-review-sprint-status-next-sprint.md"
+      },
+      "previous_state": {
+        "sha256": "56997dfe1e771fdabff3de77f08f89752bbd22bc883b4078ac0db200a14b9a7c",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-create-team/SKILL.md",
+      "sha256": "42a95ad79331faca5a90d16ec8a0d7cd6433870ff6bb545776b955946d519ee8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": "63a84df3c75af26445467f47a4f860239ff81e55a2d885e409f2207edaf0c358",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-create-team/numbered-teams.md",
+      "sha256": "2ca0aa2faecf4ac28d0851e6bb859e73901f0324f6554445a63b1237289bbbc4",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-create-team/team_worktree.py",
+      "sha256": "70e1ab5103945248f54a9779fb47bb15f4d26127564ec8503b78a8d7468ffa03",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-create-team/team_worktree.md",
+      "sha256": "010bdf3ad7ec6a2afb3f2be99b93f2e87691abda887668f90385dd51384ec0aa",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-create-team/create-chats.md",
+      "sha256": "f2f4b32d549bb4968f310c39ca965134fe05ca546087bf1eac7946e47c08e3a4",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": "5296df04210a34df2b802b6e5812b220e9bae904ce787a04281d7c8d109ad90f",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-focus/rename-chat.md",
+      "sha256": "14f7779cd5de02efdaa70ae5c83dd1d6ce300e0757abb2a3e0e7ac282ebd345a",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": "7ddcacc1bb9b102bb01b113c2901d65fab32d2ba952bd24a5461bce2ea3235c8",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-create-team-admin/SKILL.md",
+      "sha256": "1e3b70c8e32b3f957b0d78ec87ef3e6a6f167e711b4b8da545d94339b945ca6e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "templates/.agents/skills/asdg-create-team-admin/SKILL.md",
+      "sha256": "c702970e947c42734ab63ec1017a66b82a66b62694f9180ac346a19dd332d2e9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "templates/.agents/skills/asdg-create-team-admin/agents/openai.yaml",
+      "sha256": "805056f7f00aa498e0550fc954de714f48dcabd3f1dc5515f99193d6c0e1a941",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "admin/AGENTS.md",
+      "sha256": "ad809cb437ab1cbe45909aa84130b0926278e4d34a87c663a6367ff178e979d1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": "9f636bbdff9a9750960c3ea596a16ab93428dfd6e10482b8ba28cc8ee59a7c30",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/README.md",
+      "sha256": "6d31cac948b9b03fa07a2fe9968ac1a5dda21116184e889ef433fa6c811b4e45",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": "e911357ab43dd92ee046b79deadc280a46c070dd0d250985dbbf428697035935",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "skills/asdg-help/SKILL.md",
+      "sha256": "57d9cf98631b21cc3a9d979218b4c076e290233f8f64a329bf53e9afefaa13fa",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": "45847a72b703f94f8b9446950e9e61e98a98526eeff40cbd4e4ce37be80ebe6b",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "metadata/package-files.json",
+      "sha256": "56cb5f269e9af607f3d6ada1bc7de972071530c3c2c2061ec5b2abf56e77c303",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": "ad9b506a0b4b211091554dc438d58e337f69af3baa6be925b4f4556d4c488e19",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_numbered_teams.py",
+      "sha256": "b0c5e262379ee4fdaf0ea467358836d4dc6f3f331288866060bc608b987e7485",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/test_numbered_teams.md",
+      "sha256": "93f1ed836320e91a455bdae618db2bfbf4b63a237d7fea01b48a7770a288fd8c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
+    },
+    {
+      "path": "tests/README.md",
+      "sha256": "febb19b99641eb96d4cd723aaf3637c178780d43c8e0df0217de6b6cf92b052f",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-22T22:45:00Z",
+      "human_approval": null,
+      "provenance": {
+        "role": "ASDG-ADMIN",
+        "task": "Numbered teams: a worktree and branch per team, and the create-team-admin skill",
+        "review": "docs/asdg/07-planning/02.26-review-numbered-teams.md"
+      },
+      "previous_state": {
+        "sha256": "8ed14adaae8436e9989361ab8fd577e5f2e8db583c229c12257a261d19fb9cb1",
+        "visible_review_markers": [],
+        "approval_binding": "No approval inferred or transferred."
+      }
     }
   ],
   "distribution_version": "0.3.0-pilot.2"

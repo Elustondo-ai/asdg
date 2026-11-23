@@ -78,6 +78,8 @@ def main(argv: list[str] | None = None) -> int:
             command.add_argument('--target', help='existing target Git root; defaults to caller project')
             command.add_argument('--client', choices=('codex', 'claude', 'both'), default=None,
                                  help='client integration to add; repeat setup without it keeps the recorded clients (Codex if none)')
+            command.add_argument('--no-openspec', action='store_true',
+                                 help="do not plan OpenSpec's project files for the selected clients")
         if name == 'status':
             mode = command.add_mutually_exclusive_group()
             mode.add_argument('--facts-only', action='store_true', help='skip coordinator advice')
@@ -130,7 +132,8 @@ def main(argv: list[str] | None = None) -> int:
             from cli_install import install, render
             report = install(source=args.source, target=args.target, commit=args.commit, client=args.client,
                              project_state=args.project_status, apply_changes=args.apply, expected_plan=args.plan,
-                             team_inventory=json.loads(Path(args.team_inventory).read_text(encoding='utf-8')) if args.team_inventory else None)
+                             team_inventory=json.loads(Path(args.team_inventory).read_text(encoding='utf-8')) if args.team_inventory else None,
+                             openspec=not args.no_openspec)
             print(json.dumps(report, indent=2) if args.json else render(report))
             return 0
         root = project_root()
@@ -205,6 +208,10 @@ def main(argv: list[str] | None = None) -> int:
         elif args.operation == 'verify':
             if report['structure_ok']:
                 print('ASDG structure verified.')
+                absent = sorted(name for name, state in report.get('openspec_skills', {}).items() if state == 'MISSING')
+                if absent and report.get('openspec_project'):
+                    print('Note: OpenSpec skills are not installed for ' + ', '.join(absent)
+                          + '; asdg-openspec-propose cannot run there. Repeat setup to add them.')
                 print('ALL GOOD!')
             else:
                 print('ASDG initialization failed.' if args.operation == 'init'

@@ -15,6 +15,8 @@ sys.path.insert(0, str(CORE / 'scripts'))
 from build_distribution import build, refresh_manifest
 from check import validate
 from distribution_files import package_files
+import os
+os.environ.setdefault('ASDG_OPENSPEC', '0')  # Hermetic: setup's OpenSpec step would run a separately installed command.
 
 
 class DistributionTests(unittest.TestCase):

@@ -19,7 +19,7 @@ An adopted snapshot supplies ancestry without treating the target's local change
 | --- | --- |
 | `digest(data)` / `encoded(value)` | SHA-256 of bytes (None stays None); deterministic UTF-8 JSON bytes. |
 | `git(root, *args)` / `repository_id(remote)` | Reads local Git; normalizes HTTP(S)/SSH origins to host/path without storing credentials. |
-| `methodology_path(name)` | Validates a distribution-relative path; rejects traversal, local adoption state and excluded project/build areas. |
+| `methodology_path(name)` | Validates a distribution-relative path; rejects traversal, local adoption state and excluded project/build areas. Top-level areas are the stage folders, `admin`, `docs`, `metadata`, `mods`, `scripts`, `skills`, `templates`, `tests` and `scaffolds`, plus the four root files. |
 | `read_json(path)` / `hash_map(value)` | Validates bounded JSON objects and path-to-SHA-256 maps; no writes. |
 | `read_state(core)` | Returns schema-1 local adoption state or an empty state; corrupt identities or snapshot hashes fail. |
 | `snapshot(location)` | Requires an exact Git root, identifiable origin/HEAD, versioned metadata and the thirteen stable lifecycle identities. Returns bytes, hashes, history, binding and a public identity summary. |

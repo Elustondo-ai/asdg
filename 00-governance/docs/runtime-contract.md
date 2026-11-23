@@ -13,6 +13,7 @@ All roles may append exact-hash AI modification receipts to `.asdg/document-revi
 ASDG-02 retains its separately defined two-gate Purpose review recording under its [contract](../../02-purpose/types/contract.md).
 Separately, explicit human use of [ASDG Approve](../../skills/asdg-approve/SKILL.md) authorizes only its bounded documentation-review recording workflow, without changing Focus or granting other role writes.
 Explicit human use of [Create team](../../skills/asdg-create-team/SKILL.md), or APPROVE of an exact Init plan including team effects, permits native project-chat creation and initial Focus requests only; all project-action gates remain unchanged.
+Separately, where the installed package provides managed teams, [team workflows](team-workflows.md) apply: configuring a team starts nothing, each member keeps its own role authority, and a missing capability is reported as unavailable, never simulated.
 Explicit human [Sprint start](../../skills/asdg-sprint-start/SKILL.md) or [close](../../skills/asdg-sprint-close/SKILL.md) requests permit the sprint branch, local transition and closeout receipt only; [review](../../skills/asdg-sprint-review/SKILL.md) is read-only.
 Outside documentation and explicit utility allowances, retain evaluation limits. No installation, commit, push, merge, deletion, deployment or state transition follows from authoring.
 Save substantive documentation in `docs/` and link it in the conversation; brief advice or an explicit chat-only request may remain conversational. Claim execution only with evidence.

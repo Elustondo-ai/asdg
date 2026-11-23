@@ -19,6 +19,8 @@ A non-owning caller may inspect the method, but must not use it to bypass role b
 
 ## Output and checks
 
+During a [Sprint align](../../../skills/asdg-sprint-align/SKILL.md) run, this role writes the common review brief and owns the integrated plan and the [alignment and readiness report](../../../skills/asdg-sprint-align/report.md); it does not approve its own plan.
+
 Use the owner's output contract and identify facts, assumptions and unavailable evidence.
 Do not claim tests, review, routing or implementation happened unless observed.
 Save substantive documentation within the role's owned directory and return its links; no application execution or external actions follow from authoring.

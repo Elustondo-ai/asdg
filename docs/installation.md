@@ -32,7 +32,7 @@ Run `python3 asdg/scripts/cli.py verify --json` in the target, and repeat the pr
 The [canonical Create team workflow](../skills/asdg-create-team/initialization.md) prepares native inventory before preview; `--team-inventory PATH` binds Codex create/reuse effects to the same plan token. APPROVE covers those displayed effects without a second team question.
 After verified file installation, Init executes that workflow, confirms team readiness and reports Status from Governance. Native actions are outside file rollback; partial success is retained and rediscovered before retry.
 A plain Python invocation cannot operate native chats: it reports file installation complete and initialization pending. The canonical agent workflow completes the client phase automatically. Missing tools or ambiguous inventory prevent a readiness claim.
-Claude prepares role/skill sources and adapters with Governance available by default; specialists use manual Focus. Codex prepares thirteen activated project chats. Admin is excluded. See [client readiness](client-integrations.md).
+Claude prepares role/skill sources and adapters with Governance available by default; specialists use manual Focus, or role chats where a later Create team request can open them. Codex prepares thirteen activated project chats. Admin is excluded. See [client readiness](client-integrations.md).
 
 | Location | Ownership and protection |
 | --- | --- |

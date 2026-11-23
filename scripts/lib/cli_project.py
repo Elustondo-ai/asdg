@@ -370,6 +370,8 @@ def inspect(root, repo=REPO):
         missing.append(str(exc))
     integrations, problems = client_report(root, repo, value is not None)
     missing.extend(problems)
+    from cli_openspec import presence
+    openspec = presence(root, [name for name, item in integrations.items() if item['status'] != 'NOT_SELECTED'])
     codex = integrations['codex']['status'] != 'NOT_SELECTED'
     body = read_bytes(safe_path(root, 'AGENTS.md'))
     if body is None or not bootstrap_is_current(body.decode('utf-8', 'replace')):
@@ -396,6 +398,7 @@ def inspect(root, repo=REPO):
     return {'provider': PROVIDER, 'cli_version': VERSION, 'project_root': str(root),
             'initialized': value is not None, 'structure_ok': not missing, 'missing': missing,
             'semantic_compliance': 'NOT_ASSESSED', 'sprint_state': sprint, 'integrations': integrations,
+            'openspec_skills': openspec, 'openspec_project': (root / 'openspec/config.yaml').is_file(),
             'implementation_enforcement': 'HOOK_TRUST_NOT_ASSESSED' if codex else 'NO_ASDG_GUARD_INSTALLED',
             'methodology_root': str(repo / 'asdg'), 'catalog_sha256': digest,
             'methodology_revision_now': None, 'methodology_revision_at_init': (value or {}).get('methodology_revision_at_init'),

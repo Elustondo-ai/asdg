@@ -1,0 +1,6 @@
+{
+  "name": "asdg-sprint-status",
+  "version": "0.2.0",
+  "description": "Keeps the project's ASDG sprint status visible above the prompt, with details in a pane, and the proposed next sprint while none is active.",
+  "types": "./types/index.d.ts"
+}

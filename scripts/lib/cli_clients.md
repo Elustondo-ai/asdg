@@ -2,12 +2,12 @@
 
 [Source: cli_clients.py](cli_clients.py)
 
-Decides which client integrations, Codex and Claude, a setup run installs, and renders Claude skill adapters from the same templates Codex uses.
+Decides which client integrations, Codex and Claude, a setup run installs, renders Claude skill adapters from the same templates Codex uses, and copies [Claude mods](../../mods/README.md).
 The authoritative behavior is described in [client integrations](../../docs/client-integrations.md).
 
 ## Responsibilities and collaborators
 
-Owns the client choice, the `.asdg/integrations.json` record, Claude adapter rendering and the Claude `@AGENTS.md` bridge. It writes nothing; the initializer plans and applies files.
+Owns the client choice, the `.asdg/integrations.json` record, Claude adapter rendering, Claude mod copying and the Claude `@AGENTS.md` bridge. It writes nothing; the initializer plans and applies files.
 
 ![--client choice + recorded clients + adapter templates → select clients and render adapters → planned files and per-client status](images/cli_clients-flow.svg)
 
@@ -25,14 +25,16 @@ The record is `{"schema_version": 1, "clients": {"<client>": {"recorded_from": "
 | `resolve_clients(root, choice, installed) -> (recorded, applied, notes)` | Adds `choice` (`codex`, `claude`, `both`) to the record, records a legacy Codex installation explicitly, and returns the clients to plan; without a choice, the recorded clients, or Codex when none. |
 | `integrations_bytes(recorded) -> bytes` | Deterministic, sorted JSON, so repeat setup writes nothing new. |
 | `skill_names(repo)` / `explicit_only(repo, name)` | Public skills are templates containing `SKILL.md`; explicit-only means the Codex policy sets `allow_implicit_invocation: false`. |
-| `claude_adapter(repo, name) -> bytes` / `claude_files(repo)` | Copies the template's name, description and body, adding `disable-model-invocation: true` for explicit-only skills. |
+| `claude_adapter(repo, name) -> bytes` | Copies the template's name, description and body, adding `disable-model-invocation: true` for explicit-only skills. |
+| `mod_names(repo)` / `claude_mod(repo, name)` | Mods are folders under `asdg/mods` holding `.claude-plugin/plugin.json`. Returns the four `MOD_FILES` unchanged for `.claude/skills/<name>/`; a missing file, a manifest name unlike the folder or a name shared with a skill raises `Conflict`. |
+| `claude_files(repo)` | Every Claude adapter, then every mod's runtime files. |
 | `suppressors(root)` | Lists `CLAUDE.md`, `.claude/CLAUDE.md` or `CLAUDE.local.md` here or in parent folders. |
 | `claude_bridge(root)` / `claude_bridge_problems(root)` | Returns the managed `@AGENTS.md` import to add only when a suppressor exists, or None; reports a missing or edited bridge. |
 
 ## Effects and failure behavior
 
 Read-only. An existing import of `AGENTS.md` outside code counts as bridged, so no second import is added; an edited managed bridge or foreign symlink raises `Conflict`.
-Rendering does not prove Claude registers the skills; native discovery is observed separately.
+Rendering does not prove Claude registers the skills or loads a mod; native discovery is observed separately.
 
 ## Example
 

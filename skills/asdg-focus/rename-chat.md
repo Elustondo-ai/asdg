@@ -6,18 +6,26 @@ Read the current [session receipt](session-state.md); the title is its projectio
 
 ## Compose the title
 
-Use `NN <short role label> [<focus>] [<attitude>]`, joined with single spaces; brackets indicate optional fields and are never literal.
+Use `NN <short role label> [<team number>] [<focus>] [<attitude>]`, joined with single spaces; brackets indicate optional fields and are never literal.
+The team number is the receipt's [numbered team](../asdg-create-team/numbered-teams.md), shown from team 2 up and never for team 1: `05 Architecture 2`, `ASDG Admin 2`, `Alice ASDG Team Lead 2`.
 Take stage/role identity from [the catalogue](../../00-governance/types/agent-catalog.json) and its short label from [Focus choices](focus-choices.md).
-For example: `00 Governance`, `05 Architecture`, `05 Architecture Security`, or `05 Architecture Security Black`.
-ASDG Admin is outside the stages: use `ASDG Admin [<focus>] [<attitude>]` with no number.
+For example: `00 Governance`, `05 Architecture`, `05 Architecture Security`, or `05 Architecture Security Black`. ASDG Admin is outside the stages: use `ASDG Admin [<team number>] [<focus>] [<attitude>]` with no stage number.
 Use the exact short labels supplied in Focus choices; preserve catalogue numbering and project binding in the receipt.
 Append an explicitly selected focus, then a selected English attitude color. Omit unset fields entirely: no Off, NoAttitude, NoFocus, None or placeholder separators.
-The default role displays `00 Governance`; there is no `General` title. Unknown or blocked role displays `Role unknown` without inventing a prefix.
+The default role displays `00 Governance`, or the [team lead title](#team-lead-title) in a team's lead chat; there is no `General` title. Unknown or blocked role displays `Role unknown` without inventing a prefix.
 Report unknown focus/attitude in the receipt and reply; do not infer an empty selection. Omit unverified optional title fields.
-Never append the project name automatically or use it as an inferred focus. Goal, project and temporary scope stay in the receipt.
+Apart from the team lead title, never add the project name automatically or use it as an inferred focus. Goal, project and temporary scope stay in the receipt.
 Use one line with no pipes, dots, dashes, secrets or control characters added as separators; retain the full selected focus in the receipt if its display needs shortening.
 Identical selections may share a title; route by verified receipts and stable IDs, never by title alone.
 Honor a directly requested custom title while retaining the computed projection separately; a custom title changes no state.
+
+## Team lead title
+
+The chat that leads a project's role team, the one [Create team](../asdg-create-team/SKILL.md) ran in or the user names as lead, displays `<Project Nickname> ASDG Team Lead [<team number>] [<focus>] [<attitude>]` while its role is 00 Governance; for example `Alice ASDG Team Lead`.
+The nickname is the short name the user gives the project; ask when none is established, and never derive it silently from the folder name.
+This is a display name only: the receipt and the reply declaration still say 00 Governance (`ASDG-COORDINATOR`), and the title grants nothing.
+Create team applies it to the calling chat once the roster is confirmed; any other Governance chat keeps `00 Governance`. A title the user set themselves is replaced only on their yes.
+If that chat selects another role, the ordinary title applies; a clear back to Governance restores the team lead title.
 
 ## Supported native action
 

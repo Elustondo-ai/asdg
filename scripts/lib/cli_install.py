@@ -7,15 +7,16 @@ import tempfile
 from pathlib import Path
 
 from build_identity import BUILD, label, record_bytes
-from cli_files import Conflict, apply, plan
+from cli_files import Conflict, apply, plan, read_bytes, safe_path
 from cli_install_source import git_root, package, source_snapshot
 from cli_model import REPO, git_value, json_bytes, now, sha
-from cli_project import client_files, inspect, plan_initialization, preflight_package
+from cli_openspec import note as openspec_note, plan_openspec
+from cli_project import BINDING, client_files, inspect, plan_initialization, preflight_package
 from cli_team import team_plan
 
 
 def install(*, source=None, target=None, commit=None, client=None, project_state=None,
-            apply_changes=False, expected_plan=None, team_inventory=None, repo=REPO):
+            apply_changes=False, expected_plan=None, team_inventory=None, repo=REPO, openspec=True):
     if apply_changes and not expected_plan:
         raise Conflict('--apply requires the exact --plan token from a reviewed dry run.')
     if expected_plan and not apply_changes:
@@ -36,7 +37,9 @@ def install(*, source=None, target=None, commit=None, client=None, project_state
         stamp = match[1]
     if not source:
         preflight_package(origin)
-    info, entries = source_snapshot(origin, commit)
+    # An initialized client refreshing its own integration files may carry local methodology edits.
+    local = not source and read_bytes(safe_path(root, BINDING)) is not None
+    info, entries = source_snapshot(origin, commit, local_changes=local)
     # Normalize both acquisitions to exactly the manifest members. Unlisted provider
     # templates can never become client integration files through directory scanning.
     with tempfile.TemporaryDirectory(prefix='asdg-install-plan-') as area:
@@ -76,6 +79,15 @@ def install(*, source=None, target=None, commit=None, client=None, project_state
                 (change.before or b'').decode('utf-8').splitlines(True),
                 change.after.decode('utf-8').splitlines(True), fromfile='before/' + path, tofile='after/' + path))
             files.append(row)
+        # OpenSpec is a separately installed tool: only its missing project files are planned, add-only.
+        spec, additions = plan_openspec(root, report['clients_applied'], skip=not openspec)
+        for relative, data in additions:
+            changes.append(plan(root, relative, data))
+            files.append({'path': relative.as_posix(), 'action': 'added', 'before_sha256': None,
+                          'sha256': sha(data), 'kind': 'openspec', 'mode': oct(0o644)})
+        report['openspec'] = spec
+        if openspec_note(spec):
+            report['notes'].append(openspec_note(spec))
         identity = {'git_dir': git_value(root, 'rev-parse', '--absolute-git-dir'),
                     'head': git_value(root, 'rev-parse', 'HEAD'),
                     'branch': git_value(root, 'symbolic-ref', '-q', 'HEAD')}
@@ -83,6 +95,9 @@ def install(*, source=None, target=None, commit=None, client=None, project_state
         approval = {'team': team, 'source': info, 'target': str(root), 'git': identity, 'timestamp': stamp,
                     'client': client, 'project_status': project_state, 'files': files}
         token = stamp + '.' + sha(json_bytes(approval))
+        if info['integrity'] == 'LOCAL_CHANGES':
+            report['notes'].append('Local methodology changes: asdg/ differs from its delivery manifest or build record. '
+                                   'Integration files are planned from the local copy; manifest and build record are unchanged.')
         report.update(source=info, files=files, plan=token, team=team, initialization_complete=False, dry_run=not apply_changes,
                       planned_files=[c.relative.as_posix() for c in changes],
                       unchanged=not changes, installation_complete=False, context_survey={'offered': False, 'executed': False,
@@ -90,11 +105,11 @@ def install(*, source=None, target=None, commit=None, client=None, project_state
         if apply_changes:
             if token != expected_plan:
                 raise Conflict('Installation plan changed; review a fresh dry run before applying.')
-            if source_snapshot(origin, commit) != (info, entries):
+            if source_snapshot(origin, commit, local_changes=local) != (info, entries):
                 raise Conflict('Source changed during preflight; review a fresh dry run.')
 
             def verify():
-                _, installed_entries = package(root)
+                _, installed_entries = package(root, local_changes=local)
                 if installed_entries != entries:
                     raise Conflict('Installed package differs from the selected source.')
                 checked = inspect(root, repo=root)
@@ -110,7 +125,8 @@ def install(*, source=None, target=None, commit=None, client=None, project_state
 
 def render(report):
     lines = [f"ASDG {report['source']['version']} — {report['source']['kind']}",
-             'Package integrity matched; release approval NOT_ESTABLISHED; hook trust NOT_ASSESSED.',
+             ('Package integrity matched' if report['source']['integrity'] == 'MANIFEST_MATCHED'
+              else 'Package has LOCAL CHANGES, not a delivered build') + '; release approval NOT_ESTABLISHED; hook trust NOT_ASSESSED.',
              'Target: ' + report['project_root']]
     if report['source']['commit']:
         lines.append('Verified source commit: ' + report['source']['commit'])

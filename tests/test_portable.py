@@ -20,6 +20,7 @@ from cli_runtime_env import subprocess_environment
 from cli_advice import build_prompt
 from cli_advice_report import save_advice
 from distribution_files import package_files
+os.environ.setdefault('ASDG_OPENSPEC', '0')  # Hermetic: setup's OpenSpec step would run a separately installed command.
 
 
 def snapshot(root):
