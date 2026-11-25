@@ -1,0 +1,39 @@
+{
+  "path": "docs/asdg/00-governance/reports/2026-11-25-plan-sync-next-steps.md",
+  "sha256": "d504f865dcc8f1205550f106f60c304305c6195f4f2f926ecbc2f5c83ca64c26",
+  "event": "AI-MODIFIED",
+  "recorded_at": "2026-11-25T13:19:13.713239+00:00",
+  "human_approval": null,
+  "provenance": {
+    "role_id": "ASDG-COORDINATOR",
+    "requester": "Pablo",
+    "request": "Write the findings document so a second reviewer can work from the branch",
+    "scope": "Proposal only; no Stage 07 commitment, approval, sprint or code change"
+  },
+  "evidence": {
+    "basis": "docs/asdg/00-governance/reports/2026-11-25-plan-sync-findings.md and its receipt",
+    "effort_estimates": "Rough estimates by the reviewing agent; not derived from measured work",
+    "step_1_target": "Under 1,000 requests for 30 new stories is a proposed target, not a demonstrated result",
+    "visual_check": {
+      "kind": "embedded Mermaid flowchart",
+      "idea": "Order of the five proposed steps and the human decisions that gate them",
+      "syntax": "valid: true from a Mermaid renderer for the first draft; final text checked on GitHub only",
+      "rendered_check": "GitHub blob preview of commit b016f7a in a 1280 pixel wide browser viewport",
+      "observed": "Single top-to-bottom chain; the first five boxes were inspected and legible, the remaining four were not scrolled into view",
+      "first_attempt": "Commit 8af5a4b rendered poorly in an 800 pixel pane and was replaced"
+    },
+    "limitations": [
+      "Planning (ASDG-07) owns sprint task proposals; this report is coordination input, not a plan",
+      "Decisions listed for Pablo are open; none was taken"
+    ],
+    "session": {
+      "role": "ASDG-COORDINATOR",
+      "focus": "GitHub Issues and Projects for ASDG-07",
+      "attitude": "Blue",
+      "agent": "Claude Code (claude-fable-5-2)",
+      "title_requested": "00 Governance GitHub Issues and Projects for ASDG-07 Blue",
+      "title_action": "RENAMED",
+      "ui_readback": "NOT_INSPECTED"
+    }
+  }
+}

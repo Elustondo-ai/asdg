@@ -1,0 +1,134 @@
+{
+  "path": "docs/asdg/00-governance/reports/2026-11-25-plan-sync-findings.md",
+  "sha256": "820a041ca1e62b0579055e96aa4256464934506bef26454123d45611b201a772",
+  "event": "AI-MODIFIED",
+  "recorded_at": "2026-11-25T13:19:13.713239+00:00",
+  "human_approval": null,
+  "provenance": {
+    "role_id": "ASDG-COORDINATOR",
+    "requester": "Pablo",
+    "request": "Write the findings document so a second reviewer can work from the branch",
+    "scope": "Read-only review of Project Plan Sync on branch project-plan-sync; coordination report only"
+  },
+  "evidence": {
+    "reviewed_commit": "496ced2 on project-plan-sync (code from b720cb2); main at c34f4a753de6c6dfed59f824aaa273832a50a089",
+    "plan_sync_tests": {
+      "command": "python3 -B -m unittest tests.test_plan_merge tests.test_plan_github tests.test_plan_sync",
+      "tests": 72,
+      "summary": "OK",
+      "tree": "uncommitted working tree later committed unchanged as b720cb2"
+    },
+    "suite": {
+      "command": "python3 -B -m unittest discover -s tests",
+      "tests": 389,
+      "skipped": 9,
+      "duration_seconds": 221.278,
+      "summary": "OK (skipped=9)",
+      "skip_reasons": "NOT_INSPECTED"
+    },
+    "integrity_check": {
+      "command": "python3 scripts/check.py --integrity",
+      "exit_code": 0
+    },
+    "finding_1_request_cost": {
+      "method": "Real cli_plan_sync.synchronize (preview then apply) in a disposable Git repository with the FakeGitHub from tests/test_plan_sync.py, an existing Project with all four managed fields, and N new cache items that each set status, priority, team and sprint.",
+      "requests_per_complete_read": "4 fixed (repository, account, project, fields) + Project item pages + 1 per Project item (_item_values) + Issue pages, summed over every snapshot call",
+      "results": [
+        {
+          "new_stories": 10,
+          "writes": 60,
+          "complete_reads": 125,
+          "read_requests_estimate": 1390
+        },
+        {
+          "new_stories": 30,
+          "writes": 180,
+          "complete_reads": 365,
+          "read_requests_estimate": 7710
+        },
+        {
+          "new_stories": 60,
+          "writes": 360,
+          "complete_reads": 725,
+          "read_requests_estimate": 26190
+        }
+      ],
+      "source_lines": {
+        "scripts/lib/cli_plan_sync.py": {
+          "one operation per field": 164,
+          "read before write": 402,
+          "read after write": 420,
+          "read before publication": 384
+        },
+        "scripts/lib/cli_plan_github.py": {
+          "one request per Project item": 299
+        }
+      },
+      "limits": [
+        "Simulation only; no request was sent to GitHub",
+        "GitHub rate limits quoted from its documentation, not observed",
+        "The measuring script was a throwaway outside the repository and is not preserved"
+      ]
+    },
+    "finding_2_import_scope": {
+      "scripts/lib/cli_plan_github.py": {
+        "reads state=all Issues": 328
+      },
+      "scripts/lib/cli_plan_merge.py": {
+        "imports every unmatched Issue": "240-252"
+      }
+    },
+    "finding_3_planning": {
+      "only_reference": "07-planning/skills/prepare-plan/SKILL.md step 5",
+      "engine_statement": "docs/project-plan-sync.md: the engine never parses prose into Issues automatically"
+    },
+    "finding_4_fields": {
+      "cache_fields": "scripts/lib/cli_plan_merge.py lines 10-12",
+      "client_example": "A client product backlog and sprint task list read on 2026-11-25; client artifacts are evidence only"
+    },
+    "finding_5_live": {
+      "gh_command": "not found in the reviewing shell",
+      "GH_TOKEN": "unset",
+      "GITHUB_TOKEN": "unset",
+      "live_project_inspected": false
+    },
+    "finding_6_committed_cache": {
+      "reproduction": "cli_plan_merge.reconcile with one item: fields.status \"In Progress\", base.status \"Done\", remote status \"Done\", Project member",
+      "result": "conflicts: []; operations: update_fields status -> \"In Progress\"",
+      "interpretation": "A Git merge resolved with current values from the older side and base from the newer side pushes the stale value. Inference from the merge rule; no test merges two branch caches."
+    },
+    "process_state": {
+      "review_receipts_for_plan_sync": "none found in 00-governance/types/document-reviews.json",
+      "stage_07_record": "none found under docs/asdg/07-planning",
+      "governance_documents_changed_by_the_feature": [
+        "00-governance/docs/runtime-contract.md",
+        "00-governance/docs/write-controls.md",
+        "00-governance/docs/write-exceptions.md"
+      ],
+      "authorization_evidence": "NOT_FOUND in the repository; may exist in the earlier Codex conversation"
+    },
+    "visual_check": {
+      "kind": "embedded Mermaid flowchart",
+      "idea": "Three copies of a plan and where each finding sits",
+      "syntax": "valid: true from a Mermaid renderer for the first draft; final text checked on GitHub only",
+      "rendered_check": "GitHub blob preview of commit b016f7a in a 1280 pixel wide browser viewport",
+      "observed": "Planning documents and other Issues on the left feed the plan cache; a two-way arrow joins it to GitHub; all labels legible",
+      "first_attempt": "Commit 8af5a4b rendered poorly in an 800 pixel pane and was replaced"
+    },
+    "limitations": [
+      "No live GitHub Project or API call",
+      "Push replacement on the same branch not reviewed",
+      "No code changed; all reviewed code came from an earlier Codex session",
+      "Reviewer and report author are the same agent session"
+    ],
+    "session": {
+      "role": "ASDG-COORDINATOR",
+      "focus": "GitHub Issues and Projects for ASDG-07",
+      "attitude": "Blue",
+      "agent": "Claude Code (claude-fable-5-2)",
+      "title_requested": "00 Governance GitHub Issues and Projects for ASDG-07 Blue",
+      "title_action": "RENAMED",
+      "ui_readback": "NOT_INSPECTED"
+    }
+  }
+}
