@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "status": "REVIEW_REQUIRED",
+  "role_id": "ASDG-COORDINATOR",
+  "recorded_at": "2026-11-25T14:01:39.556015+00:00",
+  "baseline": {
+    "remote": "https://github.com/Elustondo-ai/asdg.git",
+    "branch": "project-plan-sync",
+    "commit_before_this_package": "bd3507d",
+    "documents_commit": "9d16d67",
+    "agent": "Claude Code (claude-fable-5-2)",
+    "session": {
+      "role": "ASDG-COORDINATOR",
+      "focus": "GitHub Issues and Projects for ASDG-07",
+      "attitude": "Blue"
+    }
+  },
+  "human_selection": {
+    "by": "Pablo",
+    "date": "2026-11-25",
+    "channel": "this Claude Code conversation",
+    "statements_as_typed": [
+      "Epic. (group of chilkd stories with a common there and opourpos) / Story / Tasks (child of stories) / Sprint group of Sotories / Sprint Plan. (which storyres and its child tasks will enter in the sprint) ... let use agile scrum standard terminology even when we use github issues that may differ",
+      "Produce Backlog rigth I agree",
+      "08 Looks very like the Technical Team Lead - Low Level Desing .and he does the task split / 09 Coder just implement tasks, can update tasks status..add commens but not repourpose this is 08 / 07 planner is the project Manager / Scrum master / manager..",
+      "more than \"write\" 07 should verbatim copy/paste what 02,03,04,05 do. ... PM should only be able to \"read and compohrehend\" in other to put things together. but then PM will report back the final epic/stories/tasks to the specialist so they can review and propose changes. the PM is in charge of all this happened and fostering the colaborations. but the especilist are the ultima responsibles of the actual content/description of the epoics, stories, tasks...",
+      "Coder updates teh tasks and signals issues / blockers. The 08 tech lead need to address taht review. Coder codes and signals issues. WE NEED TO UPDATE ALL OUR ESPECIALIST> SPECIALLY THE PLANER BUT ALSIO ALL THE OTHER SO EVEYBODY KNOWS THEY ROLE!"
+    ],
+    "covers": [
+      "The six terms",
+      "The division of responsibility in the README table",
+      "That role definitions are to be updated, Planning first"
+    ],
+    "agent_interpretations": [
+      "Sprint is recorded as a period of time and \"Sprint Plan\" as Sprint Backlog; the developer accepted both names without restating the definitions.",
+      "\"02 Use Case Model\" in one statement was read as stage 03.",
+      "Pablo as product owner is the agent's Scrum label for approval rights the developer already holds."
+    ],
+    "does_not_cover": [
+      "The text of these documents",
+      "The exact wording of any role definition",
+      "Source link and hash on copied text",
+      "The gap-reporting rule",
+      "Story status",
+      "Field ownership in the sync",
+      "Selecting ASDG Admin or starting the maintenance task"
+    ]
+  },
+  "events": [
+    {
+      "path": "docs/asdg/00-governance/decisions/plan-roles-and-vocabulary/README.md",
+      "sha256": "9e1e2889b9eda64c06aea9889d69bc49320a0be48d35c44a9c1101a8f8a52d96",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:01:39.556015+00:00",
+      "human_approval": null,
+      "provenance": {
+        "scope": "Governance record of a human selection and a change proposal; no role definition edited",
+        "visual": "embedded Mermaid flowchart",
+        "idea": "How content, review and blockers move between the roles",
+        "inspection": "GitHub blob preview of 9d16d67 at a 1280 by 1400 viewport after one 503 retry: five of six boxes and both return labels legible; the 09 Coding box was below the fold."
+      }
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/plan-roles-and-vocabulary/01-role-changes.md",
+      "sha256": "e2ee41dd7f91c5fce24976141ebc6f0211ec39edd205017de5571a274ff4c9ee",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:01:39.556015+00:00",
+      "human_approval": null,
+      "provenance": {
+        "scope": "Governance record of a human selection and a change proposal; no role definition edited",
+        "visual": "responsibility and collaborator table; links to the README flowchart",
+        "idea": "What each role definition says today and what it would change",
+        "inspection": "Rendered page NOT_INSPECTED. Quoted definitions were matched against the role files with grep (six of six found)."
+      }
+    }
+  ],
+  "checks": {
+    "ownership": "check-write as ASDG-COORDINATOR for the three paths: exit 0",
+    "nonblank_lines": {
+      "README.md": 37,
+      "01-role-changes.md": 24,
+      "limit": 50
+    },
+    "local_links": "all resolve once this receipt exists",
+    "template_copies": "templates/.codex/agents/ holds one toml per role; the responsibility sentence was found in asdg_02, asdg_07 and asdg_09"
+  },
+  "limitations": [
+    "No role definition, template or manifest was changed",
+    "Roles 01, 06, 10, 11 and 12 were not read for this record",
+    "The proposed wording per role is a summary, not final text"
+  ]
+}
