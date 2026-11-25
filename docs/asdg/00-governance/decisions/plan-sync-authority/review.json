@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "status": "REVIEW_REQUIRED",
+  "role_id": "ASDG-COORDINATOR",
+  "recorded_at": "2026-11-25T13:35:27.291625+00:00",
+  "baseline": {
+    "remote": "https://github.com/Elustondo-ai/asdg.git",
+    "branch": "project-plan-sync",
+    "commit_before_this_package": "ac74342",
+    "documents_commit": "af4552c",
+    "agent": "Claude Code (claude-fable-5-2)",
+    "session": {
+      "role": "ASDG-COORDINATOR",
+      "focus": "GitHub Issues and Projects for ASDG-07",
+      "attitude": "Blue"
+    }
+  },
+  "human_selection": {
+    "by": "Pablo",
+    "date": "2026-11-25",
+    "channel": "this Claude Code conversation",
+    "statement": "I like nd approve this sync rules:",
+    "statement_note": "Quoted as typed, followed by the three rules below pasted as a table.",
+    "selected_rules": [
+      {
+        "situation": "Only one side changed since the last sync",
+        "what_happens": "Take that change",
+        "who_decides": "Nobody; it is safe"
+      },
+      {
+        "situation": "Both sides changed the same field",
+        "what_happens": "Stop and show both values, with time and author; the newer one is the suggested answer",
+        "who_decides": "A human approves"
+      },
+      {
+        "situation": "A branch value is older than the sync it is compared against",
+        "what_happens": "Treat it as a leftover, not as a change, and take GitHub's value",
+        "who_decides": "Nobody; it is safe"
+      }
+    ],
+    "recording_instruction": "Yes, record it",
+    "covers": "The three rules as quoted.",
+    "does_not_cover": [
+      "The text of these documents",
+      "Any code or implementation",
+      "Starting work or a sprint",
+      "Where the last-sync record is stored",
+      "Protection of an approved plan"
+    ],
+    "earlier_view_by_the_same_person": "Authority should rest on human approval and timestamp; both GitHub and the branch can be outdated."
+  },
+  "second_review_input": "The developer relayed notes from a separate Codex review recommending that authority and cache behaviour be settled before request optimisation. Relayed text only; that review was not inspected here.",
+  "events": [
+    {
+      "path": "docs/asdg/00-governance/decisions/plan-sync-authority/README.md",
+      "sha256": "773e15c92d8168be5d0297836e4538131a1dfda4d310bb5f3cdc38bfdfbb6dbc",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T13:35:27.291625+00:00",
+      "human_approval": null,
+      "provenance": {
+        "scope": "Governance record of a human selection; no approval of these bytes, no code change",
+        "visual": "embedded Mermaid flowchart",
+        "idea": "How one differing field is handled under the three rules",
+        "inspection": "GitHub blob preview of af4552c at a 1280 pixel viewport: title, first box, first decision and the yes/no branches legible; the lower boxes (rules 1 and 2 and the human step) were not scrolled into view."
+      }
+    },
+    {
+      "path": "docs/asdg/00-governance/decisions/plan-sync-authority/01-comparison.md",
+      "sha256": "5987cd593160e1d94919e0e1f7149172627616784cf41769611fbc63ac1d8755",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T13:35:27.291625+00:00",
+      "human_approval": null,
+      "provenance": {
+        "scope": "Governance record of a human selection; no approval of these bytes, no code change",
+        "visual": "embedded Mermaid sequence diagram",
+        "idea": "The lost-update example that separates the options",
+        "inspection": "GitHub blob preview of af4552c at a 1280 pixel viewport: whole diagram visible and legible; note text is low contrast in the dark theme."
+      }
+    }
+  ],
+  "checks": {
+    "ownership": "python3 scripts/cli.py check-write for all three paths as ASDG-COORDINATOR: exit 0",
+    "nonblank_lines": {
+      "README.md": 33,
+      "01-comparison.md": 35,
+      "limit": 50
+    },
+    "local_links": "all resolve once this receipt exists",
+    "engine_claim": "scripts/lib/cli_plan_merge.py lines 230-231: a field conflict carries base, local and remote only"
+  },
+  "limitations": [
+    "GitHub change times per field are expected from its API documentation and were not verified",
+    "Rule 3 is not implemented or tested",
+    "Author of the analysis and of this record is the same agent session"
+  ]
+}
