@@ -5,13 +5,12 @@ This report records what was found in the canonical repository on 25 November 20
 
 ```mermaid
 flowchart LR
-    M["Planning documents<br/>Markdown, in each branch"] -- "copied by hand (3)" --> C["Plan cache<br/>JSON, in each branch (6)"]
+    M["Planning documents<br/>Markdown, in each branch"] -- "copied by hand,<br/>one way only (3)" --> C["Plan cache<br/>JSON, in each branch (6)"]
+    R["All other Issues<br/>in the repository"] -- "imported too (2)" --> C
     C <-- "sync on request (1)" --> G["GitHub Issues and one Project<br/>shared by all branches"]
-    R["All other repository Issues"] -- "imported too (2)" --> C
-    G -. "nothing flows back (3)" .-> M
 ```
 
-*The three copies of a plan and the paths between them. The numbers point to the findings below.*
+*The three copies of a plan and the paths between them. Nothing flows from GitHub back into the planning documents. The numbers point to the findings below.*
 
 ## Intended, actual and planned
 

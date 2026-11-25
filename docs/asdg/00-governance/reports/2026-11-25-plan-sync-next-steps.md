@@ -4,18 +4,18 @@ This proposes how to take the existing two-way sync from "passes simulated tests
 It is a proposal for Pablo and a second reviewer. Nothing here is approved, scheduled or started, and it establishes no Stage 07 commitment. The reasons are in the [findings](2026-11-25-plan-sync-findings.md).
 
 ```mermaid
-flowchart LR
-    A["1 Cut the request cost"] --> B["2 Sync plan items only"]
-    B --> C["3 Planning reads the shared plan"]
-    C --> D["4 Live pilot on one repository"]
-    D --> E["5 Review, then merge to main"]
-    H1(["Pablo selects Admin and sets the scope"]) -.-> A
-    H2(["Pablo decides where the record lives"]) -.-> C
-    H3(["Pablo authorizes the pilot and its token"]) -.-> D
-    H4(["Pablo reviews and decides"]) -.-> E
+flowchart TB
+    H1(["Pablo selects Admin and sets the scope"]) --> A["1 Cut the request cost"]
+    A --> B["2 Sync plan items only"]
+    B --> H2(["Pablo decides where the record lives"])
+    H2 --> C["3 Planning reads the shared plan"]
+    C --> H3(["Pablo authorizes the pilot and its token"])
+    H3 --> D["4 Live pilot on one repository"]
+    D --> H4(["Pablo reviews and decides"])
+    H4 --> E["5 Merge to main"]
 ```
 
-*The proposed order of work. Rounded boxes are human decisions that must come before the step they point to.*
+*The proposed order of work, top to bottom. Rounded boxes are human decisions that must come before the step below them.*
 
 ## Steps
 
