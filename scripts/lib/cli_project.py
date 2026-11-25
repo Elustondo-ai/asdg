@@ -199,18 +199,39 @@ def client_report(root, repo, installed):
                        'runtime': 'NOT_VERIFIED'} for name in CLIENTS}, [problem]
     recorded = current['clients'] if current else ({'codex': {'recorded_from': 'legacy installation'}} if installed else {})
     report, problems = {}, []
+    ownership, ownership_problem = None, None
+    receipt = root / '.asdg/installation-ownership.json'
+    transactions = root / '.asdg/backups/push-replace'
+    has_receipt = receipt.exists() or receipt.is_symlink()
+    if has_receipt or transactions.exists() or transactions.is_symlink():
+        try:
+            from cli_push_transaction import assert_idle
+            assert_idle(root)
+            if has_receipt:
+                from cli_push_inventory import load_ownership, target_identity
+                ownership = load_ownership(root, target=target_identity(root), clients=sorted(recorded))
+        except (OSError, ValueError) as exc:
+            ownership_problem = str(exc)
     for name in CLIENTS:
         if name not in recorded:
             report[name] = {'selection': 'not-selected', 'status': 'NOT_SELECTED', 'problems': [], 'runtime': 'NOT_VERIFIED'}
             continue
-        found = [f'{relative}: missing or locally modified integration'
-                 for relative, data in client_files(root, repo, name) if read_bytes(safe_path(root, relative)) != data]
-        if name == 'claude':
-            found += claude_bridge_problems(root)
+        if ownership_problem:
+            found = [ownership_problem]
+        elif ownership is not None:
+            from cli_push_integrations import integration_problems
+            found = integration_problems(root, distribution_core(repo), [name], ownership['entries'])
+        else:
+            found = [f'{relative}: missing or locally modified integration'
+                     for relative, data in client_files(root, repo, name) if read_bytes(safe_path(root, relative)) != data]
+            if name == 'claude':
+                found += claude_bridge_problems(root)
         report[name] = {'selection': 'recorded' if current else 'legacy-unrecorded',
                         'recorded_from': recorded[name]['recorded_from'],
                         'status': 'DAMAGED' if found else 'COMPLETE', 'problems': found, 'runtime': 'NOT_VERIFIED'}
         problems.extend(found)
+    if ownership_problem and not recorded:
+        problems.append(ownership_problem)
     return report, problems
 
 

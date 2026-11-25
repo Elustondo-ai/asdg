@@ -49,6 +49,7 @@ Repeat setup creates nothing that already exists: identical files are skipped; d
 A project that edited its embedded `asdg/` can still repeat setup: the preview says `LOCAL CHANGES`, plans integration files from the local copy and leaves the delivery manifest and build record untouched. A first install still requires a matching package.
 Setup also plans [OpenSpec's missing project files](../scripts/lib/cli_openspec.md) for the clients of that run, add-only, using the `openspec` command already installed; it never downloads it, and `--no-openspec` skips the step.
 `verify` always checks the shared package, then each client: `NOT_SELECTED`, `COMPLETE` or `DAMAGED`, with runtime behavior `NOT_VERIFIED`.
+Explicit [push replacement](push-replace.md) preserves recorded clients and unrelated shared-file content, verifies owned sections through its validated receipt, and ensures a Claude AGENTS import; unfinished replacement transactions require recovery before readiness.
 An installation made before client tracking reports Codex as `legacy-unrecorded`; the next setup records it explicitly and says so.
 
 ## Enforcement differences

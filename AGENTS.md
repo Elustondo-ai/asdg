@@ -51,6 +51,7 @@ Agent changes to these definitions run only under explicitly selected [ASDG Admi
 Maintaining a definition never activates the specialist whose file is edited, and no agent selects Admin to escape a restriction.
 The canonical methodology repository produces the reviewed distribution; each client owns its versioned embedded copy.
 Record bounded changes; propose reusable improvements upstream. Never overwrite client changes or state during an upgrade.
+Explicit [push replacement](docs/push-replace.md) may overwrite proven ASDG-owned entities through its exact plan and recovery engine; preserve client application work, project state, evidence and unrelated configuration.
 Keep canonical skills here; native discovery adapters remain thin references generated from `templates/`.
 Preserve state, evidence, user configuration and prior review records through changes.
 Read [the iteration contract](docs/review-loop.md) before preparing a local maintenance handoff.

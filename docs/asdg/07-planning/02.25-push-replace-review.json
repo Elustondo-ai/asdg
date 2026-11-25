@@ -1,0 +1,185 @@
+{
+  "event": "AI-MODIFIED",
+  "recorded_at": "2026-11-24T20:32:35.663784+00:00",
+  "human_approval": null,
+  "role": "ASDG-ADMIN",
+  "requester": "Pablo",
+  "session": "01a20f1a-9455-7982-ab82-f73eb3459bd2",
+  "status": "REVIEW_REQUIRED_DESIGN_VALIDATED",
+  "previous_reviews": [
+    {
+      "event": "AI-MODIFIED",
+      "human_approval": null,
+      "role": "ASDG-ADMIN",
+      "requester": "Pablo",
+      "status": "DESIGN_PROPOSAL",
+      "files": {
+        "docs/asdg/07-planning/02.25-push-replace-catalog.json": "def5ee02cdee5961a4fd310b29acfcdf686614e34cd17454a834a611652b2bfb",
+        "docs/asdg/07-planning/02.25-push-replace.md": "3fd54c433bd0897ed206517998a8c0493b870dfaa138dfa289f1aaf4d153af89"
+      },
+      "verification": [
+        "JSON parsed",
+        "ownership categories checked against cli_project, cli_clients and cli_sync"
+      ],
+      "limits": [
+        "No executable replacement engine added",
+        "No client changes",
+        "Workflow visual pending"
+      ]
+    }
+  ],
+  "files": {
+    "docs/asdg/07-planning/02.25-push-replace.md": "755d9241c9bc9277a03882e95123bdbc7c85fd3387def9b80b6e7ced51a3b8e7",
+    "docs/asdg/07-planning/02.25-push-replace-protocol.md": "220072ef834b1c5ff308c897743507fb86e80f7c672ec3c62eb8c51dceea2dfa",
+    "docs/asdg/07-planning/02.25-push-replace-catalog.json": "234c1fa99d944204c7be21d438f211410a4cc4b5521c1174b5ee39a5b5325317",
+    "docs/asdg/07-planning/02.25-push-replace-ownership.schema.json": "074b5bc5dd33607e188d783a389d88157d0bfd4f1c1fc54da12ff6026c1ebdaa",
+    "docs/asdg/07-planning/images/push-replace-flow.svg": "cdd738d8e63c13af3d7ca293634fc1e021afac8b0266138e463cb6d87774f255",
+    "tests/test_push_replace_contract.py": "87d2a77eedea79f0c584fdbe16f17bec374246883b8ff1d14677ca82052906f9",
+    "tests/test_push_replace_contract.md": "cea4497bd8938a320afb3ab9d8e36bb4500d53ba9b8d915ad796ecdf4b9e912d"
+  },
+  "events": [
+    {
+      "path": "docs/asdg/07-planning/02.25-push-replace.md",
+      "sha256": "755d9241c9bc9277a03882e95123bdbc7c85fd3387def9b80b6e7ced51a3b8e7",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T20:32:35.663784+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Five design review fixes and source-only contract validation"
+      },
+      "previous_state": {
+        "sha256": "3fd54c433bd0897ed206517998a8c0493b870dfaa138dfa289f1aaf4d153af89",
+        "approval_binding": "Prior proposal retained; no approval transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.25-push-replace-protocol.md",
+      "sha256": "220072ef834b1c5ff308c897743507fb86e80f7c672ec3c62eb8c51dceea2dfa",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T20:32:35.663784+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Five design review fixes and source-only contract validation"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.25-push-replace-catalog.json",
+      "sha256": "234c1fa99d944204c7be21d438f211410a4cc4b5521c1174b5ee39a5b5325317",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T20:32:35.663784+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Five design review fixes and source-only contract validation"
+      },
+      "previous_state": {
+        "sha256": "def5ee02cdee5961a4fd310b29acfcdf686614e34cd17454a834a611652b2bfb",
+        "approval_binding": "Prior proposal retained; no approval transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.25-push-replace-ownership.schema.json",
+      "sha256": "074b5bc5dd33607e188d783a389d88157d0bfd4f1c1fc54da12ff6026c1ebdaa",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T20:32:35.663784+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Five design review fixes and source-only contract validation"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/images/push-replace-flow.svg",
+      "sha256": "cdd738d8e63c13af3d7ca293634fc1e021afac8b0266138e463cb6d87774f255",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T20:32:35.663784+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Five design review fixes and source-only contract validation"
+      }
+    },
+    {
+      "path": "tests/test_push_replace_contract.py",
+      "sha256": "87d2a77eedea79f0c584fdbe16f17bec374246883b8ff1d14677ca82052906f9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T20:32:35.663784+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Five design review fixes and source-only contract validation"
+      }
+    },
+    {
+      "path": "tests/test_push_replace_contract.md",
+      "sha256": "cea4497bd8938a320afb3ab9d8e36bb4500d53ba9b8d915ad796ecdf4b9e912d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T20:32:35.663784+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Five design review fixes and source-only contract validation"
+      }
+    }
+  ],
+  "fixes": {
+    "shared_verification": "Contract requires owned-section writers and verifiers; unchanged current verifier is explicitly identified.",
+    "ownership_receipt": "Proposed .asdg/installation-ownership.json has a closed Draft 2020-12 schema and bound entity/client/kind fields.",
+    "claude_cleanup": "Both clients remove exactly proven owned obsolete adapter files.",
+    "preserved_state": "27 categories cover team receipts, shared Git records, worktrees, host identities and unrelated settings.",
+    "clock": "Timeless ownership payload and hash-bound audit intents; runtime timestamp and realized audit hash belong to execution evidence.",
+    "second_review": "Explicit material no-op gate prevents recursive receipt rehashing."
+  },
+  "verification": {
+    "focused": {
+      "tests": 9,
+      "passed": 9,
+      "skipped": 0,
+      "command": "/private/tmp/asdg-push-contract-validation/bin/python -B -m unittest discover -s tests -p test_push_replace_contract.py -v"
+    },
+    "full_suite": {
+      "tests": 255,
+      "passed": 252,
+      "skipped": 3,
+      "seconds": 180.301,
+      "command": "/private/tmp/asdg-push-contract-validation/bin/python -B -m unittest discover -s tests -v",
+      "log": "/private/tmp/asdg-push-contract-suite.log",
+      "skip_evidence": [
+        "test_render_embeds_notes_on_every_slide (test_pre_code_review.PreCodeReviewTests.test_render_embeds_notes_on_every_slide) ... skipped 'python-pptx is not installed in this interpreter'",
+        "test_rebuild_after_editing_only_markdown (test_report_project_status.ReportRenderTests.test_rebuild_after_editing_only_markdown) ... skipped 'requires reviewed provider renderer dependencies'",
+        "test_specialist_full_and_partial_pptx (test_report_project_status.ReportRenderTests.test_specialist_full_and_partial_pptx) ... skipped 'requires reviewed provider renderer dependencies'"
+      ]
+    },
+    "schema_validator": "jsonschema 4.26.0 in temporary Python 3.11 environment; no runtime dependency added",
+    "integrity": "python3 scripts/check.py --integrity: PASS",
+    "syntax": "Python 3.9 AST syntax accepted for added test; no Python 3.9 runtime executed",
+    "visual": {
+      "asset": "docs/asdg/07-planning/images/push-replace-flow.svg",
+      "rendered_width": 840,
+      "inspection": "Legible all stages, arrows, preserved entities and execution/plan boundary; asset-only preview inspected",
+      "markdown_preview": "NOT_INSPECTED"
+    },
+    "client_package_comparison": {
+      "alice.good.meetings": 0,
+      "lifebuckets": 0,
+      "elustondoaiweb": 0
+    }
+  },
+  "limits": [
+    "No push-replace apply engine implemented",
+    "No change to existing init/verify runtime behavior",
+    "No native Claude Code or Codex invocation or hook-trust verification",
+    "Cloud interpreted as Claude Code pending user clarification",
+    "Full command scope clarification pending; completed design-first scope",
+    "Receipt schema shape validation does not authenticate ownership or replace semantic target/category/path validation"
+  ]
+}

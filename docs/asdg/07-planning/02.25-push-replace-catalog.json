@@ -1,0 +1,610 @@
+{
+  "schema_version": 2,
+  "catalog_id": "asdg-client-ownership",
+  "status": "PROPOSED_CONTRACT_NO_REPLACEMENT_ENGINE",
+  "scope": "initialized_client",
+  "supported_clients": [
+    "codex",
+    "claude"
+  ],
+  "ownership_receipt": ".asdg/installation-ownership.json",
+  "ownership_receipt_schema": "02.25-push-replace-ownership.schema.json",
+  "defaults": {
+    "unknown_entity": "preserve_and_report",
+    "ambiguous_ownership": "block",
+    "unselected_client": "preserve",
+    "source_symlink": "block",
+    "target_symlink": "block",
+    "target_hardlink": "block",
+    "nested_repository": "exclude",
+    "directory_deletion": "forbidden"
+  },
+  "rules": {
+    "scope_resolution": "Resolvers are identifiers for reviewed implementations, not arbitrary commands. Resolve sorted exact paths and selectors; no wildcard is a write target. Overlapping preserve/exclude scopes dominate mutation candidates.",
+    "adoption": "When no valid bound receipt exists, construct a read-only candidate inventory from exact known source versions and current files. Explicitly reviewed exact-path/selector adoption is required before replacement; matching names or hashes alone do not establish authority. Unknown entries remain preserved.",
+    "obsolete": "Removal requires exact prior ownership plus current source absence and selected client applicability. Shared-section retirement restores its recorded original value only after current ownership is established; unknown or conflicting ownership blocks.",
+    "receipt_binding": "Validate schema, catalog/version, source and target identities, binding hash, selected clients, path/selector uniqueness and category scope. A local receipt is evidence, not authentication or human approval.",
+    "plan_basis": "Canonical UTF-8 JSON with sorted keys and stable array order hashes source/target/catalog/client selection/prior receipt hash/resolved mutations before output ownership receipt and execution events. Store this digest as plan_basis_sha256 in the receipt; the final plan token can bind the receipt after-hash without self-reference.",
+    "clock": "Ownership payload has no timestamps. Review-ledger execution intent binds old ledger hash, fixed event fields and plan binding; execution time and realized after-hash are recorded after apply. A no-op emits no event.",
+    "verification": "Whole files use exact bytes; marked blocks, TOML keys and JSON entries use ownership-aware checks plus preserved-remainder checks. Existing whole-file Codex verifier is insufficient.",
+    "content_hashes": "Whole-file and marked-block installed_sha256 bind exact bytes (UTF-8 for block text). TOML key and JSON entry installed_sha256 bind canonical UTF-8 JSON of their typed value: sorted object keys, compact separators, ensure_ascii=False, no trailing newline, and no NaN/Infinity. original.sha256 uses the same representation as that entry; absent originals omit both value and hash.",
+    "selector_identity": "Receipt entries are unique by normalized path plus ownership kind and selector. Markers must be unique and non-overlapping. TOML key paths are arrays of exact literal keys. A JSON entry selector names one exact array pointer and matches one canonical entry hash; zero or multiple matches are conflicts unless an explicitly reviewed adoption resolves them.",
+    "receipt_entry_scope": "Receipt payload entries are only replaceable source or integration units (whole_file, marked_block, toml_key, json_entry). Runtime state, preserved documents, generated receipts, execution journals and backups never become deletion-authorized payload entries. Validate every entry against its entity kind, resolver destination scope and selected client.",
+    "idempotence": "Before deriving a successor basis or ownership receipt, compare desired payload, source/catalog/generator identities, selected clients and exact ownership entries with the verified installed state, excluding transaction provenance plan_basis_sha256. If no material delta or owned-file repair exists, reuse existing receipt bytes and emit no writes or events. Never make the prior receipt hash alone cause a successor receipt."
+  },
+  "resolvers": {
+    "package_manifest_files": {
+      "source": "metadata/package-files.json",
+      "output": "exact_relative_file_paths",
+      "destination_prefix": "asdg/"
+    },
+    "codex_skill_templates": {
+      "source": "scripts/lib/cli_project.py:template_files",
+      "output": "exact_relative_file_paths",
+      "filter_prefix": ".agents/skills/"
+    },
+    "codex_role_templates": {
+      "source": "scripts/lib/cli_project.py:template_files",
+      "output": "exact_relative_file_paths",
+      "filter_prefix": ".codex/agents/"
+    },
+    "claude_skill_adapters": {
+      "source": "scripts/lib/cli_clients.py:skill_names,claude_adapter",
+      "output": "exact_relative_file_paths",
+      "destination_prefix": ".claude/skills/"
+    },
+    "claude_mod_runtime_files": {
+      "source": "scripts/lib/cli_clients.py:mod_names,claude_mod,MOD_FILES",
+      "output": "exact_relative_file_paths",
+      "destination_prefix": ".claude/skills/"
+    },
+    "claude_bridge_destination": {
+      "source": "scripts/lib/cli_clients.py:claude_bridge",
+      "output": "zero_or_one_exact_path",
+      "allowed_paths": [
+        "CLAUDE.md",
+        ".claude/CLAUDE.md"
+      ]
+    },
+    "codex_hook_registrations": {
+      "source": "scripts/lib/cli_project.py:hook_config",
+      "output": "exact_json_entry_selectors",
+      "allowed_paths": [
+        ".codex/hooks.json"
+      ]
+    },
+    "git_repository_metadata": {
+      "source": "git rev-parse --git-common-dir; git rev-parse --git-dir",
+      "output": "excluded_roots"
+    },
+    "configured_host_identity": {
+      "source": "scripts/lib/cli_team_claim.py:default_host_path; explicit target runtime configuration",
+      "output": "excluded_paths"
+    },
+    "openspec_owned_skills": {
+      "source": "scripts/lib/cli_openspec.py:presence and explicit OpenSpec inventory",
+      "output": "excluded_paths"
+    },
+    "native_runtime_surfaces": {
+      "source": "native client runtime",
+      "output": "runtime_observation_only"
+    }
+  },
+  "entities": [
+    {
+      "id": "distribution",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "whole_file",
+      "scope": {
+        "anchor": "project",
+        "paths": [],
+        "resolver": "package_manifest_files"
+      },
+      "replacement": "replace_owned",
+      "obsolete": "remove_previously_owned",
+      "verification": "exact_bytes",
+      "notes": "Resolve exact package-files.json members under asdg/. Validate both the source manifest and prior ownership evidence. Extra files are not owned by directory membership."
+    },
+    {
+      "id": "codex-skills",
+      "clients": [
+        "codex"
+      ],
+      "ownership_kind": "whole_file",
+      "scope": {
+        "anchor": "project",
+        "paths": [],
+        "resolver": "codex_skill_templates"
+      },
+      "replacement": "replace_owned",
+      "obsolete": "remove_previously_owned",
+      "verification": "exact_bytes",
+      "notes": "Only exact files emitted from canonical templates/.agents/skills; no directory wildcard deletion."
+    },
+    {
+      "id": "codex-roles",
+      "clients": [
+        "codex"
+      ],
+      "ownership_kind": "whole_file",
+      "scope": {
+        "anchor": "project",
+        "paths": [],
+        "resolver": "codex_role_templates"
+      },
+      "replacement": "replace_owned",
+      "obsolete": "remove_previously_owned",
+      "verification": "exact_bytes",
+      "notes": "Only exact canonical templates/.codex/agents files, including the coordinator."
+    },
+    {
+      "id": "claude-skills",
+      "clients": [
+        "claude"
+      ],
+      "ownership_kind": "whole_file",
+      "scope": {
+        "anchor": "project",
+        "paths": [],
+        "resolver": "claude_skill_adapters"
+      },
+      "replacement": "replace_owned",
+      "obsolete": "remove_previously_owned",
+      "verification": "exact_bytes",
+      "notes": "Render every selected canonical skill and remove only exact retired adapter files proven owned by prior inventory."
+    },
+    {
+      "id": "claude-mods",
+      "clients": [
+        "claude"
+      ],
+      "ownership_kind": "whole_file",
+      "scope": {
+        "anchor": "project",
+        "paths": [],
+        "resolver": "claude_mod_runtime_files"
+      },
+      "replacement": "replace_owned",
+      "obsolete": "remove_previously_owned",
+      "verification": "exact_bytes",
+      "notes": "Resolve exact MOD_FILES for each validated canonical mod; companions and tests stay in asdg/."
+    },
+    {
+      "id": "bootstrap",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "marked_block",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          "AGENTS.md"
+        ],
+        "resolver": null,
+        "selector": {
+          "start": "<!-- ASDG:BEGIN bootstrap-v2 -->",
+          "end": "<!-- ASDG:END -->"
+        }
+      },
+      "replacement": "replace_owned_section",
+      "obsolete": "restore_original_section",
+      "verification": "managed_section_and_preserved_remainder",
+      "notes": "Recognized legacy markers require explicit resolver mapping; duplicated, missing or ambiguous boundaries block replacement."
+    },
+    {
+      "id": "claude-bridge",
+      "clients": [
+        "claude"
+      ],
+      "ownership_kind": "marked_block",
+      "scope": {
+        "anchor": "project",
+        "paths": [],
+        "resolver": "claude_bridge_destination",
+        "selector": {
+          "start": "<!-- ASDG:BEGIN claude-bridge-v1 -->",
+          "end": "<!-- ASDG:END claude-bridge -->"
+        }
+      },
+      "replacement": "replace_owned_section",
+      "obsolete": "restore_original_section",
+      "verification": "managed_section_and_preserved_remainder",
+      "notes": "Destination is root CLAUDE.md or .claude/CLAUDE.md. Existing user-written imports remain user-owned; parent instruction files are read-only evidence."
+    },
+    {
+      "id": "ignore",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "marked_block",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          ".gitignore"
+        ],
+        "resolver": null,
+        "selector": {
+          "start": "# ASDG generated files: BEGIN",
+          "end": "# ASDG generated files: END"
+        }
+      },
+      "replacement": "replace_owned_section",
+      "obsolete": "restore_original_section",
+      "verification": "managed_section_and_preserved_remainder",
+      "notes": "Preserve unrelated ignore rules byte-for-byte."
+    },
+    {
+      "id": "codex-config",
+      "clients": [
+        "codex"
+      ],
+      "ownership_kind": "toml_key",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          ".codex/config.toml"
+        ],
+        "resolver": null,
+        "selector": {
+          "key_path": [
+            "features",
+            "hooks"
+          ]
+        }
+      },
+      "replacement": "replace_owned_section",
+      "obsolete": "restore_original_section",
+      "verification": "managed_section_and_preserved_remainder",
+      "notes": "Writer and verifier must both inspect the owned key. Preserve unrelated keys and formatting. A shared feature switch is not exclusive ASDG ownership or hook trust; existing user choice requires explicit adoption."
+    },
+    {
+      "id": "codex-hooks",
+      "clients": [
+        "codex"
+      ],
+      "ownership_kind": "json_entry",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          ".codex/hooks.json"
+        ],
+        "resolver": "codex_hook_registrations"
+      },
+      "replacement": "replace_owned_section",
+      "obsolete": "restore_original_section",
+      "verification": "managed_section_and_preserved_remainder",
+      "notes": "Own exact identified ASDG hook entries, not parent arrays or unrelated hooks. Validate selector uniqueness; compare entries semantically and preserve unrelated content."
+    },
+    {
+      "id": "integration-receipt",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "receipt",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          ".asdg/integrations.json"
+        ],
+        "resolver": null
+      },
+      "replacement": "update_receipt",
+      "obsolete": "preserve",
+      "verification": "schema_and_binding",
+      "notes": "Retain selected clients; do not silently add or remove integrations."
+    },
+    {
+      "id": "adoption-receipt",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "receipt",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          "asdg/metadata/sync-state.json"
+        ],
+        "resolver": null
+      },
+      "replacement": "update_receipt",
+      "obsolete": "preserve",
+      "verification": "schema_and_binding",
+      "notes": "Preserve existing upstream records. Existing schema permits promote/upgrade only; push-replace requires explicit compatible record semantics, never an unrecognized operation value."
+    },
+    {
+      "id": "build-identity",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "receipt",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          "asdg/metadata/build.json"
+        ],
+        "resolver": null
+      },
+      "replacement": "update_receipt",
+      "obsolete": "remove_stale_attribution",
+      "verification": "schema_and_binding",
+      "notes": "Attribute only matching committed package bytes; remove a stale record for unattributed source."
+    },
+    {
+      "id": "ownership-receipt",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "receipt",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          ".asdg/installation-ownership.json"
+        ],
+        "resolver": null
+      },
+      "replacement": "update_receipt",
+      "obsolete": "preserve",
+      "verification": "schema_and_binding",
+      "notes": "Proposed receipt governed by the adjacent schema. No schema-valid receipt alone authenticates historical ownership. Never inventory this receipt as a replaceable payload entry."
+    },
+    {
+      "id": "review-history",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "append_only",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          ".asdg/document-reviews.json"
+        ],
+        "resolver": null
+      },
+      "replacement": "append_execution_event",
+      "obsolete": "preserve",
+      "verification": "preserved_prefix_and_execution_event",
+      "notes": "The deterministic plan binds the old ledger hash and typed event intent. recorded_at and realized ledger after-hash belong to the execution envelope; a no-op adds no events."
+    },
+    {
+      "id": "project-state",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "preserved",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          ".asdg/project.json",
+          ".asdg/sprint.json",
+          ".asdg/lifecycle.json"
+        ],
+        "resolver": null
+      },
+      "replacement": "preserve",
+      "obsolete": "preserve",
+      "verification": "preserved_bytes",
+      "notes": "Validate schema compatibility without mutating identity, lifecycle or sprint state; migrations require separate scope."
+    },
+    {
+      "id": "team-specifications",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "preserved_tree",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          ".asdg/teams"
+        ],
+        "resolver": null
+      },
+      "replacement": "preserve",
+      "obsolete": "preserve",
+      "verification": "preserved_bytes",
+      "notes": "Preserve all saved team definitions and related client records."
+    },
+    {
+      "id": "team-write-receipts",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "preserved_tree",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          ".asdg/cache/teams/spec-writes"
+        ],
+        "resolver": null
+      },
+      "replacement": "preserve",
+      "obsolete": "preserve",
+      "verification": "preserved_bytes",
+      "notes": "Despite the cache directory name these receipts establish prior team writes and must not be cleared."
+    },
+    {
+      "id": "remaining-cache",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "preserved_tree",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          ".asdg/cache"
+        ],
+        "resolver": null
+      },
+      "replacement": "preserve",
+      "obsolete": "preserve",
+      "verification": "preserved_bytes",
+      "notes": "Preserve every other cache entry too; push replacement is not cache cleanup."
+    },
+    {
+      "id": "shared-team-run",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "excluded",
+      "scope": {
+        "anchor": "git_common_dir",
+        "paths": [
+          "asdg/teams/active-run.json",
+          "asdg/teams/write.lock"
+        ],
+        "resolver": null
+      },
+      "replacement": "preserve",
+      "obsolete": "preserve",
+      "verification": "outside_mutation_scope",
+      "notes": "Shared among linked worktrees. Never overwrite active claims or acquire/delete the team lock as the replacement lock. Runtime compatibility/liveness is reported separately."
+    },
+    {
+      "id": "team-worktrees",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "excluded",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          ".claude/worktrees"
+        ],
+        "resolver": null
+      },
+      "replacement": "preserve",
+      "obsolete": "preserve",
+      "verification": "outside_mutation_scope",
+      "notes": "Contains full Git worktrees and application work. Do not recurse into them as integration files or independently update them without explicit target selection."
+    },
+    {
+      "id": "git-metadata",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "excluded",
+      "scope": {
+        "anchor": "git_common_dir",
+        "paths": [
+          "info/exclude"
+        ],
+        "resolver": "git_repository_metadata"
+      },
+      "replacement": "preserve",
+      "obsolete": "preserve",
+      "verification": "outside_mutation_scope",
+      "notes": "ASDG team setup can add .claude/worktrees/ to info/exclude; replacement preserves all Git metadata, refs and worktree registrations."
+    },
+    {
+      "id": "host-identity",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "excluded",
+      "scope": {
+        "anchor": "host_home",
+        "paths": [
+          ".local/state/asdg/host-id.json"
+        ],
+        "resolver": "configured_host_identity"
+      },
+      "replacement": "preserve",
+      "obsolete": "preserve",
+      "verification": "outside_mutation_scope",
+      "notes": "Preserve the default identity and any explicitly configured alternate identity. Never inspect or reset arbitrary host state as a side effect."
+    },
+    {
+      "id": "project-documents",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "preserved_tree",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          "docs/asdg"
+        ],
+        "resolver": null
+      },
+      "replacement": "preserve",
+      "obsolete": "preserve",
+      "verification": "preserved_bytes",
+      "notes": "All client artifacts are preserved, including generated stage READMEs; missing-scaffold creation belongs to explicit initialization."
+    },
+    {
+      "id": "backups-and-logs",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "preserved_tree",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          ".asdg/backups",
+          "logs"
+        ],
+        "resolver": null
+      },
+      "replacement": "preserve",
+      "obsolete": "preserve",
+      "verification": "preserved_bytes",
+      "notes": "Retain existing data. New replacement backups use a distinct transaction namespace and record exact original bytes/modes; no purge."
+    },
+    {
+      "id": "optional-openspec",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "excluded",
+      "scope": {
+        "anchor": "project",
+        "paths": [
+          "openspec",
+          ".claude/commands/opsx"
+        ],
+        "resolver": "openspec_owned_skills"
+      },
+      "replacement": "preserve",
+      "obsolete": "preserve",
+      "verification": "outside_mutation_scope",
+      "notes": "OpenSpec skills and commands remain externally owned; resolver lists them read-only and cannot authorize ASDG replacement."
+    },
+    {
+      "id": "native-sessions",
+      "clients": [
+        "codex",
+        "claude"
+      ],
+      "ownership_kind": "external_runtime",
+      "scope": {
+        "anchor": "native_host",
+        "paths": [],
+        "resolver": "native_runtime_surfaces"
+      },
+      "replacement": "preserve",
+      "obsolete": "preserve",
+      "verification": "runtime_not_verified",
+      "notes": "Chat membership, active sessions, skill discovery, terminals and trust are native runtime objects; file checks do not prove them ready."
+    }
+  ]
+}

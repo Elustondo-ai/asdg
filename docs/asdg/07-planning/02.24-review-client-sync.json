@@ -1,0 +1,12 @@
+{
+  "event": "AI-MODIFIED",
+  "path": "docs/asdg/07-planning/02.24-review-client-sync.md",
+  "sha256": "ae0509836015d4bca8794044dd8387c4f3a13e84b95be57c49ef59155e001f58",
+  "human_approval": null,
+  "requester": "Pablo",
+  "role": "ASDG-ADMIN",
+  "session": "01a20f1a-9455-7982-ab82-f73eb3459bd2",
+  "scope": "canonical manifest and three client synchronization",
+  "evidence": "build/client-sync-20261124/final-evidence.json",
+  "native_runtime": "NOT_VERIFIED"
+}

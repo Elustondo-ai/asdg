@@ -16,6 +16,7 @@ Explicit human use of [Create team](../../skills/asdg-create-team/SKILL.md), or 
 Separately, where the installed package provides managed teams, [team workflows](team-workflows.md) apply: configuring a team starts nothing, each member keeps its own role authority, and a missing capability is reported as unavailable, never simulated.
 Explicit human [Sprint start](../../skills/asdg-sprint-start/SKILL.md) or [close](../../skills/asdg-sprint-close/SKILL.md) requests permit the sprint branch, local transition and closeout receipt only; [review](../../skills/asdg-sprint-review/SKILL.md) is read-only.
 Outside documentation and explicit utility allowances, retain evaluation limits. No installation, commit, push, merge, deletion, deployment or state transition follows from authoring.
+Explicit [Project Plan Sync](../../skills/asdg-project-plan-sync/SKILL.md) permits its exact cache preparation and requested GitHub planning synchronization; it grants no sprint transition or application permission.
 Save substantive documentation in `docs/` and link it in the conversation; brief advice or an explicit chat-only request may remain conversational. Claim execution only with evidence.
 An in-scope application action outside execution authority is `BLOCKED: READ_ONLY_EVALUATION`, not OUT_OF_SCOPE; ordinary documentation writes are allowed.
 Skill discovery, role assignment and coordinator requests grant no operational authority; human-directed utilities preserve specialist delivery limits and runtime denials.

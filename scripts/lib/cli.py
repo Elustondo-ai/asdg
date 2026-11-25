@@ -38,6 +38,29 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog=SHORT_COMMAND, description=__doc__)
     parser.add_argument('--version', action='version', version=f'{COMMAND} {VERSION}')
     sub = parser.add_subparsers(dest='operation', required=True)
+    plan_sync = sub.add_parser('project-plan-sync', help='Synchronize the local planning cache and GitHub Projects/Issues on request')
+    plan_mode = plan_sync.add_mutually_exclusive_group(required=True)
+    plan_mode.add_argument('--dry-run', action='store_true', help='read both sides and preview without writes')
+    plan_mode.add_argument('--apply', action='store_true', help='apply the exact previewed plan')
+    plan_mode.add_argument('--resume', action='store_true', help='reconcile an interrupted sync without blindly repeating writes')
+    plan_mode.add_argument('--abandon', action='store_true', help='archive an interrupted plan while preserving local and GitHub changes')
+    plan_sync.add_argument('--plan', help='exact digest from the current preview; required with --apply')
+    plan_sync.add_argument('--repo', help='GitHub owner/repository; defaults to verified origin')
+    plan_sync.add_argument('--project-number', type=int, help='select an existing GitHub Project under the repository owner')
+    plan_sync.add_argument('--bootstrap-ref', help='seed an absent cache from this local Git ref without switching branches')
+    plan_sync.add_argument('--acknowledge-uncertain', action='store_true', help='human acknowledgement of unresolved remote outcome when abandoning; never inferred')
+    plan_sync.add_argument('--json', action='store_true')
+    push = sub.add_parser('push-replace', help='Replace proven ASDG-owned files with a pinned canonical package')
+    push.add_argument('--source', help='explicit local canonical Git root; required for preview/apply')
+    push.add_argument('--target', required=True, help='initialized client Git root')
+    mode = push.add_mutually_exclusive_group(required=True)
+    mode.add_argument('--dry-run', action='store_true')
+    mode.add_argument('--apply', action='store_true')
+    mode.add_argument('--verify', action='store_true')
+    mode.add_argument('--recover', metavar='TRANSACTION_ID')
+    push.add_argument('--recovery', choices=('resume', 'rollback'), default='rollback')
+    push.add_argument('--plan', help='exact digest returned by the reviewed preview')
+    push.add_argument('--json', action='store_true')
     for name in ('promote', 'upgrade'):
         sync = sub.add_parser(name, help='Preview or explicitly apply local methodology synchronization')
         sync.add_argument('--source', required=True, help='source Git repository root')
@@ -101,6 +124,26 @@ def main(argv: list[str] | None = None) -> int:
         if args.json and not args.advise:
             parser.error('--json --verbose requires --advise; plain --json never invokes the coordinator')
     try:
+        if args.operation == 'project-plan-sync':
+            from cli_plan_sync import synchronize, render
+            result = synchronize(project_root(), repository=args.repo, project_number=args.project_number,
+                                 bootstrap_ref=args.bootstrap_ref, apply=args.apply,
+                                 expected_plan=args.plan, resume=args.resume, abandon=args.abandon,
+                                 acknowledge_uncertain=args.acknowledge_uncertain)
+            print(json.dumps(result, indent=2) if args.json else render(result))
+            return 1 if result.get('conflicts') else 0
+        if args.operation == 'push-replace':
+            from cli_push import replace, recover, render, serializable, verify_installed
+            if args.recover:
+                result = recover(args.target, args.recover, args.recovery)
+            elif args.verify:
+                result = verify_installed(args.target)
+            else:
+                if not args.source:
+                    raise Conflict('--source is required for replacement preview/apply.')
+                result = replace(args.source, args.target, apply=args.apply, expected_plan=args.plan)
+            print(json.dumps(serializable(result), indent=2) if args.json else render(result))
+            return 1 if result.get('conflicts') or result.get('verified') is False else 0
         if args.operation == 'check-write':
             context = json.loads(args.context)
             if not isinstance(context, dict):

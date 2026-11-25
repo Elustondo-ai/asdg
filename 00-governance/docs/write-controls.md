@@ -30,6 +30,7 @@ python3 asdg/scripts/cli.py check-write --context '{"role_id":"ASDG-05"}' --path
 Exit 0 permits the path under the declaration; exit 1 blocks it. Save out-of-ownership proposals in the role's directory or return a pending handoff instead.
 For a named exception add `workflow` and exact authorized `targets` to the JSON context; OpenSpec additionally needs `openspec_store`, resolved from the installed workflow.
 Workflow values are `openspec`, `admin`, `shared-record`, `review-receipt`, `approve`, `purpose-review`, `sprint-start` and `sprint-close`.
+`project-plan-sync` additionally permits only the exact planning-cache file under an explicit [sync request](../../skills/asdg-project-plan-sync/SKILL.md); journal and remote mutations belong to the sync engine.
 `targets` are exact files, never wildcard/directory grants. `review-receipt` is limited to the established append-only project ledger.
 A declaration is evidence supplied by the caller, not proof of human approval; follow the named workflow's content, scope and review contract.
 The checker separates ownership from sprint permission: only ASDG-09 application targets proceed to existing sprint checks. Ordinary owned documentation never needs sprint/lifecycle state.

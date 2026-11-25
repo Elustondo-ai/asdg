@@ -140,6 +140,8 @@ def ownership_decision(root: Path, paths: list[str], context: dict, repo: Path =
         if path == Path('.asdg/document-reviews.json') and workflow == 'review-receipt':
             continue  # Append-only authorship; semantic validation remains in the workflow.
         if path in exceptions:
+            if workflow == 'project-plan-sync' and path == Path('docs/asdg/07-planning/project-plan-cache.json'):
+                continue  # Explicit sync preparation only; the engine owns journal and remote writes.
             if workflow in {'approve', 'purpose-review'} and path == Path('.asdg/lifecycle.json'):
                 if workflow == 'approve' or role == 'ASDG-02':
                     continue

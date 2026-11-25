@@ -7,6 +7,8 @@ Both commands use the same conservative file comparison; neither decides that on
 
 The conversational [Update skill](../skills/asdg-update/SKILL.md) guides approved upgrades and a separate integration preview for new command adapters; it preserves the engine prerequisites below.
 
+For an intentional reset of proven ASDG-owned package and integration files, use [push replacement](push-replace.md). Its exact-plan transaction, backup and recovery contract is separate from the conservative promote/upgrade commands described here.
+
 ## Preview, review, apply
 
 Use Python 3.9+ and Git. Run the current project-local entry point; no global command or model is required.

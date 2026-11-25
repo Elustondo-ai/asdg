@@ -1,0 +1,78 @@
+{
+  "path": "docs/asdg/00-governance/reports/2026-11-24-canonical-review.md",
+  "sha256": "fa868121247c006b4e376b1497b1abd24e04d75b4d7c40aebe087500c606df54",
+  "event": "AI-MODIFIED",
+  "recorded_at": "2026-11-24T19:57:38.166542+00:00",
+  "human_approval": null,
+  "provenance": {
+    "role_id": "ASDG-COORDINATOR",
+    "scope": "Read-only canonical and local client baseline review; coordination report only"
+  },
+  "evidence": {
+    "canonical_commit": "c34f4a753de6c6dfed59f824aaa273832a50a089",
+    "cloud_heads": {
+      "main": "c34f4a753de6c6dfed59f824aaa273832a50a089",
+      "claude-team-materialization": "331b92e51cea0876c62e4eb756b6d5966827f022"
+    },
+    "structural_check": {
+      "command": "python3 scripts/check.py",
+      "exit_code": 0
+    },
+    "integrity_check": {
+      "command": "python3 scripts/check.py --integrity",
+      "exit_code": 1,
+      "mismatched_paths": 96
+    },
+    "suite": {
+      "command": "python3 -B -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 246,
+      "passed": 243,
+      "skipped": 3,
+      "duration_seconds": 294.031,
+      "summary": "OK (skipped=3)",
+      "skip_reasons": [
+        "python-pptx is not installed in this interpreter",
+        "requires reviewed provider renderer dependencies (two tests)"
+      ]
+    },
+    "additional_reproduction": {
+      "setup": "Disposable fixture Git project, valid acquired and released claim; replace end_kind with [] and invoke read_claim",
+      "result": "TypeError: cannot use list as a dict key (unhashable type: list)",
+      "source_mutated": false
+    },
+    "client_selected_comparison": {
+      "selected_count": 463,
+      "alice.good.meetings": {
+        "same": 463,
+        "different": 0,
+        "missing": 0
+      },
+      "lifebuckets": {
+        "same": 367,
+        "different": 43,
+        "missing": 53
+      }
+    },
+    "visual_check": {
+      "asset": "docs/images/distribution-flow.svg",
+      "renderer": "rsvg-convert",
+      "width_pixels": 800,
+      "observed": "Legible four-step canonical source to package to client setup flow",
+      "markdown_preview": "NOT_INSPECTED"
+    },
+    "limitations": [
+      "Client GitHub freshness not checked",
+      "No native invocation, hook trust or live application verification",
+      "No methodology repair or distribution applied"
+    ],
+    "session": {
+      "role": "ASDG-COORDINATOR",
+      "focus": "NoFocus",
+      "attitude": "NoAttitude",
+      "title_requested": "00 Governance",
+      "title_action": "RENAMED",
+      "ui_readback": "NOT_INSPECTED"
+    }
+  }
+}

@@ -20,6 +20,7 @@ Examples use Claude's `/`; substitute `$` in Codex. Read the linked skill for it
 | `/asdg-report-project-status` | Three slides from the active specialist. Codex Governance can collect twelve sections with verified named delegation. The Markdown presentation is primary. PowerPoint export requires a reviewed provider renderer. |
 | `/asdg-decision <question>` | Analyze a decision; explicitly request recording when that is the intended output. |
 | `/asdg-openspec-propose <change>` | Request a bounded planning proposal; requires native `openspec-propose`. |
+| `/asdg-project-plan-sync` | Compare the planner cache with GitHub Projects/Issues and apply the requested, conflict-free synchronization. |
 
 ## Terminal command families
 
@@ -39,7 +40,9 @@ These names are CLI commands, not slash skills. Prefer the conversational skill 
 | `sprint start` | Writes scope/state; needs `--id`, `--objective`, repeated `--scope` and `--acceptance`, plus the sprint skill's authorization/preflight. |
 | `sprint stop` | Stops sprint state; the Close skill additionally preserves review and carry-forward evidence. |
 | `promote` / `upgrade` | Preview pilot-to-canonical / accepted-version-to-client synchronization with `--source`, `--target`, `--dry-run`; approved apply needs `--apply --plan <digest>`. |
+| `push-replace` | Explicitly reset proven ASDG-owned package/integration entities from the selected source; exact-plan apply, backups, recovery and verification follow the [replacement contract](../../docs/push-replace.md). |
 | `dashboard` | Start a local read-only dashboard server; optional `--port`. Help never starts it. |
+| `project-plan-sync` | Preview with `--dry-run`; apply with `--apply --plan DIGEST`; reconcile an interruption with `--resume`. Keeps notes and sprint authorization separate. |
 
 Use [synchronization](../../docs/synchronization.md) for promote/upgrade contracts and [installation](../../docs/installation.md) for ZIP/clone flows. `python3 asdg/scripts/init.py` delegates to the same init engine; it is not a second policy.
 

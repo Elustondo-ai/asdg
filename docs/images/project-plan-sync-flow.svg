@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">On-demand Project Plan Sync</title>
+  <desc id="desc">The worktree's structured plan cache and the shared GitHub Project and Issues are compared field by field against their last synchronized values. Independent edits merge. Divergent edits stop before writes. Markdown notes remain unchanged, and sprint authorization stays separate.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 Z" fill="#52637a"/></marker>
+    <style>text{font-family:Arial,sans-serif;fill:#1e293b}.heading{font-size:19px;font-weight:700}.label{font-size:16px}.small{font-size:14px}.box{stroke-width:1.5;rx:14}.arrow{stroke:#52637a;stroke-width:2;fill:none;marker-start:url(#arrow);marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="960" height="360" rx="16" fill="#f8fafc"/>
+  <text x="32" y="35" class="heading">One requested sync · shared planning, bounded local work</text>
+  <rect x="30" y="85" width="242" height="152" class="box" fill="#eaf2ff" stroke="#7b9bc4"/>
+  <text x="50" y="114" class="heading">Worktree plan cache</text>
+  <text x="50" y="143" class="label">Stable task / issue identities</text>
+  <text x="50" y="168" class="label">Current local field values</text>
+  <text x="50" y="193" class="label">Last synchronized values</text>
+  <text x="50" y="220" class="small">Markdown notes remain intact</text>
+  <path d="M279 161 H335" class="arrow"/>
+  <rect x="344" y="85" width="272" height="152" class="box" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="365" y="114" class="heading">Compare each field</text>
+  <text x="365" y="143" class="label">Local ↔ last common ↔ remote</text>
+  <text x="365" y="173" class="label" fill="#166534">Independent changes → merge</text>
+  <text x="365" y="203" class="label" fill="#9f1239">Different edits → stop + resolve</text>
+  <text x="365" y="224" class="small">Preview digest binds the apply</text>
+  <path d="M625 161 H681" class="arrow"/>
+  <rect x="690" y="85" width="240" height="152" class="box" fill="#eaf8f0" stroke="#75a889"/>
+  <text x="710" y="114" class="heading">GitHub shared plan</text>
+  <text x="710" y="143" class="label">Project + repository Issues</text>
+  <text x="710" y="168" class="label">Status · Priority · ASDG Team</text>
+  <text x="710" y="193" class="label">Sprint ID as text</text>
+  <text x="710" y="220" class="small">Visible across team worktrees</text>
+  <rect x="30" y="267" width="900" height="65" class="box" fill="#fff8e7" stroke="#d5b76d"/>
+  <text x="50" y="294" class="label">Local implementation permission stays in .asdg/sprint.json.</text>
+  <text x="50" y="318" class="small">Project status and sprint labels do not start, close or approve an ASDG sprint. No polling or schedule is installed.</text>
+</svg>

@@ -36080,6 +36080,233 @@
         "visible_review_markers": [],
         "approval_binding": "No approval inferred or transferred."
       }
+    },
+    {
+      "path": "asdg/docs/push-replace.md",
+      "sha256": "040bf6c20f3833f4f4e37f6ec1c2e9e808bf9d2dad89ee59e37258613907c734",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:20:23.185428+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Complete deterministic push-replace command for Claude Code and Codex"
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli.md",
+      "sha256": "e876025a526e196f14b77b1c49e79db0d48b5f2a462284eb0e9757c77abe126b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:20:23.185428+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Complete deterministic push-replace command for Claude Code and Codex"
+      },
+      "previous_state": {
+        "sha256": "e82c7f037b229d6f39369a7a775a4161f39567380e162ce047a79680c10fec93",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_project.md",
+      "sha256": "6baa9bf7fdb7bc8ec94d8937c3b490bfa089266031ff0146deed607ec5f7b420",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:20:23.185428+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Complete deterministic push-replace command for Claude Code and Codex"
+      },
+      "previous_state": {
+        "sha256": "b45455969e84a410e809f2e12719fbfb6fe4c8f75e798583e683c00312d1a482",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_push.md",
+      "sha256": "ef628c92b9e957cff604386beedfd6ab28aaa314594082dfa88dcc5dd6026274",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:20:23.185428+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Complete deterministic push-replace command for Claude Code and Codex"
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_push_integrations.md",
+      "sha256": "ef391ba6638eafc9bccfb5beab394f0dcc0aafe73a64eb5b43c5c4167f0d5103",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:20:23.185428+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Complete deterministic push-replace command for Claude Code and Codex"
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_push_inventory.md",
+      "sha256": "040f89c403395323700e2d44148248ab0a59009d368a6f0fa905355b193b0723",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:20:23.185428+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Complete deterministic push-replace command for Claude Code and Codex"
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_push_transaction.md",
+      "sha256": "d9e9c2f5b875d6ea9df5598c8dd3793530d076b0b18df91fad84f60d878e7aaa",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:20:23.185428+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Complete deterministic push-replace command for Claude Code and Codex"
+      }
+    },
+    {
+      "path": "asdg/tests/test_push_replace.md",
+      "sha256": "b246c95f8c087e07c22bdcf607efd5f718df142a0b0dccbe0060f6d0cc775bb0",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:20:23.185428+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Complete deterministic push-replace command for Claude Code and Codex"
+      }
+    },
+    {
+      "path": "asdg/tests/test_push_integrations.md",
+      "sha256": "725a48d53772c61d59b1daead5704a5d617162a62953bfff0364574e320c9a32",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:20:23.185428+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Complete deterministic push-replace command for Claude Code and Codex"
+      }
+    },
+    {
+      "path": "asdg/tests/test_push_inventory.md",
+      "sha256": "6a3a89e4e2c3649fd362dfdb5ef452388c94e491f2d6086c83ce0209ebd46309",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:20:23.185428+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Complete deterministic push-replace command for Claude Code and Codex"
+      }
+    },
+    {
+      "path": "asdg/tests/test_push_transaction.md",
+      "sha256": "d35f34940e1e1e875e56535506a8e23f34053ce0d3e7fe0506506ab3d0d2e72d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:20:23.185428+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Complete deterministic push-replace command for Claude Code and Codex"
+      }
+    },
+    {
+      "path": "asdg/AGENTS.md",
+      "sha256": "7339b122025b1902f006cb43384842399dfeeef6777c88bc77e25be09cc00071",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:21:52.063148+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Document explicit replacement command and preserved integration selection"
+      },
+      "previous_state": {
+        "sha256": "d8e3edd6a3c0a62166b8e685e527fca70b3c39295e6f735cc8b58ca07642e897",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/synchronization.md",
+      "sha256": "f2606b2da6f453d8dca1d9f356961a9d8036fd2183d4f944e57a3b2dbaebeff6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:21:52.063148+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Document explicit replacement command and preserved integration selection"
+      },
+      "previous_state": {
+        "sha256": "9260e5179003c20972fb4efd87e9f9ce1d789f88b07265155fa9db5ac8791f6f",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "sha256": "3794357ea85ca0396f9cd7521f2b6a62bac22278a31546388a5b8163630f4f12",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:21:52.063148+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Document explicit replacement command and preserved integration selection"
+      },
+      "previous_state": {
+        "sha256": "126607b5a20c788b945375105a2e185826d613ac62f23535b9c425fcf10e1154",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/scripts/README.md",
+      "sha256": "d59397d1f42cb4ec5264331d6d478a88c62305055da4e8dfb444a1fbb4f2bef1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:21:52.063148+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Document explicit replacement command and preserved integration selection"
+      },
+      "previous_state": {
+        "sha256": "7ad3a5a1b51c245c9edce944913beab0fe0d5b3de3a0cb81e44102ddba6ac3d8",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-help/command-reference.md",
+      "sha256": "783b001aab48ade0eea903c608c14f58f16b597859e476c4e40ca52fff8fa7cf",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:21:52.063148+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "requester": "Pablo",
+        "scope": "Document explicit replacement command and preserved integration selection"
+      },
+      "previous_state": {
+        "sha256": "ee2055185b3615773370ecc0dfb81ea2863788bb29733dbce5b5ffda472937df",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
     }
   ],
   "distribution_version": "0.3.0-pilot.2"

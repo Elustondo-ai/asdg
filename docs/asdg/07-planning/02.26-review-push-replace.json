@@ -1,0 +1,987 @@
+{
+  "schema_version": 1,
+  "status": "IMPLEMENTED_AND_CLIENTS_SYNCHRONIZED",
+  "requester": "Pablo",
+  "role_id": "ASDG-ADMIN",
+  "session": "01a20f1a-9455-7982-ab82-f73eb3459bd2",
+  "scope": "Complete deterministic push-replace command for Claude Code and Codex; synchronize explicitly selected existing clients",
+  "human_approval": null,
+  "recorded_at": "2026-11-24T21:22:55.599939+00:00",
+  "verification": {
+    "source_integrity": "PASS",
+    "python39_inventory": {
+      "tests": 9,
+      "passed": 9
+    },
+    "python39_transaction": {
+      "tests": 22,
+      "passed": 22
+    },
+    "python39_claude_preview": "PASS",
+    "python39_codex_without_parser": "UNSUPPORTED_TOML before writes",
+    "documentation_visuals": {
+      "docs/push-replace.md": "push-replace-flow.svg inspected at 840px",
+      "scripts/lib/cli_push.md": "shared flow inspected at 840px",
+      "scripts/lib/cli_push_transaction.md": "shared flow inspected at 840px",
+      "scripts/lib/cli_push_integrations.md": "cli_clients-flow.svg inspected at 840px",
+      "scripts/lib/cli_push_inventory.md": "CRC collaboration table source reviewed",
+      "rendered_markdown": "Unavailable: local Chrome headless preview aborted; asset-only checks reported"
+    },
+    "full_suite": {
+      "tests": 317,
+      "passed": 314,
+      "skipped": 3,
+      "seconds": 204.528,
+      "python": "3.11.17",
+      "command": "/private/tmp/asdg-push-contract-validation/bin/python -B -m unittest discover -s tests -v",
+      "log": "/private/tmp/asdg-push-full-suite.log",
+      "skip_reasons": [
+        "python-pptx unavailable for pre-code-review render",
+        "reviewed provider renderer dependencies unavailable for two report renders"
+      ]
+    },
+    "python39_runtime": "3.9.6"
+  },
+  "limits": [
+    "Native Claude Code/Codex discovery and hook execution not observed",
+    "Cooperative locks do not prevent unrelated external writers",
+    "Interruption before durable manifest/checksum may need manual backup reconciliation; payload remains unchanged",
+    "Python 3.9/3.10 Codex configuration requires tomli; no dependency installed automatically",
+    "No commit, push, release, team creation or sprint transition"
+  ],
+  "completed_at": "2026-11-24T21:25:18.779191+00:00",
+  "clients": {
+    "alice.good.meetings": {
+      "client": "alice.good.meetings",
+      "verify_exit": 0,
+      "status_exit": 0,
+      "integrity_exit": 0,
+      "push_verify": {
+        "operation": "push-replace",
+        "verified": true,
+        "problems": [],
+        "clients": [
+          "claude",
+          "codex"
+        ],
+        "native_runtime": "NOT_VERIFIED",
+        "hook_trust": "NOT_ASSESSED"
+      },
+      "next_preview_noop": true,
+      "package_files": 483,
+      "package_mismatches": [],
+      "unexpected_changed": [],
+      "unexpected_added": [],
+      "head_unchanged": true,
+      "transaction": {
+        "transaction_id": "tx-f4f569c41cda4a5599f3d63e06e68e2d",
+        "plan_id": "9f8429cc5596736e26b3b430e8d5aa3f31b1159d6b684d4274dea844f98f8991",
+        "state": "COMMITTED",
+        "created_at": "2026-11-24T21:24:04.289096+00:00",
+        "backup_path": "/Users/pablo.elustondo/git-projects/alice.good.meetings/.asdg/backups/push-replace/tx-f4f569c41cda4a5599f3d63e06e68e2d",
+        "updated_at": "2026-11-24T21:24:04.509374+00:00",
+        "elapsed_seconds": 0.220278,
+        "changed_files": [
+          "CLAUDE.md",
+          "asdg/00-governance/types/document-reviews.json",
+          "asdg/AGENTS.md",
+          "asdg/docs/client-integrations.md",
+          "asdg/docs/images/push-replace-flow.svg",
+          "asdg/docs/push-replace.md",
+          "asdg/docs/synchronization.md",
+          "asdg/metadata/MANIFEST.json",
+          "asdg/metadata/package-files.json",
+          "asdg/metadata/push-replace-catalog.json",
+          "asdg/metadata/push-replace-ownership.schema.json",
+          "asdg/metadata/sync-state.json",
+          "asdg/scripts/README.md",
+          "asdg/scripts/lib/cli.md",
+          "asdg/scripts/lib/cli.py",
+          "asdg/scripts/lib/cli_project.md",
+          "asdg/scripts/lib/cli_project.py",
+          "asdg/scripts/lib/cli_push.md",
+          "asdg/scripts/lib/cli_push.py",
+          "asdg/scripts/lib/cli_push_integrations.md",
+          "asdg/scripts/lib/cli_push_integrations.py",
+          "asdg/scripts/lib/cli_push_inventory.md",
+          "asdg/scripts/lib/cli_push_inventory.py",
+          "asdg/scripts/lib/cli_push_transaction.md",
+          "asdg/scripts/lib/cli_push_transaction.py",
+          "asdg/skills/asdg-help/command-reference.md",
+          "asdg/tests/test_push_integrations.md",
+          "asdg/tests/test_push_integrations.py",
+          "asdg/tests/test_push_inventory.md",
+          "asdg/tests/test_push_inventory.py",
+          "asdg/tests/test_push_replace.md",
+          "asdg/tests/test_push_replace.py",
+          "asdg/tests/test_push_transaction.md",
+          "asdg/tests/test_push_transaction.py",
+          ".asdg/document-reviews.json",
+          ".asdg/installation-ownership.json"
+        ],
+        "verification_status": "PASSED",
+        "realized_files": [
+          {
+            "path": "CLAUDE.md",
+            "sha256": "09ac6cf7aac3caed3bc66cc413761cdc9560560cf513a92e756d46d3df023045",
+            "mode": 420
+          },
+          {
+            "path": "asdg/00-governance/types/document-reviews.json",
+            "sha256": "57cf349322a888c0227165f3cf9ee41989cf77068873f1e0021c439cc5575b1f",
+            "mode": 420
+          },
+          {
+            "path": "asdg/AGENTS.md",
+            "sha256": "7339b122025b1902f006cb43384842399dfeeef6777c88bc77e25be09cc00071",
+            "mode": 420
+          },
+          {
+            "path": "asdg/docs/client-integrations.md",
+            "sha256": "3794357ea85ca0396f9cd7521f2b6a62bac22278a31546388a5b8163630f4f12",
+            "mode": 420
+          },
+          {
+            "path": "asdg/docs/images/push-replace-flow.svg",
+            "sha256": "d8954b14e430b3c3dc1c07921e6b3e10ea04bee2593b4bc15159e3ba6f9049de",
+            "mode": 420
+          },
+          {
+            "path": "asdg/docs/push-replace.md",
+            "sha256": "040bf6c20f3833f4f4e37f6ec1c2e9e808bf9d2dad89ee59e37258613907c734",
+            "mode": 420
+          },
+          {
+            "path": "asdg/docs/synchronization.md",
+            "sha256": "f2606b2da6f453d8dca1d9f356961a9d8036fd2183d4f944e57a3b2dbaebeff6",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/MANIFEST.json",
+            "sha256": "e9a4dad89d6430eea158c491badd6158d1bc68c5f016c46a2593d85f7ace0d41",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/package-files.json",
+            "sha256": "effd331cf2603765c1932bb9ff32ef76df823cbabbb29e9cb912fad658a3216c",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/push-replace-catalog.json",
+            "sha256": "2a6a2e12506705d3f6a6c103acedced8f94bc3032f4d0c3ee23b48aa1d1e84fe",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/push-replace-ownership.schema.json",
+            "sha256": "784432c448b6d0fe2e44ee36ece3c3302656a16b91e050a39600ae70ad51d379",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/sync-state.json",
+            "sha256": "b78f6421a3e502274796a8c4194b3da8cb2904a39e8d8dd9d2260189fa776dc7",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/README.md",
+            "sha256": "d59397d1f42cb4ec5264331d6d478a88c62305055da4e8dfb444a1fbb4f2bef1",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli.md",
+            "sha256": "e876025a526e196f14b77b1c49e79db0d48b5f2a462284eb0e9757c77abe126b",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli.py",
+            "sha256": "10e8220c366735e07af4f8267f57a448982ca207e5cc6bbc64ed676a669d3594",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_project.md",
+            "sha256": "6baa9bf7fdb7bc8ec94d8937c3b490bfa089266031ff0146deed607ec5f7b420",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_project.py",
+            "sha256": "379f8e9b4344c33f5a1fe5fdc1889e940d45d612b01335586eb55da20266d405",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push.md",
+            "sha256": "ef628c92b9e957cff604386beedfd6ab28aaa314594082dfa88dcc5dd6026274",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push.py",
+            "sha256": "55ac78c40da943e68c9594ca708d831f3a745c7efbb26d25cceef24f09414eb7",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_integrations.md",
+            "sha256": "ef391ba6638eafc9bccfb5beab394f0dcc0aafe73a64eb5b43c5c4167f0d5103",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_integrations.py",
+            "sha256": "427b5e28463ab3cafe1c62e395f36e0d277fdbcc0877f5f80959ef8cee5190e8",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_inventory.md",
+            "sha256": "040f89c403395323700e2d44148248ab0a59009d368a6f0fa905355b193b0723",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_inventory.py",
+            "sha256": "65cde353b2712ae95bbbb6c69cc03d462149bdd6ac0540f6ea73ee89e7e8d3fa",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_transaction.md",
+            "sha256": "d9e9c2f5b875d6ea9df5598c8dd3793530d076b0b18df91fad84f60d878e7aaa",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_transaction.py",
+            "sha256": "1487e241aae2b17060fbfa802cd856f2182972772fd6904fdd353dd5864aae6d",
+            "mode": 420
+          },
+          {
+            "path": "asdg/skills/asdg-help/command-reference.md",
+            "sha256": "783b001aab48ade0eea903c608c14f58f16b597859e476c4e40ca52fff8fa7cf",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_integrations.md",
+            "sha256": "725a48d53772c61d59b1daead5704a5d617162a62953bfff0364574e320c9a32",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_integrations.py",
+            "sha256": "b220799cb8e4db6d1c6729e2a4c1c6cff772281728cc16ec3cebdbd59fb88dbc",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_inventory.md",
+            "sha256": "6a3a89e4e2c3649fd362dfdb5ef452388c94e491f2d6086c83ce0209ebd46309",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_inventory.py",
+            "sha256": "7b3c44d901c699eb5b4fe5ebc241c603bbbeaa5dc5e4177b65872da9ee0e83bd",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_replace.md",
+            "sha256": "b246c95f8c087e07c22bdcf607efd5f718df142a0b0dccbe0060f6d0cc775bb0",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_replace.py",
+            "sha256": "53afca0a6b5fdd0bcebe58d1f860ccc570d8e08e8997ff8e50191a37bc9fe53b",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_transaction.md",
+            "sha256": "d35f34940e1e1e875e56535506a8e23f34053ce0d3e7fe0506506ab3d0d2e72d",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_transaction.py",
+            "sha256": "a5d4920a79209b442939b0e3bf00f541fb3dd6fed2b49f48a73748ca39a54d0c",
+            "mode": 420
+          },
+          {
+            "path": ".asdg/document-reviews.json",
+            "sha256": "90db3f8ce4963e95979df9d82293617929cf2d0233f37291e4bb4f9dca55c4e4",
+            "mode": 420
+          },
+          {
+            "path": ".asdg/installation-ownership.json",
+            "sha256": "34eca2d6ec37a5c2fc60f6180026e64247a01df5a65aa01fa674ac63fe80bc88",
+            "mode": 420
+          }
+        ]
+      },
+      "tracked_missing_unchanged": [
+        "asdg/metadata/build.json"
+      ]
+    },
+    "lifebuckets": {
+      "client": "lifebuckets",
+      "verify_exit": 0,
+      "status_exit": 0,
+      "integrity_exit": 0,
+      "push_verify": {
+        "operation": "push-replace",
+        "verified": true,
+        "problems": [],
+        "clients": [
+          "claude"
+        ],
+        "native_runtime": "NOT_VERIFIED",
+        "hook_trust": "NOT_ASSESSED"
+      },
+      "next_preview_noop": true,
+      "package_files": 483,
+      "package_mismatches": [],
+      "unexpected_changed": [],
+      "unexpected_added": [],
+      "head_unchanged": true,
+      "transaction": {
+        "transaction_id": "tx-bfd387862b8d45a995d576bb7409663d",
+        "plan_id": "68183720c2519fe43ab4aba68fc90253d5faf78715297dff91d2eab6a4dbe88c",
+        "state": "COMMITTED",
+        "created_at": "2026-11-24T21:24:17.173296+00:00",
+        "backup_path": "/Users/pablo.elustondo/git-projects/lifebuckets/.asdg/backups/push-replace/tx-bfd387862b8d45a995d576bb7409663d",
+        "updated_at": "2026-11-24T21:24:17.304423+00:00",
+        "elapsed_seconds": 0.131127,
+        "changed_files": [
+          "CLAUDE.md",
+          "asdg/00-governance/types/document-reviews.json",
+          "asdg/AGENTS.md",
+          "asdg/docs/client-integrations.md",
+          "asdg/docs/images/push-replace-flow.svg",
+          "asdg/docs/push-replace.md",
+          "asdg/docs/synchronization.md",
+          "asdg/metadata/MANIFEST.json",
+          "asdg/metadata/package-files.json",
+          "asdg/metadata/push-replace-catalog.json",
+          "asdg/metadata/push-replace-ownership.schema.json",
+          "asdg/metadata/sync-state.json",
+          "asdg/scripts/README.md",
+          "asdg/scripts/lib/cli.md",
+          "asdg/scripts/lib/cli.py",
+          "asdg/scripts/lib/cli_project.md",
+          "asdg/scripts/lib/cli_project.py",
+          "asdg/scripts/lib/cli_push.md",
+          "asdg/scripts/lib/cli_push.py",
+          "asdg/scripts/lib/cli_push_integrations.md",
+          "asdg/scripts/lib/cli_push_integrations.py",
+          "asdg/scripts/lib/cli_push_inventory.md",
+          "asdg/scripts/lib/cli_push_inventory.py",
+          "asdg/scripts/lib/cli_push_transaction.md",
+          "asdg/scripts/lib/cli_push_transaction.py",
+          "asdg/skills/asdg-help/command-reference.md",
+          "asdg/tests/test_push_integrations.md",
+          "asdg/tests/test_push_integrations.py",
+          "asdg/tests/test_push_inventory.md",
+          "asdg/tests/test_push_inventory.py",
+          "asdg/tests/test_push_replace.md",
+          "asdg/tests/test_push_replace.py",
+          "asdg/tests/test_push_transaction.md",
+          "asdg/tests/test_push_transaction.py",
+          ".asdg/document-reviews.json",
+          ".asdg/installation-ownership.json"
+        ],
+        "verification_status": "PASSED",
+        "realized_files": [
+          {
+            "path": "CLAUDE.md",
+            "sha256": "09ac6cf7aac3caed3bc66cc413761cdc9560560cf513a92e756d46d3df023045",
+            "mode": 420
+          },
+          {
+            "path": "asdg/00-governance/types/document-reviews.json",
+            "sha256": "57cf349322a888c0227165f3cf9ee41989cf77068873f1e0021c439cc5575b1f",
+            "mode": 420
+          },
+          {
+            "path": "asdg/AGENTS.md",
+            "sha256": "7339b122025b1902f006cb43384842399dfeeef6777c88bc77e25be09cc00071",
+            "mode": 420
+          },
+          {
+            "path": "asdg/docs/client-integrations.md",
+            "sha256": "3794357ea85ca0396f9cd7521f2b6a62bac22278a31546388a5b8163630f4f12",
+            "mode": 420
+          },
+          {
+            "path": "asdg/docs/images/push-replace-flow.svg",
+            "sha256": "d8954b14e430b3c3dc1c07921e6b3e10ea04bee2593b4bc15159e3ba6f9049de",
+            "mode": 420
+          },
+          {
+            "path": "asdg/docs/push-replace.md",
+            "sha256": "040bf6c20f3833f4f4e37f6ec1c2e9e808bf9d2dad89ee59e37258613907c734",
+            "mode": 420
+          },
+          {
+            "path": "asdg/docs/synchronization.md",
+            "sha256": "f2606b2da6f453d8dca1d9f356961a9d8036fd2183d4f944e57a3b2dbaebeff6",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/MANIFEST.json",
+            "sha256": "e9a4dad89d6430eea158c491badd6158d1bc68c5f016c46a2593d85f7ace0d41",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/package-files.json",
+            "sha256": "effd331cf2603765c1932bb9ff32ef76df823cbabbb29e9cb912fad658a3216c",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/push-replace-catalog.json",
+            "sha256": "2a6a2e12506705d3f6a6c103acedced8f94bc3032f4d0c3ee23b48aa1d1e84fe",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/push-replace-ownership.schema.json",
+            "sha256": "784432c448b6d0fe2e44ee36ece3c3302656a16b91e050a39600ae70ad51d379",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/sync-state.json",
+            "sha256": "5de8cca4fda9097e7f999f4bbd7a34bbb48251a0f280a06f89e379eef7a184f2",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/README.md",
+            "sha256": "d59397d1f42cb4ec5264331d6d478a88c62305055da4e8dfb444a1fbb4f2bef1",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli.md",
+            "sha256": "e876025a526e196f14b77b1c49e79db0d48b5f2a462284eb0e9757c77abe126b",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli.py",
+            "sha256": "10e8220c366735e07af4f8267f57a448982ca207e5cc6bbc64ed676a669d3594",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_project.md",
+            "sha256": "6baa9bf7fdb7bc8ec94d8937c3b490bfa089266031ff0146deed607ec5f7b420",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_project.py",
+            "sha256": "379f8e9b4344c33f5a1fe5fdc1889e940d45d612b01335586eb55da20266d405",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push.md",
+            "sha256": "ef628c92b9e957cff604386beedfd6ab28aaa314594082dfa88dcc5dd6026274",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push.py",
+            "sha256": "55ac78c40da943e68c9594ca708d831f3a745c7efbb26d25cceef24f09414eb7",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_integrations.md",
+            "sha256": "ef391ba6638eafc9bccfb5beab394f0dcc0aafe73a64eb5b43c5c4167f0d5103",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_integrations.py",
+            "sha256": "427b5e28463ab3cafe1c62e395f36e0d277fdbcc0877f5f80959ef8cee5190e8",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_inventory.md",
+            "sha256": "040f89c403395323700e2d44148248ab0a59009d368a6f0fa905355b193b0723",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_inventory.py",
+            "sha256": "65cde353b2712ae95bbbb6c69cc03d462149bdd6ac0540f6ea73ee89e7e8d3fa",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_transaction.md",
+            "sha256": "d9e9c2f5b875d6ea9df5598c8dd3793530d076b0b18df91fad84f60d878e7aaa",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_transaction.py",
+            "sha256": "1487e241aae2b17060fbfa802cd856f2182972772fd6904fdd353dd5864aae6d",
+            "mode": 420
+          },
+          {
+            "path": "asdg/skills/asdg-help/command-reference.md",
+            "sha256": "783b001aab48ade0eea903c608c14f58f16b597859e476c4e40ca52fff8fa7cf",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_integrations.md",
+            "sha256": "725a48d53772c61d59b1daead5704a5d617162a62953bfff0364574e320c9a32",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_integrations.py",
+            "sha256": "b220799cb8e4db6d1c6729e2a4c1c6cff772281728cc16ec3cebdbd59fb88dbc",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_inventory.md",
+            "sha256": "6a3a89e4e2c3649fd362dfdb5ef452388c94e491f2d6086c83ce0209ebd46309",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_inventory.py",
+            "sha256": "7b3c44d901c699eb5b4fe5ebc241c603bbbeaa5dc5e4177b65872da9ee0e83bd",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_replace.md",
+            "sha256": "b246c95f8c087e07c22bdcf607efd5f718df142a0b0dccbe0060f6d0cc775bb0",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_replace.py",
+            "sha256": "53afca0a6b5fdd0bcebe58d1f860ccc570d8e08e8997ff8e50191a37bc9fe53b",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_transaction.md",
+            "sha256": "d35f34940e1e1e875e56535506a8e23f34053ce0d3e7fe0506506ab3d0d2e72d",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_transaction.py",
+            "sha256": "a5d4920a79209b442939b0e3bf00f541fb3dd6fed2b49f48a73748ca39a54d0c",
+            "mode": 420
+          },
+          {
+            "path": ".asdg/document-reviews.json",
+            "sha256": "47dd76ccc730bb0b6eaef382a50857ca754a43f427b7c2760672a87397bf5631",
+            "mode": 420
+          },
+          {
+            "path": ".asdg/installation-ownership.json",
+            "sha256": "7ff3042ee71173b264be5c71997011f0ec35c7f0c413523f93db32a3daac91e5",
+            "mode": 420
+          }
+        ]
+      },
+      "tracked_missing_unchanged": [
+        "asdg/metadata/build.json"
+      ]
+    },
+    "elustondoaiweb": {
+      "client": "elustondoaiweb",
+      "verify_exit": 0,
+      "status_exit": 0,
+      "integrity_exit": 0,
+      "push_verify": {
+        "operation": "push-replace",
+        "verified": true,
+        "problems": [],
+        "clients": [
+          "codex"
+        ],
+        "native_runtime": "NOT_VERIFIED",
+        "hook_trust": "NOT_ASSESSED"
+      },
+      "next_preview_noop": true,
+      "package_files": 483,
+      "package_mismatches": [],
+      "unexpected_changed": [],
+      "unexpected_added": [],
+      "head_unchanged": true,
+      "transaction": {
+        "transaction_id": "tx-b1af6a65b0f843169eeb502f76fc7d27",
+        "plan_id": "4eab6012e123490d591dd02c5564862052f602f8720af36027e2d0d49510822e",
+        "state": "COMMITTED",
+        "created_at": "2026-11-24T21:24:24.586455+00:00",
+        "backup_path": "/Users/pablo.elustondo/git-projects/elustondoaiweb/.asdg/backups/push-replace/tx-b1af6a65b0f843169eeb502f76fc7d27",
+        "updated_at": "2026-11-24T21:24:24.717686+00:00",
+        "elapsed_seconds": 0.131231,
+        "changed_files": [
+          "asdg/00-governance/types/document-reviews.json",
+          "asdg/AGENTS.md",
+          "asdg/docs/client-integrations.md",
+          "asdg/docs/images/push-replace-flow.svg",
+          "asdg/docs/push-replace.md",
+          "asdg/docs/synchronization.md",
+          "asdg/metadata/MANIFEST.json",
+          "asdg/metadata/package-files.json",
+          "asdg/metadata/push-replace-catalog.json",
+          "asdg/metadata/push-replace-ownership.schema.json",
+          "asdg/metadata/sync-state.json",
+          "asdg/scripts/README.md",
+          "asdg/scripts/lib/cli.md",
+          "asdg/scripts/lib/cli.py",
+          "asdg/scripts/lib/cli_project.md",
+          "asdg/scripts/lib/cli_project.py",
+          "asdg/scripts/lib/cli_push.md",
+          "asdg/scripts/lib/cli_push.py",
+          "asdg/scripts/lib/cli_push_integrations.md",
+          "asdg/scripts/lib/cli_push_integrations.py",
+          "asdg/scripts/lib/cli_push_inventory.md",
+          "asdg/scripts/lib/cli_push_inventory.py",
+          "asdg/scripts/lib/cli_push_transaction.md",
+          "asdg/scripts/lib/cli_push_transaction.py",
+          "asdg/skills/asdg-help/command-reference.md",
+          "asdg/tests/test_push_integrations.md",
+          "asdg/tests/test_push_integrations.py",
+          "asdg/tests/test_push_inventory.md",
+          "asdg/tests/test_push_inventory.py",
+          "asdg/tests/test_push_replace.md",
+          "asdg/tests/test_push_replace.py",
+          "asdg/tests/test_push_transaction.md",
+          "asdg/tests/test_push_transaction.py",
+          ".asdg/document-reviews.json",
+          ".asdg/installation-ownership.json"
+        ],
+        "verification_status": "PASSED",
+        "realized_files": [
+          {
+            "path": "asdg/00-governance/types/document-reviews.json",
+            "sha256": "57cf349322a888c0227165f3cf9ee41989cf77068873f1e0021c439cc5575b1f",
+            "mode": 420
+          },
+          {
+            "path": "asdg/AGENTS.md",
+            "sha256": "7339b122025b1902f006cb43384842399dfeeef6777c88bc77e25be09cc00071",
+            "mode": 420
+          },
+          {
+            "path": "asdg/docs/client-integrations.md",
+            "sha256": "3794357ea85ca0396f9cd7521f2b6a62bac22278a31546388a5b8163630f4f12",
+            "mode": 420
+          },
+          {
+            "path": "asdg/docs/images/push-replace-flow.svg",
+            "sha256": "d8954b14e430b3c3dc1c07921e6b3e10ea04bee2593b4bc15159e3ba6f9049de",
+            "mode": 420
+          },
+          {
+            "path": "asdg/docs/push-replace.md",
+            "sha256": "040bf6c20f3833f4f4e37f6ec1c2e9e808bf9d2dad89ee59e37258613907c734",
+            "mode": 420
+          },
+          {
+            "path": "asdg/docs/synchronization.md",
+            "sha256": "f2606b2da6f453d8dca1d9f356961a9d8036fd2183d4f944e57a3b2dbaebeff6",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/MANIFEST.json",
+            "sha256": "e9a4dad89d6430eea158c491badd6158d1bc68c5f016c46a2593d85f7ace0d41",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/package-files.json",
+            "sha256": "effd331cf2603765c1932bb9ff32ef76df823cbabbb29e9cb912fad658a3216c",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/push-replace-catalog.json",
+            "sha256": "2a6a2e12506705d3f6a6c103acedced8f94bc3032f4d0c3ee23b48aa1d1e84fe",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/push-replace-ownership.schema.json",
+            "sha256": "784432c448b6d0fe2e44ee36ece3c3302656a16b91e050a39600ae70ad51d379",
+            "mode": 420
+          },
+          {
+            "path": "asdg/metadata/sync-state.json",
+            "sha256": "32e445f57e048ca280262bc8a906320608517295212f6107cccfd69fb4557ddc",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/README.md",
+            "sha256": "d59397d1f42cb4ec5264331d6d478a88c62305055da4e8dfb444a1fbb4f2bef1",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli.md",
+            "sha256": "e876025a526e196f14b77b1c49e79db0d48b5f2a462284eb0e9757c77abe126b",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli.py",
+            "sha256": "10e8220c366735e07af4f8267f57a448982ca207e5cc6bbc64ed676a669d3594",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_project.md",
+            "sha256": "6baa9bf7fdb7bc8ec94d8937c3b490bfa089266031ff0146deed607ec5f7b420",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_project.py",
+            "sha256": "379f8e9b4344c33f5a1fe5fdc1889e940d45d612b01335586eb55da20266d405",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push.md",
+            "sha256": "ef628c92b9e957cff604386beedfd6ab28aaa314594082dfa88dcc5dd6026274",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push.py",
+            "sha256": "55ac78c40da943e68c9594ca708d831f3a745c7efbb26d25cceef24f09414eb7",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_integrations.md",
+            "sha256": "ef391ba6638eafc9bccfb5beab394f0dcc0aafe73a64eb5b43c5c4167f0d5103",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_integrations.py",
+            "sha256": "427b5e28463ab3cafe1c62e395f36e0d277fdbcc0877f5f80959ef8cee5190e8",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_inventory.md",
+            "sha256": "040f89c403395323700e2d44148248ab0a59009d368a6f0fa905355b193b0723",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_inventory.py",
+            "sha256": "65cde353b2712ae95bbbb6c69cc03d462149bdd6ac0540f6ea73ee89e7e8d3fa",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_transaction.md",
+            "sha256": "d9e9c2f5b875d6ea9df5598c8dd3793530d076b0b18df91fad84f60d878e7aaa",
+            "mode": 420
+          },
+          {
+            "path": "asdg/scripts/lib/cli_push_transaction.py",
+            "sha256": "1487e241aae2b17060fbfa802cd856f2182972772fd6904fdd353dd5864aae6d",
+            "mode": 420
+          },
+          {
+            "path": "asdg/skills/asdg-help/command-reference.md",
+            "sha256": "783b001aab48ade0eea903c608c14f58f16b597859e476c4e40ca52fff8fa7cf",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_integrations.md",
+            "sha256": "725a48d53772c61d59b1daead5704a5d617162a62953bfff0364574e320c9a32",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_integrations.py",
+            "sha256": "b220799cb8e4db6d1c6729e2a4c1c6cff772281728cc16ec3cebdbd59fb88dbc",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_inventory.md",
+            "sha256": "6a3a89e4e2c3649fd362dfdb5ef452388c94e491f2d6086c83ce0209ebd46309",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_inventory.py",
+            "sha256": "7b3c44d901c699eb5b4fe5ebc241c603bbbeaa5dc5e4177b65872da9ee0e83bd",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_replace.md",
+            "sha256": "b246c95f8c087e07c22bdcf607efd5f718df142a0b0dccbe0060f6d0cc775bb0",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_replace.py",
+            "sha256": "53afca0a6b5fdd0bcebe58d1f860ccc570d8e08e8997ff8e50191a37bc9fe53b",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_transaction.md",
+            "sha256": "d35f34940e1e1e875e56535506a8e23f34053ce0d3e7fe0506506ab3d0d2e72d",
+            "mode": 420
+          },
+          {
+            "path": "asdg/tests/test_push_transaction.py",
+            "sha256": "a5d4920a79209b442939b0e3bf00f541fb3dd6fed2b49f48a73748ca39a54d0c",
+            "mode": 420
+          },
+          {
+            "path": ".asdg/document-reviews.json",
+            "sha256": "4e91dd8f04f7113546a0c552c3e341f760958add18b41e31d80a5e98ab685452",
+            "mode": 420
+          },
+          {
+            "path": ".asdg/installation-ownership.json",
+            "sha256": "d09cbcc43b9f179ce5235523676471c52a2a68c4d24ab8ce8267b75858c66d0c",
+            "mode": 420
+          }
+        ]
+      },
+      "tracked_missing_unchanged": []
+    }
+  },
+  "exact_file_hashes": {
+    "00-governance/types/document-reviews.json": "57cf349322a888c0227165f3cf9ee41989cf77068873f1e0021c439cc5575b1f",
+    "AGENTS.md": "7339b122025b1902f006cb43384842399dfeeef6777c88bc77e25be09cc00071",
+    "docs/asdg/07-planning/02.26-review-push-replace.md": "be3cb310844feade40f38320e47af1aa9789cd02b9ca5cf9544d51652a848a28",
+    "docs/client-integrations.md": "3794357ea85ca0396f9cd7521f2b6a62bac22278a31546388a5b8163630f4f12",
+    "docs/images/push-replace-flow.svg": "d8954b14e430b3c3dc1c07921e6b3e10ea04bee2593b4bc15159e3ba6f9049de",
+    "docs/push-replace.md": "040bf6c20f3833f4f4e37f6ec1c2e9e808bf9d2dad89ee59e37258613907c734",
+    "docs/synchronization.md": "f2606b2da6f453d8dca1d9f356961a9d8036fd2183d4f944e57a3b2dbaebeff6",
+    "metadata/MANIFEST.json": "e9a4dad89d6430eea158c491badd6158d1bc68c5f016c46a2593d85f7ace0d41",
+    "metadata/package-files.json": "effd331cf2603765c1932bb9ff32ef76df823cbabbb29e9cb912fad658a3216c",
+    "metadata/push-replace-catalog.json": "2a6a2e12506705d3f6a6c103acedced8f94bc3032f4d0c3ee23b48aa1d1e84fe",
+    "metadata/push-replace-ownership.schema.json": "784432c448b6d0fe2e44ee36ece3c3302656a16b91e050a39600ae70ad51d379",
+    "scripts/README.md": "d59397d1f42cb4ec5264331d6d478a88c62305055da4e8dfb444a1fbb4f2bef1",
+    "scripts/lib/cli.md": "e876025a526e196f14b77b1c49e79db0d48b5f2a462284eb0e9757c77abe126b",
+    "scripts/lib/cli.py": "10e8220c366735e07af4f8267f57a448982ca207e5cc6bbc64ed676a669d3594",
+    "scripts/lib/cli_project.md": "6baa9bf7fdb7bc8ec94d8937c3b490bfa089266031ff0146deed607ec5f7b420",
+    "scripts/lib/cli_project.py": "379f8e9b4344c33f5a1fe5fdc1889e940d45d612b01335586eb55da20266d405",
+    "scripts/lib/cli_push.md": "ef628c92b9e957cff604386beedfd6ab28aaa314594082dfa88dcc5dd6026274",
+    "scripts/lib/cli_push.py": "55ac78c40da943e68c9594ca708d831f3a745c7efbb26d25cceef24f09414eb7",
+    "scripts/lib/cli_push_integrations.md": "ef391ba6638eafc9bccfb5beab394f0dcc0aafe73a64eb5b43c5c4167f0d5103",
+    "scripts/lib/cli_push_integrations.py": "427b5e28463ab3cafe1c62e395f36e0d277fdbcc0877f5f80959ef8cee5190e8",
+    "scripts/lib/cli_push_inventory.md": "040f89c403395323700e2d44148248ab0a59009d368a6f0fa905355b193b0723",
+    "scripts/lib/cli_push_inventory.py": "65cde353b2712ae95bbbb6c69cc03d462149bdd6ac0540f6ea73ee89e7e8d3fa",
+    "scripts/lib/cli_push_transaction.md": "d9e9c2f5b875d6ea9df5598c8dd3793530d076b0b18df91fad84f60d878e7aaa",
+    "scripts/lib/cli_push_transaction.py": "1487e241aae2b17060fbfa802cd856f2182972772fd6904fdd353dd5864aae6d",
+    "skills/asdg-help/command-reference.md": "783b001aab48ade0eea903c608c14f58f16b597859e476c4e40ca52fff8fa7cf",
+    "tests/test_push_integrations.md": "725a48d53772c61d59b1daead5704a5d617162a62953bfff0364574e320c9a32",
+    "tests/test_push_integrations.py": "b220799cb8e4db6d1c6729e2a4c1c6cff772281728cc16ec3cebdbd59fb88dbc",
+    "tests/test_push_inventory.md": "6a3a89e4e2c3649fd362dfdb5ef452388c94e491f2d6086c83ce0209ebd46309",
+    "tests/test_push_inventory.py": "7b3c44d901c699eb5b4fe5ebc241c603bbbeaa5dc5e4177b65872da9ee0e83bd",
+    "tests/test_push_replace.md": "b246c95f8c087e07c22bdcf607efd5f718df142a0b0dccbe0060f6d0cc775bb0",
+    "tests/test_push_replace.py": "53afca0a6b5fdd0bcebe58d1f860ccc570d8e08e8997ff8e50191a37bc9fe53b",
+    "tests/test_push_transaction.md": "d35f34940e1e1e875e56535506a8e23f34053ce0d3e7fe0506506ab3d0d2e72d",
+    "tests/test_push_transaction.py": "a5d4920a79209b442939b0e3bf00f541fb3dd6fed2b49f48a73748ca39a54d0c"
+  },
+  "document_reviews": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "7339b122025b1902f006cb43384842399dfeeef6777c88bc77e25be09cc00071",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.26-review-push-replace.md",
+      "sha256": "be3cb310844feade40f38320e47af1aa9789cd02b9ca5cf9544d51652a848a28",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "docs/client-integrations.md",
+      "sha256": "3794357ea85ca0396f9cd7521f2b6a62bac22278a31546388a5b8163630f4f12",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "docs/push-replace.md",
+      "sha256": "040bf6c20f3833f4f4e37f6ec1c2e9e808bf9d2dad89ee59e37258613907c734",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "docs/synchronization.md",
+      "sha256": "f2606b2da6f453d8dca1d9f356961a9d8036fd2183d4f944e57a3b2dbaebeff6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "scripts/README.md",
+      "sha256": "d59397d1f42cb4ec5264331d6d478a88c62305055da4e8dfb444a1fbb4f2bef1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "scripts/lib/cli.md",
+      "sha256": "e876025a526e196f14b77b1c49e79db0d48b5f2a462284eb0e9757c77abe126b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "scripts/lib/cli_project.md",
+      "sha256": "6baa9bf7fdb7bc8ec94d8937c3b490bfa089266031ff0146deed607ec5f7b420",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "scripts/lib/cli_push.md",
+      "sha256": "ef628c92b9e957cff604386beedfd6ab28aaa314594082dfa88dcc5dd6026274",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "scripts/lib/cli_push_integrations.md",
+      "sha256": "ef391ba6638eafc9bccfb5beab394f0dcc0aafe73a64eb5b43c5c4167f0d5103",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "scripts/lib/cli_push_inventory.md",
+      "sha256": "040f89c403395323700e2d44148248ab0a59009d368a6f0fa905355b193b0723",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "scripts/lib/cli_push_transaction.md",
+      "sha256": "d9e9c2f5b875d6ea9df5598c8dd3793530d076b0b18df91fad84f60d878e7aaa",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "skills/asdg-help/command-reference.md",
+      "sha256": "783b001aab48ade0eea903c608c14f58f16b597859e476c4e40ca52fff8fa7cf",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "tests/test_push_integrations.md",
+      "sha256": "725a48d53772c61d59b1daead5704a5d617162a62953bfff0364574e320c9a32",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "tests/test_push_inventory.md",
+      "sha256": "6a3a89e4e2c3649fd362dfdb5ef452388c94e491f2d6086c83ce0209ebd46309",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "tests/test_push_replace.md",
+      "sha256": "b246c95f8c087e07c22bdcf607efd5f718df142a0b0dccbe0060f6d0cc775bb0",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    },
+    {
+      "path": "tests/test_push_transaction.md",
+      "sha256": "d35f34940e1e1e875e56535506a8e23f34053ce0d3e7fe0506506ab3d0d2e72d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-24T21:25:18.779191+00:00",
+      "human_approval": null,
+      "role_id": "ASDG-ADMIN"
+    }
+  ],
+  "starting_head": "c34f4a753de6c6dfed59f824aaa273832a50a089"
+}

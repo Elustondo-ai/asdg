@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="400" viewBox="0 0 960 400" role="img" aria-labelledby="title desc">
+<title id="title">Deterministic replacement and execution evidence</title>
+<desc id="desc">Source package and ownership evidence produce a fixed plan. A matching apply backs up, replaces and verifies owned content while preserving project state. Execution time is recorded separately from the plan.</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#45677a" stroke-width="1.5"/></marker></defs>
+<rect width="960" height="400" rx="16" fill="#f5f8fa"/>
+<g font-family="Arial,sans-serif" fill="#17384a">
+<text x="28" y="38" font-size="24" font-weight="bold">One fixed plan; separate evidence of execution</text>
+<text x="28" y="66" font-size="16">Claude Code and Codex use the same ownership contract, with client-specific adapters.</text>
+<g fill="white" stroke="#45677a" stroke-width="1.5"><rect x="28" y="104" width="188" height="112" rx="10"/><rect x="258" y="104" width="188" height="112" rx="10"/><rect x="488" y="104" width="190" height="112" rx="10"/><rect x="720" y="104" width="212" height="112" rx="10"/></g>
+<g font-size="18" font-weight="bold"><text x="42" y="131">Verified inputs</text><text x="272" y="131">Deterministic plan</text><text x="502" y="131">Apply and verify</text><text x="734" y="131">Execution envelope</text></g>
+<g font-size="15"><text x="42" y="157">Pinned package</text><text x="42" y="180">Ownership + target state</text><text x="42" y="203">Selected integrations</text><text x="272" y="157">Exact owned effects</text><text x="272" y="180">Timeless receipt bytes</text><text x="272" y="203">Hash-bound audit intent</text><text x="502" y="157">Recheck, lock, back up</text><text x="502" y="180">Replace owned content</text><text x="502" y="203">Verify preserved content</text><text x="734" y="157">Actual time + plan ID</text><text x="734" y="180">Realized audit hashes</text><text x="734" y="203">Verification + recovery</text></g>
+<g stroke="#45677a" stroke-width="2" marker-end="url(#arrow)"><path d="M216 160H252"/><path d="M446 160H482"/><path d="M678 160H714"/></g>
+<rect x="28" y="248" width="904" height="74" rx="10" fill="#e1efe8"/>
+<text x="44" y="275" font-size="17" font-weight="bold">Preserved throughout</text><text x="44" y="301" font-size="16">Application code • project records • unrelated settings • teams, worktrees and host identities</text>
+<text x="28" y="357" font-size="16">No-op: no new writes or audit events. Changed inputs: stop and produce a fresh plan.</text>
+<text x="28" y="382" font-size="15">File checks only: native skill invocation and hook trust require separate observed checks.</text>
+</g></svg>

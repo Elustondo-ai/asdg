@@ -13,6 +13,7 @@
 Context contains role_id, optional workflow, exact targets and native-resolved openspec_store; hook binding additionally uses session_id.
 The CLI accepts a conversation declaration; the hook accepts only externally supplied context matched to its payload session.
 Exceptions are path allowances, never authentication or semantic approval. Append-only review history, exact human decisions and native OpenSpec validation remain workflow responsibilities.
+Explicit `project-plan-sync` permits its exact Stage 07 `project-plan-cache.json` preparation for known roles; its engine owns journal and remote mutations. No other planning path or sprint state is included.
 No writes, state transitions, title lookup or native discovery occur here. Invalid paths/context may raise ValueError, TypeError or Conflict; the CLI/hook fail closed.
 The hook's documentation classifier rejects policy names and source suffixes; content cannot be certified by a suffix.
 OpenSpec external/reserved-root stores are conservatively denied; no path is silently substituted.
