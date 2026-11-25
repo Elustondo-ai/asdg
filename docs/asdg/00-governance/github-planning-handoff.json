@@ -1,0 +1,12 @@
+{
+  "path": "docs/asdg/00-governance/github-planning-handoff.md",
+  "sha256": "bc03dea13b21450ca2d1a341ed2fe4f5c717cadc9139765ca7b91499b4cb1836",
+  "event": "AI-MODIFIED",
+  "recorded_at": "2026-11-25",
+  "human_approval": null,
+  "provenance": {
+    "role_id": "ASDG-COORDINATOR",
+    "request": "Prepare Claude handoff for GitHub planning integration",
+    "scope": "Discovery and proposal; implementation authorization pending"
+  }
+}
