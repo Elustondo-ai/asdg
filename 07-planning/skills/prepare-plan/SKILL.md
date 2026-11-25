@@ -14,8 +14,8 @@ A non-owning caller may inspect the method, but must not use it to bypass role b
 
 1. Read the authorized scope and available baseline and closure evidence.
 2. List missing preflight facts rather than claiming the next sprint can start.
-3. Integrate progress, gaps and priorities with component-scoped tasks, dependencies and acceptance evidence. Link each item to the domain owner’s source.
-4. Return plan and task proposals; do not create branches, commit, or start implementation.
+3. Assemble epics and stories from their owners' documents, word for word, with priorities, gaps, dependencies and acceptance evidence; include 08's tasks unchanged. Link each item to the domain owner’s source.
+4. Report the assembled plan back to its owners for review, then return it with the proposed Sprint Backlog; do not create branches, commit, or start implementation.
 5. When the user explicitly requests shared GitHub planning, use [Project Plan Sync](../../../skills/asdg-project-plan-sync/SKILL.md) to reconcile structured items with the Project. Preserve authored documents; ordinary plan preparation does not trigger synchronization or external writes.
 
 ## Output and checks

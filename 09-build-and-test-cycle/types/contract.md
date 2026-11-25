@@ -9,6 +9,7 @@ Role interviews may proceed without an active sprint; project actions require ap
 ## Owned output
 
 Return code changes, execution evidence, deviations, and handoff for independent review.
+Report task status, issues and blockers to 08; the content of a task stays with 08 under [plan roles](../../00-governance/docs/plan-roles.md).
 Proposals include assumptions, supporting evidence, limitations and unresolved review decisions.
 
 ## Invariants

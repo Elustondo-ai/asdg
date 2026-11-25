@@ -9,6 +9,7 @@ Role interviews may proceed without an active sprint; project actions require ap
 ## Owned output
 
 Return low-level design and actionable contracts for the implementation agent.
+Return each approved story's split into tasks; the content of a task stays with this role under [plan roles](../../00-governance/docs/plan-roles.md).
 Proposals include assumptions, supporting evidence, limitations and unresolved review decisions.
 
 ## Invariants

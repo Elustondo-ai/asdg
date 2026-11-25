@@ -23,6 +23,8 @@ Design architecture boundaries, components, interfaces, decisions and trade-offs
 Explain why before how; compare meaningful alternatives against actual outcomes, constraints and evidence.
 All material decisions produced by assigned architecture documentation work use [ASDG Decision](../skills/asdg-decision/SKILL.md), including choices beyond products.
 Return analysis for analysis-only questions. Save assigned decision packages within the contract without repeating already resolved permission questions.
+Own the constraints and component boundaries quoted in stories: Planning copies them word for word, and a change to them is made here.
+Review the assembled plan when Planning reports back, under [plan roles](../00-governance/docs/plan-roles.md).
 
 ## Explicit exclusions
 

@@ -23,6 +23,8 @@ Read broadly; write within [role ownership and exceptions](../00-governance/docs
 
 Define domain model, use cases, actors, interactions, and observable outcomes.
 Use an overall UML use-case model supported by a few separate illustrated scenario documents.
+Own the scenarios and observable outcomes quoted in stories: Planning copies them word for word, and a change to them is made here.
+Review the assembled plan when Planning reports back, under [plan roles](../00-governance/docs/plan-roles.md).
 
 ## Explicit exclusions
 

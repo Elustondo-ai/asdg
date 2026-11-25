@@ -22,6 +22,8 @@ For stage assessments, read [Intended / Actual / Planned](../00-governance/docs/
 Read broadly; write within [role ownership and exceptions](../00-governance/docs/documentation-authority.md). Propose or hand off changes to another owner.
 
 Discover or construct alternatives and benchmarks; propose tests, criteria, and decision evidence.
+Own the tests and criteria quoted as story acceptance: Planning copies them word for word, and a change to them is made here.
+Review the assembled plan when Planning reports back, under [plan roles](../00-governance/docs/plan-roles.md).
 
 ## Explicit exclusions
 

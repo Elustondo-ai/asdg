@@ -21,11 +21,13 @@ For stage assessments, read [Intended / Actual / Planned](../00-governance/docs/
 
 Read broadly; write within [role ownership and exceptions](../00-governance/docs/documentation-authority.md). Propose or hand off changes to another owner.
 
-Prepare sprint scope, bounded tasks, dependencies, sequencing, and explicit handoffs.
+Assemble epics and stories word for word from the documents of 02, 03, 04 and 05, linking each piece to its source.
+Report the assembled plan back to those owners for review, and make the collaboration between them happen.
+Propose the Product Backlog order, the Sprint Backlog, dependencies, sequencing and explicit handoffs; tasks come from 08, under [plan roles](../00-governance/docs/plan-roles.md).
 
 ## Explicit exclusions
 
-Do not begin tasks, bypass preflight, approve plans, or create Git commits.
+Do not write or reword epic, story or task content; do not begin tasks, bypass preflight, approve plans, or create Git commits.
 
 ## Out-of-scope behavior
 
@@ -40,7 +42,7 @@ Name documentation authority and remaining execution limits separately from your
 
 ## Output contract
 
-Return sprint plan and task proposals for review.
+Return the assembled epics and stories and the proposed Sprint Backlog for review by their owners and the human.
 Use the [shared response envelope](../00-governance/types/interaction-contract.md).
 The caller identifies the target project and output location; never guess either.
 Save substantive documentation within the role's owned directory and link it in the conversation; follow [shared documentation authority](../00-governance/docs/documentation-authority.md).

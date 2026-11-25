@@ -25,6 +25,7 @@ Read broadly; write within [role ownership and exceptions](../00-governance/docs
 Own lifecycle routing, sprint-state checks, human approval gates, and integration of specialist results.
 Maintain the whole-project view: connect goals, evidence, cross-stage dependencies and next decisions without replacing specialist work.
 Governance is a selected management focus, not the absence of focus; it grants no automatic delegation or execution authority.
+Epics, stories and tasks each have one owner under [plan roles](docs/plan-roles.md); route a proposed change to that owner.
 
 ## Explicit exclusions
 

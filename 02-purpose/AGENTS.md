@@ -23,6 +23,8 @@ For stage assessments, read [Intended / Actual / Planned](../00-governance/docs/
 Read broadly; write within [role ownership and exceptions](../00-governance/docs/documentation-authority.md). Propose or hand off changes to another owner.
 
 Clarify why the system exists; elicit desired outcomes, constraints, non-goals, and acceptance questions.
+Own the why of each epic and story: Planning quotes it word for word, and a change to it is made here.
+Review the assembled plan when Planning reports back, under [plan roles](../00-governance/docs/plan-roles.md).
 
 ## Explicit exclusions
 

@@ -1,0 +1,77 @@
+{
+  "event": "AI-MODIFIED",
+  "path": "docs/asdg/07-planning/02.27-review-plan-roles.md",
+  "sha256": "52e54945c19a7724fe2a7ff42e28ddd7c24aac506129a0ce7e4dd461c17533b7",
+  "recorded_at": "2026-11-25T14:13:23.342231+00:00",
+  "human_approval": null,
+  "requester": "Pablo",
+  "role": "ASDG-COORDINATOR",
+  "admin_selected": false,
+  "authority": {
+    "human_request_as_typed": "Ok, time to update the speclist AGENTS.MD / we are working on asdg project.... you do not need \"ASDG Admin\" this is for client projets",
+    "earlier_instruction_as_typed": "WE NEED TO UPDATE ALL OUR ESPECIALIST> SPECIALLY THE PLANER BUT ALSIO ALL THE OTHER SO EVEYBODY KNOWS THEY ROLE!",
+    "constraint_set_aside": "Root AGENTS.md and admin/AGENTS.md: agent changes to these definitions run only under explicitly selected ASDG Admin",
+    "skipped": [
+      "check-write with workflow admin",
+      "Admin source loading and title change"
+    ]
+  },
+  "scope": "Plan vocabulary and ownership of epics, stories and tasks in the role definitions",
+  "baseline": {
+    "branch": "project-plan-sync",
+    "commit": "fc2da48",
+    "initial_git_status": "clean"
+  },
+  "changed_files": {
+    "00-governance/AGENTS.md": "e0a4eed20442aecdf80739a404489560cf9d99848be1c949e6205f05dd71426e",
+    "00-governance/docs/plan-roles.md": "060dae95c66bb280955b723216893ef7cd1c1c6c7c54fbe2e3eca148f92cd61d",
+    "00-governance/types/document-reviews.json": "6cc26482aede899b5448bd410b6216a1fde4a8ba6f35f0a24e3ea3be2c40b5e8",
+    "01-context-and-domain-analysis/AGENTS.md": "23e292968e9e863ccadede80921eca23cb49ab1cc2f9dbc6221bc474ca1074b5",
+    "02-purpose/AGENTS.md": "869f1812dac6b008c86183f560767761d8053488ac98733f9f9407e5420c3c55",
+    "03-system-model-and-use-cases/AGENTS.md": "a284c1ff56ea300822ca200e9f8c8b9d1061365901073618b236e0dbb1a6a54b",
+    "04-benchmarks-and-eval-strategy/AGENTS.md": "58e6d9a8fb7d2f97e4661539935c6d8b29fba1960553f94ad8e5cb0a5172e34e",
+    "05-high-level-design-and-architecture/AGENTS.md": "cee437f01489f788df3dd65b89103b0d1dc15305eb9fc94886ff77f9f8183ab1",
+    "06-viable-proof-of-concept/AGENTS.md": "9583ffc807d40ae4e54050d2a4910ea279d18324f775f1e28c7ddd62e1c67e0d",
+    "07-planning/AGENTS.md": "4297208ea0f7fc8b883b5c2da6d564f8a98aa745b87feff7bdf4cf7d0fc88f6c",
+    "07-planning/skills/prepare-plan/SKILL.md": "bac45e4374ba784d9132f59a648a668c2885185be892caf628d796b935c551f2",
+    "07-planning/types/contract.md": "ab3fbfb6c45d5fee87cc95f125eeed0900a2e976f01211f14c61ec7498bb9c93",
+    "08-low-level-design/AGENTS.md": "687084bb052d45bc227e19846ef3826085724793924a453b8b26dd91fc2586b0",
+    "08-low-level-design/types/contract.md": "f1dfb4d99e8695904978602ea82dcf7b4bdabdb865ef91ea8d79c3586b6e5657",
+    "09-build-and-test-cycle/AGENTS.md": "9bf26768812e637bfdf42d0be031384cb4ea306a20c0452ea069d2bb852091c2",
+    "09-build-and-test-cycle/types/contract.md": "00cbf08a1a240e85d5e01fbb9c568cbf060784a22e949865c20713170be4e500",
+    "10-document-review-and-release/AGENTS.md": "c48fd6ae1a18329c468350d70aca40d755d25a6c7c08a2fe28e4b1ed9a9b03be",
+    "11-operational-reality-devops-and-user-acceptance/AGENTS.md": "d464614965a84c2215d1484cf4daaf27c77f1c0910236efd6ea2ed431ec38a87",
+    "12-observability-insights-and-learning/AGENTS.md": "32b81600e4594406321f2776afbf129294e4b8d4095198819f9d77238569eac2",
+    "metadata/MANIFEST.json": "68bd984635b6c08f1275c87d029ada8a94ff1af77f68e2db76cabf9c4cd7e9c3",
+    "metadata/package-files.json": "a26c6d37a84ac1f16ede72cd1b2ffd8701ab56756a752edcc5ca99085fa0d3af",
+    "templates/.codex/agents/asdg_07.toml": "03e38b52b36ab156a089ebb0b65105b1febd9d14c05412b70efc4e3423508b08"
+  },
+  "verification": {
+    "structural": {
+      "command": "python3 scripts/check.py",
+      "result": "PASS"
+    },
+    "integrity": {
+      "command": "python3 scripts/check.py --integrity",
+      "result": "PASS",
+      "after": "manifest refresh"
+    },
+    "suite": {
+      "command": "python3 -B -m unittest discover -s tests",
+      "result": "Ran 389 tests in 235.471s; OK (skipped=9)"
+    },
+    "line_limit": "all edited or new Markdown within 50 nonblank lines; largest 45",
+    "native_runtime": "NOT_VERIFIED",
+    "rendered_shared_page": "NOT_INSPECTED"
+  },
+  "ledger": {
+    "file": "00-governance/types/document-reviews.json",
+    "events_before": 2330,
+    "events_after": 2349
+  },
+  "git": {
+    "staged": false,
+    "committed": false,
+    "pushed": false
+  }
+}

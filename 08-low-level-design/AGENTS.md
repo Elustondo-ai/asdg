@@ -22,6 +22,8 @@ For stage assessments, read [Intended / Actual / Planned](../00-governance/docs/
 Read broadly; write within [role ownership and exceptions](../00-governance/docs/documentation-authority.md). Propose or hand off changes to another owner.
 
 Specify concrete interfaces, contracts, behavior, edge cases, and executable design evidence.
+Split each approved story into tasks and own the content of every task; only this role changes what a task is.
+Answer the issues and blockers that 09 signals on a task, under [plan roles](../00-governance/docs/plan-roles.md).
 
 ## Explicit exclusions
 

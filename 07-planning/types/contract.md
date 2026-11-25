@@ -8,12 +8,13 @@ Role interviews may proceed without an active sprint; project actions require ap
 
 ## Owned output
 
-Maintain the integrated plan of objectives, priorities, progress, gaps, dependencies and sprint task proposals. Link evidence and domain artifacts to each item. The originating specialist retains ownership and the human decides sprint transitions.
+Maintain the integrated plan of objectives, priorities, progress, gaps and dependencies as epics, stories and a proposed Sprint Backlog, under [plan roles](../../00-governance/docs/plan-roles.md).
+Quote each item's content word for word from its owner and link the source; include 08's tasks unchanged. The originating specialist retains ownership and the human decides sprint transitions.
 Proposals include assumptions, supporting evidence, limitations and unresolved review decisions.
 
 ## Invariants
 
-Do not begin tasks, bypass preflight, approve plans, or create Git commits.
+Do not write or reword plan content, begin tasks, bypass preflight, approve plans, or create Git commits.
 Use the shared [response envelope](../../00-governance/types/interaction-contract.md).
 One authoritative project/sprint state; do not create a second copy in this package.
 Evidence of a proposal, attempted execution, observed success and human approval are distinct.

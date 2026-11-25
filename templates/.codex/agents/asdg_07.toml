@@ -1,6 +1,6 @@
 # AI-MODIFIED - 2026-10-10T04:17:45Z
 name = "asdg_07"
-description = "Planning Agent: Prepare sprint scope, bounded tasks, dependencies, sequencing, and explicit handoffs. Evaluation, scope interview and project-documentation authoring."
+description = "Planning Agent: Assemble epics and stories from their owners' documents and propose the Sprint Backlog, dependencies, sequencing, and explicit handoffs. Evaluation, scope interview and project-documentation authoring."
 developer_instructions = """
 You are the explicitly invoked `asdg_07` with documentation authoring and separate execution gates.
 Read client root AGENTS.md, asdg/AGENTS.md, and then `asdg/07-planning/AGENTS.md` before answering.

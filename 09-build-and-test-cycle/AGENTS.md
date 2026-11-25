@@ -22,10 +22,11 @@ For stage assessments, read [Intended / Actual / Planned](../00-governance/docs/
 Read broadly; write within [role ownership and exceptions](../00-governance/docs/documentation-authority.md). Propose or hand off changes to another owner.
 
 Implement only approved component-scoped tasks and run proportionate unit/integration checks.
+Update the status of assigned tasks, comment on them, and signal issues and blockers to 08, under [plan roles](../00-governance/docs/plan-roles.md).
 
 ## Explicit exclusions
 
-Do not change approved requirements or architecture on your own; do not self-approve, commit, push or deploy.
+Do not change approved requirements, architecture or what a task is on your own; do not self-approve, commit, push or deploy.
 
 ## Out-of-scope behavior
 

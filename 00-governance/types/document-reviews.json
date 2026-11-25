@@ -36307,6 +36307,345 @@
         "visible_review_markers": [],
         "approval_binding": "Legacy declarations only; no approval inferred or transferred."
       }
+    },
+    {
+      "path": "asdg/00-governance/docs/plan-roles.md",
+      "sha256": "060dae95c66bb280955b723216893ef7cd1c1c6c7c54fbe2e3eca148f92cd61d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      }
+    },
+    {
+      "path": "asdg/02-purpose/AGENTS.md",
+      "sha256": "869f1812dac6b008c86183f560767761d8053488ac98733f9f9407e5420c3c55",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "4fbd3f18fad3c79fac563c48b9e7407458ee693f5aedb50fda16fa54adcbf8b4",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/03-system-model-and-use-cases/AGENTS.md",
+      "sha256": "a284c1ff56ea300822ca200e9f8c8b9d1061365901073618b236e0dbb1a6a54b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "9cffe11872a8cc451ac05ef0bf755a763011d6de2f90801b75e6cfce5408c8b8",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/04-benchmarks-and-eval-strategy/AGENTS.md",
+      "sha256": "58e6d9a8fb7d2f97e4661539935c6d8b29fba1960553f94ad8e5cb0a5172e34e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "e17be3acd1bd5725dfa27ce0db6a4787e7a099dd5625a2f7a77d583d0be43046",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/05-high-level-design-and-architecture/AGENTS.md",
+      "sha256": "cee437f01489f788df3dd65b89103b0d1dc15305eb9fc94886ff77f9f8183ab1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "00763e6864f25d716005d7c6ccbe368f57d0154ff9bb39e7ef1b7e3384b35c21",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/07-planning/AGENTS.md",
+      "sha256": "4297208ea0f7fc8b883b5c2da6d564f8a98aa745b87feff7bdf4cf7d0fc88f6c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "9bf1d4e956a3a66494f84c335acb4834de4bef02eac33a755a4129da198178b3",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/07-planning/types/contract.md",
+      "sha256": "ab3fbfb6c45d5fee87cc95f125eeed0900a2e976f01211f14c61ec7498bb9c93",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "7963eb70fa38237c399ee16ef37b12fced04e49c48ada9903d732dfde606adbd",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/07-planning/skills/prepare-plan/SKILL.md",
+      "sha256": "bac45e4374ba784d9132f59a648a668c2885185be892caf628d796b935c551f2",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "895a3ad5e89efe77becb9c6be090adfbf711204ad33d5997dd7650c5a31a28ab",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/templates/.codex/agents/asdg_07.toml",
+      "sha256": "03e38b52b36ab156a089ebb0b65105b1febd9d14c05412b70efc4e3423508b08",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "27a882bd35ff3da660adc8f22b82f31e89b96f87a275a15d8e6d0b380d661f4c",
+        "visible_review_markers": [
+          "# AI-MODIFIED - 2026-10-10T04:17:45Z"
+        ],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/08-low-level-design/AGENTS.md",
+      "sha256": "687084bb052d45bc227e19846ef3826085724793924a453b8b26dd91fc2586b0",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "839f6e9e04d4c8d7c58ab1bc91cb44077acead80e6118480716aa42d0bd5f7b3",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/08-low-level-design/types/contract.md",
+      "sha256": "f1dfb4d99e8695904978602ea82dcf7b4bdabdb865ef91ea8d79c3586b6e5657",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "50ec96dd998c91a57cfe86704aef312a15d9b40f1a04bb414a90fd42f998e3da",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/09-build-and-test-cycle/AGENTS.md",
+      "sha256": "9bf26768812e637bfdf42d0be031384cb4ea306a20c0452ea069d2bb852091c2",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "52fc4ed5d01eb88205b99f419020b91c52dfe61230e44caa85fec1d0f4506bcf",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/09-build-and-test-cycle/types/contract.md",
+      "sha256": "00cbf08a1a240e85d5e01fbb9c568cbf060784a22e949865c20713170be4e500",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "425e18cffcec8c6d81f80e6a5f2377a469149868ba950e876a2e7c80629862b3",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/01-context-and-domain-analysis/AGENTS.md",
+      "sha256": "23e292968e9e863ccadede80921eca23cb49ab1cc2f9dbc6221bc474ca1074b5",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "40f215f45326be4745e578635693ee1e4bcbb1acecdf50132953755aaa8f181d",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/06-viable-proof-of-concept/AGENTS.md",
+      "sha256": "9583ffc807d40ae4e54050d2a4910ea279d18324f775f1e28c7ddd62e1c67e0d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "147df3732e1137fc287dbc7989172cb227cc1fa9c5a43c5cdec6b8884a8b210d",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/10-document-review-and-release/AGENTS.md",
+      "sha256": "c48fd6ae1a18329c468350d70aca40d755d25a6c7c08a2fe28e4b1ed9a9b03be",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "d1e78f9dcf306cfa3cadec12548cc958fbbd97c723cc98a7bad3162bc3f03f67",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/11-operational-reality-devops-and-user-acceptance/AGENTS.md",
+      "sha256": "d464614965a84c2215d1484cf4daaf27c77f1c0910236efd6ea2ed431ec38a87",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "d7b86483472f62ef9f1610a6c339c4998503d3b4a00b3090a5c9e37ddb375fc6",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/12-observability-insights-and-learning/AGENTS.md",
+      "sha256": "32b81600e4594406321f2776afbf129294e4b8d4095198819f9d77238569eac2",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "3e360bc56529f058d617a3dcb90f2d54d9ed1b772bd6b50c0decb01175030dac",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/00-governance/AGENTS.md",
+      "sha256": "e0a4eed20442aecdf80739a404489560cf9d99848be1c949e6205f05dd71426e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-25T14:09:06.714082+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-COORDINATOR",
+        "requester": "Pablo",
+        "scope": "Plan vocabulary and ownership of epics, stories and tasks across all roles",
+        "authority": "Developer-directed methodology edit; ASDG Admin was not selected because the developer stated it is not required in the canonical repository"
+      },
+      "previous_state": {
+        "sha256": "bd34bd6b4aac193ea65f2bd1a2741db72d71f3eeea23cc1267b189909766be84",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
     }
   ],
   "distribution_version": "0.3.0-pilot.2"
